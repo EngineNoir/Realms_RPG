@@ -62,13 +62,12 @@ class Character:
         # uhhh
         return 100
 
-    def get_char_class(self, char_class):
+    def get_char_class(self):
         pass
 
     def add_to_inventory(self, item):
         if len(self.inventory) < 5 and len(self.inventory) >= 0:
             self.inventory.append(item)
-
 
 
 def load_character():
@@ -94,7 +93,6 @@ def save_character(player_character):
     char_sheet_save = json.dumps(char_dictionary, indent=1)
     with open(f'{char_dictionary["name"]}' + '.json', 'w') as outfile:
         outfile.write(char_sheet_save)
-
 
 
 if __name__ == "__main__":
