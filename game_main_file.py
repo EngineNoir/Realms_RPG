@@ -3,6 +3,7 @@
 import os
 import json
 import time
+from characters.create_character import load_character
 from functions.char_creation import character_creation
 from functions.menu_functions import inspect_sheet
 from functions.exploration_functions import explore
