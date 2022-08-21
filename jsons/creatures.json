@@ -1,0 +1,47 @@
+[
+
+  ["Rat", 3, 5, 0, 4, 0, 1, ["bites at you", "jumps at you"], 40, 0],
+  ["Bear", 4, 6, 1, 6, 0, 2, ["lunges forward", "swings its claws", "charges with its maw open"], 60, 0],
+  ["Spider", 4, 5, 0, 5, 0, 2, ["bites with its mandibles", "stabs with its stinger"], 50, 5],
+
+  ["Skeleton", 4, 5, 1, 6, 1, 2, ["swings its rusty blade", "throws a bony punch"], 50, 10],
+  ["Ghost", 5, 7, 1, 7, 1, 3, ["levitates and tosses objects at you", "flies at you", "sings hauntingly"], 75, 15],
+  ["Ghoul", 4, 6, 0, 6, 1, 2, ["runs up and swings at you", "lashes with its tongue", "glares at you"], 60, 15],
+  ["Flesh Golem", 6, 7, 1, 8, 1, 2, ["swings its giant arms", "raises its leg and stomps at you", "charges at you"], 80, 15],
+
+  ["Slime", 4, 6, 1, 6, 2, 2, ["manifests a spike and jabs at you", "spits a green glob at you"], 90, 0],
+  ["Crocodile", 6, 8, 1, 8, 2, 3, ["bites down with its jaw", "attempts to grab and deathroll", "lashes with its tail"], 150, 0],
+  ["Tree Blight", 7, 9, 0, 9, 2, 2, ["swings its branch like arm", "summons vines that swing at you", "tries to stomp you"], 175, 25],
+  ["Raptor", 6, 8, 1, 8, 2, 2, ["tries to rend you with razor sharp teeth", "swings its tail at you", "charges at you with jaws open"], 150, 0],
+
+  ["Snakeblood Addict", 4, 6, 1, 6, 3, 3, ["jabs with their dagger", "claws at you"], 200, 5],
+  ["Naga", 6, 8, 1, 8, 3, 4, ["spits acid", "swings its tail at you", "slithers up and whips its tail"], 250, 40],
+  ["Serpentfolk", 7, 9, 1, 8, 3, 3, ["swings its scimitar", "jabs its head forward to bite you", "swings its tail"], 250, 40],
+  ["Priest of the Serpent", 7, 9, 1, 8, 3, 4, ["summons serpents that fly at you", "chants an unholy incantation", "stabs with a ritual dagger"], 300, 50],
+
+  ["Mindblasted Witness", 5, 8, 1, 6, 4, 5, ["mutters insanely", "swings their fists at you"], 450, 20],
+  ["Floating Eye", 7, 10, 2, 8, 4, 6, ["shoots a beam from its iris", "spins in a hypnotic pattern", "assaults your mind"], 600, 5],
+  ["Parasitic Ooze", 7, 9, 1, 8, 4, 3, ["lashes out a tendril", "morphs into a spiked orb", "latches to you, trying to drain your health"], 600, 5],
+  ["Crystalline Shambler", 9, 12, 2, 10, 4, 4, ["slams its jagged fists down", "breaks off a shard of itself and stabs at you", "spins around with its fists out"], 900, 50],
+
+  ["Sand Mummy", 7, 9, 1, 6, 5, 3, ["swings its skinny hands", "kicks at you"], 1000, 5],
+  ["Giant Scorpion", 9, 10, 2, 8, 5, 3, ["clams down with its pincer", "jabs at you with its stinger", "slams its body down on you"], 1400, 0],
+  ["Djinn", 9, 10, 1, 8, 5, 4, ["releases fire from its hands", "calls forth a sandstorm", "flies at you with its claws out"], 1500, 40],
+  ["Sandworm", 12, 14, 2, 10, 5, 6, ["attempts to devour you", "coils around you", "shoots upwards and crashes down on you"], 2000, 100],
+
+  ["Technocrat Neanderthal", 9, 10, 1, 10, 6, 4, ["swings their club", "beams you with a laser gun"], 2000, 100],
+  ["Cyber Allosaurus", 12, 14, 2, 10, 6, 6, ["shoots lasers from its eyes", "swings its nano-plate tail", "chomps down with its mechanized jaw"], 2500, 50],
+  ["Mecha-Crusader", 12, 14, 2, 10, 6, 4, ["slams down with their carbon-plated hammer", "releases hand missiles at you", "swings their tech-claymore"], 2750, 150],
+  ["Plasmablade Samurai", 12, 14, 2, 10, 6, 6, ["unsheathes their glowing katana", "sidestep slices at you", "brings the blade down in a single calculated motion"], 3000, 200],
+
+  ["Death Knight", 12, 16, 2, 12, 7, 4, ["thrusts with their runeblade", "grabs at you with their icy gauntlets", "breathes out a cone of frost"], 3000, 100],
+  ["Necroflame Demon", 10, 14, 1, 10, 7, 6, ["swipes with its claws", "charges with its horns out", "stabs with a green flaming spear"], 2500, 50],
+  ["Undead Valkyrie", 12, 16, 2, 12, 7, 4, ["summons skeletal hands that fly at you", "throws a spear of ice at you", "swoops down with her blade"], 3000, 100],
+  ["Fiendblood Alchemist", 10, 14, 1, 10, 7, 6, ["throws a vial of glowing liquid", "breathes out fire and acid", "throws a hellfire explosive"], 3000, 200],
+
+  ["Mass of Tentacles", 14, 16, 1, 12, 8, 4, ["slams down its appendage", "flails", "slams down with consecutive tendrils"], 5000, 0],
+  ["Faceless Cultist", 12, 14, 1, 12, 8, 8, ["chants to Kath", "summons forth tentacles from its hood", "assaults you telepathically"], 6000, 200],
+  ["Grafted Crustacean", 16, 18, 3, 14, 8, 4, ["shoots forth hidden claws and spikes from underneath its carapace", "spits forth half-digested corpses", "grabs with its pincers and tentacles"], 6000, 0],
+  ["Screaming Mass of Flesh", 16, 18, 1, 14, 8, 8, ["evokes mental suffering", "tries to conjure blisters and sores", "flails with coagulated human limbs"], 6000, 100]
+
+]

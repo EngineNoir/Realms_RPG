@@ -1,0 +1,19 @@
+[
+  ["Invisibility", 0, "Become invisible to the undiscerning eye.", 3, "inv"],
+  ["Fireball", 7, "Cast a barrage of flame down upon your enemy.", 3,
+    "unleash orbs of flame at your enemy"],
+  ["Eldritch Slam", 4, "Summon an extra-dimensional tentacle to beat down your foe.", 3,
+    "conjure a writhing tendril that lunges at your foe"],
+  ["Bestial Claws", 7, "Turn into a bear and slice your foe.", 5,
+    "shapeshift into a bear and maul your foe"],
+  ["Serpent's Coil", 4, "Turn into a serpent and crush your enemy.", 3,
+    "transform into a serpent, wrapping and crushing your enemy"],
+  ["Mutilation Choir", 7, "Play a dissonant choir, forcing your foe to inflict self harm.", 5,
+    "play a haunting tune that makes your foe claw at their ears"],
+  ["Eldritch Tongues", 4, "Speak in tongues, assaulting your opponents mind.", 3,
+    "speak dissonant whispers that assault your enemy's mind"],
+  ["Heal", 0, "Restore health at the cost of mana.", 3, "heal"],
+  ["Sacred Flame", 4, "Sear creatures in their place with holy magic.", 3,
+    "chant a prayer, showering your foe in a radiant flame"],
+  ["Arcane Recovery", 0, "Recover health for a large cost of mana.", 8, "rec"]
+]

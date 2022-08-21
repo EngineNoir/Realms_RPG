@@ -1,0 +1,8 @@
+[
+  ["Lesser Health Potion", 5, 10],
+  ["Health Potion", 10, 50],
+  ["Greater Health Potion", 20, 200],
+  ["Lesser Mana Potion", 5, 10],
+  ["Mana Potion", 10, 50],
+  ["Greater Mana Potion", 20, 200]
+]

@@ -1,0 +1,66 @@
+[
+ "Hackerman",
+ [
+  [
+   "Str",
+   21
+  ],
+  [
+   "Dex",
+   20
+  ],
+  [
+   "Wil",
+   20
+  ]
+ ],
+ 99844,
+ [],
+ 925,
+ "Knight",
+ [
+  3,
+  "Heavy Plate Armor and Shield"
+ ],
+ [
+  "Longsword",
+  [
+   "swing",
+   "thrust"
+  ]
+ ],
+ 0,
+ 925,
+ false,
+ [
+  [
+   "Invisibility",
+   0,
+   "Become invisible to the undiscerning eye.",
+   2,
+   "inv"
+  ],
+  [
+   "Fireball",
+   8,
+   "Cast a barrage of flame down upon your enemy.",
+   2,
+   "unleash orbs of flame at your enemy"
+  ],
+  [
+   "Arcane Recovery",
+   0,
+   "Recover health for a large cost of mana.",
+   4,
+   "rec"
+  ]
+ ],
+ 915,
+ 915,
+ 50,
+ 200,
+ 2,
+ [
+  0
+ ]
+]

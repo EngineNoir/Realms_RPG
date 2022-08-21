@@ -1,0 +1,14 @@
+Creatures:
+ ['creature name', health_minimum, health_maximum, armor, attack (number of d6 dice), location value,
+    alertness value, [moves], xp_value]
+
+Bosses:
+ ['boss name', health_minimum, health_maximum, armor, attack (number of d6 dice), location value,
+    alertness value, [moves], xp_value, [quotes], big_damage]
+
+Items:
+['Item name',
+    'item type',
+    attack/defense value,
+    value,
+    inventory slots]
