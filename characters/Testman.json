@@ -1,0 +1,20 @@
+{ 
+
+    "name": "Tester",
+    "char_class": "Knight",
+    "strength": 5,
+    "dexterity": 2,
+    "willpower": 2,
+    "health": 10,
+    "mana": 5,
+    "gold": 100,
+    "inventory": [],
+    "armor": "Plate Armor",
+    "weapon": "Longsword",
+    "amulet": "Amulet of Health",
+    "ring": "Ring of Strength",
+    "spellbook": []
+
+}
+
+
