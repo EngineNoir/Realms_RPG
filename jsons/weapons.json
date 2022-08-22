@@ -1,6 +1,5 @@
 {
     "Dagger": {
-        "item_id": 100,
         "weapon_name": "Dagger",
         "ability": "Dexterity",
         "damage": 2,
@@ -11,7 +10,6 @@
     },
 
     "Curved Twinblades": {
-        "item_id": 101,
         "weapon_name": "Curved Twinblades",
         "ability": "Dexterity",
         "damage": 4,
@@ -22,7 +20,6 @@
     },
 
     "Longsword": {
-        "item_id": 102,
         "weapon_name": "Longsword",
         "ability": "Strength",
         "damage": 4,
@@ -33,7 +30,6 @@
     },
 
     "Mace": {
-        "item_id": 103,
         "weapon_name": "Mace",
         "ability": "Strength",
         "damage": 3,
@@ -44,7 +40,6 @@
     },
 
     "Runestaff": {
-        "item_id": 104,
         "weapon_name": "Runestaff",
         "ability": "Willpower",
         "damage": 3,
@@ -55,7 +50,6 @@
     },
 
     "Battleaxe": {
-        "item_id": 105,
         "weapon_name": "Battleaxe",
         "ability": "Strength",
         "damage": 6,
@@ -66,7 +60,6 @@
     },
 
     "Katana": {
-        "item_id": 106,
         "weapon_name": "Katana",
         "ability": "Dexterity",
         "damage": 5,

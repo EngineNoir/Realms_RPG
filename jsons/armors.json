@@ -1,6 +1,5 @@
 {
     "Plate Armor": {
-        "item_id": 200,
         "armor_name": "Plate Armor",
         "weight": "Heavy",
         "defence": 3,
@@ -8,8 +7,15 @@
         "rarity": "common"
     },
 
+    "Chain Mail": {
+        "armor_name": "Chain Mail",
+        "weight": "Medium",
+        "defence": 2,
+        "value": 10,
+        "rarity": "common"
+    },
+    
     "Cloth Robes": {
-        "item_id": 201,
         "armor_name": "Cloth Robes",
         "weight": "Light",
         "defence": 1,
@@ -18,7 +24,6 @@
     },
 
     "Leather Tunic": {
-        "item_id": 202,
         "armor_name": "Leather Tunic",
         "weight": "Medium",
         "defence": 2,
@@ -27,7 +32,6 @@
     },
 
     "Karuta": {
-        "item_id": 203,
         "armor_name": "Karuta",
         "weight": "Medium",
         "defence": 2,
@@ -36,7 +40,6 @@
     },
 
     "Loincloth": {
-        "item_id": 204,
         "armor_name": "Loincloth",
         "weight": "Light",
         "defence": 1,
@@ -45,7 +48,6 @@
     },
 
     "Enchanted Hide": {
-        "item_id": 205,
         "armor_name": "Enchanted Hide",
         "weight": "Light",
         "defence": 1,

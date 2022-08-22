@@ -1,8 +1,6 @@
 import random
 import time
-from functions.combat_function import combat_time
-from functions.potion_functions import use_potions
-from functions.menu_functions import inspect_sheet
+
 
 
 def explore(char_sheet, locations, creatures, bosses):
@@ -17,7 +15,7 @@ def explore(char_sheet, locations, creatures, bosses):
             location_exploration(char_sheet, locations[player_choice], creatures, bosses[player_choice])
         if player_choice == len(locations):
             print('\nReturning to menu.')
-            time.sleep(2)
+            time.sleep(1)
             break
     char_sheet[10] = False
 
