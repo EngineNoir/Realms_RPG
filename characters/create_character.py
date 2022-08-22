@@ -79,7 +79,7 @@ def make_character(classes, armors, weapons):
     # index over the class names in classes list and present the options
     i = 1
     for char_class in classes:
-        print (str(i) + ". " + char_class["class_name"])
+        print(str(i) + ". " + char_class["class_name"] + ' - ' + char_class["description"])
         i += 1
     
     # makes the player choose a class from the given options
@@ -109,7 +109,7 @@ def make_character(classes, armors, weapons):
 def load_character():
     # ask for the character name
     char_name = input("\nWhat is your character's name?: ")
-    char_sheet = json.load(open(f'{char_name}.json'))
+    char_sheet = json.load(open(f'characters/{char_name}.json'))
     # generate a Character class object with the values from the json file
     player_character = Character(char_sheet['name'], char_sheet['char_class'], char_sheet['strength'], char_sheet['dexterity'], 
                         char_sheet['willpower'], char_sheet['health'], char_sheet['mana'], char_sheet['gold'], char_sheet['inventory'], 

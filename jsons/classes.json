@@ -1,21 +1,112 @@
 [
     {
-        "class_name": "Knight",
+        "class_name": "Legionnaire",
         "strength": 6,
-        "dexterity": 2,
-        "willpower": 2,
+        "dexterity": 3,
+        "willpower": 1,
         "starter_armor": "Plate Armor",
         "starter_weapon": "Longsword",
-        "starter_gold": 50
+        "starter_gold": 50,
+        "description": "A trained warrior destined for death on the battlefield."
     },
 
     {
-        "class_name": "Paladin",
+        "class_name": "Templar",
         "strength": 6,
+        "dexterity": 1,
+        "willpower": 3,
+        "starter_armor": "Plate Armor",
+        "starter_weapon": "Mace",
+        "starter_gold": 50,
+        "description": "A righteous enforcer of divine laws."
+    },
+
+    {
+        "class_name": "Samurai",
+        "strength": 3,
+        "dexterity": 6,
+        "willpower": 1,
+        "starter_armor": "Karuta",
+        "starter_weapon": "Katana",
+        "starter_gold": 50,
+        "description": "An expert blademaster from a distant land."
+    },
+
+    {
+        "class_name": "Berserker",
+        "strength": 8,
+        "dexterity": 2,
+        "willpower": 0,
+        "starter_armor": "Loincloth",
+        "starter_weapon": "Battleaxe",
+        "starter_gold": 50,
+        "description": "A ruthless warrior who fights to destroy."
+    },
+
+    {
+        "class_name": "Theologist",
+        "strength": 3,
+        "dexterity": 1,
+        "willpower": 6,
+        "starter_armor": "Chain Mail",
+        "starter_weapon": "Mace",
+        "starter_gold": 50,
+        "description": "A devoted scholar of the divine."
+    },
+
+    {
+        "class_name": "Occultist",
+        "strength": 1,
+        "dexterity": 3,
+        "willpower": 6,
+        "starter_armor": "Cloth Robes",
+        "starter_weapon": "Dagger",
+        "starter_gold": 50,
+        "description": "A dreamer, obsessed with eldritch visions."
+    },
+
+    {
+        "class_name": "Arcanist",
+        "strength": 0,
+        "dexterity": 2,
+        "willpower": 8,
+        "starter_armor": "Cloth Robes",
+        "starter_weapon": "Runestaff",
+        "starter_gold": 50,
+        "description": "An academic enraptured by the metaphysical."
+    },
+
+    {
+        "class_name": "Naturalist",
+        "strength": 1,
+        "dexterity": 6,
+        "willpower": 3,
+        "starter_armor": "Enchanted Hide",
+        "starter_weapon": "Runestaff",
+        "starter_gold": 40,
+        "description": "A gardener, who cares for all life."
+    },
+
+    {
+        "class_name": "Fugitive",
+        "strength": 2,
+        "dexterity": 8,
+        "willpower": 0,
+        "starter_armor": "Leather Tunic",
+        "starter_weapon": "Curved Twinblades",
+        "starter_gold": 50,
+        "description": "An escaped convict, who has eyes only for riches."
+    },
+
+    {
+        "class_name": "Unfortunate",
+        "strength": 2,
         "dexterity": 2,
         "willpower": 2,
-        "starter_armor": "Plate Armor",
-        "starter_weapon": "Longsword",
-        "starter_gold": 50
+        "starter_armor": "Loincloth",
+        "starter_weapon": "Dagger",
+        "starter_gold": 50,
+        "description": "An abandonned soul, who never knew success."
     }
+
 ]

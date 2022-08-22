@@ -2,7 +2,7 @@
     "Dagger": {
         "item_id": 100,
         "weapon_name": "Dagger",
-        "ability": "dexterity",
+        "ability": "Dexterity",
         "damage": 2,
         "modifier": 0,
         "value": 5,
@@ -13,7 +13,7 @@
     "Curved Twinblades": {
         "item_id": 101,
         "weapon_name": "Curved Twinblades",
-        "ability": "dexterity",
+        "ability": "Dexterity",
         "damage": 4,
         "modifier": 0,
         "value": 10,
@@ -24,11 +24,56 @@
     "Longsword": {
         "item_id": 102,
         "weapon_name": "Longsword",
-        "ability": "strength",
+        "ability": "Strength",
         "damage": 4,
         "modifier": 0,
         "value": 10,
         "moveset": ["swing the blade", "thrust the longsword forward", "spin and accelerate your swing"],
         "rarity": "common"  
+    },
+
+    "Mace": {
+        "item_id": 103,
+        "weapon_name": "Mace",
+        "ability": "Strength",
+        "damage": 3,
+        "modifier": 0,
+        "value": 10,
+        "moveset": ["strike down", "pummel", "slam the mace down"],
+        "rarity": "common"  
+    },
+
+    "Runestaff": {
+        "item_id": 104,
+        "weapon_name": "Runestaff",
+        "ability": "Willpower",
+        "damage": 3,
+        "modifier": 0,
+        "value": 10,
+        "moveset": ["unleash a magical bolt", "channel forth arcane energy", "release magical arrows"],
+        "rarity": "common"  
+    },
+
+    "Battleaxe": {
+        "item_id": 105,
+        "weapon_name": "Battleaxe",
+        "ability": "Strength",
+        "damage": 6,
+        "modifier": 0,
+        "value": 15,
+        "moveset": ["swing down", "arch back and swing the axe overhead", "spin and accelerate your swing"],
+        "rarity": "common"  
+    },
+
+    "Katana": {
+        "item_id": 106,
+        "weapon_name": "Katana",
+        "ability": "Dexterity",
+        "damage": 5,
+        "modifier": 0,
+        "value": 15,
+        "moveset": ["unsheathe", "swing with precision", "step sideways and swing out"],
+        "rarity": "common"  
     }
+
 }

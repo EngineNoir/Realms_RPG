@@ -33,6 +33,11 @@ consumables = json.load(load_consumables)
 # test the new function to create dictionary based character
 # make_character(character_classes, armors, weapons)
 
+# test loading a character
+# player_character = load_character()
+# print(player_character.name)
+
+
 print('\n-----------------------------------')
 print('--------A----A-A-A-A-A----A--------')
 print('-------A-A----A-----A----A-A-------')
