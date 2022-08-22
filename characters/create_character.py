@@ -19,8 +19,8 @@ class Character:
         # --------------
         gold: int,
         inventory: list,
-        armor: str,
-        weapon: str,
+        armor: dict,
+        weapon: dict,
         amulet: str,
         ring: str,
         # --------------
@@ -70,9 +70,45 @@ class Character:
             self.inventory.append(item)
 
 
+def make_character(classes, armors, weapons):
+    # need to include try commands in case players input str instead of int or vice versa
+
+    # ask for character's name as a string input
+    char_name = str(input("\nWhat is your character's name?: "))
+    
+    # index over the class names in classes list and present the options
+    i = 1
+    for char_class in classes:
+        print (str(i) + ". " + char_class["class_name"])
+        i += 1
+    
+    # makes the player choose a class from the given options
+    class_choice = None
+    while class_choice not in range(0, len(classes)):
+        # we add the minus one because choice number 1 is indexed by 0
+        class_choice = int(input('Which class do you choose?: ')) - 1
+
+    chosen_class = classes[class_choice]
+    starting_health = 10 + chosen_class["strength"] + 0.5*chosen_class["dexterity"]
+    starting_mana = 5 + chosen_class["willpower"]
+
+    starting_weapon = weapons[chosen_class["starter_weapon"]]
+    print(starting_weapon)
+    starting_armor = armors[chosen_class["starter_armor"]]
+    print(starting_armor)
+
+    player_character = Character(char_name, chosen_class["class_name"], chosen_class["strength"], chosen_class["dexterity"],
+                        chosen_class["willpower"], starting_health, starting_mana, chosen_class["starter_gold"], [], starting_armor, 
+                        starting_weapon, None, None, [])
+    
+    save_character(player_character)
+    print(player_character)
+    
+
+
 def load_character():
     # ask for the character name
-    char_name = input("\nWhat is your character's name?: )
+    char_name = input("\nWhat is your character's name?: ")
     char_sheet = json.load(open(f'{char_name}.json'))
     # generate a Character class object with the values from the json file
     player_character = Character(char_sheet['name'], char_sheet['char_class'], char_sheet['strength'], char_sheet['dexterity'], 
@@ -89,28 +125,24 @@ def save_character(player_character):
                         'armor': player_character.armor, 'weapon': player_character.weapon, 'amulet': player_character.amulet,
                         'ring': player_character.ring, 'spellbook': player_character.spellbook}
 
+    print(char_dictionary)
     # save the dictionary as a json file
     char_sheet_save = json.dumps(char_dictionary, indent=1)
-    with open(f'{char_dictionary["name"]}' + '.json', 'w') as outfile:
+    # export character sheet to the characters directory
+    with open(f'characters/{char_dictionary["name"]}' + '.json', 'w') as outfile:
         outfile.write(char_sheet_save)
 
 
 if __name__ == "__main__":
-    # print(Character(
-    #     "Henk",
-    #     "Knight",
-    #     1,
-    #     2,
-    #     3,
-    #     4,
-    #     5,
-    #     6,
-    #     [],
-    #     "shit",
-    #     "shit",
-    #     "shit",
-    #     "shit",
-    #     []
-    #     ).char_class)
+    
+    load_classes = open('./jsons/classes.json')
+    load_armors = open('./jsons/armors.json')
+    load_weapons = open('./jsons/weapons.json')
+    
+    armors = json.load(load_weapons)
+    weapons = json.load(load_weapons)
+    character_classes = json.load(load_classes)
 
+    print(weapons)
+    print(character_classes)
 

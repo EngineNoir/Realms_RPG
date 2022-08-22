@@ -1,0 +1,25 @@
+{
+    "Plate Armor": {
+        "item_id": 200,
+        "armor_name": "Plate Armor",
+        "defence": 3,
+        "value": 50,
+        "rarity": "common"
+    },
+
+    "Cloth Robes": {
+        "item_id": 201,
+        "armor_name": "Cloth Robes",
+        "defence": 1,
+        "value": 10,
+        "rarity": "common"
+    },
+
+    "Leather Tunic": {
+        "item_id": 202,
+        "armor_name": "Leather Tunic",
+        "defence": 2,
+        "value": 20,
+        "rarity": "common"
+    }
+}

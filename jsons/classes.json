@@ -1,7 +1,20 @@
 [
     {
         "class_name": "Knight",
-        "starter_armor": "Plate",
+        "strength": 6,
+        "dexterity": 2,
+        "willpower": 2,
+        "starter_armor": "Plate Armor",
+        "starter_weapon": "Longsword",
+        "starter_gold": 50
+    },
+
+    {
+        "class_name": "Paladin",
+        "strength": 6,
+        "dexterity": 2,
+        "willpower": 2,
+        "starter_armor": "Plate Armor",
         "starter_weapon": "Longsword",
         "starter_gold": 50
     }

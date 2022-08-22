@@ -1,0 +1,34 @@
+{
+    "Dagger": {
+        "item_id": 100,
+        "weapon_name": "Dagger",
+        "ability": "dexterity",
+        "damage": 2,
+        "modifier": 0,
+        "value": 5,
+        "moveset": ["thrust your dagger forward", "jab at the opponent", "pull back and stab forward"],
+        "rarity": "common"
+    },
+
+    "Curved Twinblades": {
+        "item_id": 101,
+        "weapon_name": "Curved Twinblades",
+        "ability": "dexterity",
+        "damage": 4,
+        "modifier": 0,
+        "value": 10,
+        "moveset": ["swing the twinblades", "spin the blades around you", "flourish and spin your blades mid air"],
+        "rarity": "common"
+    },
+
+    "Longsword": {
+        "item_id": 102,
+        "weapon_name": "Longsword",
+        "ability": "strength",
+        "damage": 4,
+        "modifier": 0,
+        "value": 10,
+        "moveset": ["swing the blade", "thrust the longsword forward", "spin and accelerate your swing"],
+        "rarity": "common"  
+    }
+}
