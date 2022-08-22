@@ -1,5 +1,4 @@
 import json
-import time
 from functions.main_screen_functions import ask_to_load, request_action
 
 load_creatures = open('jsons/creatures.json')
