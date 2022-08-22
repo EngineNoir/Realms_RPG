@@ -1,0 +1,26 @@
+--- Done: ---
+make_character function
+Save/Load character function
+gain_xp function
+Level up (improve ability score, subtract XP from pool and update XP needed to level)
+created the main menu and request_action() functions
+converted locations to dictionaries
+made classes and starting gear
+
+
+--- To do soon: ---
+Add try checks for inputs in all functions where possible to input str or int
+Convert creatures and bosses to dictionaries
+determine damage function (how to calculate damage? what system?)
+determine health and mana gain from leveling (ability score related, or fixed value?)
+setup exploration functions with the new dictionaries and classes
+setup combat functions with the new dictionaries and classes
+setup consumable buy/use functions
+
+
+--- To do later: ---
+add rings
+add amulets
+add loot mechanics
+add equipment management mechanics (unequipped armor/weapons/etc in inventory possible to be sold at hub area?)
+add more to hub area (tavern to heal, shop for gear, shop for potions and consumables, maybe level at shrine/inn?)
