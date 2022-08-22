@@ -31,7 +31,7 @@ bosses = json.load(load_bosses)
 consumables = json.load(load_consumables)
 
 # test the new function to create dictionary based character
-# make_character(character_classes, armors, weapons)
+make_character(character_classes, armors, weapons)
 
 # test loading a character
 # player_character = load_character()
