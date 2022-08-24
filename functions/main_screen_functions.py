@@ -26,7 +26,7 @@ def request_action(player):
               'Visit the Tavern\n4. Buy Potions\n5. Save and Exit the Game')
         action = int(input('\nWhat would you like to do?: '))
         if player.health <= 0:
-            print('You awake in the tavern, somewhat recovered from your injuries.')
+            print('You awake in the tavern, barely alive. Rest here to regain the rest of your vigour.')
             player.health = 1
         elif action == 1:
             inspect_sheet(player)
@@ -36,6 +36,7 @@ def request_action(player):
             pass
         elif action == 3:
             # rest_at_tavern(player) needs to be made
+            player.weapon_attack()
             pass
         elif action == 4:
             # shopping_for_potions(char_sheet) needs to be made/updated

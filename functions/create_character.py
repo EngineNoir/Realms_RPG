@@ -62,6 +62,34 @@ class Character:
         self.xp_to_level = xp_to_level
 
 
+    def weapon_attack(self):
+        # get the right ability and compute total damage potential
+        attack_potential =  self.determine_weapon_ability() + self.weapon['damage']
+        successes = 0
+
+        # compute your damage output
+        for i in range(attack_potential):
+            roll = random.randint(1,6)
+            if roll >= 4:
+                successes += 1
+
+        # crit if outcome >= 4/5*potential
+        if successes >= (4/5)*attack_potential:
+            successes += self.weapon['damage']
+        
+        print('You ' + random.choice(self.weapon['moveset']) + ' dealing ' + str(successes) + ' damage.')
+        # need to include the target's defences to set up a "you miss" outcome
+        return successes
+
+    def determine_weapon_ability(self):
+        # function that accesses a Character value based on weapon ability value
+        if self.weapon['ability'] == 'strength':
+            return self.strength
+        elif self.weapon['ability'] == 'dexterity':
+            return self.dexterity
+        else:
+            return self.willpower
+
     def gain_xp(self, xp):
         self.current_xp += xp
         print("\nYou've gained " + str(xp) + " XP.")

@@ -1,9 +1,8 @@
 {
     "Dagger": {
         "weapon_name": "Dagger",
-        "ability": "Dexterity",
+        "ability": "dexterity",
         "damage": 2,
-        "modifier": 0,
         "value": 5,
         "moveset": ["thrust your dagger forward", "jab at the opponent", "pull back and stab forward"],
         "rarity": "common"
@@ -11,9 +10,8 @@
 
     "Curved Twinblades": {
         "weapon_name": "Curved Twinblades",
-        "ability": "Dexterity",
+        "ability": "dexterity",
         "damage": 4,
-        "modifier": 0,
         "value": 10,
         "moveset": ["swing the twinblades", "spin the blades around you", "flourish and spin your blades mid air"],
         "rarity": "common"
@@ -21,9 +19,8 @@
 
     "Longsword": {
         "weapon_name": "Longsword",
-        "ability": "Strength",
+        "ability": "strength",
         "damage": 4,
-        "modifier": 0,
         "value": 10,
         "moveset": ["swing the blade", "thrust the longsword forward", "spin and accelerate your swing"],
         "rarity": "common"  
@@ -31,9 +28,8 @@
 
     "Mace": {
         "weapon_name": "Mace",
-        "ability": "Strength",
+        "ability": "strength",
         "damage": 3,
-        "modifier": 0,
         "value": 10,
         "moveset": ["strike down", "pummel", "slam the mace down"],
         "rarity": "common"  
@@ -41,9 +37,8 @@
 
     "Runestaff": {
         "weapon_name": "Runestaff",
-        "ability": "Willpower",
+        "ability": "willpower",
         "damage": 3,
-        "modifier": 0,
         "value": 10,
         "moveset": ["unleash a magical bolt", "channel forth arcane energy", "release magical arrows"],
         "rarity": "common"  
@@ -51,9 +46,8 @@
 
     "Battleaxe": {
         "weapon_name": "Battleaxe",
-        "ability": "Strength",
+        "ability": "strength",
         "damage": 6,
-        "modifier": 0,
         "value": 15,
         "moveset": ["swing down", "arch back and swing the axe overhead", "spin and accelerate your swing"],
         "rarity": "common"  
@@ -61,9 +55,8 @@
 
     "Katana": {
         "weapon_name": "Katana",
-        "ability": "Dexterity",
+        "ability": "dexterity",
         "damage": 5,
-        "modifier": 0,
         "value": 15,
         "moveset": ["unsheathe", "swing with precision", "step sideways and swing out"],
         "rarity": "common"  
