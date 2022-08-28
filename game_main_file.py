@@ -1,7 +1,6 @@
 import json
 from functions.main_screen_functions import ask_to_load, request_action
 
-load_creatures = open('jsons/creatures.json')
 load_locations = open('jsons/locations.json')
 load_spells = open('jsons/spells.json')
 load_bosses = open('jsons/bosses.json')
@@ -13,7 +12,6 @@ load_weapons = open('jsons/weapons.json')
 armors = json.load(load_armors)
 weapons = json.load(load_weapons)
 character_classes = json.load(load_classes)
-creatures = json.load(load_creatures)
 locations = json.load(load_locations)
 spells = json.load(load_spells)
 bosses = json.load(load_bosses)

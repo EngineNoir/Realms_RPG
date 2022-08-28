@@ -76,8 +76,7 @@ class Character:
         # crit if outcome >= 4/5*potential
         if successes >= (4/5)*attack_potential:
             successes += self.weapon['damage']
-        
-        print('You ' + random.choice(self.weapon['moveset']) + ' dealing ' + str(successes) + ' damage.')
+    
         # need to include the target's defences to set up a "you miss" outcome
         return successes
 
@@ -90,10 +89,20 @@ class Character:
         else:
             return self.willpower
 
+    def deal_damage_to_enemy(self, target):
+        damage_dealt = max(self.weapon_attack() - target.armor, 0)
+        output_text = '\nYou ' + random.choice(self.weapon['moveset'])
+        if damage_dealt > 0:
+            output_text += ' dealing ' + str(damage_dealt) + ' damage to ' + target.name + '.'
+            target.health -= damage_dealt
+        else:
+            fails = ["your attack misses.", "you fail to deal damage.", "the enemy dodges out of the way."]
+            output_text += ' but ' + random.choice(fails)
+        print(output_text)
+
     def gain_xp(self, xp):
         self.current_xp += xp
         print("\nYou've gained " + str(xp) + " XP.")
-
 
     def increase_ability(self):
         player_choice = None
@@ -129,8 +138,6 @@ class Character:
                         '. Congratulations!')
             if answer_input == 2:
                 break
-
-
 
 
 def make_character(classes, armors, weapons):

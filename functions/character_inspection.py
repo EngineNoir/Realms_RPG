@@ -21,5 +21,6 @@ def inspect_sheet(player):
     print('Spells: ' + str(player.spellbook))
     print('-----------------')
     
+    # level option if there's enough XP
     if player.current_xp >= player.xp_to_level:
         player.level_up()

@@ -1,0 +1,42 @@
+{
+ "name": "Thradeus",
+ "char_class": "Templar",
+ "level": 1,
+ "strength": 6,
+ "dexterity": 1,
+ "willpower": 3,
+ "health": 14.5,
+ "mana": 8,
+ "gold": 75,
+ "inventory": [],
+ "armor": {
+  "armor_name": "Plate Armor",
+  "weight": "Heavy",
+  "defence": 3,
+  "value": 50,
+  "rarity": "common"
+ },
+ "weapon": {
+  "weapon_name": "Mace",
+  "ability": "strength",
+  "damage": 3,
+  "value": 10,
+  "moveset": [
+   "strike down",
+   "pummel",
+   "slam the mace down"
+  ],
+  "rarity": "common"
+ },
+ "amulet": null,
+ "ring": null,
+ "spellbook": [],
+ "stealth": false,
+ "max_health": 16.5,
+ "max_mana": 8,
+ "debuffs": {
+  "poison": false
+ },
+ "current_xp": 25,
+ "xp_to_level": 100
+}

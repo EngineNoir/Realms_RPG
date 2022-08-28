@@ -1,7 +1,8 @@
 import time
-
+from functions.combat_function import combat_time
 from functions.create_character import load_character, make_character, save_character
 from functions.character_inspection import inspect_sheet
+
 
 def ask_to_load(classes, armors, weapons):
     # establish None type variables to overwrite with player choice, and player character
@@ -36,7 +37,7 @@ def request_action(player):
             pass
         elif action == 3:
             # rest_at_tavern(player) needs to be made
-            player.weapon_attack()
+            combat_time(player, "Forest")
             pass
         elif action == 4:
             # shopping_for_potions(char_sheet) needs to be made/updated
