@@ -4,16 +4,7 @@ import json
 from functions.character_class_functions import Character
 from functions.creature_class_functions import Creature
 
-def combat_time(player: Character, location: str):
-
-    load_creatures = open('jsons/creatures.json')
-    creatures = json.load(load_creatures)
-
-    # generate an enemy based on area
-    picked_enemy = random.choice([creature for creature in creatures if creature['location'] == location])
-    enemy = Creature(picked_enemy['name'], picked_enemy['moveset'], picked_enemy['health'], picked_enemy['damage_min'], 
-                        picked_enemy['damage_max'], picked_enemy['armor'], picked_enemy['loot'], picked_enemy['location'],
-                        picked_enemy['gold'], picked_enemy['xp'], picked_enemy['awareness'], picked_enemy['speed'])
+def combat_time(player: Character, enemy: Creature):
 
     while enemy.health > 0 and player.health > 0:
 
@@ -68,33 +59,20 @@ def combat_time(player: Character, location: str):
 
     # decide if fight is over, and appropriately reward the player
 
+    combat_succesful = False
+
     if player.health <= 0:
         print('\nYou have been defeated and faint!')
     if enemy.health <= 0:
+        combat_succesful = True
         print('\nYou have defeated your foe and gained ' + str(enemy.xp) + ' XP.')
         if enemy.gold != 0:
             print('You loot ' + str(enemy.gold) + ' gold.')
             player.gold += enemy.gold
         player.current_xp += enemy.xp
-
-def fleeing_combat(char_sheet, creature):
-
-    flee_ability = max(char_sheet[1][0][1], char_sheet[1][1][1])
-    flee_value = 0
-
-    for i in range(1, flee_ability + 1):
-        roll = random.randint(1, 6)
-        if roll > 3:
-            flee_value += 1
-
-    if flee_value >= creature[6]:
-        flee_possible = True
-    elif char_sheet[10]:
-        flee_possible = True
-    else:
-        flee_possible = False
-
-    return flee_possible
+    
+    return combat_succesful
+        
 
 
 def player_combat_magic(char_sheet, creature, creature_health):

@@ -16,8 +16,9 @@ Add try checks for inputs in all functions where possible to input str or int
 Convert bosses to dictionaries
 determine health and mana gain from leveling (ability score related, or fixed value?)
 setup exploration functions with the new dictionaries and classes
-add potions and spells to combat
+add potions and spells to combat and exploration
 setup consumable buy/use functions
+
 
 
 --- To do later: ---

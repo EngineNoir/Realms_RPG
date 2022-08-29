@@ -1,167 +1,162 @@
 import random
 import time
+import json
+
+from functions.combat_function import combat_time
+from functions.character_inspection import inspect_sheet
+from functions.character_class_functions import Character
+from functions.creature_class_functions import Creature
+from functions.boss_class_functions import Boss
+
+load_locations = open('jsons/locations.json')
+locations = json.load(load_locations)
+
+load_creatures = open('jsons/creatures.json')
+creatures = json.load(load_creatures)
+
+load_bosses = open('jsons/bosses.json')
+bosses = json.load(load_bosses)
 
 
-
-def explore(char_sheet, locations, creatures, bosses):
+def explore(player: Character):
     print("\nYou may explore the following places:")
     for i in range(0, len(locations)):
-        print(str(i+1) + '. ' + locations[i][0])
+        print(str(i+1) + '. ' + locations[i]['location_name'])
     print(str(len(locations)+1) + '. Return')
+    
     player_choice = None
     while player_choice not in range(0, len(locations)+1):
-        player_choice = int(input("Where do you wish to go?: "))-1
+        while True:
+            try:
+                player_choice = int(input("Where do you wish to go?: ")) - 1
+            except ValueError:
+                print('Please input a valid choice.')
+            else:
+                break
         if player_choice in range(0, len(locations)):
-            location_exploration(char_sheet, locations[player_choice], creatures, bosses[player_choice])
+            location_exploration(player, locations[player_choice]['location_name'])
         if player_choice == len(locations):
             print('\nReturning to menu.')
             time.sleep(1)
             break
-    char_sheet[10] = False
+    
+    # end stealth
+    if player.stealth == True:
+        player.stealth = False
+        print('\nYou are no longer stealthed.')
 
+def location_exploration(player: Character, location_name):
+    location = [exp_location for exp_location in locations if exp_location['location_name'] == location_name][0]
 
-def location_exploration(char_sheet, location, creatures, boss):
-    print(location[6][0])
-
+    print(location['entry_description'])
     # dungeon length and movement
-    location_length = random.randint(location[2], location[3])
+    location_length = random.randint(location['min_rooms'], location['max_rooms'])
     exploration_counter = 0
 
-    while exploration_counter < location_length and char_sheet[4] > 0:
-        action = exploration_player_actions(char_sheet, location, creatures)
+    while exploration_counter < location_length and player.health > 0:
+        action = exploration_player_actions(player, location)
         if action == 1:
-            print(random.choice(location[4]))
+            print(random.choice(location['room_descriptions']))
             exploration_counter += 1
         elif action == 6:
             break
 
     if exploration_counter == location_length:
-        print(location[5][0])
-        if location[1] not in char_sheet[17]:
-            if combat_time(char_sheet, boss):
-                print(location[8][0])
-                char_sheet[17].append(location[1])
+        print(location['final_room_description'])
+
+        # make this neater
+        chosen_boss = [boss for boss in bosses if boss['location'] == location['location_name']]
+        picked_enemy = chosen_boss[0]
+        enemy = Boss(picked_enemy['name'], picked_enemy['moveset'], picked_enemy['health'], picked_enemy['health'],
+                        picked_enemy['damage_min'], picked_enemy['damage_max'], picked_enemy['damage_final'], picked_enemy['armor'], 
+                        picked_enemy['loot'], picked_enemy['location'], picked_enemy['gold'], picked_enemy['xp'], picked_enemy['awareness'], 
+                        picked_enemy['speed'], picked_enemy['taunts'])
+
+        if location['location_name'] not in player.cleared_dungeons:
+            print(enemy.taunts[0])
+            combat_result = combat_time(player, enemy)
+            if combat_result:
+                print(location['boss_death'])
+                player.cleared_dungeons.append(location['location_name'])
                 print('\nYou return to Hubberton City.')
         else:
-            print(location[8][1])
+            print(location['final_room_return'])
 
 
-def exploration_player_actions(char_sheet, location, creatures):
-    # populate dungeon
-    location_creatures = []
-    for creature in creatures:
-        if creature[5] == location[1]:
-            location_creatures.append(creature)
+def exploration_player_actions(player: Character, location):
 
     player_choice = None
 
-    if char_sheet[4] > 0:
+    if player.health > 0:
         print('\nYou may do the following:\n1. Continue Exploring.\n2. Stealth.\n3. Use Magic.\n4. Use a potion'
               '\n5. Inspect Character Sheet\n6. Leave the Location.')
 
-    while player_choice not in [1, 2, 3, 4, 5, 6] and char_sheet[4] > 0:
-        player_choice = int(input('What would you like to do?: '))
+    while player_choice not in range(1,6) and player.health > 0:
+        while True:
+            try:
+                player_choice = int(input('What would you like to do?: '))
+            except ValueError:
+                print('Please input a valid choice.')
+            else:
+                break
+
         if player_choice == 1:
             print('\nYou explore further in this location...')
 
+            # check if fight or encounter
             if_fight = random.randint(1, 100)
+
             if if_fight > 50:
-                spawn_creature = random.choice(location_creatures)
-                print("\nYou encounter " + spawn_creature[0] + "!")
-                if char_sheet[10] and max(char_sheet[1][1][1], char_sheet[1][2][1]) > spawn_creature[6]:
+
+                # generate an enemy based on area
+                picked_enemy = random.choice([creature for creature in creatures if creature['location'] == location['location_name']])
+                enemy = Creature(picked_enemy['name'], picked_enemy['moveset'], picked_enemy['health'], picked_enemy['damage_min'], 
+                        picked_enemy['damage_max'], picked_enemy['armor'], picked_enemy['loot'], picked_enemy['location'],
+                        picked_enemy['gold'], picked_enemy['xp'], picked_enemy['awareness'], picked_enemy['speed'])
+
+                print("\nYou encounter " + enemy.name + "!")
+
+                # maybe add additional condition if player is invisible... or remove invisibility
+                if player.stealth and player.dexterity > enemy.awareness:
                     print(
-                        '\nYou remain hidden, and may ambush ' + spawn_creature[0] + '.\n1. Ambush.\n2. Stealth past.')
+                        '\nYou remain hidden, and may ambush ' + enemy.name + '.\n1. Ambush.\n2. Stealth past.')
                     player_choice = None
                     while player_choice not in [1, 2]:
-                        player_choice = int(input("What do you do?: "))
+                        while True:
+                            try:
+                                player_choice = int(input("What do you do?: "))
+                            except ValueError:
+                                print('Please input a valid response.')
+                            else:
+                                break
+
                         if player_choice == 1:
                             print('\nYou ambush your foe!')
-                            combat_time(char_sheet, spawn_creature)
+                            combat_time(player, enemy)
                         if player_choice == 2:
-                            print('\nYou sneak past ' + spawn_creature[0] + '.')
-                elif char_sheet[10] and max(char_sheet[1][1][1], char_sheet[1][2][1]) <= spawn_creature[6]:
+                            print('\nYou sneak past ' + enemy.name + '.')
+                elif player.stealth and player.dexterity <= enemy.awareness:
                     print('You are spotted and ready yourself for a fight!')
-                    char_sheet[10] = False
-                    combat_time(char_sheet, spawn_creature)
-                elif not char_sheet[10]:
+                    player.stealth = False
+                    combat_time(player, enemy)
+                elif not player.stealth:
                     print('You prepare for a fight!')
-                    combat_time(char_sheet, spawn_creature)
+                    combat_time(player, enemy)
             else:
-                print(random.choice(location[7]))
+                print(random.choice(location['encounter_descriptions']))
 
         if player_choice == 2:
-            if char_sheet[10]:
-                print('\nYou remain hidden.')
-            elif not char_sheet[10] and (char_sheet[5] != 'Mage' or char_sheet[1][1][1] >= 4):
-                char_sheet[10] = True
-                print('\nYou are mindful to remain hidden and continue in stealth.')
-            elif not char_sheet[10] and char_sheet[5] == 'Mage':
-                print('\nYou struggle to be unseen, but know that you can achieve invisibility through magic.')
-                if char_sheet[12] >= char_sheet[11][0][3]:
-                    char_sheet[12] -= char_sheet[11][0][3]
-                    print('You become invisible, effectively entering stealth.')
-                    char_sheet[10] = True
-                elif char_sheet[12] < char_sheet[11][0][3]:
-                    print('It seems however that you lack the mana to do so.')
-            break
+            player.stealth_in_exploration()
         if player_choice == 3:
-            exploration_magic(char_sheet)
+            # add something for magic exploration_magic(char_sheet)
             break
         if player_choice == 4:
-            use_potions(char_sheet)
+            # add a use item thing use_potions(char_sheet)
             break
         if player_choice == 5:
-            inspect_sheet(char_sheet)
+            inspect_sheet(player)
         if player_choice == 6:
             print('\nYou choose to leave this location, perhaps to return another time.')
+        
+        return player_choice
 
-    return player_choice
-
-
-def exploration_magic(char_sheet):
-    magic_ability = char_sheet[1][2][1]
-
-    print("\nYou can cast the following spells:")
-    for i in range(0, len(char_sheet[11])):
-        print(str(i + 1) + '. ' + char_sheet[11][i][0])
-    print(str(len(char_sheet[11]) + 1) + '. Return')
-    spell_choice = None
-    while spell_choice not in range(0, len(char_sheet[11]) + 1):
-        spell_choice = int(input("Which spell would you like to cast?: ")) - 1
-        if spell_choice == len(char_sheet[11]):
-            break
-        if char_sheet[11][spell_choice][1] != 0:
-            print('\nYou cannot cast combat spells outside of combat.')
-            break
-        if spell_choice in range(0, len(char_sheet[11])):
-            if char_sheet[12] == 0:
-                print('\nYou fail to cast the spell, as you are out of mana.')
-
-            if char_sheet[12] > 0:
-
-                if spell_choice in range(0, len(char_sheet[11])):
-
-                    if str(char_sheet[11][spell_choice][4]) == 'inv':
-                        if not char_sheet[10]:
-                            char_sheet[10] = True
-                            print('\nYou become invisible, effectively entering stealth.')
-                        elif char_sheet[10]:
-                            print('\nYou are already invisible, and thus require no further expense to remain so.')
-                    if str(char_sheet[11][spell_choice][4]) == 'rec':
-                        char_sheet[4] += magic_ability
-                        print('\nYou magically heal for ' + str(magic_ability) + ' points.')
-                        if char_sheet[4] > char_sheet[9]:
-                            char_sheet[4] = char_sheet[9]
-                    if str(char_sheet[11][spell_choice][4]) == 'heal':
-                        char_sheet[4] += magic_ability
-                        print('\nYou pray and recover ' + str(magic_ability) + ' points of health.')
-                        if char_sheet[4] > char_sheet[9]:
-                            char_sheet[4] = char_sheet[9]
-
-            char_sheet[12] -= char_sheet[11][spell_choice][3]
-
-            if char_sheet[12] < 0:
-                char_sheet[4] += char_sheet[12]
-                print('\nYou lack sufficient mana to cast this spell and must use your blood instead.')
-                print('You take ' + str(abs(char_sheet[12])) + ' points of damage.')
-                char_sheet[12] = 0

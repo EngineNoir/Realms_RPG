@@ -1,6 +1,7 @@
 import random
 import json
 import time
+from turtle import clear
 
 class Character:
     def __init__(
@@ -31,6 +32,8 @@ class Character:
         # --------------
         current_xp: int,
         xp_to_level: int,
+        # --------------
+        cleared_dungeons: list
     ):
         
         self.name = name
@@ -60,6 +63,8 @@ class Character:
 
         self.current_xp = current_xp
         self.xp_to_level = xp_to_level
+
+        self.cleared_dungeons = cleared_dungeons
 
     def weapon_attack(self):
         # get the right ability and compute total damage potential
@@ -111,7 +116,7 @@ class Character:
             print("You succeed in hiding!")
             self.stealth = True
         elif self.stealth:
-            print('You remain hidden.')
+            print('\nYou remain hidden.')
         else:
             print("You fail to hide! Your opponent seizes the opportunity and strikes!")
             target.deal_damage_to_player(self)
@@ -135,10 +140,10 @@ class Character:
 
     def stealth_in_exploration(self):
         if self.stealth == False:
-            print('You move quietly, effectively entering stealth.')
+            print('\nYou move quietly, effectively entering stealth.')
             self.stealth = True
         else:
-            print('You remain stealthed.')
+            print('\nYou remain stealthed.')
 
     def gain_xp(self, xp):
         self.current_xp += xp
@@ -176,16 +181,16 @@ class Character:
                     else:
                         break 
         
-        if answer_input == 1:
-            self.increase_ability()
-            self.level += 1
-            self.current_xp -= self.xp_to_level
-            self.xp_to_level *= 2
-            print('\nYou have successfully leveled up and are now level ' + str(self.level) +
-                    '. Congratulations!')
+            if answer_input == 1:
+                self.increase_ability()
+                self.level += 1
+                self.current_xp -= self.xp_to_level
+                self.xp_to_level *= 2
+                print('\nYou have successfully leveled up and are now level ' + str(self.level) +
+                        '. Congratulations!')
             
-        if answer_input == 2:
-            return
+            if answer_input == 2:
+                return
 
 
 def make_character(classes, armors, weapons):
@@ -230,7 +235,7 @@ def make_character(classes, armors, weapons):
 
     player_character = Character(char_name, chosen_class["class_name"], 1, chosen_class["strength"], chosen_class["dexterity"],
                         chosen_class["willpower"], starting_health, starting_mana, chosen_class["starter_gold"], [], starting_armor, 
-                        starting_weapon, None, None, [], starting_health, starting_mana, 0, 100)
+                        starting_weapon, None, None, [], starting_health, starting_mana, 0, 100, [])
 
     # save character as json
     save_character(player_character)
@@ -256,7 +261,7 @@ def load_character():
                         char_sheet['dexterity'], char_sheet['willpower'], char_sheet['health'], char_sheet['mana'], char_sheet['gold'], 
                         char_sheet['inventory'], char_sheet['armor'], char_sheet['weapon'], char_sheet['amulet'], char_sheet['ring'], 
                         char_sheet['spellbook'], char_sheet['max_health'], char_sheet['max_mana'], char_sheet['current_xp'],
-                        char_sheet['xp_to_level'])
+                        char_sheet['xp_to_level'], char_sheet['cleared_dungeons'])
 
     return player_character
 
@@ -270,7 +275,8 @@ def save_character(player_character):
                         'armor': player_character.armor, 'weapon': player_character.weapon, 'amulet': player_character.amulet,
                         'ring': player_character.ring, 'spellbook': player_character.spellbook, 'stealth': False, 
                         'max_health': player_character.max_health, 'max_mana': player_character.max_mana, 'debuffs': {'poison': False},
-                        'current_xp': player_character.current_xp, 'xp_to_level': player_character.xp_to_level}
+                        'current_xp': player_character.current_xp, 'xp_to_level': player_character.xp_to_level, 
+                        'cleared_dungeons': player_character.cleared_dungeons}
 
     # save the dictionary as a json file
     char_sheet_save = json.dumps(char_dictionary, indent=1)

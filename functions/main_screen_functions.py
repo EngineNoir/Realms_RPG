@@ -1,5 +1,6 @@
 import time
 from functions.combat_function import combat_time
+from functions.exploration_functions import explore
 from functions.character_class_functions import load_character, make_character, save_character
 from functions.character_inspection import inspect_sheet
 
@@ -46,12 +47,10 @@ def request_action(player):
         if action == 1:
             inspect_sheet(player)
         elif action == 2:
-            # explore(char_sheet, locations, creatures, bosses)
-            player.gain_xp(50)
+            explore(player)
             pass
         elif action == 3:
             # rest_at_tavern(player) needs to be made
-            combat_time(player, "Forest")
             pass
         elif action == 4:
             # shopping_for_potions(char_sheet) needs to be made/updated
