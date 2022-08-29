@@ -9,7 +9,9 @@
   "loot": [],
   "location": "Forest",
   "gold": 5,
-  "xp": 5
+  "xp": 5,
+  "awareness": 2,
+  "speed": 2
   }, 
   
   {"name": "Bear",
@@ -21,7 +23,9 @@
   "loot": [],
   "location": "Forest",
   "gold": 5,
-  "xp": 5
+  "xp": 5,
+  "awareness": 2,
+  "speed": 2
   },
   
   {"name": "Spider",
@@ -33,7 +37,9 @@
   "loot": [],
   "location": "Forest",
   "gold": 5,
-  "xp": 5
+  "xp": 5,
+  "awareness": 2,
+  "speed": 2
   },
 
   {"name": "Skeleton",
@@ -45,7 +51,9 @@
   "loot": [],
   "location": "Forest",
   "gold": 5,
-  "xp": 5
+  "xp": 5,
+  "awareness": 2,
+  "speed": 2
   },
   
   {"name": "Ghost",
@@ -57,7 +65,9 @@
   "loot": [],
   "location": "Forest",
   "gold": 5,
-  "xp": 5
+  "xp": 5,
+  "awareness": 2,
+  "speed": 2
   },
   
   {"name": "Ghoul",
@@ -69,7 +79,9 @@
   "loot": [],
   "location": "Forest",
   "gold": 5,
-  "xp": 5
+  "xp": 5,
+  "awareness": 2,
+  "speed": 2
   },
   
   {"name": "Flesh Golem",
@@ -81,7 +93,9 @@
   "loot": [],
   "location": "Forest",
   "gold": 5,
-  "xp": 5
+  "xp": 5,
+  "awareness": 2,
+  "speed": 2
   },
 
   {"name": "Slime",
@@ -93,7 +107,9 @@
   "loot": [],
   "location": "Forest",
   "gold": 5,
-  "xp": 5
+  "xp": 5,
+  "awareness": 2,
+  "speed": 2
   },
   
   {"name": "Crocodile",
@@ -105,7 +121,9 @@
   "loot": [],
   "location": "Forest",
   "gold": 5,
-  "xp": 5
+  "xp": 5,
+  "awareness": 2,
+  "speed": 2
   },
   
   {"name": "Tree Blight",
@@ -117,7 +135,9 @@
   "loot": [],
   "location": "Forest",
   "gold": 5,
-  "xp": 5
+  "xp": 5,
+  "awareness": 2,
+  "speed": 2
   },
   
   {"name": "Raptor",
@@ -129,7 +149,9 @@
   "loot": [],
   "location": "Forest",
   "gold": 5,
-  "xp": 5
+  "xp": 5,
+  "awareness": 2,
+  "speed": 2
   },
 
   {"name": "Snakeblood Addict",
@@ -141,7 +163,9 @@
   "loot": [],
   "location": "Forest",
   "gold": 5,
-  "xp": 5
+  "xp": 5,
+  "awareness": 2,
+  "speed": 2
   },
   
   {"name": "Naga",
@@ -153,7 +177,9 @@
   "loot": [],
   "location": "Forest",
   "gold": 5,
-  "xp": 5
+  "xp": 5,
+  "awareness": 2,
+  "speed": 2
   },
   
   {"name": "Serpentfolk",
@@ -165,7 +191,9 @@
   "loot": [],
   "location": "Forest",
   "gold": 5,
-  "xp": 5
+  "xp": 5,
+  "awareness": 2,
+  "speed": 2
   },
   
   {"name": "Priest of the Serpent",
@@ -177,7 +205,9 @@
   "loot": [],
   "location": "Forest",
   "gold": 5,
-  "xp": 5
+  "xp": 5,
+  "awareness": 2,
+  "speed": 2
   },
 
   {"name": "Mindblasted Witness",
@@ -189,7 +219,9 @@
   "loot": [],
   "location": "Forest",
   "gold": 5,
-  "xp": 5
+  "xp": 5,
+  "awareness": 2,
+  "speed": 2
   },
   
   {"name": "Floating Eye",
@@ -201,7 +233,9 @@
   "loot": [],
   "location": "Forest",
   "gold": 5,
-  "xp": 5
+  "xp": 5,
+  "awareness": 2,
+  "speed": 2
   },
   
   {"name": "Parasitic Ooze",
@@ -213,7 +247,9 @@
   "loot": [],
   "location": "Forest",
   "gold": 5,
-  "xp": 5
+  "xp": 5,
+  "awareness": 2,
+  "speed": 2
   },
   
   {"name": "Crystalline Shambler",
@@ -225,7 +261,9 @@
   "loot": [],
   "location": "Forest",
   "gold": 5,
-  "xp": 5
+  "xp": 5,
+  "awareness": 2,
+  "speed": 2
   },
 
   {"name": "Sand Mummy",
@@ -237,7 +275,9 @@
   "loot": [],
   "location": "Forest",
   "gold": 5,
-  "xp": 5
+  "xp": 5,
+  "awareness": 2,
+  "speed": 2
   },
   
   {"name": "Giant Scorpion",
@@ -249,7 +289,9 @@
   "loot": [],
   "location": "Forest",
   "gold": 5,
-  "xp": 5
+  "xp": 5,
+  "awareness": 2,
+  "speed": 2
   },
   
   {"name": "Djinn",
@@ -261,7 +303,9 @@
   "loot": [],
   "location": "Forest",
   "gold": 5,
-  "xp": 5
+  "xp": 5,
+  "awareness": 2,
+  "speed": 2
   },
   
   {"name": "Sandworm",
@@ -273,7 +317,9 @@
   "loot": [],
   "location": "Forest",
   "gold": 5,
-  "xp": 5
+  "xp": 5,
+  "awareness": 2,
+  "speed": 2
   },
 
   {"name": "Technocrat Neanderthal",
@@ -285,7 +331,9 @@
   "loot": [],
   "location": "Forest",
   "gold": 5,
-  "xp": 5
+  "xp": 5,
+  "awareness": 2,
+  "speed": 2
   },
   
   {"name": "Cyber Allosaurus",
@@ -297,7 +345,9 @@
   "loot": [],
   "location": "Forest",
   "gold": 5,
-  "xp": 5
+  "xp": 5,
+  "awareness": 2,
+  "speed": 2
   },
   
   {"name": "Mecha-Crusader",
@@ -309,7 +359,9 @@
   "loot": [],
   "location": "Forest",
   "gold": 5,
-  "xp": 5
+  "xp": 5,
+  "awareness": 2,
+  "speed": 2
   },
   
   {"name": "Plasmablade Samurai",
@@ -321,7 +373,9 @@
   "loot": [],
   "location": "Forest",
   "gold": 5,
-  "xp": 5
+  "xp": 5,
+  "awareness": 2,
+  "speed": 2
   },
 
   {"name": "Death Knight",
@@ -333,7 +387,9 @@
   "loot": [],
   "location": "Forest",
   "gold": 5,
-  "xp": 5
+  "xp": 5,
+  "awareness": 2,
+  "speed": 2
   },
   
   {"name": "Necroflame Demon",
@@ -345,7 +401,9 @@
   "loot": [],
   "location": "Forest",
   "gold": 5,
-  "xp": 5
+  "xp": 5,
+  "awareness": 2,
+  "speed": 2
   },
   
   {"name": "Undead Valkyrie",
@@ -357,7 +415,9 @@
   "loot": [],
   "location": "Forest",
   "gold": 5,
-  "xp": 5
+  "xp": 5,
+  "awareness": 2,
+  "speed": 2
   },
   
   {"name": "Fiendblood Alchemist",
@@ -369,7 +429,9 @@
   "loot": [],
   "location": "Forest",
   "gold": 5,
-  "xp": 5
+  "xp": 5,
+  "awareness": 2,
+  "speed": 2
   },
 
   {"name": "Mass of Tentacles",
@@ -381,7 +443,9 @@
   "loot": [],
   "location": "Forest",
   "gold": 5,
-  "xp": 5
+  "xp": 5,
+  "awareness": 2,
+  "speed": 2
   },
   
   {"name": "Faceless Cultist",
@@ -393,7 +457,9 @@
   "loot": [],
   "location": "Forest",
   "gold": 5,
-  "xp": 5
+  "xp": 5,
+  "awareness": 2,
+  "speed": 2
   },
   
   {"name": "Grafted Crustacean",
@@ -405,7 +471,9 @@
   "loot": [],
   "location": "Forest",
   "gold": 5,
-  "xp": 5
+  "xp": 5,
+  "awareness": 2,
+  "speed": 2
   },
 
   {"name": "Screaming Mass of Flesh",
@@ -417,7 +485,9 @@
   "loot": [],
   "location": "Forest",
   "gold": 5,
-  "xp": 5
+  "xp": 5,
+  "awareness": 2,
+  "speed": 2
   }
 
 ]

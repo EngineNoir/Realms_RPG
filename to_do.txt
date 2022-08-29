@@ -6,15 +6,17 @@ Level up (improve ability score, subtract XP from pool and update XP needed to l
 created the main menu and request_action() functions
 converted locations to dictionaries
 made classes and starting gear
+setup combat functions with the new dictionaries and classes
+converted creatures to dictionaries
+determine damage function (how to calculate damage? what system?)
+Add try checks for inputs in all functions where possible to input str or int
 
 
 --- To do soon: ---
-Add try checks for inputs in all functions where possible to input str or int
-Convert creatures and bosses to dictionaries
-determine damage function (how to calculate damage? what system?)
+Convert bosses to dictionaries
 determine health and mana gain from leveling (ability score related, or fixed value?)
 setup exploration functions with the new dictionaries and classes
-setup combat functions with the new dictionaries and classes
+add potions and spells to combat
 setup consumable buy/use functions
 
 

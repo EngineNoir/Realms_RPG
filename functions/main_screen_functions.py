@@ -1,6 +1,6 @@
 import time
 from functions.combat_function import combat_time
-from functions.create_character import load_character, make_character, save_character
+from functions.character_class_functions import load_character, make_character, save_character
 from functions.character_inspection import inspect_sheet
 
 
@@ -11,7 +11,13 @@ def ask_to_load(classes, armors, weapons):
 
     print("1. New Character\n2. Load Character\n")
     while answer not in [1, 2]:
-        answer = int(input('Select one of the above: '))
+        while True:
+            try:
+                answer = int(input('\nSelect one of the above: '))
+            except ValueError:
+                print('\nPlease make a valid choice.')
+            else:
+                break
     if answer == 2:
         player_character = load_character()
     else:
@@ -23,13 +29,21 @@ def ask_to_load(classes, armors, weapons):
 
 def request_action(player):
     while True:
-        print('\nAvailable actions:\n1. Inspect Character Sheet\n2. Explore\n3. '
-              'Visit the Tavern\n4. Buy Potions\n5. Save and Exit the Game')
-        action = int(input('\nWhat would you like to do?: '))
         if player.health <= 0:
             print('You awake in the tavern, barely alive. Rest here to regain the rest of your vigour.')
             player.health = 1
-        elif action == 1:
+
+        print('\nAvailable actions:\n1. Inspect Character Sheet\n2. Explore\n3. '
+              'Visit the Tavern\n4. Buy Potions\n5. Save and Exit the Game')
+        while True:
+            try:
+                action = int(input('\nWhat would you like to do?: '))
+            except ValueError:
+                print('\nPlease input a valid choice.')
+            else:
+                break
+
+        if action == 1:
             inspect_sheet(player)
         elif action == 2:
             # explore(char_sheet, locations, creatures, bosses)

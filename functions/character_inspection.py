@@ -22,5 +22,5 @@ def inspect_sheet(player):
     print('-----------------')
     
     # level option if there's enough XP
-    if player.current_xp >= player.xp_to_level:
-        player.level_up()
+    
+    player.level_up()

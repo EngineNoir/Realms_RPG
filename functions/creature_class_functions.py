@@ -1,6 +1,6 @@
 import random
 
-from functions.create_character import Character
+from functions.character_class_functions import Character
 
 class Creature:
     def __init__(
@@ -15,7 +15,9 @@ class Creature:
         loot: list,
         location: str,
         gold: int,
-        xp: int
+        xp: int,
+        awareness: int,
+        speed: int
         ):
         
         self.name = name
@@ -27,7 +29,9 @@ class Creature:
         self.loot = loot
         self.location = location
         self.gold = gold
-        self.xp = xp       
+        self.xp = xp
+        self.awareness = awareness   
+        self.speed = speed   
 
     def compute_damage(self):
         return random.randint(self.damage_min, self.damage_max) 
@@ -44,4 +48,9 @@ class Creature:
         else:
             output_text += random.choice(misses)
         print(output_text)
+
+    def spot_player(self, target: Character):
+        if self.awareness >= target.dexterity:
+            print('You are spotted!')
+            target.stealth = False
 

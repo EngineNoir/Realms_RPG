@@ -1,6 +1,6 @@
 import random
 import json
-
+import time
 
 class Character:
     def __init__(
@@ -21,8 +21,8 @@ class Character:
         inventory: list,
         armor: dict,
         weapon: dict,
-        amulet: str,
-        ring: str,
+        amulet,
+        ring,
         # --------------
         spellbook: list,
         # --------------
@@ -60,7 +60,6 @@ class Character:
 
         self.current_xp = current_xp
         self.xp_to_level = xp_to_level
-
 
     def weapon_attack(self):
         # get the right ability and compute total damage potential
@@ -100,6 +99,47 @@ class Character:
             output_text += ' but ' + random.choice(fails)
         print(output_text)
 
+    def attempt_stealth_in_combat(self, target):
+        print("\nYou attempt to stealth and ...")
+        time.sleep(1)
+        successes = 0
+        for i in range(1, self.dexterity):
+            roll = random.randint(1, 6)
+            if roll >= 4:
+                successes += 1
+        if successes >= target.awareness and not self.stealth:
+            print("You succeed in hiding!")
+            self.stealth = True
+        elif self.stealth:
+            print('You remain hidden.')
+        else:
+            print("You fail to hide! Your opponent seizes the opportunity and strikes!")
+            target.deal_damage_to_player(self)
+
+    def fleeing_combat(self, target):
+        print("\nYou attempt to flee and ...")
+        time.sleep(1)
+        is_flee_succesful = False
+        flight_skill = max(self.strength, self.dexterity)
+        if flight_skill > target.speed:
+            print("You succesfully escape from your opponent!")
+            is_flee_succesful = True
+        elif self.stealth:
+            print("You sneak away succesfully!")
+            is_flee_succesful = True
+        else:
+            print("You fail to sneak away, and your opponent strikes at you!")
+            target.deal_damage_to_player(self)
+            is_flee_succesful = False
+        return is_flee_succesful
+
+    def stealth_in_exploration(self):
+        if self.stealth == False:
+            print('You move quietly, effectively entering stealth.')
+            self.stealth = True
+        else:
+            print('You remain stealthed.')
+
     def gain_xp(self, xp):
         self.current_xp += xp
         print("\nYou've gained " + str(xp) + " XP.")
@@ -123,30 +163,45 @@ class Character:
         
         print("You have increased your " + ability_chosen + " by 1.")
 
-
     def level_up(self):
-        print('\nYou have ' + str(self.current_xp) + ' XP. Do you wish to spend ' + str(self.xp_to_level) + ' XP to level up?')
-        answer_input = None
-        while answer_input not in [1, 2]:
-            answer_input = int(input('1. Yes\n2. No\nSpend XP and level up?: '))
-            if answer_input == 1:
-                self.increase_ability()
-                self.level += 1
-                self.current_xp -= self.xp_to_level
-                self.xp_to_level *= 2
-                print('\nYou have successfully leveled up and are now level ' + str(self.level) +
-                        '. Congratulations!')
-            if answer_input == 2:
-                break
+        if self.current_xp >= self.xp_to_level:
+            print('\nYou have ' + str(self.current_xp) + ' XP. Do you wish to spend ' + str(self.xp_to_level) + ' XP to level up?')
+            answer_input = None
+            while answer_input not in [1, 2]:
+                while True:
+                    try:
+                        answer_input = int(input('1. Yes\n2. No\nSpend XP and level up?: '))
+                    except ValueError:
+                        print('\nPlease input a valid response.')
+                    else:
+                        break 
+        
+        if answer_input == 1:
+            self.increase_ability()
+            self.level += 1
+            self.current_xp -= self.xp_to_level
+            self.xp_to_level *= 2
+            print('\nYou have successfully leveled up and are now level ' + str(self.level) +
+                    '. Congratulations!')
+            
+        if answer_input == 2:
+            return
 
 
 def make_character(classes, armors, weapons):
-    # need to include try commands in case players input str instead of int or vice versa
-
     # ask for character's name as a string input
-    char_name = str(input("\nWhat is your character's name?: "))
-    
+    char_name = None
+    while True:
+        try:
+            char_name = str(input("\nWhat is your character's name?: "))
+        except ValueError:
+            print("\nPlease input a valid name.")
+            continue
+        else:
+            break
+
     # index over the class names in classes list and present the options
+    print('\nPick one of the following classes.')
     i = 1
     for char_class in classes:
         print(str(i) + ". " + char_class["class_name"] + ' - ' + char_class["description"])
@@ -156,7 +211,13 @@ def make_character(classes, armors, weapons):
     class_choice = None
     while class_choice not in range(0, len(classes)):
         # we add the minus one because choice number 1 is indexed by 0
-        class_choice = int(input('\nWhich class do you choose?: ')) - 1
+        while True:
+            try:
+                class_choice = int(input('\nWhich class do you choose?: ')) - 1
+            except ValueError:
+                print('\nPlease select a valid input.')
+            else:
+                break
 
     chosen_class = classes[class_choice]
     #compute starting health and mana
@@ -178,9 +239,18 @@ def make_character(classes, armors, weapons):
 
 def load_character():
     # ask for the character name
-    char_name = input("\nWhat is your character's name?: ")
-    char_sheet = json.load(open(f'characters/{char_name}.json'))
-    
+    while True:
+        try:
+            char_name = input("\nWhat is your character's name?: ")
+        except ValueError:
+            print('\nPlease input a valid character name.')
+        try:
+            char_sheet = json.load(open(f'characters/{char_name}.json'))
+        except FileNotFoundError:
+            print('\nPlease input an existing character name.')
+        else:
+            break
+
     # generate a Character class object with the values from the json file
     player_character = Character(char_sheet['name'], char_sheet['char_class'], char_sheet["level"], char_sheet['strength'], 
                         char_sheet['dexterity'], char_sheet['willpower'], char_sheet['health'], char_sheet['mana'], char_sheet['gold'], 

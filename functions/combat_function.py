@@ -1,7 +1,7 @@
 import random
 import time
 import json
-from functions.create_character import Character
+from functions.character_class_functions import Character
 from functions.creature_class_functions import Creature
 
 def combat_time(player: Character, location: str):
@@ -13,26 +13,40 @@ def combat_time(player: Character, location: str):
     picked_enemy = random.choice([creature for creature in creatures if creature['location'] == location])
     enemy = Creature(picked_enemy['name'], picked_enemy['moveset'], picked_enemy['health'], picked_enemy['damage_min'], 
                         picked_enemy['damage_max'], picked_enemy['armor'], picked_enemy['loot'], picked_enemy['location'],
-                        picked_enemy['gold'], picked_enemy['xp'])
+                        picked_enemy['gold'], picked_enemy['xp'], picked_enemy['awareness'], picked_enemy['speed'])
 
     while enemy.health > 0 and player.health > 0:
 
+        # print some useful statistics
         print('\n' + enemy.name + "'s health: " + str(enemy.health))
         print('Your health: ' + str(player.health))
         print('Your mana: ' + str(player.mana))
         print("1. Attack with a Weapon\n2. Cast a Spell\n3. Use a Potion\n4. Attempt to Hide\n5. Attempt to Flee")
-        action_choice = int(input("What do you choose to do?: "))
+        while True:
+            try:
+                action_choice = int(input("\nWhat do you choose to do?: "))
+            except ValueError:
+                print('\nPlease input a valid action.')
+            else:
+                break
+
+        # check if enemy spots the player
+        enemy.spot_player(player)
 
         if action_choice == 1:
 
+            # player strikes at the opponent
             player.deal_damage_to_enemy(enemy)
 
+            # if the player is stealthed they get a free attack
+            if enemy.health > 0 and not player.stealth:
+                enemy.deal_damage_to_player(player)
+
+            # the player is revealed from stealth after their attack
             if player.stealth:
                 print('You are spotted again, and are no longer hidden or invisible.')
                 player.stealth = False
-
-            if enemy.health > 0:
-                enemy.deal_damage_to_player(player)     
+     
 
         if action_choice == 2:
             # make code for spellcasting
@@ -45,14 +59,12 @@ def combat_time(player: Character, location: str):
             return
 
         if action_choice == 4:
-            # write a sneaking function 
-            # enemy awareness vs player dexterity
-            return
+            player.attempt_stealth_in_combat(enemy)
 
         if action_choice == 5:
-            print('\nYou attempt to flee and...')
-            time.sleep(1)
-            # Function for stealthing
+            flight = player.fleeing_combat(enemy)
+            if flight:
+                break
 
     # decide if fight is over, and appropriately reward the player
 
@@ -64,29 +76,6 @@ def combat_time(player: Character, location: str):
             print('You loot ' + str(enemy.gold) + ' gold.')
             player.gold += enemy.gold
         player.current_xp += enemy.xp
-
-
-def sneaking_function(char_sheet, creature):
-
-    sneak_line = '\nYou attempt to sneak and ...'
-    time.sleep(1)
-    successful_sneaks = 0
-
-    for i in range(1, char_sheet[1][1][1] + 1):
-        dice_roll = random.randint(1, 6)
-        if dice_roll > 3:
-            successful_sneaks += 1
-
-    if not char_sheet[10]:
-        if successful_sneaks > creature[6]:
-            sneak_line += 'You succeed!'
-            char_sheet[10] = True
-        else:
-            sneak_line += 'You fail!'
-        print(sneak_line)
-    else:
-        print('\nYou remain hidden.')
-
 
 def fleeing_combat(char_sheet, creature):
 
