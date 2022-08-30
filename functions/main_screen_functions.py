@@ -5,21 +5,40 @@ from functions.character_class_functions import load_character, make_character, 
 from functions.character_inspection import inspect_sheet
 
 
+# def ask_to_load(classes, armors, weapons):
+#     # establish None type variables to overwrite with player choice, and player character
+#     player_character = None
+#     answer = None
+
+#     print("1. New Character\n2. Load Character\n")
+#     while answer not in [1, 2]:
+#         while True:
+#             try:
+#                 answer = int(input('\nSelect one of the above: '))
+#             except ValueError:
+#                 print('\nPlease make a valid choice.')
+#             else:
+#                 break
+#     if answer == 2:
+#         player_character = load_character()
+#     else:
+#         print("\nAlright, time to make a new character!")
+#         player_character = make_character(classes, armors, weapons)
+#     
+#     return player_character
+
+
 def ask_to_load(classes, armors, weapons):
     # establish None type variables to overwrite with player choice, and player character
     player_character = None
     answer = None
+    choices = ["1", "2"]
 
     print("1. New Character\n2. Load Character\n")
-    while answer not in [1, 2]:
-        while True:
-            try:
-                answer = int(input('\nSelect one of the above: '))
-            except ValueError:
-                print('\nPlease make a valid choice.')
-            else:
-                break
-    if answer == 2:
+    while answer not in choices:
+        answer = input('\nSelect one of the above: ')
+        if answer not in choices: print('\nPlease make a valid choice.')
+    if answer == "2":
         player_character = load_character()
     else:
         print("\nAlright, time to make a new character!")
