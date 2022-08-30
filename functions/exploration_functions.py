@@ -65,8 +65,7 @@ def location_exploration(player: Character, location_name):
         print(location['final_room_description'])
 
         # make this neater
-        chosen_boss = [boss for boss in bosses if boss['location'] == location['location_name']]
-        picked_enemy = chosen_boss[0]
+        picked_enemy = [boss for boss in bosses if boss['location'] == location['location_name']][0]
         enemy = Boss(picked_enemy['name'], picked_enemy['moveset'], picked_enemy['health'], picked_enemy['health'],
                         picked_enemy['damage_min'], picked_enemy['damage_max'], picked_enemy['damage_final'], picked_enemy['armor'], 
                         picked_enemy['loot'], picked_enemy['location'], picked_enemy['gold'], picked_enemy['xp'], picked_enemy['awareness'], 
@@ -91,7 +90,7 @@ def exploration_player_actions(player: Character, location):
         print('\nYou may do the following:\n1. Continue Exploring.\n2. Stealth.\n3. Use Magic.\n4. Use a potion'
               '\n5. Inspect Character Sheet\n6. Leave the Location.')
 
-    while player_choice not in range(1,6) and player.health > 0:
+    while player_choice not in [1, 2, 3, 4, 5, 6] and player.health > 0:
         while True:
             try:
                 player_choice = int(input('What would you like to do?: '))

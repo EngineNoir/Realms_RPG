@@ -47,13 +47,13 @@ class Boss:
         if self.health < 0.75*self.health_max and not spoken_once:
             print(self.taunts[1])
             spoken_once = True
-        if spoken_once and not spoken_twice and self.health < 0.33*self.health_max:
+        if spoken_once and not spoken_twice and self.health < 0.5*self.health_max:
             print(self.taunts[2])
             spoken_twice = True
 
 
     def compute_damage(self):
-        if self.health > 0.33*self.health_max:
+        if self.health > 0.5*self.health_max:
             damage = self.damage_max
         else:
             damage = self.damage_final

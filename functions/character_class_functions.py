@@ -153,9 +153,15 @@ class Character:
         player_choice = None
         ability_chosen = None
         
-        while player_choice not in [1, 2, 3]:
-            player_choice = int(input('\nChoose which of the three abilities you wish to increase by 1.'
+        while player_choice not in [1, 2, 3, 4]:
+            while True:
+                try:
+                    player_choice = int(input('\nChoose which of the three abilities you wish to increase by 1.'
                                         '\n1. Strength\n2. Dexterity\n3. Willpower\nAttribute to improve: '))
+                except ValueError:
+                    print('Please select an ability to increase.')
+                else:
+                    break
         if player_choice == 1:
             self.strength += 1
             ability_chosen = "Strength"
@@ -165,7 +171,7 @@ class Character:
         elif player_choice == 3:
             self.willpower += 1
             ability_chosen = "Willpower"
-        
+
         print("You have increased your " + ability_chosen + " by 1.")
 
     def level_up(self):

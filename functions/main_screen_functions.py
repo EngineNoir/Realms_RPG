@@ -1,3 +1,4 @@
+from multiprocessing.sharedctypes import Value
 import time
 from functions.combat_function import combat_time
 from functions.exploration_functions import explore
@@ -36,8 +37,13 @@ def ask_to_load(classes, armors, weapons):
 
     print("1. New Character\n2. Load Character\n")
     while answer not in choices:
-        answer = input('\nSelect one of the above: ')
-        if answer not in choices: print('\nPlease make a valid choice.')
+        while True:
+            try:
+                answer = input('\nSelect one of the above: ')
+            except ValueError:
+                print('Please input a valid choice.')
+            else:
+                break
     if answer == "2":
         player_character = load_character()
     else:
