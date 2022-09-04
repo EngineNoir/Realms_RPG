@@ -1,6 +1,7 @@
 import random
 import json
 import time
+import os
 from turtle import clear
 
 class Character:
@@ -287,6 +288,8 @@ def save_character(player_character):
     # save the dictionary as a json file
     char_sheet_save = json.dumps(char_dictionary, indent=1)
     # export character sheet to the characters directory
+    # for this to work you have to be in the projects top level directory
+    if not os.path.isdir('characters'): os.mkdir('characters')
     with open(f'characters/{char_dictionary["name"]}' + '.json', 'w') as outfile:
         outfile.write(char_sheet_save)
 
