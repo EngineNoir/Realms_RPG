@@ -2,7 +2,6 @@ import random
 import json
 import time
 import os
-from turtle import clear
 
 class Character:
     def __init__(
