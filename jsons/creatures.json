@@ -1,493 +1,637 @@
 [
-
-  {"name": "Rat",
-  "moveset": ["bites at you", "jumps at you"],
-  "health": 5,
-  "damage_min": 2,
-  "damage_max": 4,
-  "armor": 0,
-  "loot": [],
-  "location": "Ancient Forest",
-  "gold": 5,
-  "xp": 5,
-  "awareness": 2,
-  "speed": 2
-  }, 
-  
-  {"name": "Bear",
-  "moveset": ["lunges forward", "swings its claws", "charges with its maw open"],
-  "health": 5,
-  "damage_min": 2,
-  "damage_max": 4,
-  "armor": 0,
-  "loot": [],
-  "location": "Ancient Forest",
-  "gold": 5,
-  "xp": 5,
-  "awareness": 2,
-  "speed": 2
-  },
-  
-  {"name": "Spider",
-  "moveset": ["bites with its mandibles", "sta1bs with its stinger"],
-  "health": 5,
-  "damage_min": 2,
-  "damage_max": 4,
-  "armor": 0,
-  "loot": [],
-  "location": "Ancient Forest",
-  "gold": 5,
-  "xp": 5,
-  "awareness": 2,
-  "speed": 2
+  {
+    "name": "Rat",
+    "moveset": ["bites at you", "jumps at you"],
+    "health": 5,
+    "damage_min": 2,
+    "damage_max": 4,
+    "armor": 0,
+    "loot": [],
+    "location": "Ancient Forest",
+    "gold": 5,
+    "xp": 5,
+    "awareness": 2,
+    "speed": 2
   },
 
-  {"name": "Skeleton",
-  "moveset": ["swings its rusty blade", "throws a bony punch"],
-  "health": 5,
-  "damage_min": 2,
-  "damage_max": 4,
-  "armor": 0,
-  "loot": [],
-  "location": "Forest",
-  "gold": 5,
-  "xp": 5,
-  "awareness": 2,
-  "speed": 2
-  },
-  
-  {"name": "Ghost",
-  "moveset": ["levitates and tosses objects at you", "flies at you", "sings hauntingly"],
-  "health": 5,
-  "damage_min": 2,
-  "damage_max": 4,
-  "armor": 0,
-  "loot": [],
-  "location": "Forest",
-  "gold": 5,
-  "xp": 5,
-  "awareness": 2,
-  "speed": 2
-  },
-  
-  {"name": "Ghoul",
-  "moveset": ["runs up and swings at you", "lashes with its tongue", "glares at you"],
-  "health": 5,
-  "damage_min": 2,
-  "damage_max": 4,
-  "armor": 0,
-  "loot": [],
-  "location": "Forest",
-  "gold": 5,
-  "xp": 5,
-  "awareness": 2,
-  "speed": 2
-  },
-  
-  {"name": "Flesh Golem",
-  "moveset": ["swings its giant arms", "raises its leg and stomps at you", "charges at you"],
-  "health": 5,
-  "damage_min": 2,
-  "damage_max": 4,
-  "armor": 0,
-  "loot": [],
-  "location": "Forest",
-  "gold": 5,
-  "xp": 5,
-  "awareness": 2,
-  "speed": 2
+  {
+    "name": "Bear",
+    "moveset": [
+      "lunges forward",
+      "swings its claws",
+      "charges with its maw open"
+    ],
+    "health": 5,
+    "damage_min": 2,
+    "damage_max": 4,
+    "armor": 0,
+    "loot": [],
+    "location": "Ancient Forest",
+    "gold": 5,
+    "xp": 5,
+    "awareness": 2,
+    "speed": 2
   },
 
-  {"name": "Slime",
-  "moveset": ["manifests a spike and jabs at you", "spits a green glob at you"],
-  "health": 5,
-  "damage_min": 2,
-  "damage_max": 4,
-  "armor": 0,
-  "loot": [],
-  "location": "Forest",
-  "gold": 5,
-  "xp": 5,
-  "awareness": 2,
-  "speed": 2
-  },
-  
-  {"name": "Crocodile",
-  "moveset": ["bites down with its jaw", "attempts to grab and deathroll", "lashes with its tail"],
-  "health": 5,
-  "damage_min": 2,
-  "damage_max": 4,
-  "armor": 0,
-  "loot": [],
-  "location": "Forest",
-  "gold": 5,
-  "xp": 5,
-  "awareness": 2,
-  "speed": 2
-  },
-  
-  {"name": "Tree Blight",
-  "moveset": ["swings its branch like arm", "summons vines that swing at you", "tries to stomp you"],
-  "health": 5,
-  "damage_min": 2,
-  "damage_max": 4,
-  "armor": 0,
-  "loot": [],
-  "location": "Forest",
-  "gold": 5,
-  "xp": 5,
-  "awareness": 2,
-  "speed": 2
-  },
-  
-  {"name": "Raptor",
-  "moveset": ["tries to rend you with razor sharp teeth", "swings its tail at you", "charges at you with jaws open"],
-  "health": 5,
-  "damage_min": 2,
-  "damage_max": 4,
-  "armor": 0,
-  "loot": [],
-  "location": "Forest",
-  "gold": 5,
-  "xp": 5,
-  "awareness": 2,
-  "speed": 2
+  {
+    "name": "Spider",
+    "moveset": ["bites with its mandibles", "stabs with its stinger"],
+    "health": 5,
+    "damage_min": 2,
+    "damage_max": 4,
+    "armor": 0,
+    "loot": [],
+    "location": "Ancient Forest",
+    "gold": 5,
+    "xp": 5,
+    "awareness": 2,
+    "speed": 2
   },
 
-  {"name": "Snakeblood Addict",
-  "moveset": ["jabs with their dagger", "claws at you"],
-  "health": 5,
-  "damage_min": 2,
-  "damage_max": 4,
-  "armor": 0,
-  "loot": [],
-  "location": "Forest",
-  "gold": 5,
-  "xp": 5,
-  "awareness": 2,
-  "speed": 2
-  },
-  
-  {"name": "Naga",
-  "moveset": ["spits acid", "swings its tail at you", "slithers up and whips its tail"],
-  "health": 5,
-  "damage_min": 2,
-  "damage_max": 4,
-  "armor": 0,
-  "loot": [],
-  "location": "Forest",
-  "gold": 5,
-  "xp": 5,
-  "awareness": 2,
-  "speed": 2
-  },
-  
-  {"name": "Serpentfolk",
-  "moveset": ["swings its scimitar", "jabs its head forward to bite you", "swings its tail"],
-  "health": 5,
-  "damage_min": 2,
-  "damage_max": 4,
-  "armor": 0,
-  "loot": [],
-  "location": "Forest",
-  "gold": 5,
-  "xp": 5,
-  "awareness": 2,
-  "speed": 2
-  },
-  
-  {"name": "Priest of the Serpent",
-  "moveset": ["summons serpents that fly at you", "chants an unholy incantation", "stabs with a ritual dagger"],
-  "health": 5,
-  "damage_min": 2,
-  "damage_max": 4,
-  "armor": 0,
-  "loot": [],
-  "location": "Forest",
-  "gold": 5,
-  "xp": 5,
-  "awareness": 2,
-  "speed": 2
+  {
+    "name": "Skeleton",
+    "moveset": ["swings its rusty blade", "throws a bony punch"],
+    "health": 5,
+    "damage_min": 2,
+    "damage_max": 4,
+    "armor": 0,
+    "loot": [],
+    "location": "Forest",
+    "gold": 5,
+    "xp": 5,
+    "awareness": 2,
+    "speed": 2
   },
 
-  {"name": "Mindblasted Witness",
-  "moveset": ["mutters insanely", "swings their fists at you"],
-  "health": 5,
-  "damage_min": 2,
-  "damage_max": 4,
-  "armor": 0,
-  "loot": [],
-  "location": "Forest",
-  "gold": 5,
-  "xp": 5,
-  "awareness": 2,
-  "speed": 2
-  },
-  
-  {"name": "Floating Eye",
-  "moveset": ["shoots a beam from its iris", "spins in a hypnotic pattern", "assaults your mind"],
-  "health": 5,
-  "damage_min": 2,
-  "damage_max": 4,
-  "armor": 0,
-  "loot": [],
-  "location": "Forest",
-  "gold": 5,
-  "xp": 5,
-  "awareness": 2,
-  "speed": 2
-  },
-  
-  {"name": "Parasitic Ooze",
-  "moveset": ["lashes out a tendril", "morphs into a spiked orb", "latches to you, trying to drain your health"],
-  "health": 5,
-  "damage_min": 2,
-  "damage_max": 4,
-  "armor": 0,
-  "loot": [],
-  "location": "Forest",
-  "gold": 5,
-  "xp": 5,
-  "awareness": 2,
-  "speed": 2
-  },
-  
-  {"name": "Crystalline Shambler",
-  "moveset": ["slams its jagged fists down", "breaks off a shard of itself and stabs at you", "spins around with its fists out"],
-  "health": 5,
-  "damage_min": 2,
-  "damage_max": 4,
-  "armor": 0,
-  "loot": [],
-  "location": "Forest",
-  "gold": 5,
-  "xp": 5,
-  "awareness": 2,
-  "speed": 2
+  {
+    "name": "Ghost",
+    "moveset": [
+      "levitates and tosses objects at you",
+      "flies at you",
+      "sings hauntingly"
+    ],
+    "health": 5,
+    "damage_min": 2,
+    "damage_max": 4,
+    "armor": 0,
+    "loot": [],
+    "location": "Forest",
+    "gold": 5,
+    "xp": 5,
+    "awareness": 2,
+    "speed": 2
   },
 
-  {"name": "Sand Mummy",
-  "moveset": ["swings its skinny hands", "kicks at you"],
-  "health": 5,
-  "damage_min": 2,
-  "damage_max": 4,
-  "armor": 0,
-  "loot": [],
-  "location": "Forest",
-  "gold": 5,
-  "xp": 5,
-  "awareness": 2,
-  "speed": 2
-  },
-  
-  {"name": "Giant Scorpion",
-  "moveset": ["clams down with its pincer", "jabs at you with its stinger", "slams its body down on you"],
-  "health": 5,
-  "damage_min": 2,
-  "damage_max": 4,
-  "armor": 0,
-  "loot": [],
-  "location": "Forest",
-  "gold": 5,
-  "xp": 5,
-  "awareness": 2,
-  "speed": 2
-  },
-  
-  {"name": "Djinn",
-  "moveset": ["releases fire from its hands", "calls forth a sandstorm", "flies at you with its claws out"],
-  "health": 5,
-  "damage_min": 2,
-  "damage_max": 4,
-  "armor": 0,
-  "loot": [],
-  "location": "Forest",
-  "gold": 5,
-  "xp": 5,
-  "awareness": 2,
-  "speed": 2
-  },
-  
-  {"name": "Sandworm",
-  "moveset": ["attempts to devour you", "coils around you", "shoots upwards and crashes down on you"],
-  "health": 5,
-  "damage_min": 2,
-  "damage_max": 4,
-  "armor": 0,
-  "loot": [],
-  "location": "Forest",
-  "gold": 5,
-  "xp": 5,
-  "awareness": 2,
-  "speed": 2
+  {
+    "name": "Ghoul",
+    "moveset": [
+      "runs up and swings at you",
+      "lashes with its tongue",
+      "glares at you"
+    ],
+    "health": 5,
+    "damage_min": 2,
+    "damage_max": 4,
+    "armor": 0,
+    "loot": [],
+    "location": "Forest",
+    "gold": 5,
+    "xp": 5,
+    "awareness": 2,
+    "speed": 2
   },
 
-  {"name": "Technocrat Neanderthal",
-  "moveset": ["swings their club", "beams you with a laser gun"],
-  "health": 5,
-  "damage_min": 2,
-  "damage_max": 4,
-  "armor": 0,
-  "loot": [],
-  "location": "Forest",
-  "gold": 5,
-  "xp": 5,
-  "awareness": 2,
-  "speed": 2
-  },
-  
-  {"name": "Cyber Allosaurus",
-  "moveset": ["shoots lasers from its eyes", "swings its nano-plate tail", "chomps down with its mechanized jaw"],
-  "health": 5,
-  "damage_min": 2,
-  "damage_max": 4,
-  "armor": 0,
-  "loot": [],
-  "location": "Forest",
-  "gold": 5,
-  "xp": 5,
-  "awareness": 2,
-  "speed": 2
-  },
-  
-  {"name": "Mecha-Crusader",
-  "moveset": ["slams down with their carbon-plated hammer", "releases hand missiles at you", "swings their tech-claymore"],
-  "health": 5,
-  "damage_min": 2,
-  "damage_max": 4,
-  "armor": 0,
-  "loot": [],
-  "location": "Forest",
-  "gold": 5,
-  "xp": 5,
-  "awareness": 2,
-  "speed": 2
-  },
-  
-  {"name": "Plasmablade Samurai",
-  "moveset": ["unsheathes their glowing katana", "sidestep slices at you", "brings the blade down in a single calculated motion"],
-  "health": 5,
-  "damage_min": 2,
-  "damage_max": 4,
-  "armor": 0,
-  "loot": [],
-  "location": "Forest",
-  "gold": 5,
-  "xp": 5,
-  "awareness": 2,
-  "speed": 2
+  {
+    "name": "Flesh Golem",
+    "moveset": [
+      "swings its giant arms",
+      "raises its leg and stomps at you",
+      "charges at you"
+    ],
+    "health": 5,
+    "damage_min": 2,
+    "damage_max": 4,
+    "armor": 0,
+    "loot": [],
+    "location": "Forest",
+    "gold": 5,
+    "xp": 5,
+    "awareness": 2,
+    "speed": 2
   },
 
-  {"name": "Death Knight",
-  "moveset": ["thrusts with their runeblade", "grabs at you with their icy gauntlets", "breathes out a cone of frost"],
-  "health": 5,
-  "damage_min": 2,
-  "damage_max": 4,
-  "armor": 0,
-  "loot": [],
-  "location": "Forest",
-  "gold": 5,
-  "xp": 5,
-  "awareness": 2,
-  "speed": 2
-  },
-  
-  {"name": "Necroflame Demon",
-  "moveset": ["swipes with its claws", "charges with its horns out", "stabs with a green flaming spear"],
-  "health": 5,
-  "damage_min": 2,
-  "damage_max": 4,
-  "armor": 0,
-  "loot": [],
-  "location": "Forest",
-  "gold": 5,
-  "xp": 5,
-  "awareness": 2,
-  "speed": 2
-  },
-  
-  {"name": "Undead Valkyrie",
-  "moveset": ["summons skeletal hands that fly at you", "throws a spear of ice at you", "swoops down with her blade"],
-  "health": 5,
-  "damage_min": 2,
-  "damage_max": 4,
-  "armor": 0,
-  "loot": [],
-  "location": "Forest",
-  "gold": 5,
-  "xp": 5,
-  "awareness": 2,
-  "speed": 2
-  },
-  
-  {"name": "Fiendblood Alchemist",
-  "moveset": ["throws a vial of glowing liquid", "breathes out fire and acid", "throws a hellfire explosive"],
-  "health": 5,
-  "damage_min": 2,
-  "damage_max": 4,
-  "armor": 0,
-  "loot": [],
-  "location": "Forest",
-  "gold": 5,
-  "xp": 5,
-  "awareness": 2,
-  "speed": 2
+  {
+    "name": "Slime",
+    "moveset": [
+      "manifests a spike and jabs at you",
+      "spits a green glob at you"
+    ],
+    "health": 5,
+    "damage_min": 2,
+    "damage_max": 4,
+    "armor": 0,
+    "loot": [],
+    "location": "Forest",
+    "gold": 5,
+    "xp": 5,
+    "awareness": 2,
+    "speed": 2
   },
 
-  {"name": "Mass of Tentacles",
-  "moveset": ["slams down its appendage", "flails", "slams down with consecutive tendrils"],
-  "health": 5,
-  "damage_min": 2,
-  "damage_max": 4,
-  "armor": 0,
-  "loot": [],
-  "location": "Forest",
-  "gold": 5,
-  "xp": 5,
-  "awareness": 2,
-  "speed": 2
-  },
-  
-  {"name": "Faceless Cultist",
-  "moveset": ["chants to Kath", "summons forth tentacles from its hood", "assaults you telepathically"],
-  "health": 5,
-  "damage_min": 2,
-  "damage_max": 4,
-  "armor": 0,
-  "loot": [],
-  "location": "Forest",
-  "gold": 5,
-  "xp": 5,
-  "awareness": 2,
-  "speed": 2
-  },
-  
-  {"name": "Grafted Crustacean",
-  "moveset": ["shoots forth hidden claws and spikes from underneath its carapace", "spits forth half-digested corpses", "grabs with its pincers and tentacles"],
-  "health": 5,
-  "damage_min": 2,
-  "damage_max": 4,
-  "armor": 0,
-  "loot": [],
-  "location": "Forest",
-  "gold": 5,
-  "xp": 5,
-  "awareness": 2,
-  "speed": 2
+  {
+    "name": "Crocodile",
+    "moveset": [
+      "bites down with its jaw",
+      "attempts to grab and deathroll",
+      "lashes with its tail"
+    ],
+    "health": 5,
+    "damage_min": 2,
+    "damage_max": 4,
+    "armor": 0,
+    "loot": [],
+    "location": "Forest",
+    "gold": 5,
+    "xp": 5,
+    "awareness": 2,
+    "speed": 2
   },
 
-  {"name": "Screaming Mass of Flesh",
-  "moveset": ["evokes mental suffering", "tries to conjure blisters and sores", "flails with coagulated human limbs"],
-  "health": 5,
-  "damage_min": 2,
-  "damage_max": 4,
-  "armor": 0,
-  "loot": [],
-  "location": "Forest",
-  "gold": 5,
-  "xp": 5,
-  "awareness": 2,
-  "speed": 2
+  {
+    "name": "Tree Blight",
+    "moveset": [
+      "swings its branch like arm",
+      "summons vines that swing at you",
+      "tries to stomp you"
+    ],
+    "health": 5,
+    "damage_min": 2,
+    "damage_max": 4,
+    "armor": 0,
+    "loot": [],
+    "location": "Forest",
+    "gold": 5,
+    "xp": 5,
+    "awareness": 2,
+    "speed": 2
+  },
+
+  {
+    "name": "Raptor",
+    "moveset": [
+      "tries to rend you with razor sharp teeth",
+      "swings its tail at you",
+      "charges at you with jaws open"
+    ],
+    "health": 5,
+    "damage_min": 2,
+    "damage_max": 4,
+    "armor": 0,
+    "loot": [],
+    "location": "Forest",
+    "gold": 5,
+    "xp": 5,
+    "awareness": 2,
+    "speed": 2
+  },
+
+  {
+    "name": "Snakeblood Addict",
+    "moveset": ["jabs with their dagger", "claws at you"],
+    "health": 5,
+    "damage_min": 2,
+    "damage_max": 4,
+    "armor": 0,
+    "loot": [],
+    "location": "Forest",
+    "gold": 5,
+    "xp": 5,
+    "awareness": 2,
+    "speed": 2
+  },
+
+  {
+    "name": "Naga",
+    "moveset": [
+      "spits acid",
+      "swings its tail at you",
+      "slithers up and whips its tail"
+    ],
+    "health": 5,
+    "damage_min": 2,
+    "damage_max": 4,
+    "armor": 0,
+    "loot": [],
+    "location": "Forest",
+    "gold": 5,
+    "xp": 5,
+    "awareness": 2,
+    "speed": 2
+  },
+
+  {
+    "name": "Serpentfolk",
+    "moveset": [
+      "swings its scimitar",
+      "jabs its head forward to bite you",
+      "swings its tail"
+    ],
+    "health": 5,
+    "damage_min": 2,
+    "damage_max": 4,
+    "armor": 0,
+    "loot": [],
+    "location": "Forest",
+    "gold": 5,
+    "xp": 5,
+    "awareness": 2,
+    "speed": 2
+  },
+
+  {
+    "name": "Priest of the Serpent",
+    "moveset": [
+      "summons serpents that fly at you",
+      "chants an unholy incantation",
+      "stabs with a ritual dagger"
+    ],
+    "health": 5,
+    "damage_min": 2,
+    "damage_max": 4,
+    "armor": 0,
+    "loot": [],
+    "location": "Forest",
+    "gold": 5,
+    "xp": 5,
+    "awareness": 2,
+    "speed": 2
+  },
+
+  {
+    "name": "Mindblasted Witness",
+    "moveset": ["mutters insanely", "swings their fists at you"],
+    "health": 5,
+    "damage_min": 2,
+    "damage_max": 4,
+    "armor": 0,
+    "loot": [],
+    "location": "Forest",
+    "gold": 5,
+    "xp": 5,
+    "awareness": 2,
+    "speed": 2
+  },
+
+  {
+    "name": "Floating Eye",
+    "moveset": [
+      "shoots a beam from its iris",
+      "spins in a hypnotic pattern",
+      "assaults your mind"
+    ],
+    "health": 5,
+    "damage_min": 2,
+    "damage_max": 4,
+    "armor": 0,
+    "loot": [],
+    "location": "Forest",
+    "gold": 5,
+    "xp": 5,
+    "awareness": 2,
+    "speed": 2
+  },
+
+  {
+    "name": "Parasitic Ooze",
+    "moveset": [
+      "lashes out a tendril",
+      "morphs into a spiked orb",
+      "latches to you, trying to drain your health"
+    ],
+    "health": 5,
+    "damage_min": 2,
+    "damage_max": 4,
+    "armor": 0,
+    "loot": [],
+    "location": "Forest",
+    "gold": 5,
+    "xp": 5,
+    "awareness": 2,
+    "speed": 2
+  },
+
+  {
+    "name": "Crystalline Shambler",
+    "moveset": [
+      "slams its jagged fists down",
+      "breaks off a shard of itself and stabs at you",
+      "spins around with its fists out"
+    ],
+    "health": 5,
+    "damage_min": 2,
+    "damage_max": 4,
+    "armor": 0,
+    "loot": [],
+    "location": "Forest",
+    "gold": 5,
+    "xp": 5,
+    "awareness": 2,
+    "speed": 2
+  },
+
+  {
+    "name": "Sand Mummy",
+    "moveset": ["swings its skinny hands", "kicks at you"],
+    "health": 5,
+    "damage_min": 2,
+    "damage_max": 4,
+    "armor": 0,
+    "loot": [],
+    "location": "Forest",
+    "gold": 5,
+    "xp": 5,
+    "awareness": 2,
+    "speed": 2
+  },
+
+  {
+    "name": "Giant Scorpion",
+    "moveset": [
+      "clams down with its pincer",
+      "jabs at you with its stinger",
+      "slams its body down on you"
+    ],
+    "health": 5,
+    "damage_min": 2,
+    "damage_max": 4,
+    "armor": 0,
+    "loot": [],
+    "location": "Forest",
+    "gold": 5,
+    "xp": 5,
+    "awareness": 2,
+    "speed": 2
+  },
+
+  {
+    "name": "Djinn",
+    "moveset": [
+      "releases fire from its hands",
+      "calls forth a sandstorm",
+      "flies at you with its claws out"
+    ],
+    "health": 5,
+    "damage_min": 2,
+    "damage_max": 4,
+    "armor": 0,
+    "loot": [],
+    "location": "Forest",
+    "gold": 5,
+    "xp": 5,
+    "awareness": 2,
+    "speed": 2
+  },
+
+  {
+    "name": "Sandworm",
+    "moveset": [
+      "attempts to devour you",
+      "coils around you",
+      "shoots upwards and crashes down on you"
+    ],
+    "health": 5,
+    "damage_min": 2,
+    "damage_max": 4,
+    "armor": 0,
+    "loot": [],
+    "location": "Forest",
+    "gold": 5,
+    "xp": 5,
+    "awareness": 2,
+    "speed": 2
+  },
+
+  {
+    "name": "Technocrat Neanderthal",
+    "moveset": ["swings their club", "beams you with a laser gun"],
+    "health": 5,
+    "damage_min": 2,
+    "damage_max": 4,
+    "armor": 0,
+    "loot": [],
+    "location": "Forest",
+    "gold": 5,
+    "xp": 5,
+    "awareness": 2,
+    "speed": 2
+  },
+
+  {
+    "name": "Cyber Allosaurus",
+    "moveset": [
+      "shoots lasers from its eyes",
+      "swings its nano-plate tail",
+      "chomps down with its mechanized jaw"
+    ],
+    "health": 5,
+    "damage_min": 2,
+    "damage_max": 4,
+    "armor": 0,
+    "loot": [],
+    "location": "Forest",
+    "gold": 5,
+    "xp": 5,
+    "awareness": 2,
+    "speed": 2
+  },
+
+  {
+    "name": "Mecha-Crusader",
+    "moveset": [
+      "slams down with their carbon-plated hammer",
+      "releases hand missiles at you",
+      "swings their tech-claymore"
+    ],
+    "health": 5,
+    "damage_min": 2,
+    "damage_max": 4,
+    "armor": 0,
+    "loot": [],
+    "location": "Forest",
+    "gold": 5,
+    "xp": 5,
+    "awareness": 2,
+    "speed": 2
+  },
+
+  {
+    "name": "Plasmablade Samurai",
+    "moveset": [
+      "unsheathes their glowing katana",
+      "sidestep slices at you",
+      "brings the blade down in a single calculated motion"
+    ],
+    "health": 5,
+    "damage_min": 2,
+    "damage_max": 4,
+    "armor": 0,
+    "loot": [],
+    "location": "Forest",
+    "gold": 5,
+    "xp": 5,
+    "awareness": 2,
+    "speed": 2
+  },
+
+  {
+    "name": "Death Knight",
+    "moveset": [
+      "thrusts with their runeblade",
+      "grabs at you with their icy gauntlets",
+      "breathes out a cone of frost"
+    ],
+    "health": 5,
+    "damage_min": 2,
+    "damage_max": 4,
+    "armor": 0,
+    "loot": [],
+    "location": "Forest",
+    "gold": 5,
+    "xp": 5,
+    "awareness": 2,
+    "speed": 2
+  },
+
+  {
+    "name": "Necroflame Demon",
+    "moveset": [
+      "swipes with its claws",
+      "charges with its horns out",
+      "stabs with a green flaming spear"
+    ],
+    "health": 5,
+    "damage_min": 2,
+    "damage_max": 4,
+    "armor": 0,
+    "loot": [],
+    "location": "Forest",
+    "gold": 5,
+    "xp": 5,
+    "awareness": 2,
+    "speed": 2
+  },
+
+  {
+    "name": "Undead Valkyrie",
+    "moveset": [
+      "summons skeletal hands that fly at you",
+      "throws a spear of ice at you",
+      "swoops down with her blade"
+    ],
+    "health": 5,
+    "damage_min": 2,
+    "damage_max": 4,
+    "armor": 0,
+    "loot": [],
+    "location": "Forest",
+    "gold": 5,
+    "xp": 5,
+    "awareness": 2,
+    "speed": 2
+  },
+
+  {
+    "name": "Fiendblood Alchemist",
+    "moveset": [
+      "throws a vial of glowing liquid",
+      "breathes out fire and acid",
+      "throws a hellfire explosive"
+    ],
+    "health": 5,
+    "damage_min": 2,
+    "damage_max": 4,
+    "armor": 0,
+    "loot": [],
+    "location": "Forest",
+    "gold": 5,
+    "xp": 5,
+    "awareness": 2,
+    "speed": 2
+  },
+
+  {
+    "name": "Mass of Tentacles",
+    "moveset": [
+      "slams down its appendage",
+      "flails",
+      "slams down with consecutive tendrils"
+    ],
+    "health": 5,
+    "damage_min": 2,
+    "damage_max": 4,
+    "armor": 0,
+    "loot": [],
+    "location": "Forest",
+    "gold": 5,
+    "xp": 5,
+    "awareness": 2,
+    "speed": 2
+  },
+
+  {
+    "name": "Faceless Cultist",
+    "moveset": [
+      "chants to Kath",
+      "summons forth tentacles from its hood",
+      "assaults you telepathically"
+    ],
+    "health": 5,
+    "damage_min": 2,
+    "damage_max": 4,
+    "armor": 0,
+    "loot": [],
+    "location": "Forest",
+    "gold": 5,
+    "xp": 5,
+    "awareness": 2,
+    "speed": 2
+  },
+
+  {
+    "name": "Grafted Crustacean",
+    "moveset": [
+      "shoots forth hidden claws and spikes from underneath its carapace",
+      "spits forth half-digested corpses",
+      "grabs with its pincers and tentacles"
+    ],
+    "health": 5,
+    "damage_min": 2,
+    "damage_max": 4,
+    "armor": 0,
+    "loot": [],
+    "location": "Forest",
+    "gold": 5,
+    "xp": 5,
+    "awareness": 2,
+    "speed": 2
+  },
+
+  {
+    "name": "Screaming Mass of Flesh",
+    "moveset": [
+      "evokes mental suffering",
+      "tries to conjure blisters and sores",
+      "flails with coagulated human limbs"
+    ],
+    "health": 5,
+    "damage_min": 2,
+    "damage_max": 4,
+    "armor": 0,
+    "loot": [],
+    "location": "Forest",
+    "gold": 5,
+    "xp": 5,
+    "awareness": 2,
+    "speed": 2
   }
-
 ]

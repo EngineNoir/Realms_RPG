@@ -27,19 +27,19 @@ class Character:
         # --------------
         spellbook: list,
         # --------------
-        max_health, 
-        max_mana,
+        max_health: int,
+        max_mana: int,
         # --------------
         current_xp: int,
         xp_to_level: int,
         # --------------
         cleared_dungeons: list
     ):
-        
+
         self.name = name
         self.char_class = char_class
         self.level = level
-        
+
         self.strength = strength
         self.dexterity = dexterity
         self.willpower = willpower
@@ -62,7 +62,7 @@ class Character:
         self.debuffs = {'poison': False}
 
         self.current_xp = current_xp
-        self.xp_to_level = xp_to_level
+        self.xp_to_level = (self.strength + self.dexterity + self.willpower) * 10 + self.level * 20
 
         self.cleared_dungeons = cleared_dungeons
 
@@ -80,7 +80,7 @@ class Character:
         # crit if outcome >= 4/5*potential
         if successes >= (4/5)*attack_potential:
             successes += self.weapon['damage']
-    
+
         # need to include the target's defences to set up a "you miss" outcome
         return successes
 
@@ -94,19 +94,25 @@ class Character:
             return self.willpower
 
     def deal_damage_to_enemy(self, target):
+        # either deal dmg - armor or 0, negative values will heal the enemy (bug!)
         damage_dealt = max(self.weapon_attack() - target.armor, 0)
         output_text = '\nYou ' + random.choice(self.weapon['moveset'])
         if damage_dealt > 0:
             output_text += ' dealing ' + str(damage_dealt) + ' damage to ' + target.name + '.'
             target.health -= damage_dealt
         else:
-            fails = ["your attack misses.", "you fail to deal damage.", "the enemy dodges out of the way."]
+            fails = ["your attack misses.", "you fail to deal damage.", "the enemy dodges out of the way.", "your attack fails to connect.",
+                "you underestimate the opponent's speed and miss."]
             output_text += ' but ' + random.choice(fails)
         print(output_text)
 
     def attempt_stealth_in_combat(self, target):
         print("\nYou attempt to stealth and ...")
+        # add some tension
         time.sleep(1)
+        print("\n...")
+        time.sleep(1)
+        # compute if dex roll > enemy awareness, and check if not already stealthing
         successes = 0
         for i in range(1, self.dexterity):
             roll = random.randint(1, 6)
@@ -123,7 +129,11 @@ class Character:
 
     def fleeing_combat(self, target):
         print("\nYou attempt to flee and ...")
+        # more suspence >:)
         time.sleep(1)
+        print("\n...")
+        time.sleep(1)
+        # see if sprinting > enemy speed, and if you're stealthed, auto-succeed
         is_flee_succesful = False
         flight_skill = max(self.strength, self.dexterity)
         if flight_skill > target.speed:
@@ -150,53 +160,49 @@ class Character:
         print("\nYou've gained " + str(xp) + " XP.")
 
     def increase_ability(self):
-        player_choice = None
         ability_chosen = None
-        
-        while player_choice not in [1, 2, 3, 4]:
-            while True:
-                try:
-                    player_choice = int(input('\nChoose which of the three abilities you wish to increase by 1.'
-                                        '\n1. Strength\n2. Dexterity\n3. Willpower\nAttribute to improve: '))
-                except ValueError:
-                    print('Please select an ability to increase.')
-                else:
-                    break
-        if player_choice == 1:
-            self.strength += 1
-            ability_chosen = "Strength"
-        elif player_choice == 2:
-            self.dexterity += 1
-            ability_chosen = "Dexterity"
-        elif player_choice == 3:
-            self.willpower += 1
-            ability_chosen = "Willpower"
-
-        print("You have increased your " + ability_chosen + " by 1.")
+        player_choice = int(input('\nChoose which of the three abilities you wish to increase by 1.'
+                                                '\n1. Strength\n2. Dexterity\n3. Willpower\nAttribute to improve: '))
+        match player_choice:
+            case 1:
+                self.strength += 1
+                ability_chosen = "Strength"
+            case 2:
+                self.dexterity += 1
+                ability_chosen = "Dexterity"
+            case 3:
+                self.willpower += 1
+                ability_chosen = "Willpower"
+            case _:
+                print('\nInvalid selection.')
+        if ability_chosen != None:
+            print(f'\nYou have increased your ' + str(ability_chosen) + ' by 1.')
+        return ability_chosen
 
     def level_up(self):
         if self.current_xp >= self.xp_to_level:
             print('\nYou have ' + str(self.current_xp) + ' XP. Do you wish to spend ' + str(self.xp_to_level) + ' XP to level up?')
-            answer_input = None
-            while answer_input not in [1, 2]:
-                while True:
-                    try:
-                        answer_input = int(input('1. Yes\n2. No\nSpend XP and level up?: '))
-                    except ValueError:
-                        print('\nPlease input a valid response.')
-                    else:
-                        break 
-        
-            if answer_input == 1:
-                self.increase_ability()
-                self.level += 1
-                self.current_xp -= self.xp_to_level
-                self.xp_to_level *= 2
-                print('\nYou have successfully leveled up and are now level ' + str(self.level) +
-                        '. Congratulations!')
-            
-            if answer_input == 2:
-                return
+            answer_input = int(input('1. Yes\n2. No\nSpend XP and level up?: '))
+            match answer_input:
+                case 1:
+                    increased = self.increase_ability()
+                    if increased == None:
+                        print("\nNo ability selected. Exiting level up menu.")
+                        time.sleep(1)
+                        return 0
+                    self.health += 5
+                    self.max_health = self.health
+                    self.level += 1
+                    self.current_xp -= self.xp_to_level
+                    self.xp_to_level = (self.strength + self.dexterity + self.willpower) * 10 + self.level * 20
+                    print('\nYou have successfully leveled up and are now level ' + str(self.level) +
+                            '. Congratulations!')
+                case 2:
+                    return 0
+                case _:
+                    print('\nPlease input a valid response.')
+                    answer_input = int(input('1. Yes\n2. No\nSpend XP and level up?: '))
+        return 0
 
 
 def make_character(classes, armors, weapons):
@@ -217,7 +223,7 @@ def make_character(classes, armors, weapons):
     for char_class in classes:
         print(str(i) + ". " + char_class["class_name"] + ' - ' + char_class["description"])
         i += 1
-    
+
     # makes the player choose a class from the given options
     class_choice = None
     while class_choice not in range(0, len(classes)):
@@ -240,13 +246,12 @@ def make_character(classes, armors, weapons):
     starting_armor = armors[chosen_class["starter_armor"]]
 
     player_character = Character(char_name, chosen_class["class_name"], 1, chosen_class["strength"], chosen_class["dexterity"],
-                        chosen_class["willpower"], starting_health, starting_mana, chosen_class["starter_gold"], [], starting_armor, 
+                        chosen_class["willpower"], starting_health, starting_mana, chosen_class["starter_gold"], [], starting_armor,
                         starting_weapon, None, None, [], starting_health, starting_mana, 0, 100, [])
 
     # save character as json
     save_character(player_character)
     return player_character
-    
 
 def load_character():
     # ask for the character name
@@ -263,25 +268,52 @@ def load_character():
             break
 
     # generate a Character class object with the values from the json file
-    player_character = Character(char_sheet['name'], char_sheet['char_class'], char_sheet["level"], char_sheet['strength'], 
-                        char_sheet['dexterity'], char_sheet['willpower'], char_sheet['health'], char_sheet['mana'], char_sheet['gold'], 
-                        char_sheet['inventory'], char_sheet['armor'], char_sheet['weapon'], char_sheet['amulet'], char_sheet['ring'], 
-                        char_sheet['spellbook'], char_sheet['max_health'], char_sheet['max_mana'], char_sheet['current_xp'],
-                        char_sheet['xp_to_level'], char_sheet['cleared_dungeons'])
-
+    player_character = Character(char_sheet['name'],
+                                char_sheet['char_class'],
+                                char_sheet["level"],
+                                char_sheet['strength'],
+                                char_sheet['dexterity'],
+                                char_sheet['willpower'],
+                                char_sheet['health'],
+                                char_sheet['mana'],
+                                char_sheet['gold'],
+                                char_sheet['inventory'],
+                                char_sheet['armor'],
+                                char_sheet['weapon'],
+                                char_sheet['amulet'],
+                                char_sheet['ring'],
+                                char_sheet['spellbook'],
+                                char_sheet['max_health'],
+                                char_sheet['max_mana'],
+                                char_sheet['current_xp'],
+                                char_sheet['xp_to_level'],
+                                char_sheet['cleared_dungeons'])
     return player_character
 
 
 def save_character(player_character):
     # create a dictionary from values in player_character (character class object)
-    char_dictionary = {'name': player_character.name, 'char_class': player_character.char_class, 'level': player_character.level, 
-                        'strength': player_character.strength, 'dexterity': player_character.dexterity, 
-                        'willpower': player_character.willpower, 'health': player_character.health, 'mana': player_character.mana, 
-                        'gold': player_character.gold, 'inventory': player_character.inventory, 
-                        'armor': player_character.armor, 'weapon': player_character.weapon, 'amulet': player_character.amulet,
-                        'ring': player_character.ring, 'spellbook': player_character.spellbook, 'stealth': False, 
-                        'max_health': player_character.max_health, 'max_mana': player_character.max_mana, 'debuffs': {'poison': False},
-                        'current_xp': player_character.current_xp, 'xp_to_level': player_character.xp_to_level, 
+    char_dictionary = {'name': player_character.name,
+                        'char_class': player_character.char_class,
+                        'level': player_character.level,
+                        'strength': player_character.strength,
+                        'dexterity': player_character.dexterity,
+                        'willpower': player_character.willpower,
+                        'health': player_character.health,
+                        'mana': player_character.mana,
+                        'gold': player_character.gold,
+                        'inventory': player_character.inventory,
+                        'armor': player_character.armor,
+                        'weapon': player_character.weapon,
+                        'amulet': player_character.amulet,
+                        'ring': player_character.ring,
+                        'spellbook': player_character.spellbook,
+                        'stealth': False,
+                        'max_health': player_character.max_health,
+                        'max_mana': player_character.max_mana,
+                        'debuffs': {'poison': False},
+                        'current_xp': player_character.current_xp,
+                        'xp_to_level': player_character.xp_to_level,
                         'cleared_dungeons': player_character.cleared_dungeons}
 
     # save the dictionary as a json file
@@ -291,4 +323,3 @@ def save_character(player_character):
     if not os.path.isdir('characters'): os.mkdir('characters')
     with open(f'characters/{char_dictionary["name"]}' + '.json', 'w') as outfile:
         outfile.write(char_sheet_save)
-

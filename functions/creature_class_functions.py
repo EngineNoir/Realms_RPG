@@ -19,25 +19,26 @@ class Creature:
         awareness: int,
         speed: int
         ):
-        
+
         self.name = name
         self.moveset = moveset
         self.health = health
-        self.damage_min = damage_min 
+        self.damage_min = damage_min
         self.damage_max = damage_max
         self.armor = armor
         self.loot = loot
         self.location = location
         self.gold = gold
         self.xp = xp
-        self.awareness = awareness   
-        self.speed = speed   
+        self.awareness = awareness
+        self.speed = speed
+        self.is_boss = False
 
     def compute_damage(self):
-        return random.randint(self.damage_min, self.damage_max) 
+        return random.randint(self.damage_min, self.damage_max)
 
     def deal_damage_to_player(self, target: Character):
-        damage_dealt = max(self.compute_damage() - target.armor['defence'], 0) 
+        damage_dealt = max(self.compute_damage() - target.armor['defence'], 0)
         output_text = self.name + ' ' + random.choice(self.moveset) + ' '
         misses = ["which fails to break through your defences.", "missing its attack.",
                   "failing to connect the attack.", "unable to land the attack.",
@@ -53,4 +54,3 @@ class Creature:
         if self.awareness >= target.dexterity:
             print('You are spotted!')
             target.stealth = False
-

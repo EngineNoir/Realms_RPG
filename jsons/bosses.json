@@ -1,165 +1,226 @@
 [
-
-  {"name": "Corrupt Nature Spirit",
-  "moveset": ["summons vines that lash at you", "summons thorns from the ground", "spits out a cloud of insects at you"],
-  "health": 10,
-  "damage_min": 4,
-  "damage_max": 6,
-  "damage_final": 8,
-  "armor": 1,
-  "loot": [],
-  "location": "Ancient Forest",
-  "gold": 100,
-  "xp": 50,
-  "awareness": 2,
-  "speed": 2,
-  "taunts": ["\nA tainted and corrupt spirit emerges from the trees.\n'Leave this place, fiend!' it howls.",
-  "\n'You shall not disturb this grove!' it screeches.",
-  "\n'If you seek death, you have found it!' it roars, sprouting glowing thorns from its hind."]
-  }, 
-
-  {"name": "Vampire Lord Vasilius",
-  "moveset": ["flies down to bite you", "seeks to rend you with his nails", "unleashes necromantic magic at you"],
-  "health": 10,
-  "damage_min": 4,
-  "damage_max": 6,
-  "damage_final": 8,
-  "armor": 1,
-  "loot": [],
-  "location": "Forest",
-  "gold": 100,
-  "xp": 50,
-  "awareness": 2,
-  "speed": 2,
-  "taunts": ["\nA well dressed male descends from the sky.\n'Welcome. You are just in time for dinner...' he laughs.",
-  "\n'I am the mist, and I am the land! Kneel!' he yells.",
-  "\n'I will drink this world dry!' he screams, sprouting bat-like wings and lunging at you."]
-  }, 
-
-  {"name": "Ancient Hag Baba Yurga",
-  "moveset": ["laughs maddeningly", "chants in demonic tongues", "breathes out a poison cloud"],
-  "health": 10,
-  "damage_min": 4,
-  "damage_max": 6,
-  "damage_final": 8,
-  "armor": 1,
-  "loot": [],
-  "location": "Forest",
-  "gold": 100,
-  "xp": 50,
-  "awareness": 2,
-  "speed": 2,
-  "taunts": ["\nYou approach a cozy hut, in the middle of the swamp.\nAn old lady steps out, holding a fresh pie and cackles.",
-  "\n'Rude child, I shall have to force feed you!' the hag screams as her chin, nose, and fingers start elongating.",
-  "\n'I shall cook and eat you!' the hag screams, completing her transformation with green skin and bulbous warts."]
+  {
+    "name": "Corrupt Nature Spirit",
+    "moveset": [
+      "summons vines that lash at you",
+      "summons thorns from the ground",
+      "spits out a cloud of insects at you"
+    ],
+    "health": 10,
+    "damage_min": 4,
+    "damage_max": 6,
+    "damage_final": 8,
+    "armor": 1,
+    "loot": [],
+    "location": "Ancient Forest",
+    "gold": 100,
+    "xp": 50,
+    "awareness": 2,
+    "speed": 2,
+    "taunts": [
+      "\nA tainted and corrupt spirit emerges from the trees.\n'Leave this place, fiend!' it howls.",
+      "\n'You shall not disturb this grove!' it screeches.",
+      "\n'If you seek death, you have found it!' it roars, sprouting glowing thorns from its hind."
+    ]
   },
 
-  {"name": "Avatar of Antaboros, Serpent God",
-  "moveset": ["conjures a rain of serpents", "swings with its six scimitars", "bites down with all of its serpent heads"],
-  "health": 10,
-  "damage_min": 4,
-  "damage_max": 6,
-  "damage_final": 8,
-  "armor": 1,
-  "loot": [],
-  "location": "Forest",
-  "gold": 100,
-  "xp": 50,
-  "awareness": 2,
-  "speed": 2,
-  "taunts":  ["\nA gollosal humanoid body steps forth, emerging out of the altar. It has six arms, each wielding a scimitar. \nInstead of a head, it has a hundred coiled serpents.",
-  "\n'I have devoured countless-sss worlds-sss, and this-sss one shall be no different' the colossal entity hisses.",
-  "\n'You witness-sss Antaboros-sss, Herald of the End Times-sss' it belches, as the temple walls begin to slither, and the hissing becomes omnipresent."]
+  {
+    "name": "Vampire Lord Vasilius",
+    "moveset": [
+      "flies down to bite you",
+      "seeks to rend you with his nails",
+      "unleashes necromantic magic at you"
+    ],
+    "health": 10,
+    "damage_min": 4,
+    "damage_max": 6,
+    "damage_final": 8,
+    "armor": 1,
+    "loot": [],
+    "location": "Forest",
+    "gold": 100,
+    "xp": 50,
+    "awareness": 2,
+    "speed": 2,
+    "taunts": [
+      "\nA well dressed male descends from the sky.\n'Welcome. You are just in time for dinner...' he laughs.",
+      "\n'I am the mist, and I am the land! Kneel!' he yells.",
+      "\n'I will drink this world dry!' he screams, sprouting bat-like wings and lunging at you."
+    ]
   },
 
-  {"name": "Cosmic Sentience",
-  "moveset": ["summons down a meteor", "teleports you to a freezing planet", "casts you through the cosmos"],
-  "health": 10,
-  "damage_min": 4,
-  "damage_max": 6,
-  "damage_final": 8,
-  "armor": 1,
-  "loot": [],
-  "location": "Forest",
-  "gold": 100,
-  "xp": 50,
-  "awareness": 2,
-  "speed": 2,
-  "taunts":  ["\nThe meteor pulses with a strange colour. You find yourself in an infinite space. \nA floating white geometric entity hovers above you.",
-  "\n'Aaggzz Tthhrrkk Pprrxx' the entity voices a strange noise. Its arms separate into tentacles.",
-  "\nThe infinite white space around you begins to crack, and a green and purple glow pulses through. Shards of reality hover around you."]
+  {
+    "name": "Ancient Hag Baba Yurga",
+    "moveset": [
+      "laughs maddeningly",
+      "chants in demonic tongues",
+      "breathes out a poison cloud"
+    ],
+    "health": 10,
+    "damage_min": 4,
+    "damage_max": 6,
+    "damage_final": 8,
+    "armor": 1,
+    "loot": [],
+    "location": "Forest",
+    "gold": 100,
+    "xp": 50,
+    "awareness": 2,
+    "speed": 2,
+    "taunts": [
+      "\nYou approach a cozy hut, in the middle of the swamp.\nAn old lady steps out, holding a fresh pie and cackles.",
+      "\n'Rude child, I shall have to force feed you!' the hag screams as her chin, nose, and fingers start elongating.",
+      "\n'I shall cook and eat you!' the hag screams, completing her transformation with green skin and bulbous warts."
+    ]
   },
 
-  {"name": "Anthereos, The Sphinx Pharaoh",
-  "moveset": ["launches an arcane bolt at you", "charges at you with its claws", "shoots down a beam of solar energy"],
-  "health": 10,
-  "damage_min": 4,
-  "damage_max": 6,
-  "damage_final": 8,
-  "armor": 1,
-  "loot": [],
-  "location": "Forest",
-  "gold": 100,
-  "xp": 50,
-  "awareness": 2,
-  "speed": 2,
-  "taunts":  ["\nA majestic creature with the body of a lion, large wings, and a human head descends. \n'Kneel' it commands, as the sun rotates in the sky to hover behind it.",
-  "\n'The sands are eternal, and so am I' the sphinx proclaims, its eyes now glowing azure.",
-  "\nThe sphinx flies up, and the sky turns black. The sun remains as a small white orb, resting atop the crown of the sphinx."]
+  {
+    "name": "Avatar of Antaboros, Serpent God",
+    "moveset": [
+      "conjures a rain of serpents",
+      "swings with its six scimitars",
+      "bites down with all of its serpent heads"
+    ],
+    "health": 10,
+    "damage_min": 4,
+    "damage_max": 6,
+    "damage_final": 8,
+    "armor": 1,
+    "loot": [],
+    "location": "Forest",
+    "gold": 100,
+    "xp": 50,
+    "awareness": 2,
+    "speed": 2,
+    "taunts": [
+      "\nA gollosal humanoid body steps forth, emerging out of the altar. It has six arms, each wielding a scimitar. \nInstead of a head, it has a hundred coiled serpents.",
+      "\n'I have devoured countless-sss worlds-sss, and this-sss one shall be no different' the colossal entity hisses.",
+      "\n'You witness-sss Antaboros-sss, Herald of the End Times-sss' it belches, as the temple walls begin to slither, and the hissing becomes omnipresent."
+    ]
   },
 
-  {"name": "theAfterLife_Protocol(#)",
-  "moveset": ["turns on wall-mounted laser turrets", "activates a laser grid that spins around the chamber", "calls forth missile drones"],
-  "health": 10,
-  "damage_min": 4,
-  "damage_max": 6,
-  "damage_final": 8,
-  "armor": 1,
-  "loot": [],
-  "location": "Forest",
-  "gold": 100,
-  "xp": 50,
-  "awareness": 2,
-  "speed": 2,
-  "taunts":  ["\nYou enter a room filled with glass canisters, each containing a body suspended in deep green liquid. \n'Systems activate' a female voice booms from the speakers.",
-  "\n'Chance of survival at 50%, initiate perseverance modules' the speakers announce. Some of the canisters open, and limp lifeless bodies collapse on the floor.",
-  "\n'Survival chance at @#@!%, purging specimens with sub 95-percentile strategy efficiency.'. More bodies fall out of their tubes. Some attempt to crawl away."]
+  {
+    "name": "Cosmic Sentience",
+    "moveset": [
+      "summons down a small meteor at you",
+      "briefly summons a gust of extraterrestrial frost around you",
+      "casts you through the cosmos"
+    ],
+    "health": 10,
+    "damage_min": 4,
+    "damage_max": 6,
+    "damage_final": 8,
+    "armor": 1,
+    "loot": [],
+    "location": "Forest",
+    "gold": 100,
+    "xp": 50,
+    "awareness": 2,
+    "speed": 2,
+    "taunts": [
+      "\nThe meteor pulses with a strange colour. You find yourself in an infinite space. \nA floating white geometric entity hovers above you.",
+      "\n'Aaggzz Tthhrrkk Pprrxx' the entity voices a strange noise. Its arms separate into tentacles.",
+      "\nThe infinite white space around you begins to crack, and a green and purple glow pulses through. Shards of reality hover around you."
+    ]
   },
 
-  {"name": "Malefius, Demon-Lich",
-  "moveset": ["launches a fireball", "summons a flaming skull and throws it at you", "swings with his necroflame blade"],
-  "health": 10,
-  "damage_min": 4,
-  "damage_max": 6,
-  "damage_final": 8,
-  "armor": 1,
-  "loot": [],
-  "location": "Forest",
-  "gold": 100,
-  "xp": 50,
-  "awareness": 2,
-  "speed": 2,
-  "taunts":  ["\nA demonic, winged creature stands in front of you. It turns to face you, revealing torn, blackened red skin, which glows green underneath.",
-  "\n'I have conquered death, what can you hope to achieve?' the undead demon taunts you.",
-  "\nA ghostly shape appears. 'Avenge us' it pleads. As it disappears, a pendant remains on the scorched earth beneath. \n'My phylactery! HOW!?' the demon screams."]
+  {
+    "name": "Anthereos, The Sphinx Pharaoh",
+    "moveset": [
+      "launches an arcane bolt at you",
+      "charges at you with its claws",
+      "shoots down a beam of solar energy"
+    ],
+    "health": 10,
+    "damage_min": 4,
+    "damage_max": 6,
+    "damage_final": 8,
+    "armor": 1,
+    "loot": [],
+    "location": "Forest",
+    "gold": 100,
+    "xp": 50,
+    "awareness": 2,
+    "speed": 2,
+    "taunts": [
+      "\nA majestic creature with the body of a lion, large wings, and a human head descends. \n'Kneel' it commands, as the sun rotates in the sky to hover behind it.",
+      "\n'The sands are eternal, and so am I' the sphinx proclaims, its eyes now glowing azure.",
+      "\nThe sphinx flies up, and the sky turns black. The sun remains as a small white orb, resting atop the crown of the sphinx."
+    ]
   },
 
-  {"name": "Kath'Shagurrath, Celestial Pathogen",
-  "moveset": ["pulls down an obelisk, throwing it at you", "summons orbs of green tentacles that flail uncontrollably", "whispers inside your mind"],
-  "health": 10,
-  "damage_min": 4,
-  "damage_max": 6,
-  "damage_final": 8,
-  "armor": 1,
-  "loot": [],
-  "location": "Forest",
-  "gold": 100,
-  "xp": 50,
-  "awareness": 2,
-  "speed": 2,
-  "taunts":  ["\nAn octopus-like head emerges from the chasm. Massive hands pull up a bat-winged upper body covered in pulsing blue veins.",
-  "\nAn old man's voice whispers, tearfully, in your mind's ear, 'My child... What have you done with it?'. \nImages of a pulsating meteor flash before your eyes.",
-  "\nA woman sings through static hiss in your mind. You see the infinite cosmos, and beyond it, countless eyes. \n'Where is my mind' the lady sings operatically."]
+  {
+    "name": "theAfterLife_Protocol(#)",
+    "moveset": [
+      "turns on wall-mounted laser turrets",
+      "activates a laser grid that spins around the chamber",
+      "calls forth missile drones"
+    ],
+    "health": 10,
+    "damage_min": 4,
+    "damage_max": 6,
+    "damage_final": 8,
+    "armor": 1,
+    "loot": [],
+    "location": "Forest",
+    "gold": 100,
+    "xp": 50,
+    "awareness": 2,
+    "speed": 2,
+    "taunts": [
+      "\nYou enter a room filled with glass canisters, each containing a body suspended in deep green liquid. \n'Systems activate' a female voice booms from the speakers.",
+      "\n'Chance of survival at 50%, initiate perseverance modules' the speakers announce. Some of the canisters open, and limp lifeless bodies collapse on the floor.",
+      "\n'Survival chance at @#@!%, purging specimens with sub 95-percentile strategy efficiency.'. More bodies fall out of their tubes. Some attempt to crawl away."
+    ]
+  },
+
+  {
+    "name": "Malefius, Demon-Lich",
+    "moveset": [
+      "launches a fireball",
+      "summons a flaming skull and throws it at you",
+      "swings with his necroflame blade"
+    ],
+    "health": 10,
+    "damage_min": 4,
+    "damage_max": 6,
+    "damage_final": 8,
+    "armor": 1,
+    "loot": [],
+    "location": "Forest",
+    "gold": 100,
+    "xp": 50,
+    "awareness": 2,
+    "speed": 2,
+    "taunts": [
+      "\nA demonic, winged creature stands in front of you. It turns to face you, revealing torn, blackened red skin, which glows green underneath.",
+      "\n'I have conquered death, what can you hope to achieve?' the undead demon taunts you.",
+      "\nA ghostly shape appears. 'Avenge us' it pleads. As it disappears, a pendant remains on the scorched earth beneath. \n'My phylactery! HOW!?' the demon screams."
+    ]
+  },
+
+  {
+    "name": "Kath'Shagurrath, Celestial Pathogen",
+    "moveset": [
+      "pulls down an obelisk, throwing it at you",
+      "summons orbs of green tentacles that flail uncontrollably",
+      "whispers inside your mind"
+    ],
+    "health": 10,
+    "damage_min": 4,
+    "damage_max": 6,
+    "damage_final": 8,
+    "armor": 1,
+    "loot": [],
+    "location": "Forest",
+    "gold": 100,
+    "xp": 50,
+    "awareness": 2,
+    "speed": 2,
+    "taunts": [
+      "\nAn octopus-like head emerges from the chasm. Massive hands pull up a bat-winged upper body covered in pulsing blue veins.",
+      "\nAn old man's voice whispers, tearfully, in your mind's ear, 'My child... What have you done with it?'. \nImages of a pulsating meteor flash before your eyes.",
+      "\nA woman sings through static hiss in your mind. You see the infinite cosmos, and beyond it, countless eyes. \n'Where is my mind' the lady sings operatically."
+    ]
   }
-
 ]

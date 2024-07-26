@@ -1,317 +1,306 @@
 [
-  
-  {"location_name": "Ancient Forest",  
-  "min_rooms": 3, 
-  "max_rooms": 5,
-  "entry_description": 
-    "\nYou head out into a large forest, the trees extending out towards the horizon, and the mountains beyond.",
-  "room_descriptions": 
-    ["\nYou enter a glade, where the sun shines through the foliage, and the sound of a river stream can be heard.",
-    "\nBefore you is a dark thicket, where some sounds are familiar and natural, and others not so much.",
-    "\nAhead lies an open patch, and ancient runestones circle the periphery, each worn out by time, and covered in vines.",
-    "\nA distant stampede forces you to leave the beaten path, and you find yourself stuck in a thorny bush.",
-    "\nThick trees outline a path ahead, growls and howls are heard in the distance.",
-    "\nA few hollowed out and decayed trees, home to large spiderwebs, surround a scorched patch of grass.",
-    "\nA gentle stream runs along the forest, and a collapsed tree serves as a sturdy bridge across.",
-    "\nA distant humming and singing brings you to a mushroom patch, but no further signs of life are seen.",
-    "\nYou notice a cave, but the loud snoring coming from inside makes you turn around and leave."],
-  "encounter_descriptions": 
-    ["\nYou find a quiet patch of grass in the shadow of a great oak. You take a moment for yourself.",
-    "\nYou observe dryads in the distance chasing each other. Their songs and laughter are soothing.",
-    "\nA pack of dwarf miners pass by you, carrying their haul from the cave to their home.",
-    "\nA pleasant wind brushes your nose, and in the distance a walking hut disappears into the shadows.",
-    "\nYou find a pleasant overhang at the base of a mountain along the forest edge, and take a nap.",
-    "\nYou take a moment to relax, using sticks to draw sketches in the soil. Maybe someone will see them."],
-  "final_room_description": 
-    "\nYou enter the ancient heart of the forest. The roots surround a glowing plant in the center.",  
-  "boss_death":
-    "\nYou defeat the corrupted spirit, whose dying essence nourishes the glowing flower, and it blooms brightly.",
-  "final_room_return": 
-    "\nYou have been here before, and the glowing flower is still here, in full bloom."
+  {
+    "location_name": "Ancient Forest",
+    "min_rooms": 3,
+    "max_rooms": 5,
+    "entry_description": "\nYou head out into a large forest, the trees extending out towards the horizon, and the mountains beyond.",
+    "room_descriptions": [
+      "\nYou enter a glade, where the sun shines through the foliage, and the sound of a river stream can be heard.",
+      "\nBefore you is a dark thicket, where some sounds are familiar and natural, and others not so much.",
+      "\nAhead lies an open patch, and ancient runestones circle the periphery, each worn out by time, and covered in vines.",
+      "\nA distant stampede forces you to leave the beaten path, and you find yourself stuck in a thorny bush.",
+      "\nThick trees outline a path ahead, growls and howls are heard in the distance.",
+      "\nA few hollowed out and decayed trees, home to large spiderwebs, surround a scorched patch of grass.",
+      "\nA gentle stream runs along the forest, and a collapsed tree serves as a sturdy bridge across.",
+      "\nA distant humming and singing brings you to a mushroom patch, but no further signs of life are seen.",
+      "\nYou notice a cave, but the loud snoring coming from inside makes you hesitant to enter."
+    ],
+    "encounter_descriptions": [
+      "\nYou find a quiet patch of grass in the shadow of a great oak. You take a moment for yourself.",
+      "\nYou observe dryads in the distance chasing each other. Their songs and laughter are soothing.",
+      "\nA pack of dwarf miners pass by you, carrying their haul from the cave to their home.",
+      "\nA pleasant wind brushes your nose, and in the distance a walking hut disappears into the shadows.",
+      "\nYou find a pleasant overhang at the base of a mountain along the forest edge, and take a nap.",
+      "\nYou take a moment to relax, using sticks to draw sketches in the soil. Maybe someone will see them."
+    ],
+    "final_room_description": "\nYou enter the ancient heart of the forest. The roots surround a glowing plant in the center.\nA spirit of nature paces around it.",
+    "boss_death": "\nYou defeat the corrupted spirit, whose dying essence nourishes the glowing flower, and it blooms brightly.",
+    "final_room_return": "\nYou have been here before, and the glowing flower is still here, in full bloom."
   },
 
-  {"location_name": "Abandonned Graveyard",  
-  "min_rooms": 3, 
-  "max_rooms": 5,
-  "entry_description": 
-    "\nYou step into an old graveyard, the rusted gate creaks in the wind, as you step past it.",
-  "room_descriptions": 
-    ["\nA hideous laugh is heard in the distance, distorting as it echoes through the air.",
-    "\nA thick fog surrounds you. As it ceases, you're unsure if you're still in the same place as before.",
-    "\nLightning strikes, illuminating a figure hanging on a tree. Upon closer inspection, nothing is there.",
-    "\nYou see a fountain, with a golden symbol on top. In the water's reflection, you see a cleaner, happier you.",
-    "\nYou enter a crypt, and look at the wall paintings inside. They tell the legend of an ancient family buried here.",
-    "\nYou find legible tombstones. One reads 'Here lies McGyver, who inventively decapitated himself.'",
-    "\nYou see a large cluster of crypts, yet none of them have entrances. None have plaques, either.",
-    "\nYou see the remains of a ritual site. The corpse is withered, its blood turned to black ichor."],
-  "encounter_descriptions": 
-    ["\nYou spot a raven atop a tombstone. The name is illegible. The raven shares a walnut with you.",
-    "\n'No more peeping, it's time for sleeping!' you hear a child sing. As you chase the sound, it goes quiet.",
-    "\nYou spend a moment gathering flowers and leaving them for the recently departed that rest here.",
-    "\n'No more bawling, the dead are a-crawling' the singing comes from a mist. Inside it, humanoid shadows.",
-    "\n'Turn back now, the living left the town' a raspy old lady sings somewhere in the distance.",
-    "\nYou read the plaque above a crypt: 'That is not dead which can eternal lie, and with strange aeons even death may die.'"],
-  "final_room_description": 
-    "\nA statue of an angel with a skeletal face, holding a scythe, stands at the center of the graveyard.",  
-  "boss_death":
-    "\nThe vampire lord grips his wounded heart, and begins to melt, cursing and weeping, while he turns to black ichor.",
-  "final_room_return": 
-    "\nA black puddle now lingers here, an unsettling reminder of an ancient vanquished evil."
+  {
+    "location_name": "Abandonned Graveyard",
+    "min_rooms": 3,
+    "max_rooms": 5,
+    "entry_description": "\nYou step into an old graveyard, the rusted gate creaks in the wind, as you step past it.",
+    "room_descriptions": [
+      "\nA hideous laugh is heard in the distance, distorting as it echoes through the air.",
+      "\nA thick fog surrounds you. As it ceases, you're unsure if you're still in the same place as before.",
+      "\nLightning strikes, illuminating a figure hanging on a tree. Upon closer inspection, nothing is there.",
+      "\nYou see a fountain, with a golden symbol on top. In the water's reflection, you see a cleaner, happier you.",
+      "\nYou enter a crypt, and look at the wall paintings inside. They tell the legend of an ancient family buried here.",
+      "\nYou find legible tombstones. One reads 'Here lies McGyver, who inventively decapitated himself.'",
+      "\nYou see a large cluster of crypts, yet none of them have entrances. None have plaques, either.",
+      "\nYou see the remains of a ritual site. The corpse is withered, its blood turned to black ichor."
+    ],
+    "encounter_descriptions": [
+      "\nYou spot a raven atop a tombstone. The name is illegible. The raven shares a walnut with you.",
+      "\n'No more peeping, it's time for sleeping!' you hear a child sing. As you chase the sound, it goes quiet.",
+      "\nYou spend a moment gathering flowers and leaving them for the recently departed that rest here.",
+      "\n'No more bawling, the dead are a-crawling' the singing comes from a mist. Inside it, humanoid shadows.",
+      "\n'Turn back now, the living left the town' a raspy old lady sings somewhere in the distance.",
+      "\nYou read the plaque above a crypt: 'That is not dead which can eternal lie, and with strange aeons even death may die.'"
+    ],
+    "final_room_description": "\nA statue of an angel with a skeletal face, holding a scythe, stands at the center of the graveyard.",
+    "boss_death": "\nThe vampire lord grips his wounded heart, and begins to melt, cursing and weeping, while he turns to black ichor.",
+    "final_room_return": "\nA black puddle now lingers here, an unsettling reminder of an ancient vanquished evil."
   },
 
-  {"location_name": "Rot-Plagued Swamp",  
-  "min_rooms": 4, 
-  "max_rooms": 6,
-  "entry_description": 
-    "\nYour foot splashes into the green water beneath the hanging trees. You sink up to your knees,\nand proceed into the dark swamp.",
-  "room_descriptions": 
-    ["\nA rotten tree sinks into the putrid waters below. As it sinks, a horrible stench bubbles upwards.",
-    "\nA small patch of healthy, colourful flowers is tended to by tiny fairies. They flee as you approach.",
-    "\nYou see some strange carvings on trees that span a circular area. Some carvings have decayed, or been scratched off.",
-    "\nYou see a trail of effigies line a path into the darkest part of the swamp. You decide to avoid going there yet.",
-    "\nThere is a part of the swamp where the water is full of black puddles. You stick to the branches, and swing around it.",
-    "\nYou find an abandoned hut half sunken in the swamp. It seems to have been burned a long time ago.",
-    "\nYou enter an open sprawl in the swamp, where various patches of bubbling ooze release noxious gas upwards.",
-    "\nYou pass underneath a tree, and notice strange carving one it. It seems like a rune of sorts, or a charm.",
-    "\nHeavy foliage obscures the path ahead. As you head into it, you sink up to your waste in the swamp waters.",
-    "\nOld roots, covered in fungi and mould, stick out of the water. At times they make you trip.",
-    "\nYou see strange glowing crystals protrude from the swampy waters. Strange insects swarm around them.",
-    "\nWide trees create a dry pathway over the waters. They are surprisingly sturdy and stable."],
-  "encounter_descriptions": 
-    ["\nYou spot a toad atop a branch. It expertly snatches the bugs swarming around you with its tongue.",
-    "\nA cloud of mosquitoes swarms by you, leaving you with itching bites, but causing no real harm.",
-    "\nYou climb up on a sturdy tree, and enjoy the rays of sun which are hidden from you in the swamp below.",
-    "\nA large lizard slowly trods along the swamp, disinterested in you.",
-    "\nCackling laughter is heard in the distance, and a hunched shape disappears in the rotting weeds.",
-    "\nA millipede the size of your arm rests on a blackened tree beside you. It's immobile, except for its antennae.",
-    "\nA bird falls through the trees into the waters, and is quickly swarmed by a flock of carnivorous fish.",
-    "\nYou climb up a sturdy branch and drain your shoes and gear. Some fish fall out with the wet dirt.",
-    "\nYou see a large stork jab down into the water, in search of prey. A moment later, the bird gets pulled in.",
-    "\nYou feel a pair of eyes look at you, but all you see around are strange humanoid effigies hanging on the trees."],
-  "final_room_description": 
-    "\nYou see a large open space, that shimmers slightly. You step further in, through the distorted air.",  
-  "boss_death":
-    "\nThe ancient hag falls into the swamp face down and sinks. Her hut reveals itself to be a deer-head's altar.",
-  "final_room_return": 
-    "\nThe altar formerly disguised as a hut has sunk down, with only the antlers sticking out from the green waters."
+  {
+    "location_name": "Rot-Plagued Swamp",
+    "min_rooms": 4,
+    "max_rooms": 6,
+    "entry_description": "\nYour foot splashes into the green water beneath the hanging trees. You sink up to your knees,\nand proceed into the dark swamp.",
+    "room_descriptions": [
+      "\nA rotten tree sinks into the putrid waters below. As it sinks, a horrible stench bubbles upwards.",
+      "\nA small patch of healthy, colourful flowers is tended to by tiny fairies. They flee as you approach.",
+      "\nYou see some strange carvings on trees that span a circular area. Some carvings have decayed, or been scratched off.",
+      "\nYou see a trail of effigies line a path into the darkest part of the swamp. You decide to avoid going there yet.",
+      "\nThere is a part of the swamp where the water is full of black puddles. You stick to the branches, and swing around it.",
+      "\nYou find an abandoned hut half sunken in the swamp. It seems to have been burned a long time ago.",
+      "\nYou enter an open sprawl in the swamp, where various patches of bubbling ooze release noxious gas upwards.",
+      "\nYou pass underneath a tree, and notice strange carving one it. It seems like a rune of sorts, or a charm.",
+      "\nHeavy foliage obscures the path ahead. As you head into it, you sink up to your waste in the swamp waters.",
+      "\nOld roots, covered in fungi and mould, stick out of the water. At times they make you trip.",
+      "\nYou see strange glowing crystals protrude from the swampy waters. Strange insects swarm around them.",
+      "\nWide trees create a dry pathway over the waters. They are surprisingly sturdy and stable."
+    ],
+    "encounter_descriptions": [
+      "\nYou spot a toad atop a branch. It expertly snatches the bugs swarming around you with its tongue.",
+      "\nA cloud of mosquitoes swarms by you, leaving you with itching bites, but causing no real harm.",
+      "\nYou climb up on a sturdy tree, and enjoy the rays of sun which are hidden from you in the swamp below.",
+      "\nA large lizard slowly trods along the swamp, disinterested in you.",
+      "\nCackling laughter is heard in the distance, and a hunched shape disappears in the rotting weeds.",
+      "\nA millipede the size of your arm rests on a blackened tree beside you. It's immobile, except for its antennae.",
+      "\nA bird falls through the trees into the waters, and is quickly swarmed by a flock of carnivorous fish.",
+      "\nYou climb up a sturdy branch and drain your shoes and gear. Some fish fall out with the wet dirt.",
+      "\nYou see a large stork jab down into the water, in search of prey. A moment later, the bird gets pulled in.",
+      "\nYou feel a pair of eyes look at you, but all you see around are strange humanoid effigies hanging on the trees."
+    ],
+    "final_room_description": "\nYou see a large open space, that shimmers slightly. You step further in, through the distorted air.",
+    "boss_death": "\nThe ancient hag falls into the swamp face down and sinks. Her hut reveals itself to be a deer-head's altar.",
+    "final_room_return": "\nThe altar formerly disguised as a hut has sunk down, with only the antlers sticking out from the green waters."
   },
 
-  {"location_name": "The Serpent Temple",  
-  "min_rooms": 4, 
-  "max_rooms": 6,
-  "entry_description": 
-    "\nA large pyramid has stood here for ages. The entryway is lit at night, but no one ever goes there, and no one comes back.",
-  "room_descriptions": 
-    ["\nYou look up at a wall full of hieroglyphs. They tell the prophecy of a world eating serpent.",
-    "\nA serpentine whisper flees past you. As you turn to see where it comes from, the torches extinguish around you.",
-    "\nYou run your hand along the wall, pushing in a loose tile. Spikes emerge from the ground, which you avoid.",
-    "\nYou see a pit full of snakes. Inside it there are numerous corpses chewed clean. You avoid it altogether.",
-    "\nYou see hieroglyphic depictions of ritualistic sacrifice, and the summoning of a serpent-headed entity with many arms.",
-    "\nYou find a room full of ritualistic equipment left unguarded. You break and destroy as much of it as you can.",
-    "\nYou pass a room full of priests chanting to a serpentine altar.\n'Glory to Antaboros, Herald of the End.' they chant in unison.",
-    "\nYou find the prisoner cages. They have recently been emptied, the victims ushered into sacrificial chambers.",
-    "\nYou find a wall of worn hieroglyphs, they tell the tale of an underwater entity from an ancient time.",
-    "\nA collapsed tunnel block your way. You head back out but emerge at a different tunnel than where you entered.",
-    "\nYou find yourself on a balcony that overlooks a maze-like structure beneath where large serpents slither.",
-    "\nYou pass by an elevated smooth pathway, taking note of a crushed corpse at the bottom, pinned beneath a giant slab."],
-  "encounter_descriptions": 
-    ["\nYou see a mongoose stepping out of a room, with a dead snake in its jaw. You stare at each other, and it skitters away.",
-    "\nScreaming echoes through the sandstone hallways, sacrifices taking place in dark chambers.",
-    "\nYou hide inside a crevice as a pair of serpent priests pass by in haste. They speak of Antaboros' glory to each other.",
-    "\nYou see a pulsing shard of glowing rock on a table. The snakes around it,\nand a pair of priests, lie unconscious beside it.",
-    "\nYou find an exhausted survivor hiding in a crevice. You give her some water and show her the way out.",
-    "\nYou hear barefoot footsteps running down a hall somewhere near. A trap is activated, and the footsteps halt.",
-    "\nYou find a room where a group of humans sitting in a circle are sharing a green and red liquid. They seem sleepy.",
-    "\nYou see a hunched human clawing at the remains of a serpentfolk soldier, trying to eat the remains and drink the blood.",
-    "\nA screaming human with scaly skin and serpentine eyes crawls past you. 'Glory to Antaboros' he whispers absentmindedly.",
-    "\nYou hear the sound of fighting, and notice serpentfolk guards pitting snakeblood addicted humans against each other."],
-  "final_room_description": 
-    "\nYou enter the largest area at the heart of the temple. In front of you there is a giant serpent statue atop an altar.",  
-  "boss_death":
-    "\nThe walls return to their solid state, and the avatar disperses in the air. The serpent statue splits in half.",
-  "final_room_return": 
-    "\nOne half of the serpentine statue has collapsed and shattered, the other half remains upright, staring at you."
+  {
+    "location_name": "The Serpent Temple",
+    "min_rooms": 4,
+    "max_rooms": 6,
+    "entry_description": "\nA large pyramid has stood here for ages. The entryway is lit at night, but no one ever goes there, and no one comes back.",
+    "room_descriptions": [
+      "\nYou look up at a wall full of hieroglyphs. They tell the prophecy of a world eating serpent.",
+      "\nA serpentine whisper flees past you. As you turn to see where it comes from, the torches extinguish around you.",
+      "\nYou run your hand along the wall, pushing in a loose tile. Spikes emerge from the ground, which you avoid.",
+      "\nYou see a pit full of snakes. Inside it there are numerous corpses chewed clean. You avoid it altogether.",
+      "\nYou see hieroglyphic depictions of ritualistic sacrifice, and the summoning of a serpent-headed entity with many arms.",
+      "\nYou find a room full of ritualistic equipment left unguarded. You break and destroy as much of it as you can.",
+      "\nYou pass a room full of priests chanting to a serpentine altar.\n'Glory to Antaboros, Herald of the End.' they chant in unison.",
+      "\nYou find the prisoner cages. They have recently been emptied, the victims ushered into sacrificial chambers.",
+      "\nYou find a wall of worn hieroglyphs, they tell the tale of an underwater entity from an ancient time.",
+      "\nA collapsed tunnel block your way. You head back out but emerge at a different tunnel than where you entered.",
+      "\nYou find yourself on a balcony that overlooks a maze-like structure beneath where large serpents slither.",
+      "\nYou pass by an elevated smooth pathway, taking note of a crushed corpse at the bottom, pinned beneath a giant slab."
+    ],
+    "encounter_descriptions": [
+      "\nYou see a mongoose stepping out of a room, with a dead snake in its jaw. You stare at each other, and it skitters away.",
+      "\nScreaming echoes through the sandstone hallways, sacrifices taking place in dark chambers.",
+      "\nYou hide inside a crevice as a pair of serpent priests pass by in haste. They speak of Antaboros' glory to each other.",
+      "\nYou see a pulsing shard of glowing rock on a table. The snakes around it,\nand a pair of priests, lie unconscious beside it.",
+      "\nYou find an exhausted survivor hiding in a crevice. You give her some water and show her the way out.",
+      "\nYou hear barefoot footsteps running down a hall somewhere near. A trap is activated, and the footsteps halt.",
+      "\nYou find a room where a group of humans sitting in a circle are sharing a green and red liquid. They seem sleepy.",
+      "\nYou see a hunched human clawing at the remains of a serpentfolk soldier, trying to eat the remains and drink the blood.",
+      "\nA screaming human with scaly skin and serpentine eyes crawls past you. 'Glory to Antaboros' he whispers absentmindedly.",
+      "\nYou hear the sound of fighting, and notice serpentfolk guards pitting snakeblood addicted humans against each other."
+    ],
+    "final_room_description": "\nYou enter the largest area at the heart of the temple. In front of you there is a giant serpent statue atop an altar.",
+    "boss_death": "\nThe walls return to their solid state, and the avatar disperses in the air. The serpent statue splits in half.",
+    "final_room_return": "\nOne half of the serpentine statue has collapsed and shattered, the other half remains upright, staring at you."
   },
 
-  {"location_name": "Glowing Crater",  
-  "min_rooms": 3, 
-  "max_rooms": 5,
-  "entry_description": 
-    "\nA few days ago, a strange object fell from the heavens and created a crater. You head out to investigate.",
-  "room_descriptions": 
-    ["\nGlowing veins pulse through the scorches earth, in colours ranging from green to purple.",
-    "\nYou see a farmhouse, split in two by the chasm that emerged from the impact. There are no bodies around.",
-    "\nYou step on a patch of soil, and countless worms and other insects crawl upwards, writhing in agony.",
-    "\nYou step on a particularly charred bit of earth and begin to sink into it.\nYou pull yourself out, and wipe off the dirt.",
-    "\nThe blast has uprooted certain gem deposits, which now pulse with an eerie glow. It is best to leave them be.",
-    "\nA strange tentacle lays lifelessly, seeming to originate from below the earth.\nAs you move past it, it retracts back down.",
-    "\nYou walk through crevices created by the impact. You panic as you begin to feel lost, but right then you emerge out.",
-    "\nYou see numerous black patches on the ground that vibrate gently. You pass through quietly and gently."],
-  "encounter_descriptions": 
-    ["\nYou see a flock of birds fly over the strange glow in the distance. They begin to plummet to their deaths",
-    "\nYou hear mad laughter coming from the distance. It is followed by manic screaming and howling\nwhich disappears in the distance.",
-    "\nA horse steps out from behind a slab of uprooted earth, pulling the remains of a destroyed wagon behind it.",
-    "\nA shocked man covered in dirt emerges from a dirt heap. 'Don't look straight at it!' he advises, before running off.",
-    "\nA goat stands staring at the glow in the distance. You think you hear it say something, but the goat just stares.",
-    "\nA gust of wind brings with it voices from the site of impact, but they are incomprehensible, if at all human.",
-    "\nThe glow in the distance subsides for a moment, which brings your mind calm and relief.",
-    "\nThe glow from the center of the blast becomes brighter. A choir of ethereal voices swells in tandem.",
-    "\nYou see a child with glowing eyes emerge behind a pile of earth uprooted by the blast.\nThey disappear before you catch them."],
-  "final_room_description": 
-    "\nYou reach the center of the impact. A large metallic meteor lies at the center of it, still smoking from the heat.",  
-  "boss_death":
-    "\nThe entity and the shattered meta-reality disappear. The meteor remains, still pulsing, but no longer seeking to enter your mind.",
-  "final_room_return": 
-    "\nThe meteor lays here, pulsing calmly, recognising your presence, and humbled by it."
+  {
+    "location_name": "Glowing Crater",
+    "min_rooms": 3,
+    "max_rooms": 5,
+    "entry_description": "\nA few days ago, a strange object fell from the heavens and created a crater. You head out to investigate.",
+    "room_descriptions": [
+      "\nGlowing veins pulse through the scorches earth, in colours ranging from green to purple.",
+      "\nYou see a farmhouse, split in two by the chasm that emerged from the impact. There are no bodies around.",
+      "\nYou step on a patch of soil, and countless worms and other insects crawl upwards, writhing in agony.",
+      "\nYou step on a particularly charred bit of earth and begin to sink into it.\nYou pull yourself out, and wipe off the dirt.",
+      "\nThe blast has uprooted certain gem deposits, which now pulse with an eerie glow. It is best to leave them be.",
+      "\nA strange tentacle lays lifelessly, seeming to originate from below the earth.\nAs you move past it, it retracts back down.",
+      "\nYou walk through crevices created by the impact. You panic as you begin to feel lost, but right then you emerge out.",
+      "\nYou see numerous black patches on the ground that vibrate gently. You pass through quietly and gently."
+    ],
+    "encounter_descriptions": [
+      "\nYou see a flock of birds fly over the strange glow in the distance. They begin to plummet to their deaths",
+      "\nYou hear mad laughter coming from the distance. It is followed by manic screaming and howling\nwhich disappears in the distance.",
+      "\nA horse steps out from behind a slab of uprooted earth, pulling the remains of a destroyed wagon behind it.",
+      "\nA shocked man covered in dirt emerges from a dirt heap. 'Don't look straight at it!' he advises, before running off.",
+      "\nA goat stands staring at the glow in the distance. You think you hear it say something, but the goat just stares.",
+      "\nA gust of wind brings with it voices from the site of impact, but they are incomprehensible, if at all human.",
+      "\nThe glow in the distance subsides for a moment, which brings your mind calm and relief.",
+      "\nThe glow from the center of the blast becomes brighter. A choir of ethereal voices swells in tandem.",
+      "\nYou see a child with glowing eyes emerge behind a pile of earth uprooted by the blast.\nThey disappear before you catch them."
+    ],
+    "final_room_description": "\nYou reach the center of the impact. A large metallic meteor lies at the center of it, still smoking from the heat.",
+    "boss_death": "\nThe entity and the shattered meta-reality disappear. The meteor remains, still pulsing, but no longer seeking to enter your mind.",
+    "final_room_return": "\nThe meteor lays here, pulsing calmly, recognising your presence, and humbled by it."
   },
 
-  {"location_name": "Endless Dunes",  
-  "min_rooms": 5, 
-  "max_rooms": 7,
-  "entry_description": 
-    "\nYou decide to explore the ancient desert, where ancient civilizations once ruled in times forgotten.",
-  "room_descriptions": 
-    ["\nYou see an oasis in the distance, but as you approach it disappears from your sight.",
-    "\nIn the distance, you see a massive creature rise up from the sands, and crash back into the dunes.",
-    "\nYou pass by sunken pillars. What little engravings remain, seem to hint at a culture long lost.",
-    "\nYou pass by a gathering of dried corpses, the remains of a caravan raid. Vultures are picking their bodies clean.",
-    "\nIn the distance, a lone figure tries to outpace something in the sands. Before they can get away, they are pulled in.",
-    "\nYou find a flat sprawl of sand, with numerous spears and blades sticking out.\nRemains of an ancient battle, it seems.",
-    "\nYou pass by the ruins of a pyramid. There is no entrance, or if there is one, it is buried deep down.",
-    "\nYou climb a dune, but the sand begins to sink. After climbing out, you decide to go the long way around.",
-    "\nA field of sunken obelisks lay in front of you. Some of the hieroglyphs depict an underwater god.",
-    "\nThe skeleton of a massive creature sticks out from the sand, providing some shadow from the blistering sun.",
-    "\nA large patch of sand slides down the dune in front of you, revealing a buried ruin.",
-    "\nYou find the remains of a sailing ship. How it got here is beyond you, but the sails provide shadow."],
-  "encounter_descriptions": 
-    ["\nYou find a patch of cacti, and manage to extract water from a few, nourishing and refreshing yourself.",
-    "\nYou see an oasis, and as you approach, you find a patch of lush vegetation, and a source of water.",
-    "\nYou encounter silent figures walking along the sands with caravans. They replenish your water, in silence.",
-    "\nYou find shards of a temple wall. The hieroglyphs tell of an ancient serpent deity.",
-    "\nYou find an oil lamp. As you rub it, nothing happens.",
-    "\nYou see a strange red vial in the sand. There are runes on it. You know what this is; a phylactery.",
-    "\nYou are caught in a sandstorm! After pacing through it for hours you find yourself in an unfamiliar place.",
-    "\nThe sand beneath you vibrates, but stops as you step on a stone. You follow the stone path to the other side.",
-    "\nA herd of small desert lizard pops up from beneath the sands and dive down in unison after getting fresh air.",
-    "\nYou find a tree, dried but still alive, and underneath it a thin man in monk's clothes.\nHe nods, without opening his eyes.",
-    "\nYou see a camp of silent traders. They eye you as you inspect their wares, and gladly refill your waterskin."],
-  "final_room_description": 
-    "\nTwo large obelisks, well kept and undisturbed by time, stand in the middle of the desert.",  
-  "boss_death":
-    "\nThe sphinx pharaoh kneels, his head lowered. 'Travel freely, adventurer', he says. 'Your heart is pure.'",
-  "final_room_return": 
-    "\nAnthereos is still here, and he gracefully bows at your approach. 'Sun guide you, adventurer' he says."
+  {
+    "location_name": "Endless Dunes",
+    "min_rooms": 5,
+    "max_rooms": 7,
+    "entry_description": "\nYou decide to explore the ancient desert, where ancient civilizations once ruled in times forgotten.",
+    "room_descriptions": [
+      "\nYou see an oasis in the distance, but as you approach it disappears from your sight.",
+      "\nIn the distance, you see a massive creature rise up from the sands, and crash back into the dunes.",
+      "\nYou pass by sunken pillars. What little engravings remain, seem to hint at a culture long lost.",
+      "\nYou pass by a gathering of dried corpses, the remains of a caravan raid. Vultures are picking their bodies clean.",
+      "\nIn the distance, a lone figure tries to outpace something in the sands. Before they can get away, they are pulled in.",
+      "\nYou find a flat sprawl of sand, with numerous spears and blades sticking out.\nRemains of an ancient battle, it seems.",
+      "\nYou pass by the ruins of a pyramid. There is no entrance, or if there is one, it is buried deep down.",
+      "\nYou climb a dune, but the sand begins to sink. After climbing out, you decide to go the long way around.",
+      "\nA field of sunken obelisks lay in front of you. Some of the hieroglyphs depict an underwater god.",
+      "\nThe skeleton of a massive creature sticks out from the sand, providing some shadow from the blistering sun.",
+      "\nA large patch of sand slides down the dune in front of you, revealing a buried ruin.",
+      "\nYou find the remains of a sailing ship. How it got here is beyond you, but the sails provide shadow."
+    ],
+    "encounter_descriptions": [
+      "\nYou find a patch of cacti, and manage to extract water from a few, nourishing and refreshing yourself.",
+      "\nYou see an oasis, and as you approach, you find a patch of lush vegetation, and a source of water.",
+      "\nYou encounter silent figures walking along the sands with caravans. They replenish your water, in silence.",
+      "\nYou find shards of a temple wall. The hieroglyphs tell of an ancient serpent deity.",
+      "\nYou find an oil lamp. As you rub it, nothing happens.",
+      "\nYou see a strange red vial in the sand. There are runes on it. You know what this is; a phylactery.",
+      "\nYou are caught in a sandstorm! After pacing through it for hours you find yourself in an unfamiliar place.",
+      "\nThe sand beneath you vibrates, but stops as you step on a stone. You follow the stone path to the other side.",
+      "\nA herd of small desert lizard pops up from beneath the sands and dive down in unison after getting fresh air.",
+      "\nYou find a tree, dried but still alive, and underneath it a thin man in monk's clothes.\nHe nods, without opening his eyes.",
+      "\nYou see a camp of silent traders. They eye you as you inspect their wares, and gladly refill your waterskin."
+    ],
+    "final_room_description": "\nTwo large obelisks, well kept and undisturbed by time, stand in the middle of the desert.",
+    "boss_death": "\nThe sphinx pharaoh kneels, his head lowered. 'Travel freely, adventurer', he says. 'Your heart is pure.'",
+    "final_room_return": "\nAnthereos is still here, and he gracefully bows at your approach. 'Sun guide you, adventurer' he says."
   },
 
-  {"location_name": "The City Outside of Time",  
-  "min_rooms": 6, 
-  "max_rooms": 8,
-  "entry_description": 
-    "\nA strange door appears in the middle of the farm fields. You step through, entering a flying metropolis.",
-  "room_descriptions": 
-    ["\nYou step on a long metallic bridge. As you look down, you see the apartment towers disappear in the clouds beneath.",
-    "\nYou pass by a strip of clubs, where the rhythmic music inside accompanies holographic dancers in skimpy clothes outside.",
-    "\nYou gaze out at an industrial tower, where near endless cargo traffic flies in and out.",
-    "\nYou pass by a market, where ancient swords, as well as high tech cellular phones are being sold next to each other.",
-    "\nA large promenade full of advertisement projections houses a massive statue of a multi-armed monk sitting in the center.",
-    "\nYou pass a large floating church. It is heavily fortified, and troopers in large armor man the turrets outside.",
-    "\nYou pass by cooking stands, where people sit hunched over their soups and bowls of indiscernible meat.",
-    "\nA group of dark clad and heavily tattooed men stand surrounded by their hover-bikes. They nod at you as you pass by.",
-    "\nAn advertisement drone flies by. 'Vote for order and unity' it says, depicting a hard-edged emblem of an eagle.",
-    "\nA flying car highway bisects one of the floating districts. A teleportation device brings you to the other side.",
-    "\nYou pass by a cluster of diners and warehouses. Staff from both types of businesses mingle during smoking breaks.",
-    "\nYou see a wall covered in art. One of the images is that of an octopus-headed creature with wings."],
-  "encounter_descriptions": 
-    ["\nA squad of high-tech militia men kick down the doors of a viking mead hall. Sounds of battle follow.",
-    "\nYou witness mutated ninjas fail to assassinate a cyborg activist. Robot police officers hold the ninjas down.",
-    "\nTwo knights riding on pterodactyls fly by you, throwing spears at a flying car. In the distance, the car explodes.",
-    "\nA drone patrol flies over the streets. 'Looking for suspect' they repeat, projecting a holographic image of a cowboy.",
-    "\nA coated man approaches, his face obscured, asking if you'd like some death-sticks. You reject the offer.",
-    "\nA flying pirate ship flies past you, chased by flying police cars. The pirate captain yells taunts and laughs.",
-    "\nA serpentfolk man stands on a hovering platform. 'All hail Antaboros,' he proclaims, 'the devourer of worlds.'",
-    "\nYou are greeted by silent grey creatures with large black eyes. They stare for a moment, and continue walking.",
-    "\n'Have yee some change for this veteran of the fifth great war?' a man in camouflage clothing asks, shaking a tin can.",
-    "\nA man in a long black trench coat and black sunglasses approaches you.\n'Neo, you have to wake up' he says before walking away."],
-  "final_room_description": 
-    "\nYou enter the building called AfterLife, and take the hidden elevator in the back down countless floors.",  
-  "boss_death":
-    "\n'Our afterlife is ruined' speaks the man in the final pod. You hear him, albeit somewhat muted, through the glass.",
-  "final_room_return": 
-    "\nThe room is as you last left it, all the pods except for one are empty.\nThe man inside the last one stares at you in frustration."
+  {
+    "location_name": "The City Outside of Time",
+    "min_rooms": 6,
+    "max_rooms": 8,
+    "entry_description": "\nA strange door appears in the middle of the farm fields. You step through, entering a flying metropolis.",
+    "room_descriptions": [
+      "\nYou step on a long metallic bridge. As you look down, you see the apartment towers disappear in the clouds beneath.",
+      "\nYou pass by a strip of clubs, where the rhythmic music inside accompanies holographic dancers in skimpy clothes outside.",
+      "\nYou gaze out at an industrial tower, where near endless cargo traffic flies in and out.",
+      "\nYou pass by a market, where ancient swords, as well as high tech cellular phones are being sold next to each other.",
+      "\nA large promenade full of advertisement projections houses a massive statue of a multi-armed monk sitting in the center.",
+      "\nYou pass a large floating church. It is heavily fortified, and troopers in large armor man the turrets outside.",
+      "\nYou pass by cooking stands, where people sit hunched over their soups and bowls of indiscernible meat.",
+      "\nA group of dark clad and heavily tattooed men stand surrounded by their hover-bikes. They nod at you as you pass by.",
+      "\nAn advertisement drone flies by. 'Vote for order and unity' it says, depicting a hard-edged emblem of an eagle.",
+      "\nA flying car highway bisects one of the floating districts. A teleportation device brings you to the other side.",
+      "\nYou pass by a cluster of diners and warehouses. Staff from both types of businesses mingle during smoking breaks.",
+      "\nYou see a wall covered in art. One of the images is that of an octopus-headed creature with wings."
+    ],
+    "encounter_descriptions": [
+      "\nA squad of high-tech militia men kick down the doors of a viking mead hall. Sounds of battle follow.",
+      "\nYou witness mutated ninjas fail to assassinate a cyborg activist. Robot police officers hold the ninjas down.",
+      "\nTwo knights riding on pterodactyls fly by you, throwing spears at a flying car. In the distance, the car explodes.",
+      "\nA drone patrol flies over the streets. 'Looking for suspect' they repeat, projecting a holographic image of a cowboy.",
+      "\nA coated man approaches, his face obscured, asking if you'd like some death-sticks. You reject the offer.",
+      "\nA flying pirate ship flies past you, chased by flying police cars. The pirate captain yells taunts and laughs.",
+      "\nA serpentfolk man stands on a hovering platform. 'All hail Antaboros,' he proclaims, 'the devourer of worlds.'",
+      "\nYou are greeted by silent grey creatures with large black eyes. They stare for a moment, and continue walking.",
+      "\n'Have yee some change for this veteran of the fifth great war?' a man in camouflage clothing asks, shaking a tin can.",
+      "\nA man in a long black trench coat and black sunglasses approaches you.\n'Neo, you have to wake up' he says before walking away."
+    ],
+    "final_room_description": "\nYou enter the building called AfterLife, and take the hidden elevator in the back down countless floors.",
+    "boss_death": "\n'Our afterlife is ruined' speaks the man in the final pod. You hear him, albeit somewhat muted, through the glass.",
+    "final_room_return": "\nThe room is as you last left it, all the pods except for one are empty.\nThe man inside the last one stares at you in frustration."
   },
 
-  {"location_name": "Fallen Kingdom",  
-  "min_rooms": 7, 
-  "max_rooms": 9,
-  "entry_description": 
-    "\nYou enter upon the ruins of a fallen city, destroyed by a demon invasion. You intend to cleanse what remains.",
-  "room_descriptions": 
-    ["\nYou step over a destroyed rampart wall. On the other side there is a massive boulder on top of a pile of corpses.",
-    "\nAfter ascending a partially broken ladder, you gaze over at the burning fortress in the distance.\nThe city below lays in ruins.",
-    "\nWalking along the city walls you see the remains of siege towers, and note that some are still attached.",
-    "\nYou walk through a courtyard full of summoning circles. This was once a reinforcement spawn point\nfor the invading demon armies.",
-    "\nA pathway up the streets is surrounded by flay poles, where once the bodies of skinned humans hung,\nnow only skeletal remains do.",
-    "\nStinking corpse piles, now mostly consisting of bones and clothing, litter the streets of this once flourishing city.",
-    "\nYou pass by houses still burning with a green flame. At times necroflame was used to burn the innocent masses.",
-    "\nCracks in the earth that stretch down to the underworld separate the city into islands.\nYou use rubble to get across.",
-    "\nYou climb through an abandoned siege tower to get up the wall, and into an inner part of the city.",
-    "\nYou find the remains of a dead demon ogre, its body pierced by multiple massive harpoons.\nYou use it to climb up to the rooftops.",
-    "\nYou find the central fountain, once crimson, it is now dry, and blackened with dried blood.\nRotting bodies are stuck in the drains.",
-    "\nYou see a former temple, now desecrated. Bodies are pinned to the columns, and demonic runes painted in\nblood cover the walls."],
-  "encounter_descriptions": 
-    ["\nA skinny human crawls around pillaging the corpses. As he notices you, he quickly runs away in shame.",
-    "\nA paladin named Anri greets you. They are vanquishing demons, and exchange information about\nhow to navigate the city with you.",
-    "\nA closed portcullis blocks your way forward, but you manage to leverage a large spear and lift\nit up just enough to crawl under and through.",
-    "\nYou hide behind rubble as a demon patrol passes by. They speak in incomprehensible tongues, casting curses on the dead.",
-    "\nYou see a pack of undead pacing around a courtyard. You stick to the perimeter and avoid their green glowing gazes.",
-    "\nYou see a necromancer leading a pack of undead to dig through the rubble, in search of more bodies to reanimate.",
-    "\nA horse in sharp black armour gazes at you from a distance. In front of it you see the rider - a death knight, kneeling.",
-    "\nA group of survivors are chained up, and being rushed forward by a pack of demons. Their deaths are\nintended to summon more demons.",
-    "\nYou spot a stealthy agent of faith blessing corpses, and consecrating soil to prevent more summonings and resurrections.",
-    "\nYou find yourself at a portcullis winch, and lower it preventing demons from reaching some survivors that are hiding."],
-  "final_room_description": 
-    "\nYou stand in front of a massive obsidian gate. This was the portal through which the demon lord was summoned.",  
-  "boss_death":
-    "\nThe phylactery lays broken, and the essence within evaporates, as the demon-lich's body shatters into dust.",
-  "final_room_return": 
-    "\nThe shards of the shattered phylactery lay in front of a silent and crumbling portal of obsidian stone."
+  {
+    "location_name": "Fallen Kingdom",
+    "min_rooms": 7,
+    "max_rooms": 9,
+    "entry_description": "\nYou enter upon the ruins of a fallen city, destroyed by a demon invasion. You intend to cleanse what remains.",
+    "room_descriptions": [
+      "\nYou step over a destroyed rampart wall. On the other side there is a massive boulder on top of a pile of corpses.",
+      "\nAfter ascending a partially broken ladder, you gaze over at the burning fortress in the distance.\nThe city below lays in ruins.",
+      "\nWalking along the city walls you see the remains of siege towers, and note that some are still attached.",
+      "\nYou walk through a courtyard full of summoning circles. This was once a reinforcement spawn point\nfor the invading demon armies.",
+      "\nA pathway up the streets is surrounded by flay poles, where once the bodies of skinned humans hung,\nnow only skeletal remains do.",
+      "\nStinking corpse piles, now mostly consisting of bones and clothing, litter the streets of this once flourishing city.",
+      "\nYou pass by houses still burning with a green flame. At times necroflame was used to burn the innocent masses.",
+      "\nCracks in the earth that stretch down to the underworld separate the city into islands.\nYou use rubble to get across.",
+      "\nYou climb through an abandoned siege tower to get up the wall, and into an inner part of the city.",
+      "\nYou find the remains of a dead demon ogre, its body pierced by multiple massive harpoons.\nYou use it to climb up to the rooftops.",
+      "\nYou find the central fountain, once crimson, it is now dry, and blackened with dried blood.\nRotting bodies are stuck in the drains.",
+      "\nYou see a former temple, now desecrated. Bodies are pinned to the columns, and demonic runes painted in\nblood cover the walls."
+    ],
+    "encounter_descriptions": [
+      "\nA skinny human crawls around pillaging the corpses. As he notices you, he quickly runs away in shame.",
+      "\nA paladin named Anri greets you. They are vanquishing demons, and exchange information about\nhow to navigate the city with you.",
+      "\nA closed portcullis blocks your way forward, but you manage to leverage a large spear and lift\nit up just enough to crawl under and through.",
+      "\nYou hide behind rubble as a demon patrol passes by. They speak in incomprehensible tongues, casting curses on the dead.",
+      "\nYou see a pack of undead pacing around a courtyard. You stick to the perimeter and avoid their green glowing gazes.",
+      "\nYou see a necromancer leading a pack of undead to dig through the rubble, in search of more bodies to reanimate.",
+      "\nA horse in sharp black armour gazes at you from a distance. In front of it you see the rider - a death knight, kneeling.",
+      "\nA group of survivors are chained up, and being rushed forward by a pack of demons. Their deaths are\nintended to summon more demons.",
+      "\nYou spot a stealthy agent of faith blessing corpses, and consecrating soil to prevent more summonings and resurrections.",
+      "\nYou find yourself at a portcullis winch, and lower it preventing demons from reaching some survivors that are hiding."
+    ],
+    "final_room_description": "\nYou stand in front of a massive obsidian gate. This was the portal through which the demon lord was summoned.",
+    "boss_death": "\nThe phylactery lays broken, and the essence within evaporates, as the demon-lich's body shatters into dust.",
+    "final_room_return": "\nThe shards of the shattered phylactery lay in front of a silent and crumbling portal of obsidian stone."
   },
 
-  {"location_name": "The Submerged Empire of Kath",  
-  "min_rooms": 8, 
-  "max_rooms": 10,
-  "entry_description": 
-    "\nYou've seen strange lights, and heard whispers call you to the ocean depths. Surprisingly you breathe easy as\nyou descend to explore.",
-  "room_descriptions": 
-    ["\nYou swim past a large coral that covers an ancient ruin. The ruin structure has strange geometrical properties.",
-    "\nYou see a reef with a purple and green light pulsing in its depths. As you swim deeper, the light moves further away.",
-    "\nAn open area on the sea floor is illuminated by bioluminescent jellyfish who hang in place,\ncatching prey with their tendrils.",
-    "\nYou see a circular tower, but inside it, the stairs lead down endlessly into a black abyss. You decide against going down.",
-    "\nThere is a large canyon littered with ruins along its edges. Unexpectedly, you notice that the ruins are built sideways.",
-    "\nYou swim beneath large floating obelisks. They rotate in all directions, at times projecting brief flashes of purple light.",
-    "\nYou see a large shape, like a whale's corpse, rooted at the base of an underwater ravine. It is a\ncreature completely unfamiliar to you.",
-    "\nThere is a patch of strange underwater plants which release bubbles. The bubbles reflect a disturbingly distorted reality.",
-    "\nRays of light illuminate the seafloor, scattering tentacle like shadows away from your path. You hear hisses and whispers.",
-    "\nLarge inverted pyramids drift along the seafloor, drawing strange diagrams in the sand. The water washes\nthe patterns away after a few moments.",
-    "\nA large pearl like orb hovers above the seabed. As you touch it, it releases a pulse that echoes through the water around you.",
-    "\nA wall full of hieroglyphs tell the tale of a serpent god kneeling to a creature from the sea."],
-  "encounter_descriptions": 
-    ["\nYou spot a group of faceless cultists mutilating themselves and each other. Their bodies coagulate in screaming agony.",
-    "\nYou see a necklace of a surface deity, and holding it brings you calm from the maddening whispers. It dissolves in your hand.",
-    "\nYou see a faceless priest stitch together a giant crab and an octopus, creating a grafted monstrosity.\nThe cultist is devoured immediately.",
-    "\nA tentacle shoots up from a dark ravine, and grips a glowing jellyfish floating above, pulling it down as it\nlatches more tendrils to it.",
-    "\nA merfolk explorer swims up to you, and warns you of the cultists here and the entity they worship. He gives you glowing rocks.",
-    "\nYou see a fish that is much larger than any you have ever seen before. It is ancient and has a look of intelligence\nin its eyes.",
-    "\nYou stumble upon a patch of deep sea flora, which is mutated in twisted ways to resemble distorted reflections\nof surface creatures.",
-    "\nYou witness a faceless cultist court, in which they line up in front of a gaping tentacle maw, which either devours them,\nor transforms them.",
-    "\nA school of fish swim up to you, swimming in strange patters, almost as if depicting higher dimensional geometry.",
-    "\nYou find a wall overgrown with strange glowing algae. Beneath the algae are runic carvings, but you cannot make\nout much of them."],
-  "final_room_description": 
-    "\nYou approach a massive underwater cliff, which descends into infinite darkness. The structures end here.",  
-  "boss_death":
-    "\nThe entity crashes its octopus head on the cliff edge, and you finish it off. As it plummets to the depths,\nall whispers subside.",
-  "final_room_return": 
-    "\nThe black abyss ahead of you is calm now, for the first time in perhaps millennia, or perhaps forever."
+  {
+    "location_name": "The Submerged Empire of Kath",
+    "min_rooms": 8,
+    "max_rooms": 10,
+    "entry_description": "\nYou've seen strange lights, and heard whispers call you to the ocean depths. Surprisingly you breathe easy as\nyou descend to explore.",
+    "room_descriptions": [
+      "\nYou swim past a large coral that covers an ancient ruin. The ruin structure has strange geometrical properties.",
+      "\nYou see a reef with a purple and green light pulsing in its depths. As you swim deeper, the light moves further away.",
+      "\nAn open area on the sea floor is illuminated by bioluminescent jellyfish who hang in place,\ncatching prey with their tendrils.",
+      "\nYou see a circular tower, but inside it, the stairs lead down endlessly into a black abyss. You decide against going down.",
+      "\nThere is a large canyon littered with ruins along its edges. Unexpectedly, you notice that the ruins are built sideways.",
+      "\nYou swim beneath large floating obelisks. They rotate in all directions, at times projecting brief flashes of purple light.",
+      "\nYou see a large shape, like a whale's corpse, rooted at the base of an underwater ravine. It is a\ncreature completely unfamiliar to you.",
+      "\nThere is a patch of strange underwater plants which release bubbles. The bubbles reflect a disturbingly distorted reality.",
+      "\nRays of light illuminate the seafloor, scattering tentacle like shadows away from your path. You hear hisses and whispers.",
+      "\nLarge inverted pyramids drift along the seafloor, drawing strange diagrams in the sand. The water washes\nthe patterns away after a few moments.",
+      "\nA large pearl like orb hovers above the seabed. As you touch it, it releases a pulse that echoes through the water around you.",
+      "\nA wall full of hieroglyphs tell the tale of a serpent god kneeling to a creature from the sea."
+    ],
+    "encounter_descriptions": [
+      "\nYou spot a group of faceless cultists mutilating themselves and each other. Their bodies coagulate in screaming agony.",
+      "\nYou see a necklace of a surface deity, and holding it brings you calm from the maddening whispers. It dissolves in your hand.",
+      "\nYou see a faceless priest stitch together a giant crab and an octopus, creating a grafted monstrosity.\nThe cultist is devoured immediately.",
+      "\nA tentacle shoots up from a dark ravine, and grips a glowing jellyfish floating above, pulling it down as it\nlatches more tendrils to it.",
+      "\nA merfolk explorer swims up to you, and warns you of the cultists here and the entity they worship. He gives you glowing rocks.",
+      "\nYou see a fish that is much larger than any you have ever seen before. It is ancient and has a look of intelligence\nin its eyes.",
+      "\nYou stumble upon a patch of deep sea flora, which is mutated in twisted ways to resemble distorted reflections\nof surface creatures.",
+      "\nYou witness a faceless cultist court, in which they line up in front of a gaping tentacle maw, which either devours them,\nor transforms them.",
+      "\nA school of fish swim up to you, swimming in strange patters, almost as if depicting higher dimensional geometry.",
+      "\nYou find a wall overgrown with strange glowing algae. Beneath the algae are runic carvings, but you cannot make\nout much of them."
+    ],
+    "final_room_description": "\nYou approach a massive underwater cliff, which descends into infinite darkness. The structures end here.",
+    "boss_death": "\nThe entity crashes its octopus head on the cliff edge, and you finish it off. As it plummets to the depths,\nall whispers subside.",
+    "final_room_return": "\nThe black abyss ahead of you is calm now, for the first time in perhaps millennia, or perhaps forever."
   }
-
 ]
