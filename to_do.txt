@@ -1,29 +1,31 @@
---- Done: ---
-make_character function
-Save/Load character function
-gain_xp function
-Level up (improve ability score, subtract XP from pool and update XP needed to level)
-created the main menu and request_action() functions
-converted locations to dictionaries
-made classes and starting gear
-setup combat functions with the new dictionaries and classes
-converted creatures to dictionaries
-determine damage function (how to calculate damage? what system?)
-Add try checks for inputs in all functions where possible to input str or int
+TO DO:
 
+Inputs:
+- make sure the match cases can error handle things other than numbers
 
---- To do soon: ---
-Convert bosses to dictionaries
-determine health and mana gain from leveling (ability score related, or fixed value?)
-setup exploration functions with the new dictionaries and classes
-add potions and spells to combat and exploration
-setup consumable buy/use functions
+General Mechanics:
+- correct stealth mechanics for exploration and combat
+- add combat timer to keep track of debuffs and spell effects maybe?
 
+Magic:
+- add spellcasting
+- add spells
+- add mana restoration in hub + spell purchase?
 
+Items:
+- correct stats on weapons and armors
+- add more weapons and armors
+- add rings
+- add amulets
+- add loot mechanics
+- add equipment management mechanics (unequipped armor/weapons/etc in inventory possible to be sold at hub area?)
 
---- To do later: ---
-add rings
-add amulets
-add loot mechanics
-add equipment management mechanics (unequipped armor/weapons/etc in inventory possible to be sold at hub area?)
-add more to hub area (tavern to heal, shop for gear, shop for potions and consumables, maybe level at shrine/inn?)
+Creatures/Bosses:
+- correctly assign to correct locations
+- adjust hp, dmg, xp, and gold values to fit scaling
+
+Hub:
+- add more to hub area (tavern to heal, shop for gear, shop for potions and consumables, maybe level at shrine/inn?)
+
+Combat:
+- potentially expand combat to include different actions like dodging

@@ -191,7 +191,9 @@ class Character:
                         time.sleep(1)
                         return 0
                     self.health += 5
-                    self.max_health = self.health
+                    self.mana += self.willpower
+                    self.max_health += 5
+                    self.max_mana += self.willpower
                     self.level += 1
                     self.current_xp -= self.xp_to_level
                     self.xp_to_level = (self.strength + self.dexterity + self.willpower) * 10 + self.level * 20
