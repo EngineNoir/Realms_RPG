@@ -1,11 +1,13 @@
 import random
 import json
+import time
 
 from functions.character_class_functions import Character
 from functions.combat_function import combat_time
 from functions.creature_class_functions import Creature
 from functions.boss_class_functions import Boss
 from functions.character_inspection import inspect_sheet
+from functions.potion_class_functions import use_potions
 
 
 load_creatures = open('jsons/creatures.json')
@@ -44,50 +46,60 @@ class Location:
     def explore(self, player: Character):
         number_of_rooms = random.randint(self.rooms_min, self.rooms_max)
         boss = self.generate_boss(bosses)
-        enemies = self.generate_enemies(creatures)
         print(self.entry)
 
         while self.current_room < number_of_rooms and player.health > 0:
             print('\nYou may do the following:\n1. Continue Exploring.\n2. Stealth.\n3. Use Magic.\n4. Use a potion'
                     '\n5. Inspect Character Sheet\n6. Leave the Location.')
-            player_choice = int(input('\nWhat would you like to do?: '))
-
-            match player_choice:
-                case 1:
-                    print(random.choice(self.rooms))
-                    if_combat = random.randint(0, 100)
-                    if if_combat < 50:
-                        # TO DO:STEALTH
-                        enemy = random.choice(enemies)
-                        print(f"\nYou encounter a(n) {enemy.name}! Get ready for combat!")
-                        combat_time(player, enemy)
-                        if player.health > 0:
-                            self.current_room += 1 #need a check for if the combat succeeded
-                        else: break
+            player_choice = None
+            while player_choice not in list(range(1,7)):
+                while True:
+                    try:
+                        player_choice = int(input('\nWhat would you like to do?: '))
+                    except ValueError:
+                        print("Please select a valid action.")
                     else:
-                        print(random.choice(self.encounters))
-                        if player.health < player.max_health:
-                            player.health = min(player.health + 5, player.max_health)
-                            print(f"\nYou rest and regain health up to {player.health}HP.")
-                        self.current_room += 1
-                case 2:
-                    player.stealth_in_exploration()
-                case 3:
-                    # TODO
-                    return 0
-                case 4:
-                    # TODO
-                    return 0
-                case 5:
-                    # TODO
-                    inspect_sheet(player)
-                case 6:
-                    break
-                case _:
-                    print("\nPlease select a valid action.")
+                        break
+
+                match player_choice:
+                    case 1:
+                        print(random.choice(self.rooms))
+                        if_combat = random.randint(0, 100)
+                        if if_combat < 50:
+                            enemies = self.generate_enemies(creatures)
+                            enemy = random.choice(enemies)
+                            print(f"\nYou encounter a(n) {enemy.name}!")
+                            self.stealth(player, enemy)
+                            if player.health > 0:
+                                self.current_room += 1 #need a check for if the combat succeeded
+                            else: break
+                        else:
+                            print(random.choice(self.encounters))
+                            if player.health < player.max_health:
+                                player.health = min(player.health + 5, player.max_health)
+                                print(f"\nYou rest and regain health up to {player.health}HP.")
+                            self.current_room += 1
+                    case 2:
+                        player.stealth_in_exploration()
+                    case 3:
+                        # TODO
+                        return 0
+                    case 4:
+                        use_potions(player)
+                    case 5:
+                        inspect_sheet(player)
+                    case 6:
+                        print("\nYou trace your path back to the Village.")
+                        time.sleep(1)
+                        return 0
+                    case _:
+                        print("\nPlease select a valid action.")
 
         if self.current_room == number_of_rooms and self.name not in player.cleared_dungeons:
             print(self.final_room)
+            if player.stealth:
+                print(f"\n{boss.name} notices you. Prepare for combat!")
+                player.stealth = False
             combat_time(player, boss)
             if player.health > 0:
                 player.cleared_dungeons.append(self.name)
@@ -98,7 +110,36 @@ class Location:
 
         return 0
 
-    def combat(self, player: Character, enemy: Creature):
+    def stealth(self, player: Character, enemy: Creature):
+        if player.stealth == False or enemy.awareness > player.dexterity:
+            print("\nYou are spotted by the enemy. Prepare for combat!")
+            combat_time(player, enemy)
+        elif enemy.awareness <= player.dexterity:
+            print(f"\nYou spot a(n) {enemy.name}, but remain hidden.\nDo you wish to: \n1.Ambush {enemy.name}\n2.Sneak away")
+            while True:
+                try:
+                    choice = int(input("\nWhat do you choose?: "))
+                except:
+                    print("\nYou must select a number!")
+                else:
+                    break
+            match choice:
+                case 1:
+                    player.deal_damage_to_enemy(enemy)
+                    if enemy.health > 0:
+                        print("\nYou are no longer stealthed! Prepare for combat!")
+                    combat_time(player, enemy)
+                case 2:
+                    print("\nYou stealth away")
+                case _:
+                    print("\nInvalid number chosen.")
+                    while True:
+                        try:
+                            choice = int(input("\nWhat do you choose?: "))
+                        except:
+                            print("\nYou must select a number!")
+                        else:
+                            break
         return 0
 
     def boss_combat(self, player: Character, boss: Boss):

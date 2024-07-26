@@ -34,7 +34,7 @@ class Boss(Creature):
         if self.health < 0.75*self.health_max and self.stage == 1:
             print(self.taunts[1])
             self.stage = 2
-        if self.stage == 1 and self.health < 0.5*self.health_max:
+        if self.stage == 2 and self.health < 0.5*self.health_max:
             print(self.taunts[2])
             self.stage = 3
 

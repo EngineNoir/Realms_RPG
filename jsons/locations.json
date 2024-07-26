@@ -2,7 +2,7 @@
   {
     "location_name": "Ancient Forest",
     "min_rooms": 3,
-    "max_rooms": 5,
+    "max_rooms": 6,
     "entry_description": "\nYou head out into a large forest, the trees extending out towards the horizon, and the mountains beyond.",
     "room_descriptions": [
       "\nYou enter a glade, where the sun shines through the foliage, and the sound of a river stream can be heard.",
@@ -31,7 +31,7 @@
   {
     "location_name": "Abandonned Graveyard",
     "min_rooms": 3,
-    "max_rooms": 5,
+    "max_rooms": 7,
     "entry_description": "\nYou step into an old graveyard, the rusted gate creaks in the wind, as you step past it.",
     "room_descriptions": [
       "\nA hideous laugh is heard in the distance, distorting as it echoes through the air.",
@@ -59,7 +59,7 @@
   {
     "location_name": "Rot-Plagued Swamp",
     "min_rooms": 4,
-    "max_rooms": 6,
+    "max_rooms": 8,
     "entry_description": "\nYour foot splashes into the green water beneath the hanging trees. You sink up to your knees,\nand proceed into the dark swamp.",
     "room_descriptions": [
       "\nA rotten tree sinks into the putrid waters below. As it sinks, a horrible stench bubbles upwards.",
@@ -94,8 +94,8 @@
 
   {
     "location_name": "The Serpent Temple",
-    "min_rooms": 4,
-    "max_rooms": 6,
+    "min_rooms": 6,
+    "max_rooms": 8,
     "entry_description": "\nA large pyramid has stood here for ages. The entryway is lit at night, but no one ever goes there, and no one comes back.",
     "room_descriptions": [
       "\nYou look up at a wall full of hieroglyphs. They tell the prophecy of a world eating serpent.",
@@ -130,8 +130,8 @@
 
   {
     "location_name": "Glowing Crater",
-    "min_rooms": 3,
-    "max_rooms": 5,
+    "min_rooms": 4,
+    "max_rooms": 7,
     "entry_description": "\nA few days ago, a strange object fell from the heavens and created a crater. You head out to investigate.",
     "room_descriptions": [
       "\nGlowing veins pulse through the scorches earth, in colours ranging from green to purple.",
@@ -161,8 +161,8 @@
 
   {
     "location_name": "Endless Dunes",
-    "min_rooms": 5,
-    "max_rooms": 7,
+    "min_rooms": 6,
+    "max_rooms": 9,
     "entry_description": "\nYou decide to explore the ancient desert, where ancient civilizations once ruled in times forgotten.",
     "room_descriptions": [
       "\nYou see an oasis in the distance, but as you approach it disappears from your sight.",
@@ -198,8 +198,8 @@
 
   {
     "location_name": "The City Outside of Time",
-    "min_rooms": 6,
-    "max_rooms": 8,
+    "min_rooms": 7,
+    "max_rooms": 10,
     "entry_description": "\nA strange door appears in the middle of the farm fields. You step through, entering a flying metropolis.",
     "room_descriptions": [
       "\nYou step on a long metallic bridge. As you look down, you see the apartment towers disappear in the clouds beneath.",
@@ -234,8 +234,8 @@
 
   {
     "location_name": "Fallen Kingdom",
-    "min_rooms": 7,
-    "max_rooms": 9,
+    "min_rooms": 8,
+    "max_rooms": 10,
     "entry_description": "\nYou enter upon the ruins of a fallen city, destroyed by a demon invasion. You intend to cleanse what remains.",
     "room_descriptions": [
       "\nYou step over a destroyed rampart wall. On the other side there is a massive boulder on top of a pile of corpses.",
@@ -270,8 +270,8 @@
 
   {
     "location_name": "The Submerged Empire of Kath",
-    "min_rooms": 8,
-    "max_rooms": 10,
+    "min_rooms": 10,
+    "max_rooms": 12,
     "entry_description": "\nYou've seen strange lights, and heard whispers call you to the ocean depths. Surprisingly you breathe easy as\nyou descend to explore.",
     "room_descriptions": [
       "\nYou swim past a large coral that covers an ancient ruin. The ruin structure has strange geometrical properties.",

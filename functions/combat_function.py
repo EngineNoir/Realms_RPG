@@ -3,6 +3,7 @@ import time
 import json
 from functions.character_class_functions import Character
 from functions.creature_class_functions import Creature
+from functions.potion_class_functions import use_potions
 
 def combat_time(player: Character, enemy: Creature):
 
@@ -16,7 +17,13 @@ def combat_time(player: Character, enemy: Creature):
         # check if enemy spots the player
         enemy.spot_player(player)
         # prompt player action
-        action_choice = int(input("\nWhat do you choose to do?: "))
+        while True:
+            try:
+                action_choice = int(input("\nWhat do you choose to do?: "))
+            except ValueError:
+                print("Please select a valid action!")
+            else:
+                break
         match action_choice:
             case 1:
                 # player strikes at the opponent
@@ -32,9 +39,16 @@ def combat_time(player: Character, enemy: Creature):
                 # return True if spell cast, and if True enemy deals damage
                 return 0
             case 3:
-                # TODO code for potion consumption
-                # if use_potion is true, enemy deals damage
-                return 0
+                pot = use_potions(player)
+                if pot:
+                    print(f"\n{enemy.name} tries to attack you while you consume a potion and...")
+                    check = random.randint(0, 100)
+                    time.sleep(1)
+                    if check < 65:
+                        print("\n...misses!")
+                    else:
+                        print("\n...manages to hit!")
+                        enemy.deal_damage_to_player(player)
             case 4:
                 player.attempt_stealth_in_combat(enemy)
             case 5:
@@ -43,7 +57,6 @@ def combat_time(player: Character, enemy: Creature):
                     break
             case _:
                 print('\nPlease select a valid action.')
-                action_choice = int(input("\nWhat do you choose to do?: "))
 
     # decide if fight is over, and appropriately reward the player
     combat_succesful = False

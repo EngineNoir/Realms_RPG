@@ -2,14 +2,14 @@
   {
     "name": "Rat",
     "moveset": ["bites at you", "jumps at you"],
-    "health": 5,
-    "damage_min": 2,
-    "damage_max": 4,
+    "health": 4,
+    "damage_min": 1,
+    "damage_max": 3,
     "armor": 0,
     "loot": [],
     "location": "Ancient Forest",
-    "gold": 5,
-    "xp": 5,
+    "gold": 3,
+    "xp": 20,
     "awareness": 2,
     "speed": 2
   },
@@ -21,14 +21,14 @@
       "swings its claws",
       "charges with its maw open"
     ],
-    "health": 5,
-    "damage_min": 2,
-    "damage_max": 4,
-    "armor": 0,
+    "health": 8,
+    "damage_min": 3,
+    "damage_max": 5,
+    "armor": 2,
     "loot": [],
     "location": "Ancient Forest",
     "gold": 5,
-    "xp": 5,
+    "xp": 40,
     "awareness": 2,
     "speed": 2
   },
@@ -36,14 +36,14 @@
   {
     "name": "Spider",
     "moveset": ["bites with its mandibles", "stabs with its stinger"],
-    "health": 5,
-    "damage_min": 2,
+    "health": 6,
+    "damage_min": 1,
     "damage_max": 4,
-    "armor": 0,
+    "armor": 1,
     "loot": [],
     "location": "Ancient Forest",
     "gold": 5,
-    "xp": 5,
+    "xp": 30,
     "awareness": 2,
     "speed": 2
   },
@@ -52,15 +52,15 @@
     "name": "Skeleton",
     "moveset": ["swings its rusty blade", "throws a bony punch"],
     "health": 5,
-    "damage_min": 2,
+    "damage_min": 1,
     "damage_max": 4,
-    "armor": 0,
+    "armor": 1,
     "loot": [],
-    "location": "Forest",
-    "gold": 5,
-    "xp": 5,
-    "awareness": 2,
-    "speed": 2
+    "location": "Abandonned Graveyard",
+    "gold": 12,
+    "xp": 25,
+    "awareness": 1,
+    "speed": 1
   },
 
   {
@@ -70,16 +70,16 @@
       "flies at you",
       "sings hauntingly"
     ],
-    "health": 5,
+    "health": 6,
     "damage_min": 2,
-    "damage_max": 4,
-    "armor": 0,
+    "damage_max": 5,
+    "armor": 1,
     "loot": [],
-    "location": "Forest",
-    "gold": 5,
-    "xp": 5,
-    "awareness": 2,
-    "speed": 2
+    "location": "Abandonned Graveyard",
+    "gold": 14,
+    "xp": 30,
+    "awareness": 4,
+    "speed": 4
   },
 
   {
@@ -89,16 +89,16 @@
       "lashes with its tongue",
       "glares at you"
     ],
-    "health": 5,
-    "damage_min": 2,
-    "damage_max": 4,
-    "armor": 0,
+    "health": 8,
+    "damage_min": 1,
+    "damage_max": 5,
+    "armor": 2,
     "loot": [],
-    "location": "Forest",
-    "gold": 5,
-    "xp": 5,
+    "location": "Abandonned Graveyard",
+    "gold": 14,
+    "xp": 30,
     "awareness": 2,
-    "speed": 2
+    "speed": 5
   },
 
   {
@@ -108,14 +108,14 @@
       "raises its leg and stomps at you",
       "charges at you"
     ],
-    "health": 5,
-    "damage_min": 2,
-    "damage_max": 4,
-    "armor": 0,
+    "health": 12,
+    "damage_min": 3,
+    "damage_max": 6,
+    "armor": 1,
     "loot": [],
-    "location": "Forest",
-    "gold": 5,
-    "xp": 5,
+    "location": "Abandonned Graveyard",
+    "gold": 20,
+    "xp": 40,
     "awareness": 2,
     "speed": 2
   },
@@ -126,16 +126,16 @@
       "manifests a spike and jabs at you",
       "spits a green glob at you"
     ],
-    "health": 5,
+    "health": 6,
     "damage_min": 2,
-    "damage_max": 4,
+    "damage_max": 5,
     "armor": 0,
     "loot": [],
-    "location": "Forest",
-    "gold": 5,
-    "xp": 5,
-    "awareness": 2,
-    "speed": 2
+    "location": "Rot-Plagued Swamp",
+    "gold": 15,
+    "xp": 35,
+    "awareness": 1,
+    "speed": 1
   },
 
   {
@@ -145,16 +145,16 @@
       "attempts to grab and deathroll",
       "lashes with its tail"
     ],
-    "health": 5,
-    "damage_min": 2,
-    "damage_max": 4,
-    "armor": 0,
+    "health": 9,
+    "damage_min": 4,
+    "damage_max": 8,
+    "armor": 2,
     "loot": [],
-    "location": "Forest",
-    "gold": 5,
-    "xp": 5,
-    "awareness": 2,
-    "speed": 2
+    "location": "Rot-Plagued Swamp",
+    "gold": 15,
+    "xp": 45,
+    "awareness": 4,
+    "speed": 4
   },
 
   {
@@ -164,14 +164,14 @@
       "summons vines that swing at you",
       "tries to stomp you"
     ],
-    "health": 5,
+    "health": 8,
     "damage_min": 2,
-    "damage_max": 4,
-    "armor": 0,
+    "damage_max": 6,
+    "armor": 1,
     "loot": [],
-    "location": "Forest",
-    "gold": 5,
-    "xp": 5,
+    "location": "Rot-Plagued Swamp",
+    "gold": 16,
+    "xp": 40,
     "awareness": 2,
     "speed": 2
   },
@@ -183,31 +183,31 @@
       "swings its tail at you",
       "charges at you with jaws open"
     ],
-    "health": 5,
-    "damage_min": 2,
-    "damage_max": 4,
-    "armor": 0,
+    "health": 10,
+    "damage_min": 3,
+    "damage_max": 7,
+    "armor": 1,
     "loot": [],
-    "location": "Forest",
-    "gold": 5,
-    "xp": 5,
-    "awareness": 2,
-    "speed": 2
+    "location": "Rot-Plagued Swamp",
+    "gold": 14,
+    "xp": 50,
+    "awareness": 5,
+    "speed": 7
   },
 
   {
     "name": "Snakeblood Addict",
     "moveset": ["jabs with their dagger", "claws at you"],
-    "health": 5,
-    "damage_min": 2,
-    "damage_max": 4,
+    "health": 8,
+    "damage_min": 1,
+    "damage_max": 5,
     "armor": 0,
     "loot": [],
-    "location": "Forest",
-    "gold": 5,
-    "xp": 5,
-    "awareness": 2,
-    "speed": 2
+    "location": "The Serpent Temple",
+    "gold": 15,
+    "xp": 40,
+    "awareness": 1,
+    "speed": 3
   },
 
   {
@@ -217,16 +217,16 @@
       "swings its tail at you",
       "slithers up and whips its tail"
     ],
-    "health": 5,
-    "damage_min": 2,
-    "damage_max": 4,
-    "armor": 0,
+    "health": 12,
+    "damage_min": 3,
+    "damage_max": 8,
+    "armor": 2,
     "loot": [],
-    "location": "Forest",
-    "gold": 5,
-    "xp": 5,
-    "awareness": 2,
-    "speed": 2
+    "location": "The Serpent Temple",
+    "gold": 20,
+    "xp": 50,
+    "awareness": 6,
+    "speed": 4
   },
 
   {
@@ -236,16 +236,16 @@
       "jabs its head forward to bite you",
       "swings its tail"
     ],
-    "health": 5,
+    "health": 9,
     "damage_min": 2,
-    "damage_max": 4,
-    "armor": 0,
+    "damage_max": 6,
+    "armor": 1,
     "loot": [],
-    "location": "Forest",
-    "gold": 5,
-    "xp": 5,
-    "awareness": 2,
-    "speed": 2
+    "location": "The Serpent Temple",
+    "gold": 20,
+    "xp": 45,
+    "awareness": 3,
+    "speed": 3
   },
 
   {
@@ -255,31 +255,31 @@
       "chants an unholy incantation",
       "stabs with a ritual dagger"
     ],
-    "health": 5,
-    "damage_min": 2,
-    "damage_max": 4,
+    "health": 7,
+    "damage_min": 1,
+    "damage_max": 8,
     "armor": 0,
     "loot": [],
-    "location": "Forest",
-    "gold": 5,
-    "xp": 5,
-    "awareness": 2,
-    "speed": 2
+    "location": "The Serpent Temple",
+    "gold": 25,
+    "xp": 45,
+    "awareness": 4,
+    "speed": 1
   },
 
   {
     "name": "Mindblasted Witness",
     "moveset": ["mutters insanely", "swings their fists at you"],
-    "health": 5,
-    "damage_min": 2,
-    "damage_max": 4,
+    "health": 8,
+    "damage_min": 4,
+    "damage_max": 6,
     "armor": 0,
     "loot": [],
-    "location": "Forest",
-    "gold": 5,
-    "xp": 5,
-    "awareness": 2,
-    "speed": 2
+    "location": "Glowing Crater",
+    "gold": 20,
+    "xp": 40,
+    "awareness": 1,
+    "speed": 4
   },
 
   {
@@ -289,16 +289,16 @@
       "spins in a hypnotic pattern",
       "assaults your mind"
     ],
-    "health": 5,
-    "damage_min": 2,
-    "damage_max": 4,
-    "armor": 0,
+    "health": 10,
+    "damage_min": 4,
+    "damage_max": 8,
+    "armor": 1,
     "loot": [],
-    "location": "Forest",
-    "gold": 5,
-    "xp": 5,
-    "awareness": 2,
-    "speed": 2
+    "location": "Glowing Crater",
+    "gold": 25,
+    "xp": 45,
+    "awareness": 8,
+    "speed": 5
   },
 
   {
@@ -308,16 +308,16 @@
       "morphs into a spiked orb",
       "latches to you, trying to drain your health"
     ],
-    "health": 5,
-    "damage_min": 2,
-    "damage_max": 4,
-    "armor": 0,
+    "health": 10,
+    "damage_min": 3,
+    "damage_max": 9,
+    "armor": 1,
     "loot": [],
-    "location": "Forest",
-    "gold": 5,
-    "xp": 5,
+    "location": "Glowing Crater",
+    "gold": 20,
+    "xp": 45,
     "awareness": 2,
-    "speed": 2
+    "speed": 3
   },
 
   {
@@ -327,16 +327,16 @@
       "breaks off a shard of itself and stabs at you",
       "spins around with its fists out"
     ],
-    "health": 5,
-    "damage_min": 2,
-    "damage_max": 4,
-    "armor": 0,
+    "health": 15,
+    "damage_min": 6,
+    "damage_max": 10,
+    "armor": 2,
     "loot": [],
-    "location": "Forest",
-    "gold": 5,
-    "xp": 5,
+    "location": "Glowing Crater",
+    "gold": 30,
+    "xp": 50,
     "awareness": 2,
-    "speed": 2
+    "speed": 3
   },
 
   {

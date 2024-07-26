@@ -161,8 +161,15 @@ class Character:
 
     def increase_ability(self):
         ability_chosen = None
-        player_choice = int(input('\nChoose which of the three abilities you wish to increase by 1.'
+        player_choice = None
+        while True:
+            try:
+                player_choice = int(input('\nChoose which of the three abilities you wish to increase by 1.'
                                                 '\n1. Strength\n2. Dexterity\n3. Willpower\nAttribute to improve: '))
+            except:
+                print("Input not a number!")
+            else:
+                break
         match player_choice:
             case 1:
                 self.strength += 1
@@ -182,7 +189,14 @@ class Character:
     def level_up(self):
         if self.current_xp >= self.xp_to_level:
             print('\nYou have ' + str(self.current_xp) + ' XP. Do you wish to spend ' + str(self.xp_to_level) + ' XP to level up?')
-            answer_input = int(input('1. Yes\n2. No\nSpend XP and level up?: '))
+            answer_input = None
+            while True:
+                try:
+                    answer_input = int(input('1. Yes\n2. No\nSpend XP and level up?: '))
+                except ValueError:
+                    print("Input not a number!")
+                else:
+                    break
             match answer_input:
                 case 1:
                     increased = self.increase_ability()
@@ -203,7 +217,13 @@ class Character:
                     return 0
                 case _:
                     print('\nPlease input a valid response.')
-                    answer_input = int(input('1. Yes\n2. No\nSpend XP and level up?: '))
+                    while True:
+                        try:
+                            answer_input = int(input('1. Yes\n2. No\nSpend XP and level up?: '))
+                        except:
+                            print("Input not a number!")
+                        else:
+                            break
         return 0
 
 
@@ -212,7 +232,9 @@ def make_character(classes, armors, weapons):
     char_name = None
     while True:
         try:
-            char_name = str(input("\nWhat is your character's name?: "))
+            char_name = str(input("\nWhat is your character's name? (enter 'exit' to terminate): "))
+            if char_name == 'exit':
+                return None
         except ValueError:
             print("\nPlease input a valid name.")
             continue
@@ -260,12 +282,14 @@ def load_character():
     while True:
         try:
             char_name = input("\nWhat is your character's name?: ")
+            if char_name == 'exit':
+                return None
         except ValueError:
             print('\nPlease input a valid character name.')
         try:
             char_sheet = json.load(open(f'characters/{char_name}.json'))
         except FileNotFoundError:
-            print('\nPlease input an existing character name.')
+            print('\nPlease input an existing character name. Input "exit" to terminate.')
         else:
             break
 

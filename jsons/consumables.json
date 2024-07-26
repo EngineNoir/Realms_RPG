@@ -1,8 +1,38 @@
 [
-  ["Lesser Health Potion", 5, 10],
-  ["Health Potion", 10, 50],
-  ["Greater Health Potion", 20, 200],
-  ["Lesser Mana Potion", 5, 10],
-  ["Mana Potion", 10, 50],
-  ["Greater Mana Potion", 20, 200]
+  {
+    "potion_name": "Lesser Health Potion",
+    "recover": 5,
+    "stat": "health",
+    "value": 10
+  },
+  {
+    "potion_name": "Health Potion",
+    "recover": 15,
+    "stat": "health",
+    "value": 50
+  },
+  {
+    "potion_name": "Greater Health Potion",
+    "recover": 30,
+    "stat": "health",
+    "value": 200
+  },
+  {
+    "potion_name": "Lesser Mana Potion",
+    "recover": 5,
+    "stat": "mana",
+    "value": 10
+  },
+  {
+    "potion_name": "Mana Potion",
+    "recover": 15,
+    "stat": "mana",
+    "value": 50
+  },
+  {
+    "potion_name": "Greater Mana Potion",
+    "recover": 30,
+    "stat": "mana",
+    "value": 200
+  }
 ]
