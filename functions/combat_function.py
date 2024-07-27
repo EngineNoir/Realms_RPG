@@ -15,7 +15,8 @@ def combat_time(player: Character, enemy: Creature):
         print('Your mana: ' + str(player.mana))
         print("1. Attack with a Weapon\n2. Cast a Spell\n3. Use a Potion\n4. Attempt to Hide\n5. Attempt to Flee")
         # check if enemy spots the player
-        enemy.spot_player(player)
+        if player.stealth:
+            enemy.spot_player(player)
         # prompt player action
         while True:
             try:

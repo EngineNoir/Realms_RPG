@@ -1,4 +1,16 @@
 # inspect sheet new
+from functions.inventory_class_functions import Inventory
+import json
+
+load_armors = open('jsons/armors.json')
+load_weapons = open('jsons/weapons.json')
+load_amulets = open('jsons/amulets.json')
+load_rings = open('jsons/rings.json')
+
+armors = json.load(load_armors)
+weapons = json.load(load_weapons)
+amulets = json.load(load_amulets)
+rings = json.load(load_rings)
 
 def inspect_sheet(player):
     print('\n-----------------')
@@ -14,21 +26,15 @@ def inspect_sheet(player):
     print('Dexterity: ' + str(player.dexterity))
     print('Willpower: ' + str(player.willpower))
 
-    print('\nWeapon: ' + player.eq_weapon['weapon_name'] +
-            '\nArmor: ' + player.eq_armor['armor_name'] +
-            ' (Def: ' + str(player.eq_armor['defence']) + ').')
-    print('Amulet: ' + player.eq_amulet["name"])
-    print('Ring 1: ' + player.eq_ring_1["name"])
-    print('Ring 2: ' + player.eq_ring_2["name"])
-    print('Gold: ' + str(player.gold))
+    print('\nGold: ' + str(player.gold))
     print('Potions: ' + str(player.potions))
     print('Abilities: ' + str(player.abilities))
     print('-----------------')
 
     # level option if there's enough XP
     choice = None
-    print("1. Equip Something\n2. Unequip Something\n3. Level Up\n4. Return")
-    while choice == None or choice not in list(range(1,5)):
+    print("1. Equipment\n2. Level Up\n3. Return")
+    while choice == None or choice not in list(range(1,4)):
         while True:
             try:
                 choice = int(input("\nWhat is your choice?: "))
@@ -38,18 +44,17 @@ def inspect_sheet(player):
                 break
         match choice:
             case 1:
-                list_and_equip(player)
+                inventory = Inventory(armors, weapons,
+                                        amulets, rings)
+                inventory.equipment_functions(player)
                 return 0
             case 2:
-                list_and_unequip(player)
-                return 0
-            case 3:
                 if player.current_xp >= player.xp_to_level:
                     player.level_up()
                     return 0
                 else:
                     print("\nYou do not have enough XP to level.")
-            case 4:
+            case 3:
                 return 0
 
 def list_and_equip(player):

@@ -1,7 +1,25 @@
 {
   "Empty": {
     "name": "Empty",
-    "effect": "None",
-    "value": 0
+    "effect": [0],
+    "stat": []
+  },
+
+  "Test Ring": {
+    "name": "Test Ring",
+    "effect": [2],
+    "stat": ["Strength"]
+  },
+
+  "Test Ring 2": {
+    "name": "Test Ring 2",
+    "effect": [2],
+    "stat": ["Dexterity"]
+  },
+
+  "Test Ring 3": {
+    "name": "Test Ring 3",
+    "effect": [3, 3],
+    "stat": ["Strength", "Willpower"]
   }
 }

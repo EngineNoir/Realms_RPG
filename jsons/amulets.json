@@ -1,7 +1,7 @@
 {
   "Empty": {
     "name": "Empty",
-    "effect": 0,
+    "effect": [0],
     "stat": []
   },
 

@@ -3,6 +3,8 @@ import json
 import time
 import os
 
+from functions.inventory_class_functions import Inventory
+
 class Character:
     def __init__(
         self,
@@ -238,58 +240,6 @@ class Character:
                         else:
                             break
         return 0
-
-# EQUIP FUNCTIONS -----------------
-def equip_weapon(self, new_weapon):
-    print(f"\nYou have equipped {self.eq_weapon["name"]}")
-    self.eq_weapon = new_weapon
-    return 0
-
-def unequip_weapon(self):
-    print(f"\nYou have unequipped {self.eq_weapon["name"]}")
-    self.eq_weapon = None
-    return 0
-
-def equip_armor(self, new_armor):
-    print(f"\nYou have equipped {self.eq_armor["name"]}")
-    self.eq_armor = new_armor
-    return 0
-
-def unequip_armor(self):
-    print(f"\nYou have unequipped {self.eq_armor["name"]}")
-    self.eq_armor = None
-    return 0
-
-def equip_amulet(self, new_amulet):
-    self.eq_amulet = new_amulet
-    print(f"\nYou have equipped {self.eq_amulet["name"]}")
-    return 0
-
-def unequip_amulet(self):
-    print(f"\nYou have unequipped {self.eq_amulet["name"]}")
-    self.eq_amulet = None
-    return 0
-
-def equip_ring(self, new_ring):
-    print(f"\nWhich ring slot would you like to equip?\n1.{self.eq_ring_1["name"]}\n2.{self.eq_ring_2["name"]}")
-    choice = None
-    while choice not in [1, 2]:
-        while True:
-            try:
-                choice = int(input("\nSelect which slot to replace/equip: "))
-            except ValueError:
-                print("\nPlease input a valid number!")
-            else:
-                break
-        match choice:
-            case 1:
-                self.eq_ring_1 = new_ring
-            case 2:
-                self.eq_ring_2 = new_ring
-            case _:
-                print("\nPlease select a valid option!")
-    print(f"\nYou have equipped {new_ring["name"]}.")
-    return 0
 
 # MAKE AND SAVE CHARACTER -----------------------------
 def make_character(classes, armors, weapons, amulets, rings):
