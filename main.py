@@ -1,4 +1,5 @@
 import json
+from functions.inventory_class_functions import Inventory
 from functions.main_screen_functions import ask_to_load, request_action
 
 load_spells = open('jsons/spells.json')
@@ -28,7 +29,8 @@ print('-----------------------------------\n')
 
 
 player_character = ask_to_load(character_classes, armors, weapons, amulets, rings)
+game_inventory = Inventory(armors, weapons, amulets, rings)
 
 print('\nWelcome, ' + player_character.name + ' the ' + player_character.char_class + '!')
 
-request_action(player_character)
+request_action(player_character, game_inventory)

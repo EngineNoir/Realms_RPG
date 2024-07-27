@@ -66,9 +66,86 @@
     "ability": "dexterity",
     "damage": 5,
     "moveset": [
-      "unsheathe",
+      "unsheathe and strike",
       "swing with precision",
       "step sideways and swing out"
+    ]
+  },
+
+  "Rapier": {
+    "weapon_name": "Rapier",
+    "ability": "dexterity",
+    "damage": 5,
+    "moveset": [
+      "stab at a weak spot",
+      "flourish and jab",
+      "stab into and through the enemy"
+    ]
+  },
+
+  "Druid's Staff": {
+    "weapon_name": "Druid's Staff",
+    "ability": "willpower",
+    "damage": 7,
+    "moveset": [
+      "summon vines",
+      "entangle and pull down the enemy",
+      "conjure thorns around the enemy"
+    ]
+  },
+
+  "Flying Rapier": {
+    "weapon_name": "Flying Rapier",
+    "ability": "dexterity",
+    "damage": 7,
+    "moveset": [
+      "throw the rapier",
+      "let the rapier fly towards the enemy",
+      "hold firmly and fly forward"
+    ]
+  },
+
+  "Great Scimitar of Antaboros": {
+    "weapon_name": "Great Scimitar of Antaboros",
+    "ability": "strength",
+    "damage": 7,
+    "moveset": [
+      "swing the great curved blade",
+      "thrust forward with the greatsword",
+      "spin the great scimitar over your head"
+    ]
+  },
+
+  "Staff of Infinite Echoes": {
+    "weapon_name": "Staff of Infinite Echoes",
+    "ability": "willpower",
+    "damage": 9,
+    "moveset": [
+      "conjure an illusion of fractal reality",
+      "summon down a small meteor from another dimension",
+      "blast forth cosmic frost"
+    ]
+  },
+
+  "Plasmablade Uchigatana": {
+    "weapon_name": "Plasmablade Uchigatana",
+    "ability": "dexterity",
+    "damage": 9,
+    "moveset": [
+      "swing down, unleashing a slash of energy",
+      "charge the blade, and shoot its electrical charge",
+      "spin around, creating a neon storm of slices"
+    ]
+  },
+
+  "Blade of Necroflame": {
+    "weapon_name": "Blade of Necroflame",
+    "ability": "strength",
+    "damage": 9,
+    "moveset": [
+      "swing the blade, unleashing flames of death",
+      "release a trapped soul, that lunges at the enemy",
+      "strike at the enemy with your flaming greatsword"
     ]
   }
 }

@@ -28,7 +28,7 @@ def ask_to_load(classes, armors, weapons, amulets, rings):
     return player
 
 
-def request_action(player):
+def request_action(player, inventory):
     while True:
         if player.health <= 0:
             print('\nYou awake in the tavern, barely alive. Rest here to regain the rest of your vigour.')
@@ -45,9 +45,9 @@ def request_action(player):
                 break
         match action:
             case 1:
-                inspect_sheet(player)
+                inspect_sheet(player, inventory)
             case 2:
-                explore(player)
+                explore(player, inventory)
             case 3:
                 player.health = player.max_health
                 player.mana = player.max_mana

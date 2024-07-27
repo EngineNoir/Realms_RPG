@@ -11,7 +11,7 @@
     "damage_max": 6,
     "damage_final": 8,
     "armor": 1,
-    "loot": ["Nature's Call"],
+    "loot": ["Nature's Call", "Druid's Staff", "Band of Bark"],
     "location": "Ancient Forest",
     "gold": 20,
     "xp": 60,
@@ -36,7 +36,7 @@
     "damage_max": 8,
     "damage_final": 10,
     "armor": 1,
-    "loot": ["The Night Shroud", "Blood Vial"],
+    "loot": ["The Night Shroud", "Blood Vial", "Flying Rapier"],
     "location": "Abandonned Graveyard",
     "gold": 40,
     "xp": 80,
@@ -61,7 +61,7 @@
     "damage_max": 8,
     "damage_final": 12,
     "armor": 2,
-    "loot": ["Blightrot Armor", "The Hag Eye"],
+    "loot": ["Blightrot Armor", "The Hag Eye", "Thorn Coil"],
     "location": "Rot-Plagued Swamp",
     "gold": 70,
     "xp": 100,
@@ -86,14 +86,18 @@
     "damage_max": 10,
     "damage_final": 14,
     "armor": 2,
-    "loot": ["Serpentine Scales", "Eye of the Snake God"],
+    "loot": [
+      "Serpentine Scales",
+      "Eye of the Snake God",
+      "Great Scimitar of Antaboros"
+    ],
     "location": "The Serpent Temple",
     "gold": 250,
     "xp": 200,
     "awareness": 10,
     "speed": 6,
     "taunts": [
-      "\nA gollosal humanoid body steps forth, emerging out of the altar. It has six arms, each wielding a scimitar. \nInstead of a head, it has a hundred coiled serpents.",
+      "\nA gollosal humanoid body steps forth, emerging out of the altar. It has six arms, each wielding a giant scimitar. \nInstead of a head, it has a hundred coiled serpents.",
       "\n'I have devoured countless-sss worlds-sss, and this-sss one shall be no different' the colossal entity hisses.",
       "\n'You witness-sss Antaboros-sss, Herald of the End Times-sss' it belches, as the temple walls begin to slither, and the hissing becomes omnipresent."
     ]
@@ -111,7 +115,7 @@
     "damage_max": 12,
     "damage_final": 16,
     "armor": 1,
-    "loot": ["Shard of Unreality"],
+    "loot": ["Shard of Unreality", "Staff of Infinite Echoes", "Gravity Ring"],
     "location": "Glowing Crater",
     "gold": 200,
     "xp": 300,
@@ -136,7 +140,11 @@
     "damage_max": 18,
     "damage_final": 20,
     "armor": 1,
-    "loot": ["Wrappings of the Ancients", "Claw of the Sphinx Pharaoh"],
+    "loot": [
+      "Wrappings of the Ancients",
+      "Claw of the Sphinx Pharaoh",
+      "Ring of Ancient Kings"
+    ],
     "location": "Endless Dunes",
     "gold": 300,
     "xp": 375,
@@ -161,7 +169,12 @@
     "damage_max": 20,
     "damage_final": 26,
     "armor": 2,
-    "loot": ["aegisOfTheAfterLife", "antiDecibelGenerator"],
+    "loot": [
+      "aegisOfTheAfterLife",
+      "antiDecibelGenerator",
+      "Plasmablade Uchigatana",
+      "Ring of the Technomancer"
+    ],
     "location": "The City Outside of Time",
     "gold": 500,
     "xp": 450,
@@ -189,7 +202,8 @@
     "loot": [
       "Blackened Leathers",
       "Armor of Death",
-      "Philactery of the Exiled One"
+      "Philactery of the Exiled One",
+      "Blade of Necroflame"
     ],
     "location": "Fallen Kingdom",
     "gold": 666,
@@ -215,7 +229,11 @@
     "damage_max": 25,
     "damage_final": 30,
     "armor": 2,
-    "loot": ["Robes of Many Eyes", "The Stable Singularity"],
+    "loot": [
+      "Robes of Many Eyes",
+      "The Stable Singularity",
+      "Ring of the Leviathan Hunter"
+    ],
     "location": "The Submerged Empire of Kath",
     "gold": 800,
     "xp": 750,

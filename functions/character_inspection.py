@@ -12,7 +12,7 @@ weapons = json.load(load_weapons)
 amulets = json.load(load_amulets)
 rings = json.load(load_rings)
 
-def inspect_sheet(player):
+def inspect_sheet(player, inventory):
     print('\n-----------------')
     print('Name: ' + player.name)
     print('Class: ' + player.char_class)
@@ -44,8 +44,6 @@ def inspect_sheet(player):
                 break
         match choice:
             case 1:
-                inventory = Inventory(armors, weapons,
-                                        amulets, rings)
                 inventory.equipment_functions(player)
                 return 0
             case 2:

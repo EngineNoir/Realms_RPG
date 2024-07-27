@@ -8,12 +8,13 @@ from functions.character_class_functions import Character
 from functions.creature_class_functions import Creature
 from functions.boss_class_functions import Boss
 from functions.location_class_functions import Location
+from functions.inventory_class_functions import Inventory
 
 load_locations = open('jsons/locations.json')
 locations = json.load(load_locations)
 
 
-def explore(player: Character):
+def explore(player: Character, inventory: Inventory):
     print("\nYou may explore the following places:")
     for i in range(0, len(locations)):
         print(str(i+1) + '. ' + locations[i]['location_name'])
@@ -32,7 +33,7 @@ def explore(player: Character):
                                 l["final_room_description"],
                                 l["boss_death"],
                                 l["final_room_return"])
-            location.explore(player)
+            location.explore(player, inventory)
         case _ if player_choice == len(locations):
             print('\nReturning to menu.')
             time.sleep(1)

@@ -1,25 +1,43 @@
 {
-  "Empty": {
-    "name": "Empty",
+  "Empty Slot": {
+    "name": "Empty Slot",
     "effect": [0],
     "stat": []
   },
 
-  "Test Ring": {
-    "name": "Test Ring",
+  "Band of Bark": {
+    "name": "Band of Bark",
     "effect": [2],
     "stat": ["Strength"]
   },
 
-  "Test Ring 2": {
-    "name": "Test Ring 2",
+  "Thorn Coil": {
+    "name": "Thorn Coil",
     "effect": [2],
-    "stat": ["Dexterity"]
+    "stat": ["Decterity"]
   },
 
-  "Test Ring 3": {
-    "name": "Test Ring 3",
-    "effect": [3, 3],
+  "Gravity Ring": {
+    "name": "Gravity Ring",
+    "effect": [2],
+    "stat": ["Willpower"]
+  },
+
+  "Ring of Ancient Kings": {
+    "name": "Ring of Ancient Kings",
+    "effect": [2, 2],
     "stat": ["Strength", "Willpower"]
+  },
+
+  "Ring of the Technomancer": {
+    "name": "Ring of the Technomancer",
+    "effect": [2, 2],
+    "stat": ["Dexterity", "Willpower"]
+  },
+
+  "Ring of the Leviathan Hunter": {
+    "name": "Ring of the Technomancer",
+    "effect": [2, 2],
+    "stat": ["Strength", "Dexterity"]
   }
 }

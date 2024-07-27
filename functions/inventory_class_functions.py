@@ -280,3 +280,16 @@ class Inventory:
                     player.willpower += new_item["effect"][i]
                 case _:
                    continue
+
+    def loot_boss(self, player, boss):
+        for item in boss.loot:
+            print(f"You loot {item}!")
+            if item in self.amulets:
+                player.amulets.append(item)
+            elif item in self.rings:
+                player.rings.append(item)
+            elif item in self.armors:
+                player.armors.append(item)
+            else:
+                player.weapons.append(item)
+        return 0

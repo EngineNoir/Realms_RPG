@@ -8,7 +8,7 @@ from functions.creature_class_functions import Creature
 from functions.boss_class_functions import Boss
 from functions.character_inspection import inspect_sheet
 from functions.potion_class_functions import use_potions
-
+from functions.inventory_class_functions import Inventory
 
 load_creatures = open('jsons/creatures.json')
 creatures = json.load(load_creatures)
@@ -43,7 +43,7 @@ class Location:
         self.boss_death = boss_death
         self.final_return = final_return
 
-    def explore(self, player: Character):
+    def explore(self, player: Character, inventory: Inventory):
         number_of_rooms = random.randint(self.rooms_min, self.rooms_max)
         boss = self.generate_boss(bosses)
         print(self.entry)
@@ -104,6 +104,7 @@ class Location:
             if player.health > 0 and combat_outcome:
                 player.cleared_dungeons.append(self.name)
                 print(self.boss_death)
+                inventory.loot_boss(player, boss)
             else: return 0
         elif self.name in player.cleared_dungeons:
             print(self.final_return)
@@ -142,8 +143,6 @@ class Location:
                             break
         return 0
 
-    def boss_combat(self, player: Character, boss: Boss):
-        return 0
 
     def generate_boss(self, boss_list: list):
        for boss in boss_list:
