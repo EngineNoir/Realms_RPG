@@ -38,7 +38,7 @@ class Creature:
         return random.randint(self.damage_min, self.damage_max)
 
     def deal_damage_to_player(self, target: Character):
-        damage_dealt = max(self.compute_damage() - target.armor['defence'], 0)
+        damage_dealt = max(self.compute_damage() - target.eq_armor['defence'], 0)
         output_text = self.name + ' ' + random.choice(self.moveset) + ' '
         misses = ["which fails to break through your defences.", "missing its attack.",
                   "failing to connect the attack.", "unable to land the attack.",

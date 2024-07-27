@@ -100,8 +100,8 @@ class Location:
             if player.stealth:
                 print(f"\n{boss.name} notices you. Prepare for combat!")
                 player.stealth = False
-            combat_time(player, boss)
-            if player.health > 0:
+            combat_outcome = combat_time(player, boss)
+            if player.health > 0 and combat_outcome:
                 player.cleared_dungeons.append(self.name)
                 print(self.boss_death)
             else: return 0

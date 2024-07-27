@@ -1,0 +1,61 @@
+{
+  "Empty": {
+    "name": "Empty",
+    "effect": 0,
+    "stat": []
+  },
+
+  "Nature's Call": {
+    "name": "Nature's Call",
+    "effect": [2, 2],
+    "stat": ["Dexterity", "Willpower"]
+  },
+
+  "Blood Vial": {
+    "name": "Blood Vial",
+    "effect": [4],
+    "stat": ["Strength"]
+  },
+
+  "The Hag Eye": {
+    "name": "The Hag Eye",
+    "effect": [4],
+    "stat": ["Willpower"]
+  },
+
+  "Eye of the Snake God": {
+    "name": "Eye of the Snake God",
+    "effect": [4],
+    "stat": ["Dexterity"]
+  },
+
+  "Shard of Unreality": {
+    "name": "Shard of Unreality",
+    "effect": [7],
+    "stat": ["Willpower"]
+  },
+
+  "Claw of the Sphinx Pharaoh": {
+    "name": "Claw of the Sphinx Pharaoh",
+    "effect": [4, 4],
+    "stat": ["Strength", "Dexterity"]
+  },
+
+  "antiDecibelGenerator": {
+    "name": "silenceFieldGenerator",
+    "effect": [7],
+    "stat": ["Dexterity"]
+  },
+
+  "Philactery of the Exiled One": {
+    "name": "Philactery of the Exiled One",
+    "effect": [4, 4],
+    "stat": ["Strength", "Willpower"]
+  },
+
+  "The Stable Singularity": {
+    "name": "The Stable Singularity",
+    "effect": [4, 4],
+    "stat": ["Dexterity", "Willpower"]
+  }
+}

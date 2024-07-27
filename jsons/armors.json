@@ -1,57 +1,109 @@
 {
-    "Plate Armor": {
-        "armor_name": "Plate Armor",
-        "weight": "Heavy",
-        "defence": 3,
-        "value": 50,
-        "rarity": "common"
-    },
+  "Plate Armor": {
+    "armor_name": "Plate Armor",
+    "weight": "Heavy",
+    "defence": 3
+  },
 
-    "Chain Mail": {
-        "armor_name": "Chain Mail",
-        "weight": "Medium",
-        "defence": 2,
-        "value": 10,
-        "rarity": "common"
-    },
-    
-    "Cloth Robes": {
-        "armor_name": "Cloth Robes",
-        "weight": "Light",
-        "defence": 1,
-        "value": 10,
-        "rarity": "common"
-    },
+  "Chain Mail": {
+    "armor_name": "Chain Mail",
+    "weight": "Medium",
+    "defence": 2
+  },
 
-    "Leather Tunic": {
-        "armor_name": "Leather Tunic",
-        "weight": "Medium",
-        "defence": 2,
-        "value": 20,
-        "rarity": "common"
-    },
+  "Cloth Robes": {
+    "armor_name": "Cloth Robes",
+    "weight": "Light",
+    "defence": 1
+  },
 
-    "Karuta": {
-        "armor_name": "Karuta",
-        "weight": "Medium",
-        "defence": 2,
-        "value": 20,
-        "rarity": "common"
-    },
+  "Leather Tunic": {
+    "armor_name": "Leather Tunic",
+    "weight": "Medium",
+    "defence": 2
+  },
 
-    "Loincloth": {
-        "armor_name": "Loincloth",
-        "weight": "Light",
-        "defence": 1,
-        "value": 20,
-        "rarity": "common"
-    },
+  "Karuta": {
+    "armor_name": "Karuta",
+    "weight": "Medium",
+    "defence": 2
+  },
 
-    "Enchanted Hide": {
-        "armor_name": "Enchanted Hide",
-        "weight": "Light",
-        "defence": 1,
-        "value": 20,
-        "rarity": "common"
-    }
+  "Loincloth": {
+    "armor_name": "Loincloth",
+    "weight": "Heavy",
+    "defence": 1
+  },
+
+  "Enchanted Hide": {
+    "armor_name": "Enchanted Hide",
+    "weight": "Medium",
+    "defence": 2
+  },
+
+  "The Night Shroud": {
+    "armor_name": "The Night Shroud",
+    "weight": "Light",
+    "defence": 3
+  },
+
+  "Blightrot Armor": {
+    "armor_name": "Blightrot Armor",
+    "weight": "Heavy",
+    "defence": 5
+  },
+
+  "Serpentine Scales": {
+    "armor_name": "Serpentine Scales",
+    "weight": "Medium",
+    "defence": 3
+  },
+
+  "Wrappings of the Ancients": {
+    "armor_name": "Wrappings of the Ancients",
+    "weight": "Light",
+    "defence": 5
+  },
+
+  "aegisOfTheAfterLife": {
+    "armor_name": "aegisOfTheAfterLife",
+    "weight": "Heavy",
+    "defence": 7
+  },
+
+  "Blackened Leathers": {
+    "armor_name": "Blackened Leathers",
+    "weight": "Medium",
+    "defence": 7
+  },
+
+  "Armor of Death": {
+    "armor_name": "Blackened Leathers",
+    "weight": "Heavy",
+    "defence": 8
+  },
+
+  "Robes of Many Eyes": {
+    "armor_name": "Robes of Many Eyes",
+    "weight": "Light",
+    "defence": 6
+  },
+
+  "Leathers of Humble Footings": {
+    "armor_name": "Leathers of Humble Footings",
+    "weight": "Medium",
+    "defence": 7
+  },
+
+  "Armor of the Warden": {
+    "armor_name": "Armor of the Warden",
+    "weight": "Heavy",
+    "defence": 8
+  },
+
+  "Robes of the True Seer": {
+    "armor_name": "Robes of the True Seer",
+    "weight": "Light",
+    "defence": 6
+  }
 }

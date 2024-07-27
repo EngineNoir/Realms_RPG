@@ -19,13 +19,20 @@ class Character:
         mana: int,
         # --------------
         gold: int,
-        inventory: list,
-        armor: dict,
-        weapon: dict,
-        amulet,
-        ring,
+        potions: list,
+        armors: list,
+        weapons: list,
+        amulets: list,
+        rings: list,
         # --------------
-        spellbook: list,
+        eq_armor: dict,
+        eq_weapon: dict,
+        eq_amulet: dict,
+        eq_ring_1: dict,
+        eq_ring_2: dict,
+        # --------------
+        abilities: list,
+        armor_prof: str,
         # --------------
         max_health: int,
         max_mana: int,
@@ -48,18 +55,24 @@ class Character:
         self.mana = mana
 
         self.gold = gold
-        self.inventory = inventory
-        self.armor = armor
-        self.weapon = weapon
-        self.amulet = amulet
-        self.ring = ring
+        self.potions = potions
+        self.armors = armors
+        self.weapons = weapons
+        self.amulets = amulets
+        self.rings = rings
 
-        self.spellbook = spellbook
+        self.eq_armor = eq_armor
+        self.eq_weapon = eq_weapon
+        self.eq_amulet = eq_amulet
+        self.eq_ring_1 = eq_ring_1
+        self.eq_ring_2 = eq_ring_2
+
+        self.armor_prof = armor_prof
+        self.abilities = abilities
 
         self.stealth = False
         self.max_health = max_health
         self.max_mana = max_mana
-        self.debuffs = {'poison': False}
 
         self.current_xp = current_xp
         self.xp_to_level = (self.strength + self.dexterity + self.willpower) * 10 + self.level * 20
@@ -68,7 +81,7 @@ class Character:
 
     def weapon_attack(self):
         # get the right ability and compute total damage potential
-        attack_potential =  self.determine_weapon_ability() + self.weapon['damage']
+        attack_potential =  self.determine_weapon_ability() + self.eq_weapon['damage']
         successes = 0
 
         # compute your damage output
@@ -79,16 +92,16 @@ class Character:
 
         # crit if outcome >= 4/5*potential
         if successes >= (4/5)*attack_potential:
-            successes += self.weapon['damage']
+            successes += self.eq_weapon['damage']
 
         # need to include the target's defences to set up a "you miss" outcome
         return successes
 
     def determine_weapon_ability(self):
         # function that accesses a Character value based on weapon ability value
-        if self.weapon['ability'] == 'strength':
+        if self.eq_weapon['ability'] == 'strength':
             return self.strength
-        elif self.weapon['ability'] == 'dexterity':
+        elif self.eq_weapon['ability'] == 'dexterity':
             return self.dexterity
         else:
             return self.willpower
@@ -96,7 +109,7 @@ class Character:
     def deal_damage_to_enemy(self, target):
         # either deal dmg - armor or 0, negative values will heal the enemy (bug!)
         damage_dealt = max(self.weapon_attack() - target.armor, 0)
-        output_text = '\nYou ' + random.choice(self.weapon['moveset'])
+        output_text = '\nYou ' + random.choice(self.eq_weapon['moveset'])
         if damage_dealt > 0:
             output_text += ' dealing ' + str(damage_dealt) + ' damage to ' + target.name + '.'
             target.health -= damage_dealt
@@ -143,7 +156,7 @@ class Character:
             print("You sneak away succesfully!")
             is_flee_succesful = True
         else:
-            print("You fail to sneak away, and your opponent strikes at you!")
+            print("You fail to flee succesfully, and your opponent strikes at you!")
             target.deal_damage_to_player(self)
             is_flee_succesful = False
         return is_flee_succesful
@@ -166,7 +179,7 @@ class Character:
             try:
                 player_choice = int(input('\nChoose which of the three abilities you wish to increase by 1.'
                                                 '\n1. Strength\n2. Dexterity\n3. Willpower\nAttribute to improve: '))
-            except:
+            except ValueError:
                 print("Input not a number!")
             else:
                 break
@@ -226,8 +239,60 @@ class Character:
                             break
         return 0
 
+# EQUIP FUNCTIONS -----------------
+def equip_weapon(self, new_weapon):
+    print(f"\nYou have equipped {self.eq_weapon["name"]}")
+    self.eq_weapon = new_weapon
+    return 0
 
-def make_character(classes, armors, weapons):
+def unequip_weapon(self):
+    print(f"\nYou have unequipped {self.eq_weapon["name"]}")
+    self.eq_weapon = None
+    return 0
+
+def equip_armor(self, new_armor):
+    print(f"\nYou have equipped {self.eq_armor["name"]}")
+    self.eq_armor = new_armor
+    return 0
+
+def unequip_armor(self):
+    print(f"\nYou have unequipped {self.eq_armor["name"]}")
+    self.eq_armor = None
+    return 0
+
+def equip_amulet(self, new_amulet):
+    self.eq_amulet = new_amulet
+    print(f"\nYou have equipped {self.eq_amulet["name"]}")
+    return 0
+
+def unequip_amulet(self):
+    print(f"\nYou have unequipped {self.eq_amulet["name"]}")
+    self.eq_amulet = None
+    return 0
+
+def equip_ring(self, new_ring):
+    print(f"\nWhich ring slot would you like to equip?\n1.{self.eq_ring_1["name"]}\n2.{self.eq_ring_2["name"]}")
+    choice = None
+    while choice not in [1, 2]:
+        while True:
+            try:
+                choice = int(input("\nSelect which slot to replace/equip: "))
+            except ValueError:
+                print("\nPlease input a valid number!")
+            else:
+                break
+        match choice:
+            case 1:
+                self.eq_ring_1 = new_ring
+            case 2:
+                self.eq_ring_2 = new_ring
+            case _:
+                print("\nPlease select a valid option!")
+    print(f"\nYou have equipped {new_ring["name"]}.")
+    return 0
+
+# MAKE AND SAVE CHARACTER -----------------------------
+def make_character(classes, armors, weapons, amulets, rings):
     # ask for character's name as a string input
     char_name = None
     while True:
@@ -268,10 +333,36 @@ def make_character(classes, armors, weapons):
     # get some starting equipment
     starting_weapon = weapons[chosen_class["starter_weapon"]]
     starting_armor = armors[chosen_class["starter_armor"]]
+    starting_amulet = amulets[chosen_class["starter_amulet"]]
+    starting_ring_1 = rings[chosen_class["starter_ring_1"]]
+    starting_ring_2 = rings[chosen_class["starter_ring_1"]]
 
-    player_character = Character(char_name, chosen_class["class_name"], 1, chosen_class["strength"], chosen_class["dexterity"],
-                        chosen_class["willpower"], starting_health, starting_mana, chosen_class["starter_gold"], [], starting_armor,
-                        starting_weapon, None, None, [], starting_health, starting_mana, 0, 100, [])
+    player_character = Character(char_name,
+        chosen_class["class_name"],
+        1,
+        chosen_class["strength"],
+        chosen_class["dexterity"],
+        chosen_class["willpower"],
+        starting_health,
+        starting_mana,
+        chosen_class["starter_gold"],
+        [],
+        [],
+        [],
+        [],
+        [],
+        starting_armor,
+        starting_weapon,
+        starting_amulet,
+        starting_ring_1,
+        starting_ring_2,
+        [],
+        chosen_class["armor_prof"],
+        starting_health,
+        starting_mana,
+        0,
+        100,
+        [])
 
     # save character as json
     save_character(player_character)
@@ -303,12 +394,18 @@ def load_character():
                                 char_sheet['health'],
                                 char_sheet['mana'],
                                 char_sheet['gold'],
-                                char_sheet['inventory'],
-                                char_sheet['armor'],
-                                char_sheet['weapon'],
-                                char_sheet['amulet'],
-                                char_sheet['ring'],
-                                char_sheet['spellbook'],
+                                char_sheet['potions'],
+                                char_sheet['armors'],
+                                char_sheet['weapons'],
+                                char_sheet['amulets'],
+                                char_sheet['rings'],
+                                char_sheet['eq_armor'],
+                                char_sheet['eq_weapon'],
+                                char_sheet['eq_amulet'],
+                                char_sheet['eq_ring_1'],
+                                char_sheet['eq_ring_2'],
+                                char_sheet['abilities'],
+                                char_sheet['armor_prof'],
                                 char_sheet['max_health'],
                                 char_sheet['max_mana'],
                                 char_sheet['current_xp'],
@@ -328,16 +425,21 @@ def save_character(player_character):
                         'health': player_character.health,
                         'mana': player_character.mana,
                         'gold': player_character.gold,
-                        'inventory': player_character.inventory,
-                        'armor': player_character.armor,
-                        'weapon': player_character.weapon,
-                        'amulet': player_character.amulet,
-                        'ring': player_character.ring,
-                        'spellbook': player_character.spellbook,
+                        'potions': player_character.potions,
+                        'armors': player_character.armors,
+                        'weapons': player_character.weapons,
+                        'amulets': player_character.amulets,
+                        'rings': player_character.rings,
+                        'eq_armor': player_character.eq_armor,
+                        'eq_weapon': player_character.eq_weapon,
+                        'eq_amulet': player_character.eq_amulet,
+                        'eq_ring_1': player_character.eq_ring_1,
+                        'eq_ring_2': player_character.eq_ring_2,
+                        'abilities': player_character.abilities,
+                        'armor_prof': player_character.armor_prof,
                         'stealth': False,
                         'max_health': player_character.max_health,
                         'max_mana': player_character.max_mana,
-                        'debuffs': {'poison': False},
                         'current_xp': player_character.current_xp,
                         'xp_to_level': player_character.xp_to_level,
                         'cleared_dungeons': player_character.cleared_dungeons}

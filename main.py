@@ -6,12 +6,16 @@ load_consumables = open('jsons/consumables.json')
 load_classes = open('jsons/classes.json')
 load_armors = open('jsons/armors.json')
 load_weapons = open('jsons/weapons.json')
-    
+load_amulets = open('jsons/amulets.json')
+load_rings = open('jsons/rings.json')
+
 armors = json.load(load_armors)
 weapons = json.load(load_weapons)
 character_classes = json.load(load_classes)
 spells = json.load(load_spells)
 consumables = json.load(load_consumables)
+amulets = json.load(load_amulets)
+rings = json.load(load_rings)
 
 
 print('\n-----------------------------------')
@@ -23,7 +27,7 @@ print('----A-A-A-A-A----A----A-A-A-A-A----')
 print('-----------------------------------\n')
 
 
-player_character = ask_to_load(character_classes, armors, weapons)
+player_character = ask_to_load(character_classes, armors, weapons, amulets, rings)
 
 print('\nWelcome, ' + player_character.name + ' the ' + player_character.char_class + '!')
 

@@ -46,12 +46,12 @@ def shopping_for_potions(player: Character):
         pot = potions[player_choice - 1]
         if player.gold < pot.val:
             print("\nUnfortunately, you cannot afford this item right now.")
-        elif pot.name in player.inventory:
+        elif pot.name in player.potions:
             print("\nYou already have this item, and cannot carry more.")
         else:
             print("\nYou succesfully purchase this item.")
             print(f"\n{pot.name} has been added to your inventory.")
-            player.inventory.append(pot.name)
+            player.potions.append(pot.name)
             player.gold -= pot.val
         print('\nYou have the following selection:\n1. Lesser Health Potion (10g)'
                   '\n2. Health Potion (50g)\n3. Greater Health Potion (200g)\n4. Lesser Mana Potion (10g)\n5. Mana Potion (50g)'
@@ -65,20 +65,20 @@ def use_potions(player: Character):
     i = 1
     # prints all the potions
     print('\nYou have the following in your inventory: ')
-    for potion in player.inventory:
+    for potion in player.potions:
         print(str(i) + '. ' + potion)
         i += 1
     print(str(i) + '. Return')
     #
     player_choice = None
-    while player_choice not in range(0, len(player.inventory) + 1):
+    while player_choice not in range(0, len(player.potions) + 1):
         player_choice = int(input("What is your choice?: ")) - 1
-        if player_choice == i:
+        if player_choice == len(player.potions):
             return did_drink
         else:
             pot = None
             for potion in potions:
-               if potion.name == player.inventory[player_choice]:
+               if potion.name == player.potions[player_choice]:
                    pot = potion
             if pot.stat == 'health':
                 player.health = min(player.health + pot.rec, player.max_health)
@@ -86,6 +86,6 @@ def use_potions(player: Character):
             else:
                 player.mana = min(player.mana + pot.rec, player.max_mana)
                 print(f"\nYou consume the {pot.name} bringing your mana up to {player.mana}.")
-            player.inventory.remove(pot.name)
+            player.potions.remove(pot.name)
             did_drink = True
     return did_drink

@@ -126,10 +126,10 @@
       "manifests a spike and jabs at you",
       "spits a green glob at you"
     ],
-    "health": 6,
-    "damage_min": 2,
-    "damage_max": 5,
-    "armor": 0,
+    "health": 8,
+    "damage_min": 3,
+    "damage_max": 6,
+    "armor": 1,
     "loot": [],
     "location": "Rot-Plagued Swamp",
     "gold": 15,
@@ -145,7 +145,7 @@
       "attempts to grab and deathroll",
       "lashes with its tail"
     ],
-    "health": 9,
+    "health": 10,
     "damage_min": 4,
     "damage_max": 8,
     "armor": 2,
@@ -164,8 +164,8 @@
       "summons vines that swing at you",
       "tries to stomp you"
     ],
-    "health": 8,
-    "damage_min": 2,
+    "health": 10,
+    "damage_min": 3,
     "damage_max": 6,
     "armor": 1,
     "loot": [],
@@ -183,9 +183,9 @@
       "swings its tail at you",
       "charges at you with jaws open"
     ],
-    "health": 10,
-    "damage_min": 3,
-    "damage_max": 7,
+    "health": 12,
+    "damage_min": 5,
+    "damage_max": 8,
     "armor": 1,
     "loot": [],
     "location": "Rot-Plagued Swamp",
@@ -198,9 +198,9 @@
   {
     "name": "Snakeblood Addict",
     "moveset": ["jabs with their dagger", "claws at you"],
-    "health": 8,
-    "damage_min": 1,
-    "damage_max": 5,
+    "health": 12,
+    "damage_min": 4,
+    "damage_max": 6,
     "armor": 0,
     "loot": [],
     "location": "The Serpent Temple",
@@ -217,8 +217,8 @@
       "swings its tail at you",
       "slithers up and whips its tail"
     ],
-    "health": 12,
-    "damage_min": 3,
+    "health": 15,
+    "damage_min": 4,
     "damage_max": 8,
     "armor": 2,
     "loot": [],
@@ -236,9 +236,9 @@
       "jabs its head forward to bite you",
       "swings its tail"
     ],
-    "health": 9,
-    "damage_min": 2,
-    "damage_max": 6,
+    "health": 13,
+    "damage_min": 4,
+    "damage_max": 7,
     "armor": 1,
     "loot": [],
     "location": "The Serpent Temple",
@@ -255,9 +255,9 @@
       "chants an unholy incantation",
       "stabs with a ritual dagger"
     ],
-    "health": 7,
-    "damage_min": 1,
-    "damage_max": 8,
+    "health": 10,
+    "damage_min": 2,
+    "damage_max": 10,
     "armor": 0,
     "loot": [],
     "location": "The Serpent Temple",
@@ -270,9 +270,9 @@
   {
     "name": "Mindblasted Witness",
     "moveset": ["mutters insanely", "swings their fists at you"],
-    "health": 8,
+    "health": 10,
     "damage_min": 4,
-    "damage_max": 6,
+    "damage_max": 8,
     "armor": 0,
     "loot": [],
     "location": "Glowing Crater",
@@ -289,10 +289,10 @@
       "spins in a hypnotic pattern",
       "assaults your mind"
     ],
-    "health": 10,
+    "health": 12,
     "damage_min": 4,
-    "damage_max": 8,
-    "armor": 1,
+    "damage_max": 10,
+    "armor": 2,
     "loot": [],
     "location": "Glowing Crater",
     "gold": 25,
@@ -309,13 +309,13 @@
       "latches to you, trying to drain your health"
     ],
     "health": 10,
-    "damage_min": 3,
-    "damage_max": 9,
+    "damage_min": 6,
+    "damage_max": 10,
     "armor": 1,
     "loot": [],
     "location": "Glowing Crater",
     "gold": 20,
-    "xp": 45,
+    "xp": 40,
     "awareness": 2,
     "speed": 3
   },
@@ -328,30 +328,34 @@
       "spins around with its fists out"
     ],
     "health": 15,
-    "damage_min": 6,
-    "damage_max": 10,
+    "damage_min": 7,
+    "damage_max": 12,
     "armor": 2,
     "loot": [],
     "location": "Glowing Crater",
     "gold": 30,
-    "xp": 50,
+    "xp": 55,
     "awareness": 2,
     "speed": 3
   },
 
   {
     "name": "Sand Mummy",
-    "moveset": ["swings its skinny hands", "kicks at you"],
-    "health": 5,
-    "damage_min": 2,
-    "damage_max": 4,
+    "moveset": [
+      "swings its skinny hands",
+      "kicks at you",
+      "gnaws at you with rotting teeth"
+    ],
+    "health": 12,
+    "damage_min": 4,
+    "damage_max": 10,
     "armor": 0,
     "loot": [],
-    "location": "Forest",
-    "gold": 5,
-    "xp": 5,
+    "location": "Endless Dunes",
+    "gold": 45,
+    "xp": 50,
     "awareness": 2,
-    "speed": 2
+    "speed": 1
   },
 
   {
@@ -361,16 +365,16 @@
       "jabs at you with its stinger",
       "slams its body down on you"
     ],
-    "health": 5,
-    "damage_min": 2,
-    "damage_max": 4,
-    "armor": 0,
+    "health": 15,
+    "damage_min": 6,
+    "damage_max": 12,
+    "armor": 2,
     "loot": [],
-    "location": "Forest",
-    "gold": 5,
-    "xp": 5,
-    "awareness": 2,
-    "speed": 2
+    "location": "Endless Dunes",
+    "gold": 40,
+    "xp": 60,
+    "awareness": 4,
+    "speed": 5
   },
 
   {
@@ -380,16 +384,16 @@
       "calls forth a sandstorm",
       "flies at you with its claws out"
     ],
-    "health": 5,
-    "damage_min": 2,
-    "damage_max": 4,
-    "armor": 0,
+    "health": 16,
+    "damage_min": 8,
+    "damage_max": 13,
+    "armor": 1,
     "loot": [],
-    "location": "Forest",
-    "gold": 5,
-    "xp": 5,
-    "awareness": 2,
-    "speed": 2
+    "location": "Endless Dunes",
+    "gold": 50,
+    "xp": 65,
+    "awareness": 7,
+    "speed": 8
   },
 
   {
@@ -399,31 +403,31 @@
       "coils around you",
       "shoots upwards and crashes down on you"
     ],
-    "health": 5,
-    "damage_min": 2,
-    "damage_max": 4,
-    "armor": 0,
+    "health": 20,
+    "damage_min": 8,
+    "damage_max": 15,
+    "armor": 2,
     "loot": [],
-    "location": "Forest",
-    "gold": 5,
-    "xp": 5,
-    "awareness": 2,
-    "speed": 2
+    "location": "Endless Dunes",
+    "gold": 60,
+    "xp": 85,
+    "awareness": 5,
+    "speed": 15
   },
 
   {
     "name": "Technocrat Neanderthal",
     "moveset": ["swings their club", "beams you with a laser gun"],
-    "health": 5,
-    "damage_min": 2,
-    "damage_max": 4,
-    "armor": 0,
+    "health": 15,
+    "damage_min": 6,
+    "damage_max": 10,
+    "armor": 1,
     "loot": [],
-    "location": "Forest",
-    "gold": 5,
-    "xp": 5,
-    "awareness": 2,
-    "speed": 2
+    "location": "The City Outside of Time",
+    "gold": 70,
+    "xp": 60,
+    "awareness": 3,
+    "speed": 3
   },
 
   {
@@ -433,16 +437,16 @@
       "swings its nano-plate tail",
       "chomps down with its mechanized jaw"
     ],
-    "health": 5,
-    "damage_min": 2,
-    "damage_max": 4,
-    "armor": 0,
+    "health": 18,
+    "damage_min": 8,
+    "damage_max": 12,
+    "armor": 2,
     "loot": [],
-    "location": "Forest",
-    "gold": 5,
-    "xp": 5,
-    "awareness": 2,
-    "speed": 2
+    "location": "The City Outside of Time",
+    "gold": 65,
+    "xp": 65,
+    "awareness": 5,
+    "speed": 8
   },
 
   {
@@ -452,16 +456,16 @@
       "releases hand missiles at you",
       "swings their tech-claymore"
     ],
-    "health": 5,
-    "damage_min": 2,
-    "damage_max": 4,
-    "armor": 0,
+    "health": 20,
+    "damage_min": 8,
+    "damage_max": 14,
+    "armor": 3,
     "loot": [],
-    "location": "Forest",
-    "gold": 5,
-    "xp": 5,
-    "awareness": 2,
-    "speed": 2
+    "location": "The City Outside of Time",
+    "gold": 75,
+    "xp": 75,
+    "awareness": 6,
+    "speed": 8
   },
 
   {
@@ -471,16 +475,16 @@
       "sidestep slices at you",
       "brings the blade down in a single calculated motion"
     ],
-    "health": 5,
-    "damage_min": 2,
-    "damage_max": 4,
-    "armor": 0,
+    "health": 14,
+    "damage_min": 6,
+    "damage_max": 20,
+    "armor": 2,
     "loot": [],
-    "location": "Forest",
-    "gold": 5,
-    "xp": 5,
-    "awareness": 2,
-    "speed": 2
+    "location": "The City Outside of Time",
+    "gold": 75,
+    "xp": 75,
+    "awareness": 8,
+    "speed": 5
   },
 
   {
@@ -490,16 +494,16 @@
       "grabs at you with their icy gauntlets",
       "breathes out a cone of frost"
     ],
-    "health": 5,
-    "damage_min": 2,
-    "damage_max": 4,
-    "armor": 0,
+    "health": 20,
+    "damage_min": 8,
+    "damage_max": 16,
+    "armor": 3,
     "loot": [],
-    "location": "Forest",
-    "gold": 5,
-    "xp": 5,
-    "awareness": 2,
-    "speed": 2
+    "location": "Fallen Kingdom",
+    "gold": 70,
+    "xp": 80,
+    "awareness": 4,
+    "speed": 4
   },
 
   {
@@ -509,16 +513,16 @@
       "charges with its horns out",
       "stabs with a green flaming spear"
     ],
-    "health": 5,
-    "damage_min": 2,
-    "damage_max": 4,
-    "armor": 0,
+    "health": 22,
+    "damage_min": 10,
+    "damage_max": 18,
+    "armor": 2,
     "loot": [],
-    "location": "Forest",
-    "gold": 5,
-    "xp": 5,
-    "awareness": 2,
-    "speed": 2
+    "location": "Fallen Kingdom",
+    "gold": 70,
+    "xp": 85,
+    "awareness": 6,
+    "speed": 8
   },
 
   {
@@ -528,16 +532,16 @@
       "throws a spear of ice at you",
       "swoops down with her blade"
     ],
-    "health": 5,
-    "damage_min": 2,
-    "damage_max": 4,
-    "armor": 0,
+    "health": 18,
+    "damage_min": 10,
+    "damage_max": 18,
+    "armor": 3,
     "loot": [],
-    "location": "Forest",
-    "gold": 5,
-    "xp": 5,
-    "awareness": 2,
-    "speed": 2
+    "location": "Fallen Kingdom",
+    "gold": 80,
+    "xp": 85,
+    "awareness": 6,
+    "speed": 10
   },
 
   {
@@ -547,16 +551,16 @@
       "breathes out fire and acid",
       "throws a hellfire explosive"
     ],
-    "health": 5,
-    "damage_min": 2,
-    "damage_max": 4,
-    "armor": 0,
+    "health": 15,
+    "damage_min": 8,
+    "damage_max": 20,
+    "armor": 1,
     "loot": [],
-    "location": "Forest",
-    "gold": 5,
-    "xp": 5,
-    "awareness": 2,
-    "speed": 2
+    "location": "Fallen Kingdom",
+    "gold": 80,
+    "xp": 85,
+    "awareness": 3,
+    "speed": 1
   },
 
   {
@@ -566,16 +570,16 @@
       "flails",
       "slams down with consecutive tendrils"
     ],
-    "health": 5,
-    "damage_min": 2,
-    "damage_max": 4,
-    "armor": 0,
+    "health": 20,
+    "damage_min": 10,
+    "damage_max": 16,
+    "armor": 2,
     "loot": [],
-    "location": "Forest",
-    "gold": 5,
-    "xp": 5,
-    "awareness": 2,
-    "speed": 2
+    "location": "The Submerged Empire of Kath",
+    "gold": 80,
+    "xp": 90,
+    "awareness": 5,
+    "speed": 5
   },
 
   {
@@ -585,14 +589,14 @@
       "summons forth tentacles from its hood",
       "assaults you telepathically"
     ],
-    "health": 5,
-    "damage_min": 2,
-    "damage_max": 4,
+    "health": 18,
+    "damage_min": 10,
+    "damage_max": 15,
     "armor": 0,
     "loot": [],
-    "location": "Forest",
-    "gold": 5,
-    "xp": 5,
+    "location": "The Submerged Empire of Kath",
+    "gold": 80,
+    "xp": 90,
     "awareness": 2,
     "speed": 2
   },
@@ -604,16 +608,16 @@
       "spits forth half-digested corpses",
       "grabs with its pincers and tentacles"
     ],
-    "health": 5,
-    "damage_min": 2,
-    "damage_max": 4,
-    "armor": 0,
+    "health": 25,
+    "damage_min": 12,
+    "damage_max": 20,
+    "armor": 3,
     "loot": [],
-    "location": "Forest",
-    "gold": 5,
-    "xp": 5,
+    "location": "The Submerged Empire of Kath",
+    "gold": 75,
+    "xp": 100,
     "awareness": 2,
-    "speed": 2
+    "speed": 8
   },
 
   {
@@ -623,15 +627,15 @@
       "tries to conjure blisters and sores",
       "flails with coagulated human limbs"
     ],
-    "health": 5,
-    "damage_min": 2,
-    "damage_max": 4,
-    "armor": 0,
+    "health": 25,
+    "damage_min": 12,
+    "damage_max": 18,
+    "armor": 1,
     "loot": [],
-    "location": "Forest",
-    "gold": 5,
-    "xp": 5,
-    "awareness": 2,
-    "speed": 2
+    "location": "The Submerged Empire of Kath",
+    "gold": 75,
+    "xp": 90,
+    "awareness": 1,
+    "speed": 10
   }
 ]

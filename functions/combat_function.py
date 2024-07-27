@@ -6,7 +6,7 @@ from functions.creature_class_functions import Creature
 from functions.potion_class_functions import use_potions
 
 def combat_time(player: Character, enemy: Creature):
-
+    flight = False
     while enemy.health > 0 and player.health > 0:
 
         # print some useful statistics
@@ -63,6 +63,8 @@ def combat_time(player: Character, enemy: Creature):
 
     if player.health <= 0:
         print('\nYou have been defeated and faint!')
+    elif flight:
+        return combat_succesful
     elif enemy.health <= 0:
         combat_succesful = True
         print('\nYou have defeated your foe and gained ' + str(enemy.xp) + ' XP.')

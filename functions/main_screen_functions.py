@@ -5,7 +5,7 @@ from functions.character_class_functions import load_character, make_character, 
 from functions.character_inspection import inspect_sheet
 from functions.potion_class_functions import shopping_for_potions
 
-def ask_to_load(classes, armors, weapons):
+def ask_to_load(classes, armors, weapons, amulets, rings):
     player = None
     while player == None:
         while True:
@@ -19,7 +19,7 @@ def ask_to_load(classes, armors, weapons):
         match answer:
             case 1:
                 print("\nAlright, time to make a new character!")
-                player = make_character(classes, armors, weapons)
+                player = make_character(classes, armors, weapons, amulets, rings)
             case 2:
                 player = load_character()
             case _:
