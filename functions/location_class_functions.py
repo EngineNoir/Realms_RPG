@@ -87,7 +87,7 @@ class Location:
                     case 4:
                         use_potions(player)
                     case 5:
-                        inspect_sheet(player)
+                        inspect_sheet(player, inventory)
                     case 6:
                         print("\nYou trace your path back to the Village.")
                         time.sleep(1)

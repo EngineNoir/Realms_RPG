@@ -14,7 +14,7 @@
   "Thorn Coil": {
     "name": "Thorn Coil",
     "effect": [2],
-    "stat": ["Decterity"]
+    "stat": ["Dexterity"]
   },
 
   "Gravity Ring": {
