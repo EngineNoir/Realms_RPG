@@ -6,11 +6,13 @@ load_armors = open('jsons/armors.json')
 load_weapons = open('jsons/weapons.json')
 load_amulets = open('jsons/amulets.json')
 load_rings = open('jsons/rings.json')
+load_abilities = open('jsons/abilities.json')
 
 armors = json.load(load_armors)
 weapons = json.load(load_weapons)
 amulets = json.load(load_amulets)
 rings = json.load(load_rings)
+abilities = json.load(load_abilities)
 
 def inspect_sheet(player, inventory):
     print('\n-----------------')
@@ -28,7 +30,8 @@ def inspect_sheet(player, inventory):
 
     print('\nGold: ' + str(player.gold))
     print('Potions: ' + str(player.potions))
-    print('Abilities: ' + str(player.abilities))
+    print('Abilities: ')
+    list_abilities(player)
     print('-----------------')
 
     # level option if there's enough XP
@@ -55,10 +58,8 @@ def inspect_sheet(player, inventory):
             case 3:
                 return 0
 
-def list_and_equip(player):
-    #TODO
-    return 0
 
-def list_and_unequip(player):
-    #TODO
-    return 0
+def list_abilities(player):
+    for ability in player.abilities:
+        print(f"- {abilities[ability]["name"]}: {abilities[ability]["description"]} "
+            f"(Cost: {abilities[ability]["cost"]}, Dmg: {abilities[ability]["effect"]} + {abilities[ability]["attribute"]})")

@@ -2,7 +2,7 @@ import json
 from functions.inventory_class_functions import Inventory
 from functions.main_screen_functions import ask_to_load, request_action
 
-load_spells = open('jsons/spells.json')
+load_abilities = open('jsons/abilities.json')
 load_consumables = open('jsons/consumables.json')
 load_classes = open('jsons/classes.json')
 load_armors = open('jsons/armors.json')
@@ -13,7 +13,7 @@ load_rings = open('jsons/rings.json')
 armors = json.load(load_armors)
 weapons = json.load(load_weapons)
 character_classes = json.load(load_classes)
-spells = json.load(load_spells)
+abilities = json.load(load_abilities)
 consumables = json.load(load_consumables)
 amulets = json.load(load_amulets)
 rings = json.load(load_rings)

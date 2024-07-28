@@ -34,6 +34,7 @@ class Character:
         eq_ring_2: dict,
         # --------------
         abilities: list,
+        abilities_to_learn: list,
         armor_prof: str,
         # --------------
         max_health: int,
@@ -71,6 +72,7 @@ class Character:
 
         self.armor_prof = armor_prof
         self.abilities = abilities
+        self.abilities_to_learn = abilities_to_learn
 
         self.stealth = False
         self.max_health = max_health
@@ -226,6 +228,7 @@ class Character:
                     self.level += 1
                     self.current_xp -= self.xp_to_level
                     self.xp_to_level = (self.strength + self.dexterity + self.willpower) * 10 + self.level * 20
+                    self.gain_abilities()
                     print('\nYou have successfully leveled up and are now level ' + str(self.level) +
                             '. Congratulations!')
                 case 2:
@@ -240,6 +243,21 @@ class Character:
                         else:
                             break
         return 0
+
+    def gain_abilities(self):
+        if self.level == 3 and self.abilities_to_learn[0] not in self.abilities:
+            self.abilities.append(self.abilities_to_learn[0])
+            print(f"\nYou have learned {self.abilities_to_learn[0]}!")
+            self.abilities_to_learn.pop()
+        elif self.level == 7 and self.abilities_to_learn[0] not in self.abilities:
+            self.abilities.append(self.abilities_to_learn[0])
+            print(f"\nYou have learned {self.abilities_to_learn[0]}!")
+            self.abilities_to_learn.pop()
+        elif self.level == 12 and self.abilities_to_learn[0] not in self.abilities:
+            self.abilities.append(self.abilities_to_learn[0])
+            print(f"\nYou have learned {self.abilities_to_learn[0]}!")
+            self.abilities_to_learn.pop()
+
 
 # MAKE AND SAVE CHARACTER -----------------------------
 def make_character(classes, armors, weapons, amulets, rings):
@@ -260,7 +278,7 @@ def make_character(classes, armors, weapons, amulets, rings):
     print('\nPick one of the following classes.')
     i = 1
     for char_class in classes:
-        print(str(i) + ". " + char_class["class_name"] + ' - ' + char_class["description"])
+        print(f"{i}. {char_class["class_name"]} (STR: {char_class["strength"]}, DEX {char_class["dexterity"]}, WILL: {char_class["willpower"]}) - {char_class["description"]}")
         i += 1
 
     # makes the player choose a class from the given options
@@ -306,7 +324,8 @@ def make_character(classes, armors, weapons, amulets, rings):
         starting_amulet,
         starting_ring_1,
         starting_ring_2,
-        [],
+        chosen_class["abilities"],
+        chosen_class["abilities_to_learn"],
         chosen_class["armor_prof"],
         starting_health,
         starting_mana,
@@ -355,6 +374,7 @@ def load_character():
                                 char_sheet['eq_ring_1'],
                                 char_sheet['eq_ring_2'],
                                 char_sheet['abilities'],
+                                char_sheet['abilities_to_learn'],
                                 char_sheet['armor_prof'],
                                 char_sheet['max_health'],
                                 char_sheet['max_mana'],
@@ -386,6 +406,7 @@ def save_character(player_character):
                         'eq_ring_1': player_character.eq_ring_1,
                         'eq_ring_2': player_character.eq_ring_2,
                         'abilities': player_character.abilities,
+                        'abilities_to_learn': player_character.abilities_to_learn,
                         'armor_prof': player_character.armor_prof,
                         'stealth': False,
                         'max_health': player_character.max_health,

@@ -1,4 +1,5 @@
 import json
+import random
 
 class Inventory:
     def __init__(self,

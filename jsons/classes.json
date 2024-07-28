@@ -10,6 +10,8 @@
     "starter_ring_1": "Empty Slot",
     "starter_ring_2": "Empty Slot",
     "starter_gold": 50,
+    "abilities": ["Strategic Combat", "Parry"],
+    "abilities_to_learn": ["Riposte", "Fist Fight!", "Unloaded Arsenal"],
     "armor_prof": "Heavy",
     "description": "A trained warrior destined for death on the battlefield."
   },
@@ -25,6 +27,8 @@
     "starter_ring_1": "Empty Slot",
     "starter_ring_2": "Empty Slot",
     "starter_gold": 50,
+    "abilities": ["Smite", "Parry"],
+    "abilities_to_learn": ["Searing Brand", "Heal", "Hammer of Judgement"],
     "armor_prof": "Heavy",
     "description": "A righteous enforcer of divine laws."
   },
@@ -40,6 +44,8 @@
     "starter_ring_1": "Empty Slot",
     "starter_ring_2": "Empty Slot",
     "starter_gold": 50,
+    "abilities": ["Graceful Sweep", "Parry"],
+    "abilities_to_learn": ["Swan Dive", "Blade Dance", "Nothing Personal"],
     "armor_prof": "Medium",
     "description": "An expert blademaster from a distant land."
   },
@@ -55,6 +61,8 @@
     "starter_ring_1": "Empty Slot",
     "starter_ring_2": "Empty Slot",
     "starter_gold": 50,
+    "abilities": ["Reckless Charge", "Endure"],
+    "abilities_to_learn": ["Violent Strikes", "Bloodthirst", "HEADBUTT!"],
     "armor_prof": "Heavy",
     "description": "A ruthless warrior who fights to destroy."
   },
@@ -70,6 +78,8 @@
     "starter_ring_1": "Empty Slot",
     "starter_ring_2": "Empty Slot",
     "starter_gold": 50,
+    "abilities": ["Sacred Fire", "Shield"],
+    "abilities_to_learn": ["Heal", "Rays of Gold", "Summon Angel"],
     "armor_prof": "Heavy",
     "description": "A devoted scholar of the divine."
   },
@@ -85,6 +95,12 @@
     "starter_ring_1": "Empty Slot",
     "starter_ring_2": "Empty Slot",
     "starter_gold": 50,
+    "abilities": ["Eldritch Slam", "Shield"],
+    "abilities_to_learn": [
+      "Hellfire",
+      "Otherworldly Tentacle",
+      "Summon Greater Demon"
+    ],
     "armor_prof": "Light",
     "description": "A dreamer, obsessed with eldritch visions."
   },
@@ -100,6 +116,8 @@
     "starter_ring_1": "Empty Slot",
     "starter_ring_2": "Empty Slot",
     "starter_gold": 50,
+    "abilities": ["Fireball", "Shield"],
+    "abilities_to_learn": ["Lightning Bolt", "Mind Blast", "Summon Meteor"],
     "armor_prof": "Light",
     "description": "An academic enraptured by the metaphysical."
   },
@@ -115,6 +133,8 @@
     "starter_ring_1": "Empty Slot",
     "starter_ring_2": "Empty Slot",
     "starter_gold": 40,
+    "abilities": ["Wolf Form", "Shield"],
+    "abilities_to_learn": ["Bear Form", "Plague", "Elemental Fury"],
     "armor_prof": "Medium",
     "description": "A gardener, who cares for all life."
   },
@@ -130,21 +150,25 @@
     "starter_ring_1": "Empty Slot",
     "starter_ring_2": "Empty Slot",
     "starter_gold": 50,
+    "abilities": ["Critical Strike", "Parry"],
+    "abilities_to_learn": [],
     "armor_prof": "Medium",
     "description": "An escaped convict, who has eyes only for riches."
   },
 
   {
     "class_name": "Misfortunate",
-    "strength": 2,
-    "dexterity": 2,
-    "willpower": 2,
+    "strength": 3,
+    "dexterity": 3,
+    "willpower": 3,
     "starter_armor": "Loincloth",
     "starter_weapon": "Dagger",
     "starter_amulet": "Empty Slot",
     "starter_ring_1": "Empty Slot",
     "starter_ring_2": "Empty Slot",
     "starter_gold": 50,
+    "abilities": ["Parry", "Shield"],
+    "abilities_to_learn": [],
     "armor_prof": "Heavy",
     "description": "An abandonned soul, who never knew success."
   }

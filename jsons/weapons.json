@@ -13,7 +13,7 @@
   "Curved Twinblades": {
     "weapon_name": "Curved Twinblades",
     "ability": "dexterity",
-    "damage": 4,
+    "damage": 3,
     "moveset": [
       "swing the twinblades",
       "spin the blades around you",
@@ -24,7 +24,7 @@
   "Longsword": {
     "weapon_name": "Longsword",
     "ability": "strength",
-    "damage": 4,
+    "damage": 3,
     "moveset": [
       "swing the blade",
       "thrust the longsword forward",
@@ -53,7 +53,7 @@
   "Battleaxe": {
     "weapon_name": "Battleaxe",
     "ability": "strength",
-    "damage": 6,
+    "damage": 3,
     "moveset": [
       "swing down",
       "arch back and swing the axe overhead",
@@ -64,22 +64,11 @@
   "Katana": {
     "weapon_name": "Katana",
     "ability": "dexterity",
-    "damage": 5,
+    "damage": 3,
     "moveset": [
       "unsheathe and strike",
       "swing with precision",
       "step sideways and swing out"
-    ]
-  },
-
-  "Rapier": {
-    "weapon_name": "Rapier",
-    "ability": "dexterity",
-    "damage": 5,
-    "moveset": [
-      "stab at a weak spot",
-      "flourish and jab",
-      "stab into and through the enemy"
     ]
   },
 

@@ -1,0 +1,57 @@
+{
+  "Shield": {
+    "name": "Shield",
+    "type": "attack",
+    "attribute": "willpower",
+    "cost": 7,
+    "effect": 0,
+    "description": "Block incoming attacks, and retaliate with willpower.",
+    "moveset": [
+      "conjure a ward and retalliate",
+      "summon a spectral shield to ward off the enemy."
+    ]
+  },
+
+  "Fireball": {
+    "name": "Fireball",
+    "type": "attack",
+    "attribute": "willpower",
+    "cost": 5,
+    "effect": 10,
+    "description": "Hurl an orb of elemental flame.",
+    "moveset": [
+      "conjure and throw a ball of fire",
+      "throw a flaming orb at the enemy"
+    ]
+  },
+
+  "Heal": {
+    "name": "Heal",
+    "type": "heal",
+    "attribute": "willpower",
+    "cost": 5,
+    "effect": 10,
+    "description": "Regain some health, at the cost of mana.",
+    "moveset": ["summon a gentle glow", "release a spark of golden light"]
+  },
+
+  "Parry": {},
+
+  "Reckless Charge": {},
+
+  "Strategic Combat": {},
+
+  "Smite": {},
+
+  "Graceful Sweep": {},
+
+  "Endure": {},
+
+  "Sacred Fire": {},
+
+  "Eldritch Slam": {},
+
+  "Wolf Form": {},
+
+  "Critical Strike": {}
+}
