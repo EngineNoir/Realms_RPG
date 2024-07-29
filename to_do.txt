@@ -3,28 +3,7 @@ TO DO:
 Inputs:
 - make sure the match cases can error handle things other than numbers
 
-General Mechanics:
-- add combat timer to keep track of debuffs and spell effects maybe?
-
-Magic:
-- add spellcasting
-- add spells
-- add mana restoration in hub + spell purchase?
-
-Items:
-- correct stats on weapons and armors
-- add more weapons and armors
-- add rings
-- add amulets
-- add loot mechanics
-- add equipment management mechanics (unequipped armor/weapons/etc in inventory possible to be sold at hub area?)
-
 Creatures/Bosses:
-- correctly assign to correct locations
 - adjust hp, dmg, xp, and gold values to fit scaling
 
-Hub:
-- add more to hub area (tavern to heal, shop for gear(?), maybe level at shrine/inn?)
-
-Combat:
-- potentially expand combat to include different actions like dodging
+Colours?

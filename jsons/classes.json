@@ -117,7 +117,11 @@
     "starter_ring_2": "Empty Slot",
     "starter_gold": 50,
     "abilities": ["Fireball", "Shield"],
-    "abilities_to_learn": ["Lightning Bolt", "Mind Blast", "Summon Meteor"],
+    "abilities_to_learn": [
+      "Lightning Bolt",
+      "Mind Blast",
+      "Summon Meteor Shower"
+    ],
     "armor_prof": "Light",
     "description": "An academic enraptured by the metaphysical."
   },
@@ -133,7 +137,7 @@
     "starter_ring_1": "Empty Slot",
     "starter_ring_2": "Empty Slot",
     "starter_gold": 40,
-    "abilities": ["Wolf Form", "Shield"],
+    "abilities": ["Wolf Form", "Dodge"],
     "abilities_to_learn": ["Bear Form", "Plague", "Elemental Fury"],
     "armor_prof": "Medium",
     "description": "A gardener, who cares for all life."
@@ -151,7 +155,11 @@
     "starter_ring_2": "Empty Slot",
     "starter_gold": 50,
     "abilities": ["Critical Strike", "Parry"],
-    "abilities_to_learn": [],
+    "abilities_to_learn": [
+      "Poisonous Strike",
+      "Throwing Blades",
+      "Shadowdance"
+    ],
     "armor_prof": "Medium",
     "description": "An escaped convict, who has eyes only for riches."
   },
@@ -167,8 +175,12 @@
     "starter_ring_1": "Empty Slot",
     "starter_ring_2": "Empty Slot",
     "starter_gold": 50,
-    "abilities": ["Parry", "Shield"],
-    "abilities_to_learn": [],
+    "abilities": ["Parry", "Shield", "Dodge"],
+    "abilities_to_learn": [
+      "God's Abandon",
+      "Surrounded by Ruins",
+      "Apotheosis"
+    ],
     "armor_prof": "Heavy",
     "description": "An abandonned soul, who never knew success."
   }

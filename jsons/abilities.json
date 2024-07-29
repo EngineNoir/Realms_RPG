@@ -5,9 +5,9 @@
     "attribute": "willpower",
     "cost": 7,
     "effect": 0,
-    "description": "Block incoming attacks, and retaliate with willpower.",
+    "description": "Block incoming attacks, and retaliate with magic.",
     "moveset": [
-      "conjure a ward and retalliate",
+      "conjure a ward and retalliate the attack.",
       "summon a spectral shield to ward off the enemy."
     ]
   },
@@ -31,27 +31,514 @@
     "attribute": "willpower",
     "cost": 5,
     "effect": 10,
-    "description": "Regain some health, at the cost of mana.",
+    "description": "Use divine energy to regain health.",
     "moveset": ["summon a gentle glow", "release a spark of golden light"]
   },
 
-  "Parry": {},
+  "Parry": {
+    "name": "Parry",
+    "type": "attack",
+    "attribute": "strength",
+    "cost": 7,
+    "effect": 0,
+    "description": "Stop and retalliate an enemy attack with your might.",
+    "moveset": [
+      "swing your blade, deflecting the attack.",
+      "block an incoming attack, and returning one of your own."
+    ]
+  },
 
-  "Reckless Charge": {},
+  "Dodge": {
+    "name": "Dodge",
+    "type": "attack",
+    "attribute": "dexterity",
+    "cost": 7,
+    "effect": 0,
+    "description": "Roll out of harm's way and use your speed to reengage.",
+    "moveset": [
+      "duck out of the way of an attack, and dash at your opponent.",
+      "roll away from the enemy, flanking them, and striking back."
+    ]
+  },
 
-  "Strategic Combat": {},
+  "Reckless Charge": {
+    "name": "Reckless Charge",
+    "type": "attack",
+    "attribute": "strength",
+    "cost": 5,
+    "effect": 10,
+    "description": "Heed no caution and charge at the enemy.",
+    "moveset": [
+      "go straight towards the opponent, weapon in hand",
+      "dash straight ahead, swinging your weapon"
+    ]
+  },
 
-  "Smite": {},
+  "Strategic Combat": {
+    "name": "Strategic Combat",
+    "type": "attack",
+    "attribute": "strength",
+    "cost": 5,
+    "effect": 10,
+    "description": "Assess your opponent, and strike accordingly.",
+    "moveset": [
+      "spot an opening and exploit it",
+      "assess the enemy's weakness, and strike at it"
+    ]
+  },
 
-  "Graceful Sweep": {},
+  "Ripose": {
+    "name": "Ripose",
+    "type": "attack",
+    "attribute": "strength",
+    "cost": 8,
+    "effect": 13,
+    "description": "Lunge at the enemy during their attack.",
+    "moveset": [
+      "strike straight through the enemy's defence",
+      "stick your weapon into the enemy"
+    ]
+  },
 
-  "Endure": {},
+  "Fist Fight!": {
+    "name": "Fist Fight!",
+    "type": "attack",
+    "attribute": "strength",
+    "cost": 10,
+    "effect": 16,
+    "description": "Throw down the weapons and go at it the natural way.",
+    "moveset": [
+      "using your hands, beat down at the opponent",
+      "swing with the ol' one-two, to the sound of fractures beneath"
+    ]
+  },
 
-  "Sacred Fire": {},
+  "Unloaded Arsenal": {
+    "name": "Unloaded Arsenal",
+    "type": "attack",
+    "attribute": "strength",
+    "cost": 15,
+    "effect": 25,
+    "description": "Unleash the full range of your weapons training.",
+    "moveset": [
+      "insert two daggers into your opponent,\nand a battleaxe in their ribcage",
+      "throw your weapon into the opponent,\nunleashing a storm of arrows as it soars"
+    ]
+  },
 
-  "Eldritch Slam": {},
+  "Searing Brand": {
+    "name": "Searing Brand",
+    "type": "attack",
+    "attribute": "strength",
+    "cost": 8,
+    "effect": 13,
+    "description": "Brand the enemy with the mark of your faith.",
+    "moveset": [
+      "lunge at enemy, flaming weapon in hand",
+      "conjure a flaming symbol in your palm, and strike with it"
+    ]
+  },
 
-  "Wolf Form": {},
+  "Hammer of Judgement": {
+    "name": "Hammer of Judgement",
+    "type": "attack",
+    "attribute": "strength",
+    "cost": 15,
+    "effect": 25,
+    "description": "Swing down a divine hammer, and seal your opponent's fate.",
+    "moveset": [
+      "conjure a golden mace, and slam it down\nas ripples of radiance pulse outward",
+      "reach for the heavens, and bring down a golden hammer\nwith enough force to shatter the earth beneath"
+    ]
+  },
 
-  "Critical Strike": {}
+  "Swan Dive": {
+    "name": "Swan Dive",
+    "type": "attack",
+    "attribute": "dexterity",
+    "cost": 8,
+    "effect": 13,
+    "description": "Leap into the air, and come down with a graceful swing.",
+    "moveset": [
+      "jump up, and direct yourself down with your blade",
+      "leap upwards and dive at the enemy, blade ready to unsheathe"
+    ]
+  },
+
+  "Blade Dance": {
+    "name": "Blade Dance",
+    "type": "attack",
+    "attribute": "dexterity",
+    "cost": 10,
+    "effect": 16,
+    "description": "Release a flurry of swings, striking the enemy with each.",
+    "moveset": [
+      "unleash a hundred strikes, landing a hundred slices",
+      "dash past the enemy, as a thousand cuts echo"
+    ]
+  },
+
+  "Nothing Personal": {
+    "name": "Nothing Personal",
+    "type": "attack",
+    "attribute": "dexterity",
+    "cost": 15,
+    "effect": 25,
+    "description": "Unleash a precision strike, severing your enemy.",
+    "moveset": [
+      "quickly swing your blade past the enemy and stay still.\nA fountain of blood streams out a moment later",
+      "move through the enemy with a speed that causes a sonic boom.\nAs you turn around, you see that you went through your opponent"
+    ]
+  },
+
+  "Violent Strikes": {
+    "name": "Violent Strikes",
+    "type": "attack",
+    "attribute": "strength",
+    "cost": 8,
+    "effect": 13,
+    "description": "Swing your weapon with fury and rage.",
+    "moveset": [
+      "unleash a string of devastating blows",
+      "cleave at your enemy with raging strikes"
+    ]
+  },
+
+  "Bloodthirst": {
+    "name": "Bloodthirst",
+    "type": "attack",
+    "attribute": "strength",
+    "cost": 10,
+    "effect": 16,
+    "description": "Taste blood and use it to fuel your attacks.",
+    "moveset": [
+      "lick the blood off your weapon and thrust it",
+      "fuel yourself with pain and unleash it upon your foe"
+    ]
+  },
+
+  "HEADBUTT!": {
+    "name": "HEADBUTT!",
+    "type": "attack",
+    "attribute": "strength",
+    "cost": 15,
+    "effect": 25,
+    "description": "HEADBUTT!!!",
+    "moveset": [
+      "swing your head down with such force that\nit unleashes a seismic wave",
+      "leap into the air and plummet down, head first\nlike a meteor onto the enemy"
+    ]
+  },
+
+  "Smite": {
+    "name": "Smite",
+    "type": "attack",
+    "attribute": "strength",
+    "cost": 5,
+    "effect": 10,
+    "description": "Strike your foe with divine energy.",
+    "moveset": [
+      "smite down your foe with holy radiance",
+      "slam down with divine energy"
+    ]
+  },
+
+  "Graceful Sweep": {
+    "name": "Graceful Sweep",
+    "type": "attack",
+    "attribute": "dexterity",
+    "cost": 5,
+    "effect": 10,
+    "description": "Swing with elegance and skill.",
+    "moveset": [
+      "swipe your weapon through the enemy",
+      "step forward and slash your weapon down elegantly"
+    ]
+  },
+
+  "Endure": {
+    "name": "Endure",
+    "type": "heal",
+    "attribute": "strength",
+    "cost": 5,
+    "effect": 10,
+    "description": "Power through the pain and recover lost health.",
+    "moveset": [
+      "bite tightly down and suffer through the pain",
+      "groan in pain, but grit your teeth and power through"
+    ]
+  },
+
+  "Sacred Fire": {
+    "name": "Sacred Fire",
+    "type": "attack",
+    "attribute": "willpower",
+    "cost": 5,
+    "effect": 10,
+    "description": "Release divine flames down upon your foes.",
+    "moveset": [
+      "summon a small rain of golden fire",
+      "engulf the enemy in radiant flames"
+    ]
+  },
+
+  "Eldritch Slam": {
+    "name": "Eldritch Slam",
+    "type": "attack",
+    "attribute": "willpower",
+    "cost": 5,
+    "effect": 10,
+    "description": "Seek whatever entity may offer you their might.",
+    "moveset": [
+      "summon a fel claw and strike",
+      "conjure an infernal whip and lash"
+    ]
+  },
+
+  "Wolf Form": {
+    "name": "Wolf Form",
+    "type": "attack",
+    "attribute": "dexterity",
+    "cost": 5,
+    "effect": 10,
+    "description": "Imbue yourself with the power of the wolf.",
+    "moveset": [
+      "grow large canines and bite down",
+      "howl and tear at the enemy"
+    ]
+  },
+
+  "Critical Strike": {
+    "name": "Critical Strike",
+    "type": "attack",
+    "attribute": "dexterity",
+    "cost": 5,
+    "effect": 10,
+    "description": "Strike your foes where they're weak.",
+    "moveset": [
+      "stab into an enemy's weak spot",
+      "assess a soft spot and stab it with your weapon"
+    ]
+  },
+
+  "Rays of Gold": {
+    "name": "Rays of Gold",
+    "type": "attack",
+    "attribute": "willpower",
+    "cost": 10,
+    "effect": 16,
+    "description": "The gods bestow you with orbital rays of divine energy.",
+    "moveset": [
+      "conjure rays of divine beams that singe the enemy",
+      "summon down rays of golden light that scorch all beneath them"
+    ]
+  },
+
+  "Summon Angel": {
+    "name": "Summon Angel",
+    "type": "attack",
+    "attribute": "willpower",
+    "cost": 15,
+    "effect": 25,
+    "description": "Gain the assistance of a powerful celestial entity.",
+    "moveset": [
+      "summon an Angel, beautiful and alien.\nIt unleashes a devastating heavenly flame from its eyes",
+      "pray, and the clouds part, as a golden titan slams\ndown its collosal golden blade onto the enemy"
+    ]
+  },
+
+  "Hellfire": {
+    "name": "Hellfire",
+    "type": "attack",
+    "attribute": "willpower",
+    "cost": 8,
+    "effect": 13,
+    "description": "Conjure infernal flames that invoke the pain of sin.",
+    "moveset": [
+      "release black flames from your hands",
+      "summon forth a stream of black and red fire"
+    ]
+  },
+
+  "Otherworldly Tentacle": {
+    "name": "Otherworldly Tentacle",
+    "type": "attack",
+    "attribute": "willpower",
+    "cost": 10,
+    "effect": 16,
+    "description": "Reach into the far realms, and extract the aid of an Elder God.",
+    "moveset": [
+      "point down, and a colossal tenticle slams down on your foe",
+      "summon a massive tentacle from beneath which swings at your foe"
+    ]
+  },
+
+  "Summon Greater Demon": {
+    "name": "Summon Greater Demon",
+    "type": "attack",
+    "attribute": "willpower",
+    "cost": 15,
+    "effect": 25,
+    "description": "Gain the aid of a powerful entity, at the cost of your soul.",
+    "moveset": [
+      "summon a writhing mountain. Its screech melts metal and skin",
+      "conjure a towering fiend. It looks back at you and\nwhispers 'soon' as it buries its spear in your foe"
+    ]
+  },
+
+  "Lightning Bolt": {
+    "name": "Lightning Bolt",
+    "type": "attack",
+    "attribute": "willpower",
+    "cost": 8,
+    "effect": 13,
+    "description": "Conjure a crackling bolt of electrical energy.",
+    "moveset": [
+      "cast forth an electrical orb that shoots at your foe",
+      "unleash a beam of thunder that burns all in its path"
+    ]
+  },
+
+  "Mind Blast": {
+    "name": "Mind Blast",
+    "type": "attack",
+    "attribute": "willpower",
+    "cost": 10,
+    "effect": 16,
+    "description": "Use telepahy to subdue and weaken your opponent.",
+    "moveset": [
+      "reach into the mind of your enemy, and crush it",
+      "conjure horrifying visions into the mind of your foe"
+    ]
+  },
+
+  "Summon Meteor Shower": {
+    "name": "Summon Meteor Shower",
+    "type": "attack",
+    "attribute": "willpower",
+    "cost": 15,
+    "effect": 25,
+    "description": "Cast down the very heavens onto your enemy.",
+    "moveset": [
+      "summon forth the skies above, and launch their\ncelestial bodies at your foe below",
+      "sever the skies, as comets and meteors rain down on your enemy"
+    ]
+  },
+
+  "Bear Form": {
+    "name": "Bear Form",
+    "type": "attack",
+    "attribute": "dexterity",
+    "cost": 8,
+    "effect": 13,
+    "description": "Assume the aspect of the ursine predator.",
+    "moveset": [
+      "claw at your foe with massive paws",
+      "bite down with ferocious ursine strength"
+    ]
+  },
+
+  "Plague": {
+    "name": "Plague",
+    "type": "attack",
+    "attribute": "willpower",
+    "cost": 10,
+    "effect": 16,
+    "description": "Summon forth insects and disease, and spoil heart and land.",
+    "moveset": [
+      "call forth a swarm of locust that gnaw at your enemy",
+      "conjure an ill air that ravages the insides of your opponent"
+    ]
+  },
+
+  "Elemental Fury": {
+    "name": "Elemental Fury",
+    "type": "attack",
+    "attribute": "dexterity",
+    "cost": 15,
+    "effect": 25,
+    "description": "Become one with the elements, unleashing their violence.",
+    "moveset": [
+      "strike down with a flaming arm, and blast\nunto your foe a frigid blizzard",
+      "summon forth a great tide, and unleash a thunderstorm onto your\ndrowning foe"
+    ]
+  },
+
+  "Poisonous Strike": {
+    "name": "Poisonous Strike",
+    "type": "attack",
+    "attribute": "dexterity",
+    "cost": 8,
+    "effect": 13,
+    "description": "Coat your blade with poison, and wound your foe.",
+    "moveset": [
+      "grease your weapon with black ichor, and stab your foe",
+      "dip your weapon into a green mixture that melts ehtough metal, and strike"
+    ]
+  },
+
+  "Throwing Blades": {
+    "name": "Throwing Blades",
+    "type": "attack",
+    "attribute": "dexterity",
+    "cost": 10,
+    "effect": 16,
+    "description": "Rain down bladed death onto your enemies from afar.",
+    "moveset": [
+      "jump back, releasing a handful of shuriken and throwing knives",
+      "unleash a torrent of blades from your pouches, each striking your foe"
+    ]
+  },
+
+  "Shadowdance": {
+    "name": "Shadowdance",
+    "type": "attack",
+    "attribute": "dexterity",
+    "cost": 15,
+    "effect": 25,
+    "description": "Become one with shadows, then strike from darkness",
+    "moveset": [
+      "blend into shadow, and as darkness surrounds your foe\na legion of shadowy wraiths strike from the dark",
+      "disperse into darkness, and strike at your foe with infinite\nblackened blades"
+    ]
+  },
+
+  "God's Abandon": {
+    "name": "God's Abandon",
+    "type": "attack",
+    "attribute": "strength",
+    "cost": 8,
+    "effect": 15,
+    "description": "Cast down the gods, as you have been abandonned.",
+    "moveset": [
+      "curse at the skies, unleashing thunder at your foe",
+      "recite the forbidden scriptures, melting the mind of your enemy"
+    ]
+  },
+
+  "Surrounded by Ruins": {
+    "name": "Surrounded by Ruins",
+    "type": "attack",
+    "attribute": "strength",
+    "cost": 10,
+    "effect": 20,
+    "description": "As you've ever known is destroyed, and pieces of the past still follow.",
+    "moveset": [
+      "call down a rain of ruined debris, broken temples, and shattered shrines",
+      "split the earth beneath, unearthing ancient stone and lava"
+    ]
+  },
+
+  "Apotheosis": {
+    "name": "Apotheosis",
+    "type": "attack",
+    "attribute": "strength",
+    "cost": 15,
+    "effect": 35,
+    "description": "Ascend, and become that which abandonned you.",
+    "moveset": [
+      "teleport your foe through space and time, onto a dying world.\nThe cataclysm wreaks havoc on your foe",
+      "reach into the past and seize the Hammer of Creation. You strike\ndown, unmaking your opponent bit by bit"
+    ]
+  }
 }

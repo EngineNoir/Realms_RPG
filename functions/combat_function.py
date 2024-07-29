@@ -83,9 +83,17 @@ def player_abilities(player: Character, enemy: Creature):
     ability = list_abilities_combat(player, abilities)
     if ability == 0:
         return 0
-    elif ability == "Shield" or ability == "Parry":
+    elif ability == "Shield" or ability == "Parry" or ability == "Dodge":
         print(f"\nYou {random.choice(abilities[ability]["moveset"])}")
         player.deal_damage_to_enemy(enemy)
+    elif ability == "God's Abandon" or ability == "Surrounded by Ruins" or ability == "Apotheosis":
+        if player.strength >= player.willpower and player.strength >= player.dexterity:
+            abilities[ability]["attribute"] = "strength"
+        elif player.dexterity >= player.willpower:
+            abilities[ability]["attribute"] = "dexterity"
+        else:
+            abilities[ability]["attribute"] = "willpower"
+        parse_ability(player, enemy, ability, abilities)
     else:
         parse_ability(player, enemy, ability, abilities)
 
