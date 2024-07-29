@@ -9,7 +9,7 @@
     "loot": [],
     "location": "Ancient Forest",
     "gold": 3,
-    "xp": 20,
+    "xp": 5,
     "awareness": 2,
     "speed": 2
   },
@@ -57,7 +57,7 @@
     "armor": 1,
     "loot": [],
     "location": "Abandonned Graveyard",
-    "gold": 12,
+    "gold": 7,
     "xp": 25,
     "awareness": 1,
     "speed": 1
@@ -76,7 +76,7 @@
     "armor": 1,
     "loot": [],
     "location": "Abandonned Graveyard",
-    "gold": 14,
+    "gold": 7,
     "xp": 30,
     "awareness": 4,
     "speed": 4
@@ -95,7 +95,7 @@
     "armor": 2,
     "loot": [],
     "location": "Abandonned Graveyard",
-    "gold": 14,
+    "gold": 7,
     "xp": 30,
     "awareness": 2,
     "speed": 5
@@ -114,7 +114,7 @@
     "armor": 1,
     "loot": [],
     "location": "Abandonned Graveyard",
-    "gold": 20,
+    "gold": 7,
     "xp": 40,
     "awareness": 2,
     "speed": 2
@@ -132,7 +132,7 @@
     "armor": 1,
     "loot": [],
     "location": "Rot-Plagued Swamp",
-    "gold": 15,
+    "gold": 10,
     "xp": 35,
     "awareness": 1,
     "speed": 1
@@ -151,7 +151,7 @@
     "armor": 2,
     "loot": [],
     "location": "Rot-Plagued Swamp",
-    "gold": 15,
+    "gold": 10,
     "xp": 45,
     "awareness": 4,
     "speed": 4
@@ -170,7 +170,7 @@
     "armor": 1,
     "loot": [],
     "location": "Rot-Plagued Swamp",
-    "gold": 16,
+    "gold": 10,
     "xp": 40,
     "awareness": 2,
     "speed": 2
@@ -189,7 +189,7 @@
     "armor": 1,
     "loot": [],
     "location": "Rot-Plagued Swamp",
-    "gold": 14,
+    "gold": 10,
     "xp": 50,
     "awareness": 5,
     "speed": 7
@@ -204,7 +204,7 @@
     "armor": 0,
     "loot": [],
     "location": "The Serpent Temple",
-    "gold": 15,
+    "gold": 10,
     "xp": 40,
     "awareness": 1,
     "speed": 3
@@ -223,7 +223,7 @@
     "armor": 2,
     "loot": [],
     "location": "The Serpent Temple",
-    "gold": 20,
+    "gold": 15,
     "xp": 50,
     "awareness": 6,
     "speed": 4
@@ -242,7 +242,7 @@
     "armor": 1,
     "loot": [],
     "location": "The Serpent Temple",
-    "gold": 20,
+    "gold": 15,
     "xp": 45,
     "awareness": 3,
     "speed": 3
@@ -261,7 +261,7 @@
     "armor": 0,
     "loot": [],
     "location": "The Serpent Temple",
-    "gold": 25,
+    "gold": 15,
     "xp": 45,
     "awareness": 4,
     "speed": 1
@@ -276,7 +276,7 @@
     "armor": 0,
     "loot": [],
     "location": "Glowing Crater",
-    "gold": 20,
+    "gold": 18,
     "xp": 40,
     "awareness": 1,
     "speed": 4
@@ -295,7 +295,7 @@
     "armor": 2,
     "loot": [],
     "location": "Glowing Crater",
-    "gold": 25,
+    "gold": 18,
     "xp": 45,
     "awareness": 8,
     "speed": 5
@@ -314,7 +314,7 @@
     "armor": 1,
     "loot": [],
     "location": "Glowing Crater",
-    "gold": 20,
+    "gold": 18,
     "xp": 40,
     "awareness": 2,
     "speed": 3
@@ -333,7 +333,7 @@
     "armor": 2,
     "loot": [],
     "location": "Glowing Crater",
-    "gold": 30,
+    "gold": 18,
     "xp": 55,
     "awareness": 2,
     "speed": 3
@@ -352,7 +352,7 @@
     "armor": 0,
     "loot": [],
     "location": "Endless Dunes",
-    "gold": 45,
+    "gold": 22,
     "xp": 50,
     "awareness": 2,
     "speed": 1
@@ -371,7 +371,7 @@
     "armor": 2,
     "loot": [],
     "location": "Endless Dunes",
-    "gold": 40,
+    "gold": 22,
     "xp": 60,
     "awareness": 4,
     "speed": 5
@@ -390,7 +390,7 @@
     "armor": 1,
     "loot": [],
     "location": "Endless Dunes",
-    "gold": 50,
+    "gold": 22,
     "xp": 65,
     "awareness": 7,
     "speed": 8
@@ -409,7 +409,7 @@
     "armor": 2,
     "loot": [],
     "location": "Endless Dunes",
-    "gold": 60,
+    "gold": 22,
     "xp": 85,
     "awareness": 5,
     "speed": 15
@@ -424,7 +424,7 @@
     "armor": 1,
     "loot": [],
     "location": "The City Outside of Time",
-    "gold": 70,
+    "gold": 25,
     "xp": 60,
     "awareness": 3,
     "speed": 3
@@ -443,7 +443,7 @@
     "armor": 2,
     "loot": [],
     "location": "The City Outside of Time",
-    "gold": 65,
+    "gold": 25,
     "xp": 65,
     "awareness": 5,
     "speed": 8
@@ -462,7 +462,7 @@
     "armor": 3,
     "loot": [],
     "location": "The City Outside of Time",
-    "gold": 75,
+    "gold": 25,
     "xp": 75,
     "awareness": 6,
     "speed": 8
@@ -481,7 +481,7 @@
     "armor": 2,
     "loot": [],
     "location": "The City Outside of Time",
-    "gold": 75,
+    "gold": 25,
     "xp": 75,
     "awareness": 8,
     "speed": 5
@@ -500,7 +500,7 @@
     "armor": 3,
     "loot": [],
     "location": "Fallen Kingdom",
-    "gold": 70,
+    "gold": 30,
     "xp": 80,
     "awareness": 4,
     "speed": 4
@@ -519,7 +519,7 @@
     "armor": 2,
     "loot": [],
     "location": "Fallen Kingdom",
-    "gold": 70,
+    "gold": 30,
     "xp": 85,
     "awareness": 6,
     "speed": 8
@@ -538,7 +538,7 @@
     "armor": 3,
     "loot": [],
     "location": "Fallen Kingdom",
-    "gold": 80,
+    "gold": 30,
     "xp": 85,
     "awareness": 6,
     "speed": 10
@@ -557,7 +557,7 @@
     "armor": 1,
     "loot": [],
     "location": "Fallen Kingdom",
-    "gold": 80,
+    "gold": 30,
     "xp": 85,
     "awareness": 3,
     "speed": 1
@@ -576,7 +576,7 @@
     "armor": 2,
     "loot": [],
     "location": "The Submerged Empire of Kath",
-    "gold": 80,
+    "gold": 40,
     "xp": 90,
     "awareness": 5,
     "speed": 5
@@ -595,7 +595,7 @@
     "armor": 0,
     "loot": [],
     "location": "The Submerged Empire of Kath",
-    "gold": 80,
+    "gold": 40,
     "xp": 90,
     "awareness": 2,
     "speed": 2
@@ -614,7 +614,7 @@
     "armor": 3,
     "loot": [],
     "location": "The Submerged Empire of Kath",
-    "gold": 75,
+    "gold": 40,
     "xp": 100,
     "awareness": 2,
     "speed": 8
@@ -633,7 +633,7 @@
     "armor": 1,
     "loot": [],
     "location": "The Submerged Empire of Kath",
-    "gold": 75,
+    "gold": 40,
     "xp": 90,
     "awareness": 1,
     "speed": 10

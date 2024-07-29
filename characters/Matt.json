@@ -1,0 +1,127 @@
+{
+ "name": "Matt",
+ "char_class": "Templar",
+ "level": 14,
+ "strength": 21,
+ "dexterity": 1,
+ "willpower": 15,
+ "health": 48.5,
+ "mana": 88,
+ "gold": 4031,
+ "potions": [
+  "Greater Health Potion",
+  "Mana Potion",
+  "Greater Mana Potion",
+  "Lesser Mana Potion",
+  "Lesser Health Potion"
+ ],
+ "armors": [
+  "The Night Shroud",
+  "Plate Armor",
+  "Serpentine Scales",
+  "Wrappings of the Ancients",
+  "Blightrot Armor",
+  "Blackened Leathers",
+  "aegisOfTheAfterLife",
+  "Robes of Many Eyes"
+ ],
+ "weapons": [
+  "Druid's Staff",
+  "Flying Rapier",
+  "Mace",
+  "Staff of Infinite Echoes",
+  "Plasmablade Uchigatana",
+  "Great Scimitar of Antaboros"
+ ],
+ "amulets": [
+  "Empty Slot",
+  "Nature's Call",
+  "The Hag Eye",
+  "Eye of the Snake God",
+  "Shard of Unreality",
+  "Claw of the Sphinx Pharaoh",
+  "antiDecibelGenerator",
+  "Blood Vial",
+  "The Stable Singularity"
+ ],
+ "rings": [
+  "Empty Slot",
+  "Thorn Coil",
+  "Empty Slot",
+  "Gravity Ring",
+  "Ring of the Technomancer",
+  "Ring of the Leviathan Hunter"
+ ],
+ "eq_armor": {
+  "armor_name": "Blackened Leathers",
+  "weight": "Heavy",
+  "defence": 8
+ },
+ "eq_weapon": {
+  "weapon_name": "Blade of Necroflame",
+  "ability": "strength",
+  "damage": 9,
+  "moveset": [
+   "swing the blade, unleashing flames of death",
+   "release a trapped soul, that lunges at the enemy",
+   "strike at the enemy with your flaming greatsword"
+  ]
+ },
+ "eq_amulet": {
+  "name": "Philactery of the Exiled One",
+  "effect": [
+   4,
+   4
+  ],
+  "stat": [
+   "Strength",
+   "Willpower"
+  ]
+ },
+ "eq_ring_1": {
+  "name": "Band of Bark",
+  "effect": [
+   2
+  ],
+  "stat": [
+   "Strength"
+  ]
+ },
+ "eq_ring_2": {
+  "name": "Ring of Ancient Kings",
+  "effect": [
+   2,
+   2
+  ],
+  "stat": [
+   "Strength",
+   "Willpower"
+  ]
+ },
+ "abilities": [
+  "Smite",
+  "Parry",
+  "Searing Brand"
+ ],
+ "abilities_to_learn": [
+  "Searing Brand",
+  "Heal"
+ ],
+ "armor_prof": "Heavy",
+ "stealth": false,
+ "max_health": 81.5,
+ "max_mana": 120,
+ "current_xp": 456,
+ "xp_to_level": 650,
+ "cleared_dungeons": [
+  "Ancient Forest",
+  "Abandonned Graveyard",
+  "Rot-Plagued Swamp",
+  "The Serpent Temple",
+  "Glowing Crater",
+  "Endless Dunes",
+  "The City Outside of Time",
+  "Fallen Kingdom",
+  "The Submerged Empire of Kath"
+ ]
+}

@@ -2,6 +2,8 @@ import random
 import time
 import json
 
+from colorama import Fore
+
 from functions.combat_function import combat_time
 from functions.character_inspection import inspect_sheet
 from functions.character_class_functions import Character
@@ -13,14 +15,14 @@ from functions.inventory_class_functions import Inventory
 load_locations = open('jsons/locations.json')
 locations = json.load(load_locations)
 
-
 def explore(player: Character, inventory: Inventory):
+    print(f"\n{Fore.BLUE}--- EXPLORATION ---")
     print("\nYou may explore the following places:")
     for i in range(0, len(locations)):
-        print(str(i+1) + '. ' + locations[i]['location_name'])
-    print(str(len(locations)+1) + '. Return')
+        print(f"{Fore.YELLOW}{i+1}{Fore.RESET}. {locations[i]['location_name']}")
+    print(f"{Fore.YELLOW}{len(locations) + 1}{Fore.RESET}. {Fore.RED}Return{Fore.RESET}")
 
-    player_choice = int(input("\nWhere do you wish to go?: ")) - 1
+    player_choice = int(input(f"\n{Fore.YELLOW}What is your choice?: {Fore.RESET}")) - 1
     match player_choice:
         case _ if 0 <= player_choice < len(locations):
             l = locations[player_choice]
@@ -35,10 +37,11 @@ def explore(player: Character, inventory: Inventory):
                                 l["final_room_return"])
             location.explore(player, inventory)
         case _ if player_choice == len(locations):
-            print('\nReturning to menu.')
+            print(f'\n{Fore.RED}Returning to menu.{Fore.RESET}')
             time.sleep(1)
             return 0
     # end stealth
     if player.stealth == True:
         player.stealth = False
-        print('\nYou are no longer stealthed.')
+        print(f"\n{Fore.RED}--- STEALTH CANCELLED ---")
+        print(f'\nYou are no longer stealthed.{Fore.RESET}')

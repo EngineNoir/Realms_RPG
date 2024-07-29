@@ -1,5 +1,6 @@
 import random
 
+from colorama import Fore
 from functions.character_class_functions import Character
 from functions.creature_class_functions import Creature
 
@@ -32,10 +33,12 @@ class Boss(Creature):
 
     def taunt_player(self):
         if self.health < 0.75*self.health_max and self.stage == 1:
-            print(self.taunts[1])
+            print(f"{Fore.RED}\n--- PHASE 2 ---")
+            print(self.taunts[1] + f'{Fore.RESET}')
             self.stage = 2
         if self.stage == 2 and self.health < 0.5*self.health_max:
-            print(self.taunts[2])
+            print(f"{Fore.RED}\n--- PHASE 3 ---")
+            print(self.taunts[2] + f'{Fore.RESET}')
             self.stage = 3
 
 
@@ -57,7 +60,5 @@ class Boss(Creature):
             target.health -= damage_dealt
         else:
             output_text += random.choice(misses)
-        print(output_text)
-
-    # TODO
-    # Unique Loot from bosses, looting in general
+        print(f"\n{Fore.RED}--- BOSS DAMAGE ---")
+        print(output_text + f"{Fore.RESET}")

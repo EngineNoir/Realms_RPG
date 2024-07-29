@@ -1,5 +1,7 @@
 import random
 
+from colorama import Fore
+
 from functions.character_class_functions import Character
 
 class Creature:
@@ -48,9 +50,11 @@ class Creature:
             target.health -= damage_dealt
         else:
             output_text += random.choice(misses)
-        print(output_text)
+        print(f"{Fore.RED}\n--- ENEMY DAMAGE ---")
+        print(output_text + f"{Fore.RESET}")
 
     def spot_player(self, target: Character):
         if self.awareness >= target.dexterity:
-            print('You are spotted!')
+            print(f"{Fore.RED}\n--- STEALTH CANCELLED ---")
+            print(f'You are spotted!{Fore.RESET}')
             target.stealth = False

@@ -1,6 +1,8 @@
 # inspect sheet new
-from functions.inventory_class_functions import Inventory
 import json
+
+from colorama import Fore
+from functions.inventory_class_functions import Inventory
 
 load_armors = open('jsons/armors.json')
 load_weapons = open('jsons/weapons.json')
@@ -15,34 +17,34 @@ rings = json.load(load_rings)
 abilities = json.load(load_abilities)
 
 def inspect_sheet(player, inventory):
-    print('\n-----------------')
-    print('Name: ' + player.name)
-    print('Class: ' + player.char_class)
-    print('Level: ' + str(player.level))
-    print('Current XP: ' + str(player.current_xp))
-    print('XP until next level: ' + str(player.xp_to_level))
+    print(f'\n{Fore.GREEN}--- CHARACTER SHEET ---')
+    print(f'Name: {player.name}')
+    print(f'Class: {player.char_class}')
+    print(f'Level: {player.level}')
+    print(f'Current XP: {player.current_xp}')
+    print(f'XP until next level: {player.xp_to_level}')
 
-    print('\nHealth: ' + str(player.health) + ' (Max: ' + str(player.max_health) + ').')
-    print('Mana: ' + str(player.mana) + ' (Max: ' + str(player.max_mana) + ').')
-    print('Strength: ' + str(player.strength))
-    print('Dexterity: ' + str(player.dexterity))
-    print('Willpower: ' + str(player.willpower))
+    print(f'\nHealth: {player.health} (Max: {player.max_health} ).')
+    print(f'Mana: {player.mana} (Max: {player.max_mana}).')
+    print(f'Strength: {player.strength}')
+    print(f'Dexterity: {player.dexterity}')
+    print(f'Willpower: {player.willpower}')
 
-    print('\nGold: ' + str(player.gold))
-    print('Potions: ' + str(player.potions))
-    print('Abilities: ')
+    print(f'\nGold: {player.gold}')
+    print(f'Potions: {player.potions}')
+    print(f'Abilities: ')
     list_abilities(player)
-    print('-----------------')
+    print(f'{Fore.GREEN}--- CHARACTER SHEET ---{Fore.RESET}')
 
     # level option if there's enough XP
     choice = None
-    print("1. Equipment\n2. Level Up\n3. Return")
+    print(f"\n{Fore.GREEN}1. Equipment\n2. Level Up\n3. {Fore.RED}Return{Fore.RESET}")
     while choice == None or choice not in list(range(1,4)):
         while True:
             try:
-                choice = int(input("\nWhat is your choice?: "))
+                choice = int(input(f"\n{Fore.YELLOW}What is your choice?: {Fore.RESET}"))
             except ValueError:
-                print("\nPlease select a valid input")
+                print(f"\n{Fore.RED}Please select a valid option.{Fore.RESET}")
             else:
                 break
         match choice:
@@ -54,12 +56,13 @@ def inspect_sheet(player, inventory):
                     player.level_up()
                     return 0
                 else:
-                    print("\nYou do not have enough XP to level.")
+                    print(f"{Fore.RED}\n--- LEVEL UP CANCELLED ---")
+                    print(f"\nYou do not have enough XP to level.{Fore.RESET}")
             case 3:
                 return 0
 
 
 def list_abilities(player):
     for ability in player.abilities:
-        print(f"- {abilities[ability]["name"]}: {abilities[ability]["description"]} "
-            f"(Cost: {abilities[ability]["cost"]}, Dmg: {abilities[ability]["effect"]} + {abilities[ability]["attribute"]})")
+        print(f"- {Fore.YELLOW}{abilities[ability]["name"]}{Fore.BLUE}: {abilities[ability]["description"]} "
+            f"{Fore.GREEN}(Cost: {abilities[ability]["cost"]}, Dmg: {abilities[ability]["effect"]} + {abilities[ability]["attribute"]}){Fore.RESET}")

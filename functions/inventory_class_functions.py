@@ -1,6 +1,8 @@
 import json
 import random
 
+from colorama import Fore
+
 class Inventory:
     def __init__(self,
         armors: dict,
@@ -16,14 +18,15 @@ class Inventory:
     def equipment_functions(self, player):
         choice = None
         while choice != 3:
-            print('\n1. List Equipped Items'
-                '\n2. List and Equip items from inventory'
-                '\n3. Return')
+            print(f"\n{Fore.GREEN}--- EQUIPMENT OPTIONS ---{Fore.RESET}")
+            print(f'\n1. List Equipped Items'
+                f'\n2. List and Equip items from inventory'
+                f'\n3. {Fore.RED}Return{Fore.RESET}')
             while True:
                 try:
-                    choice = int(input("\nWhat do you select?: "))
+                    choice = int(input(f"\n{Fore.YELLOW}What is your choice?: {Fore.RESET}"))
                 except ValueError:
-                    print("Not a valid choice!")
+                    print(f"\n{Fore.RED}Please select a valid option.{Fore.RESET}")
                 else:
                     break
             match choice:
@@ -34,52 +37,50 @@ class Inventory:
                 case 3:
                     return 0
                 case _:
-                    print("Please select a valid choice.")
+                    print(f"\n{Fore.RED}Please select a valid option.{Fore.RESET}")
 
     def list_equipped(self, player):
-        print("\n--- Currently equipped ---")
-        print(f"Weapon: {player.eq_weapon["weapon_name"]} "
-            f"(Dmg: {player.eq_weapon["damage"]})")
-        print(f'Armor: {player.eq_armor["armor_name"]} '
-            f'({player.eq_armor["weight"]}, '
-            f'Def: {player.eq_armor["defence"]})')
-        print(f'Amulet: {player.eq_amulet["name"]} '
-                f'(Add {player.eq_amulet["effect"]} to '
-                    f'{player.eq_amulet["stat"] or None})')
-        print(f'Ring 1: {player.eq_ring_1["name"]} '
-                f'(Add {player.eq_ring_1["effect"]} to '
-                    f'{player.eq_ring_1["stat"] or None})')
-        print(f'Ring 2: {player.eq_ring_2["name"]} '
-                f'(Add {player.eq_ring_2["effect"]} to '
-                    f'{player.eq_ring_2["stat"] or None})')
-        print("--------------------------")
+        print(f"\n{Fore.GREEN}--- EQUIPPED ---{Fore.RESET}")
+        print(f"Weapon: {Fore.RED}{player.eq_weapon["weapon_name"]} "
+            f"{Fore.BLUE}(Dmg: {player.eq_weapon["damage"]}, {Fore.RED}{player.eq_weapon["ability"]}{Fore.BLUE} scaling){Fore.RESET}")
+        print(f'Armor: {Fore.RED}{player.eq_armor["armor_name"]} '
+            f'{Fore.BLUE}(Def: {player.eq_armor["defence"]}, {Fore.RED}{player.eq_armor["weight"]}{Fore.BLUE}){Fore.RESET}')
+        print(f'Amulet: {Fore.RED}{player.eq_amulet["name"]} '
+            f'{Fore.BLUE}(Add {Fore.RED}{player.eq_amulet["effect"]}{Fore.BLUE} to '
+                    f'{Fore.RED}{player.eq_amulet["stat"] or None}{Fore.BLUE}){Fore.RESET}')
+        print(f'Ring 1: {Fore.RED}{player.eq_ring_1["name"]} '
+            f'{Fore.BLUE}(Add {Fore.RED}{player.eq_ring_1["effect"]}{Fore.BLUE} to '
+                    f'{Fore.RED}{player.eq_ring_1["stat"] or None}{Fore.BLUE}){Fore.RESET}')
+        print(f'Ring 2: {Fore.RED}{player.eq_ring_2["name"]} '
+            f'{Fore.BLUE}(Add {Fore.RED}{player.eq_ring_2["effect"]}{Fore.BLUE} to '
+                    f'{Fore.RED}{player.eq_ring_2["stat"] or None}{Fore.BLUE}){Fore.RESET}')
 
     def list_inventory(self, player):
-        print("\n--- Your inventory contains the following ---")
+        print(f"{Fore.GREEN}\n--- INVENTORY ---{Fore.RESET}")
         print("Weapons:")
         for weapon in player.weapons:
-            print("- " + weapon + f" (Dmg: {self.weapons[weapon]["damage"]})")
+            print(f'- {Fore.RED}{weapon} {Fore.BLUE}(Dmg: {Fore.RED}{self.weapons[weapon]["damage"]}{Fore.BLUE},'
+               f' {Fore.RED}{self.weapons[weapon]["ability"]}{Fore.BLUE} scaling){Fore.RESET}')
         print("Armors:")
         for armor in player.armors:
-            print("- " + armor + f" ({self.armors[armor]["weight"]}, "
-                    f"Def: {self.armors[armor]["defence"]})")
+            print(f"- {Fore.RED}{armor} {Fore.BLUE}(Def: {Fore.RED}{self.armors[armor]["defence"]}{Fore.BLUE},"
+                f" {Fore.RED}{self.armors[armor]["weight"]}{Fore.BLUE}){Fore.RESET}")
         print("Amulets:")
         for amulet in player.amulets:
-            print("- " + amulet + f" (Add {self.amulets[amulet]["effect"]} to "
-                            f"{self.amulets[amulet]["stat"]})")
+            print(f"- {Fore.RED}{amulet} {Fore.BLUE}(Add {Fore.RED}{self.amulets[amulet]["effect"]}{Fore.BLUE} to "
+                            f"{Fore.RED}{self.amulets[amulet]["stat"]}{Fore.BLUE}){Fore.RESET}")
         print("Rings:")
         for ring in player.rings:
-            print("- " + ring + f" (Add {self.rings[ring]["effect"]} to "
-                            f"{self.rings[ring]["stat"]})")
-        print("---------------------------------------------")
+            print(f"- {Fore.RED}{ring} {Fore.BLUE}(Add {Fore.RED}{self.rings[ring]["effect"]}{Fore.BLUE} to "
+                            f"{Fore.RED}{self.rings[ring]["stat"]}{Fore.BLUE}){Fore.RESET}")
         choice = None
         while choice != 2:
+            print(f"\n1. Equip item\n2. {Fore.RED}Return{Fore.RESET}")
             while True:
                 try:
-                    choice = int(input("\n1. Equip item\n2. Return\n\n"
-                        "What is your choice?: "))
+                    choice = int(input(f"\n{Fore.YELLOW}What is your choice?: {Fore.RESET}"))
                 except ValueError:
-                    print("\nPlease select a valid choice.")
+                    print(f"\n{Fore.RED}Please select a valid option.{Fore.RESET}")
                 else:
                     break
             match choice:
@@ -88,18 +89,19 @@ class Inventory:
                 case 2:
                     return 0
                 case _:
-                    print("Please select a valid action.")
+                    print(f"\n{Fore.RED}Please select a valid option.{Fore.RESET}")
 
     def equip_item(self, player):
+        print(f"\n{Fore.GREEN}--- EQUIP ---{Fore.RESET}")
         print("\nWhat would you like to equip?")
-        print("1. Weapon\n2. Armor\n3. Amulet\n4. Ring\n5. Return")
+        print(f'1. Weapon\n2. Armor\n3. Amulet\n4. Ring\n5. {Fore.RED}Return{Fore.RESET}')
         choice = None
         while choice not in list(range(1,6)):
             while True:
                 try:
-                    choice = int(input("\nWhat do you choose?: "))
+                    choice = int(input(f"\n{Fore.YELLOW}What do you choose?: {Fore.RESET}"))
                 except ValueError:
-                    print("Please select a valid input.")
+                    print(f"\n{Fore.RED}Please select a valid option.{Fore.RESET}")
                 else:
                     break
             match choice:
@@ -114,87 +116,88 @@ class Inventory:
                 case 5:
                     return 0
                 case _:
-                    print("\nPlease select a valid action.")
+                    print(f"\n{Fore.RED}Please select a valid option.{Fore.RESET}")
 
     def equip_weapon(self, player):
-        print("\nWhich weapon to equip?")
+        print(f"\n{Fore.GREEN}--- WEAPONS ---{Fore.RESET}")
         i = 1
         for weapon in player.weapons:
-            print(f"{i}. " + weapon + f" (Dmg: {self.weapons[weapon]["damage"]})")
+            print(f"{i}. {Fore.YELLOW}{weapon}{Fore.BLUE} (Dmg: "
+                f"{Fore.RED}{self.weapons[weapon]["damage"]}{Fore.BLUE}, {Fore.RED}{self.weapons[weapon]["ability"]}{Fore.BLUE} scaling){Fore.RESET}")
             i += 1
-        print(f"{i}. Return")
+        print(f"{i}. {Fore.RED}Return{Fore.RESET}")
         choice = None
         while choice not in list(range(1,i + 1)):
             while True:
                 try:
-                    choice = int(input("\nWeapon to equip: "))
+                    choice = int(input(f"\n{Fore.YELLOW}What is your choice?: {Fore.RESET}"))
                 except ValueError:
-                    print("\nPlease select a valid input.")
+                    print(f"\n{Fore.RED}Please select a valid option.{Fore.RESET}")
                 else:
                     break
             if choice == i:
-                print("\nNo weapon chosen.")
+                print(f"\n{Fore.RED}No weapon chosen.{Fore.RESET}")
                 return 0
             else:
                 chosen_weapon = player.weapons[choice - 1]
                 player.weapons.append(player.eq_weapon["weapon_name"])
                 player.weapons.remove(chosen_weapon)
                 player.eq_weapon = self.weapons[chosen_weapon]
-                print(f"\nEquipped {chosen_weapon}.")
+                print(f"\n{Fore.GREEN}--- EQUIP SUCCESS ---")
+                print(f"\nEquipped {Fore.RED}{chosen_weapon}{Fore.GREEN}.{Fore.RESET}")
         return 0
 
     def equip_armor(self, player):
-        print("\nWhich armor to equip?")
+        print(f"\n{Fore.GREEN}--- ARMOR ---{Fore.RESET}")
         i = 1
         for armor in player.armors:
-            print(f"{i}. " + armor +
-                f" ({self.armors[armor]["weight"]}, "
-                f"Def: {self.armors[armor]["defence"]})")
+            print(f"{i}. {Fore.RED}{armor}{Fore.BLUE}"
+                f" (Def: {Fore.RED}{self.armors[armor]["defence"]}{Fore.BLUE}, {Fore.RED}{self.armors[armor]["weight"]}{Fore.BLUE}){Fore.RESET}")
             i += 1
-        print(f"{i}. Return")
+        print(f"{i}. {Fore.RED}Return{Fore.RESET}")
         choice = None
         while choice not in list(range(1,i + 1)):
             while True:
                 try:
-                    choice = int(input("\nArmor to equip: "))
+                    choice = int(input(f"\n{Fore.YELLOW}What is your choice?: {Fore.RESET}"))
                 except ValueError:
-                    print("\nPlease select a valid input.")
+                    print(f"\n{Fore.RED}Please select a valid option.{Fore.RESET}")
                 else:
                     break
             if choice == i:
-                print("\nNo armor chosen.")
+                print(f"\n{Fore.RED}No armor chosen.{Fore.RESET}")
                 return 0
             elif self.armors[player.armors[choice - 1]]["weight"] != player.armor_prof:
-                print("\nYou are not proficient in this type of armor.")
+                print(f"\n{Fore.RED}You are not proficient in this type of armor.{Fore.RESET}")
                 choice = None
             else:
                 chosen_armor = player.armors[choice - 1]
                 player.armors.append(player.eq_armor["armor_name"])
                 player.armors.remove(chosen_armor)
                 player.eq_armor = self.armors[chosen_armor]
-                print(f"\nEquipped {chosen_armor}.")
+                print(f"\n{Fore.GREEN}--- EQUIP SUCCESS ---")
+                print(f"\nEquipped {Fore.RED}{chosen_armor}{Fore.GREEN}.{Fore.RESET}")
         return 0
 
     def equip_amulet(self, player):
-        print("\nWhich amulet to equip?")
+        print(f"\n{Fore.GREEN}--- AMULETS ---{Fore.RESET}")
         i = 1
         for amulet in player.amulets:
-            print(f"{i}. " + amulet +
-                f" (Add {self.amulets[amulet]["effect"]} "
-                f"to {self.amulets[amulet]["stat"]})")
+            print(f"{i}. {Fore.RED}{amulet} {Fore.BLUE}(Add {Fore.RED}{self.amulets[amulet]["effect"]}{Fore.BLUE} "
+                f"to {Fore.RED}{self.amulets[amulet]["stat"]}{Fore.BLUE}){Fore.RESET}")
             i += 1
-        print(f"{i}. Return")
+        print(f"{i}. {Fore.RED}Return{Fore.RESET}")
         choice = None
         while choice not in list(range(1,i + 1)):
             while True:
                 try:
-                    choice = int(input("\nAmulet to equip: "))
+                    choice = int(input(f"\n{Fore.YELLOW}What is your choice: {Fore.RESET}"))
                 except ValueError:
-                    print("\nPlease select a valid input.")
+                    print(f"\n{Fore.RED}Please select a valid option.{Fore.RESET}")
                 else:
                     break
             if choice == i:
-                print("\nNo amulet chosen.")
+                print(f"\n{Fore.RED}No amulet chosen.{Fore.RESET}")
                 return 0
             else:
                 chosen_amulet = player.amulets[choice - 1]
@@ -202,44 +205,45 @@ class Inventory:
                 player.amulets.append(player.eq_amulet["name"])
                 player.amulets.remove(chosen_amulet)
                 player.eq_amulet = self.amulets[chosen_amulet]
-                print(f"\nEquipped {chosen_amulet}.")
+                print(f"\n{Fore.GREEN}--- EQUIP SUCCESS ---")
+                print(f"\nEquipped {Fore.RED}{chosen_amulet}{Fore.GREEN}.{Fore.RESET}")
         return 0
 
     def equip_ring(self, player):
-        print("\nWhich ring to equip?")
+        print(f"\n{Fore.GREEN}--- RINGS ---")
         i = 1
         for ring in player.rings:
-            print(f"{i}. " + ring +
-                f" (Add {self.rings[ring]["effect"]} "
-                f"to {self.rings[ring]["stat"]})")
+            print(f"{i}. {Fore.RED}{ring}{Fore.BLUE} (Add {Fore.RED}{self.rings[ring]["effect"]} "
+                f"{Fore.BLUE}to {Fore.RED}{self.rings[ring]["stat"]}{Fore.BLUE}){Fore.RESET}")
             i += 1
-        print(f"{i}. Return")
+        print(f"{i}. {Fore.RED}Return{Fore.RESET}")
         choice = None
         while choice not in list(range(1,i + 1)):
             while True:
                 try:
-                    choice = int(input("\nRing to equip: "))
+                    choice = int(input(f"\n{Fore.YELLOW}What is your choice?: {Fore.RESET}"))
                 except ValueError:
-                    print("\nPlease select a valid input.")
+                    print(f"\n{Fore.RED}Please select a valid option.{Fore.RESET}")
                 else:
                     break
             if choice == i:
-                print("\nNo ring chosen.")
+                print(f"{Fore.RED}\nNo ring chosen.{Fore.RESET}")
                 return 0
             else:
                 chosen_ring = player.rings[choice - 1]
                 choice2 = None
-                print(f"1. {player.eq_ring_1["name"]} "
-                    f"(Add {player.eq_ring_1["effect"]} to {player.eq_ring_1["stat"]})"
-                    f"\n2. {player.eq_ring_2["name"]}"
-                    f"(Add {player.eq_ring_2["effect"]} to {player.eq_ring_2["stat"]})"
-                    f"\n3. Return")
+                print(f"\n{Fore.GREEN}--- REPLACE RING ---{Fore.RESET}")
+                print(f"\n1. {Fore.RED}{player.eq_ring_1["name"]} {Fore.BLUE}"
+                    f"(Add {Fore.RED}{player.eq_ring_1["effect"]}{Fore.BLUE} to {Fore.RED}{player.eq_ring_1["stat"]}{Fore.BLUE}){Fore.RESET}"
+                    f"\n2. {Fore.RED}{player.eq_ring_2["name"]} {Fore.BLUE}"
+                    f"(Add {Fore.RED}{player.eq_ring_2["effect"]}{Fore.BLUE} to {Fore.RED}{player.eq_ring_2["stat"]}{Fore.BLUE}){Fore.RESET}"
+                    f"\n3. {Fore.RED}Return{Fore.RESET}")
                 while choice2 not in [1, 2, 3]:
                     while True:
                         try:
-                            choice2 = int(input("\nWhich ring would you like to swap?: "))
+                            choice2 = int(input(f"\n{Fore.YELLOW}What is your choice?: {Fore.RESET}"))
                         except ValueError:
-                            print("Please choose a valid input.")
+                            print(f"\n{Fore.RED}Please select a valid option.{Fore.RESET}")
                         else:
                             break
                     match choice2:
@@ -252,12 +256,13 @@ class Inventory:
                             player.rings.append(player.eq_ring_2["name"])
                             player.eq_ring_2 = self.rings[chosen_ring]
                         case 3:
-                            print("No ring was swapped out.")
+                            print(f"{Fore.RED}\nNo ring was swapped out.{Fore.RESET}")
                             return 0
                         case _:
-                            print("Please select a valid choice.")
+                            print(f"\n{Fore.RED}Please select a valid option.{Fore.RESET}")
                 player.rings.remove(chosen_ring)
-                print(f"\nEquipped {chosen_ring}.")
+                print(f"\n{Fore.GREEN}--- EQUIP SUCCESS ---")
+                print(f"\nEquipped {Fore.RED}{chosen_ring}{Fore.GREEN}.{Fore.RESET}")
         return 0
 
     def stat_change(self, player, old_item, new_item):
@@ -284,7 +289,7 @@ class Inventory:
 
     def loot_boss(self, player, boss):
         for item in boss.loot:
-            print(f"You loot {item}!")
+            print(f"\nYou loot {Fore.RED}{item}{Fore.RESET}!")
             if item in self.amulets:
                 player.amulets.append(item)
             elif item in self.rings:

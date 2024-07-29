@@ -1,4 +1,5 @@
 import json
+from colorama import Fore
 from functions.inventory_class_functions import Inventory
 from functions.main_screen_functions import ask_to_load, request_action
 
@@ -19,18 +20,18 @@ amulets = json.load(load_amulets)
 rings = json.load(load_rings)
 
 
-print('\n-----------------------------------')
-print('--------A----A-A-A-A-A----A--------')
+print(f'\n{Fore.BLUE}-----------------------------------')
+print(f'{Fore.RED}--------A----A-A-A-A-A----A--------')
 print('-------A-A----A-----A----A-A-------')
 print('------A---A----A---A----A---A------')
 print('-----A-----A----A-A----A-----A-----')
 print('----A-A-A-A-A----A----A-A-A-A-A----')
-print('-----------------------------------\n')
+print(f'{Fore.BLUE}-----------------------------------{Fore.RESET}')
 
 
 player_character = ask_to_load(character_classes, armors, weapons, amulets, rings)
 game_inventory = Inventory(armors, weapons, amulets, rings)
 
-print('\nWelcome, ' + player_character.name + ' the ' + player_character.char_class + '!')
-
-request_action(player_character, game_inventory)
+if player_character != 0:
+    print(f'\n{Fore.GREEN}Welcome, {Fore.RED}{player_character.name}{Fore.RESET} the {Fore.YELLOW}{player_character.char_class}{Fore.GREEN}!{Fore.RESET}')
+    request_action(player_character, game_inventory)

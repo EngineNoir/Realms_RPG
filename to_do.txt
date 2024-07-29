@@ -1,9 +1,3 @@
 TO DO:
 
-Inputs:
-- make sure the match cases can error handle things other than numbers
-
-Creatures/Bosses:
-- adjust hp, dmg, xp, and gold values to fit scaling
-
-Colours?
+Bug hunting, playtesting, fine-tuning numbers.

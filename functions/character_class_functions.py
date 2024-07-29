@@ -3,6 +3,7 @@ import json
 import time
 import os
 
+from colorama import Fore
 from functions.inventory_class_functions import Inventory
 
 class Character:
@@ -121,9 +122,11 @@ class Character:
             fails = ["your attack misses.", "you fail to deal damage.", "the enemy dodges out of the way.", "your attack fails to connect.",
                 "you underestimate the opponent's speed and miss."]
             output_text += ' but ' + random.choice(fails)
-        print(output_text)
+        print(f"{Fore.BLUE}\n--- YOUR DAMAGE ---")
+        print(output_text + f"{Fore.RESET}")
 
     def attempt_stealth_in_combat(self, target):
+        print(f"{Fore.BLUE}\n--- STEALTH ---")
         print("\nYou attempt to stealth and ...")
         # add some tension
         time.sleep(1)
@@ -136,15 +139,17 @@ class Character:
             if roll >= 4:
                 successes += 1
         if successes >= target.awareness and not self.stealth:
-            print("You succeed in hiding!")
+            print(f"You succeed in hiding!{Fore.RESET}")
             self.stealth = True
         elif self.stealth:
-            print('\nYou remain hidden.')
+            print(f'\nYou remain hidden.{Fore.RESET}')
         else:
-            print("You fail to hide! Your opponent seizes the opportunity and strikes!")
+            print(f"\n{Fore.RED}--- STEALTH FAILED ---")
+            print(f"You fail to hide! Your opponent seizes the opportunity and strikes!{Fore.RESET}")
             target.deal_damage_to_player(self)
 
     def fleeing_combat(self, target):
+        print(f"\n{Fore.BLUE}--- FLEE ---")
         print("\nYou attempt to flee and ...")
         # more suspence >:)
         time.sleep(1)
@@ -154,23 +159,24 @@ class Character:
         is_flee_succesful = False
         flight_skill = max(self.strength, self.dexterity)
         if flight_skill > target.speed:
-            print("You succesfully escape from your opponent!")
+            print(f"You succesfully escape from your opponent!{Fore.RESET}")
             is_flee_succesful = True
         elif self.stealth:
-            print("You sneak away succesfully!")
+            print(f"You sneak away succesfully!{Fore.RESET}")
             is_flee_succesful = True
         else:
-            print("You fail to flee succesfully, and your opponent strikes at you!")
+            print(f"{Fore.RED}You fail to flee succesfully, and your opponent strikes at you!{Fore.RESET}")
             target.deal_damage_to_player(self)
             is_flee_succesful = False
         return is_flee_succesful
 
     def stealth_in_exploration(self):
+        print(f"\n{Fore.BLUE}--- STEALTH ---")
         if self.stealth == False:
-            print('\nYou move quietly, effectively entering stealth.')
+            print(f'\nYou move quietly, effectively entering stealth.{Fore.RESET}')
             self.stealth = True
         else:
-            print('\nYou remain stealthed.')
+            print(f'\nYou remain stealthed.{Fore.RESET}')
 
     def gain_xp(self, xp):
         self.current_xp += xp
@@ -179,14 +185,17 @@ class Character:
     def increase_ability(self):
         ability_chosen = None
         player_choice = None
-        while True:
-            try:
-                player_choice = int(input('\nChoose which of the three abilities you wish to increase by 1.'
-                                                '\n1. Strength\n2. Dexterity\n3. Willpower\nAttribute to improve: '))
-            except ValueError:
-                print("Input not a number!")
-            else:
-                break
+        while player_choice not in [1,2,3]:
+            print(f"\n{Fore.GREEN}--- INCREASE ATTRIBUTE ---")
+            print('\nChoose which of the three attributes you wish to increase by 1.'
+                    '\n1. Strength\n2. Dexterity\n3. Willpower')
+            while True:
+                try:
+                    player_choice = int(input(f'\n{Fore.YELLOW}What is your choice?: {Fore.RESET}'))
+                except ValueError:
+                    print(f"\n{Fore.RED}Please select a valid option.{Fore.RESET}")
+                else:
+                    break
         match player_choice:
             case 1:
                 self.strength += 1
@@ -197,28 +206,31 @@ class Character:
             case 3:
                 self.willpower += 1
                 ability_chosen = "Willpower"
-            case _:
-                print('\nInvalid selection.')
         if ability_chosen != None:
-            print(f'\nYou have increased your ' + str(ability_chosen) + ' by 1.')
+            print(f"\n--- SUCCESS ---")
+            print(f'\n{ability_chosen.upper} increased by 1.{Fore.RESET}')
         return ability_chosen
 
     def level_up(self):
         if self.current_xp >= self.xp_to_level:
-            print('\nYou have ' + str(self.current_xp) + ' XP. Do you wish to spend ' + str(self.xp_to_level) + ' XP to level up?')
+            print(f"\n{Fore.GREEN}--- LEVEL UP ---")
+            print(f'\nYou have {self.current_xp} XP. Do you wish to spend {self.xp_to_level} XP to level up?')
             answer_input = None
-            while True:
-                try:
-                    answer_input = int(input('1. Yes\n2. No\nSpend XP and level up?: '))
-                except ValueError:
-                    print("Input not a number!")
-                else:
-                    break
+            while answer_input not in [1,2]:
+                print("\n1. Yes\n2. No")
+                while True:
+                    try:
+                        answer_input = int(input(f'{Fore.YELLOW}\nWhat is your choice?: {Fore.RESET}'))
+                    except ValueError:
+                        print(f"\n{Fore.RED}Please select a valid option.{Fore.RESET}")
+                    else:
+                        break
             match answer_input:
                 case 1:
                     increased = self.increase_ability()
                     if increased == None:
-                        print("\nNo ability selected. Exiting level up menu.")
+                        print(f"\n{Fore.RED}--- LEVEL UP CANCELLED ---")
+                        print(f"\nNo ability selected. Exiting level up menu.{Fore.RESET}")
                         time.sleep(1)
                         return 0
                     self.health += 5
@@ -229,34 +241,28 @@ class Character:
                     self.current_xp -= self.xp_to_level
                     self.xp_to_level = (self.strength + self.dexterity + self.willpower) * 10 + self.level * 20
                     self.gain_abilities()
-                    print('\nYou have successfully leveled up and are now level ' + str(self.level) +
-                            '. Congratulations!')
+                    print(f"{Fore.GREEN}\n--- SUCCESS ---")
+                    print(f'\nYou have successfully leveled up and are now level {self.level}!{Fore.RESET}')
                 case 2:
+                    print(f"\n{Fore.RED}--- LEVEL UP CANCELLED ---")
+                    print(f"\nNo ability selected. Exiting level up menu.{Fore.RESET}")
+                    time.sleep(1)
                     return 0
-                case _:
-                    print('\nPlease input a valid response.')
-                    while True:
-                        try:
-                            answer_input = int(input('1. Yes\n2. No\nSpend XP and level up?: '))
-                        except:
-                            print("Input not a number!")
-                        else:
-                            break
         return 0
 
     def gain_abilities(self):
         if self.level == 3 and self.abilities_to_learn[0] not in self.abilities:
             self.abilities.append(self.abilities_to_learn[0])
-            print(f"\nYou have learned {self.abilities_to_learn[0]}!")
-            self.abilities_to_learn.pop()
-        elif self.level == 7 and self.abilities_to_learn[0] not in self.abilities:
-            self.abilities.append(self.abilities_to_learn[0])
-            print(f"\nYou have learned {self.abilities_to_learn[0]}!")
-            self.abilities_to_learn.pop()
-        elif self.level == 12 and self.abilities_to_learn[0] not in self.abilities:
-            self.abilities.append(self.abilities_to_learn[0])
-            print(f"\nYou have learned {self.abilities_to_learn[0]}!")
-            self.abilities_to_learn.pop()
+            print(f"\n{Fore.GREEN}--- NEW ABILITY ---")
+            print(f"\nYou have learned {self.abilities_to_learn[0]}!{Fore.RESET}")
+        elif self.level == 7 and self.abilities_to_learn[1] not in self.abilities:
+            self.abilities.append(self.abilities_to_learn[1])
+            print(f"\n{Fore.GREEN}--- NEW ABILITY ---")
+            print(f"\nYou have learned {self.abilities_to_learn[1]}!{Fore.RESET}")
+        elif self.level == 12 and self.abilities_to_learn[2] not in self.abilities:
+            self.abilities.append(self.abilities_to_learn[2])
+            print(f"\n{Fore.GREEN}--- NEW ABILITY ---")
+            print(f"\nYou have learned {self.abilities_to_learn[2]}!{Fore.RESET}")
 
 
 # MAKE AND SAVE CHARACTER -----------------------------
@@ -265,20 +271,21 @@ def make_character(classes, armors, weapons, amulets, rings):
     char_name = None
     while True:
         try:
-            char_name = str(input("\nWhat is your character's name? (enter 'exit' to terminate): "))
+            char_name = str(input(f"\n{Fore.YELLOW}What is your character's name? (enter '{Fore.RED}exit{Fore.RESET}' to terminate): {Fore.RESET}"))
             if char_name == 'exit':
                 return None
         except ValueError:
-            print("\nPlease input a valid name.")
-            continue
+            print(f"\n{Fore.RED}Please input a valid name.{Fore.RESET}")
         else:
             break
 
     # index over the class names in classes list and present the options
-    print('\nPick one of the following classes.')
+    print(f'\n{Fore.GREEN}Pick one of the following classes.{Fore.RESET}')
     i = 1
     for char_class in classes:
-        print(f"{i}. {char_class["class_name"]} (STR: {char_class["strength"]}, DEX {char_class["dexterity"]}, WILL: {char_class["willpower"]}) - {char_class["description"]}")
+        print(f"{i}. {Fore.YELLOW}{char_class["class_name"]} {Fore.BLUE}"
+            f"(STR: {char_class["strength"]}, DEX {char_class["dexterity"]}, WILL: {char_class["willpower"]}) - "
+            f"{Fore.GREEN}{char_class["description"]}{Fore.RESET}")
         i += 1
 
     # makes the player choose a class from the given options
@@ -287,9 +294,9 @@ def make_character(classes, armors, weapons, amulets, rings):
         # we add the minus one because choice number 1 is indexed by 0
         while True:
             try:
-                class_choice = int(input('\nWhich class do you choose?: ')) - 1
+                class_choice = int(input(f'\n{Fore.YELLOW}What is your choice?: {Fore.RESET}')) - 1
             except ValueError:
-                print('\nPlease select a valid input.')
+                print(f"\n{Fore.RED}Please select a valid option.{Fore.RESET}")
             else:
                 break
 
@@ -339,17 +346,18 @@ def make_character(classes, armors, weapons, amulets, rings):
 
 def load_character():
     # ask for the character name
+    print(f"\n{Fore.GREEN}--- LOAD CHARACTER ---{Fore.RESET}")
     while True:
         try:
-            char_name = input("\nWhat is your character's name?: ")
+            char_name = input(f"\n{Fore.YELLOW}What is your character's name? (enter '{Fore.RED}exit{Fore.RESET}'to terminate): {Fore.RESET}")
             if char_name == 'exit':
                 return None
         except ValueError:
-            print('\nPlease input a valid character name.')
+            print(f'\n{Fore.RED}Please input a valid character name.{Fore.RESET}')
         try:
             char_sheet = json.load(open(f'characters/{char_name}.json'))
         except FileNotFoundError:
-            print('\nPlease input an existing character name. Input "exit" to terminate.')
+            print(f"\n{Fore.GREEN}Please input an existing character name. Input '{Fore.RED}exit{Fore.RESET}' to terminate.{Fore.RESET}")
         else:
             break
 

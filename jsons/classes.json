@@ -53,8 +53,8 @@
   {
     "class_name": "Berserker",
     "strength": 8,
-    "dexterity": 2,
-    "willpower": 0,
+    "dexterity": 1,
+    "willpower": 1,
     "starter_armor": "Loincloth",
     "starter_weapon": "Battleaxe",
     "starter_amulet": "Empty Slot",
@@ -107,8 +107,8 @@
 
   {
     "class_name": "Arcanist",
-    "strength": 0,
-    "dexterity": 2,
+    "strength": 1,
+    "dexterity": 1,
     "willpower": 8,
     "starter_armor": "Cloth Robes",
     "starter_weapon": "Runestaff",
@@ -145,9 +145,9 @@
 
   {
     "class_name": "Fugitive",
-    "strength": 2,
+    "strength": 1,
     "dexterity": 8,
-    "willpower": 0,
+    "willpower": 1,
     "starter_armor": "Leather Tunic",
     "starter_weapon": "Curved Twinblades",
     "starter_amulet": "Empty Slot",
