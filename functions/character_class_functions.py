@@ -271,7 +271,7 @@ def make_character(classes, armors, weapons, amulets, rings):
     char_name = None
     while True:
         try:
-            char_name = str(input(f"\n{Fore.YELLOW}What is your character's name? (enter '{Fore.RED}exit{Fore.RESET}' to terminate): {Fore.RESET}"))
+            char_name = str(input(f"\n{Fore.YELLOW}What is your character's name? (enter '{Fore.RED}exit{Fore.YELLOW}' to terminate): {Fore.RESET}"))
             if char_name == 'exit':
                 return None
         except ValueError:
