@@ -99,7 +99,7 @@ def player_abilities(player: Character, enemy: Creature):
         return 0
     elif ability == "Shield" or ability == "Parry" or ability == "Dodge":
         print(f"\n{Fore.BLUE}--- ABILITY ---{Fore.RESET}")
-        print(f"\nYou {random.choice(abilities[ability]["moveset"])}")
+        print(f'\nYou {random.choice(abilities[ability]["moveset"])}')
         player.deal_damage_to_enemy(enemy)
     elif ability == "God's Abandon" or ability == "Surrounded by Ruins" or ability == "Apotheosis":
         if player.strength >= player.willpower and player.strength >= player.dexterity:
