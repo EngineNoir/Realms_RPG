@@ -283,9 +283,9 @@ def make_character(classes, armors, weapons, amulets, rings):
     print(f'\nPick one of the following classes.')
     i = 1
     for char_class in classes:
-        print(f"{i}. {Fore.YELLOW}{char_class["class_name"]}{Fore.RESET}"
-            f" (STR: {char_class["strength"]}, DEX {char_class["dexterity"]}, WILL: {char_class["willpower"]}) - "
-            f"{char_class["description"]}")
+        print(f'{i}. {Fore.YELLOW}{char_class["class_name"]}{Fore.RESET}'
+            f' (STR: {char_class["strength"]}, DEX {char_class["dexterity"]}, WILL: {char_class["willpower"]}) - '
+            f'{char_class["description"]}')
         i += 1
 
     # makes the player choose a class from the given options

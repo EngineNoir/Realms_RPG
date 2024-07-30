@@ -15,9 +15,9 @@ def combat_time(player: Character, enemy: Creature):
 
         # print some useful statistics
         print(f"\n{Fore.RED}--- COMBAT STATS ---{Fore.RESET}")
-        print('\n' + enemy.name + " health: " + str(enemy.health))
-        print('Your health: ' + str(player.health))
-        print('Your mana: ' + str(player.mana))
+        print(f'\n{enemy.name} health: {enemy.health}')
+        print(f'Your health: {player.health}')
+        print(f'Your mana: {player.mana}')
         print(f"\n{Fore.RED}--- COMBAT ACTIONS ---{Fore.RESET}")
         print("\n1. Attack with a Weapon\n2. Use a spell or ability\n3. Use a Potion\n4. Attempt to Hide\n5. Attempt to Flee")
         # check if enemy spots the player
@@ -117,7 +117,7 @@ def list_abilities_combat(player: Character, abilities: list):
     print('You have the following abilities available:')
     i = 1
     for ability in player.abilities:
-        print(f"{i}. {Fore.BLUE}{ability}{Fore.RESET} (Cost: {Fore.BLUE}{abilities[ability]["cost"]}{Fore.RESET}, Dmg/Heal: {Fore.RED}{abilities[ability]["cost"]}{Fore.RESET})")
+        print(f'{i}. {Fore.BLUE}{ability}{Fore.RESET} (Cost: {Fore.BLUE}{abilities[ability]["cost"]}{Fore.RESET}, Dmg/Heal: {Fore.RED}{abilities[ability]["cost"]}{Fore.RESET})')
         i += 1
     print(f"{i}. {Fore.RED}Return{Fore.RESET}")
     choice = None
@@ -144,8 +144,8 @@ def parse_ability(player: Character, enemy: Creature, ability: str, abilities: d
         print(f"\n{Fore.BLUE}--- HEAL ---{Fore.RESET}")
         player.mana = max(player.mana - abilities[ability]["cost"], 0)
         player.health = min(player.max_health, player.health + abilities[ability]["effect"])
-        print(f"\nYou {random.choice(abilities[ability]["moveset"])}.")
-        print(f"You recover {Fore.RED}{random.choice(abilities[ability]["effect"])}{Fore.RESET} HP.")
+        print(f'\nYou {random.choice(abilities[ability]["moveset"])}.')
+        print(f'You recover {Fore.RED}{random.choice(abilities[ability]["effect"])}{Fore.RESET} HP.')
     elif not is_heal:
         player.mana = max(player.mana - abilities[ability]["cost"], 0)
         dmg = None
@@ -158,7 +158,7 @@ def parse_ability(player: Character, enemy: Creature, ability: str, abilities: d
                 dmg = random.randint(1, player.willpower)
         enemy.health -= abilities[ability]["effect"] + dmg
         print(f"\n{Fore.BLUE}--- ABILITY ---{Fore.RESET}")
-        print(f"\nYou {random.choice(abilities[ability]["moveset"])} dealing {abilities[ability]["effect"] + dmg} damage.")
+        print(f'\nYou {random.choice(abilities[ability]["moveset"])} dealing {abilities[ability]["effect"] + dmg} damage.')
     if enemy.health > 0 and enemy_hits:
         enemy.deal_damage_to_player(player)
     if not enemy_hits:

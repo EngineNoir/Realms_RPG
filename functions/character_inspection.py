@@ -64,5 +64,5 @@ def inspect_sheet(player, inventory):
 
 def list_abilities(player):
     for ability in player.abilities:
-        print(f"- {Fore.RED}{abilities[ability]["name"]}{Fore.RESET}: {abilities[ability]["description"]} "
-            f"(Cost: {Fore.BLUE}{abilities[ability]["cost"]}{Fore.RESET}, Dmg: {Fore.RED}{abilities[ability]["effect"]} + {abilities[ability]["attribute"]}{Fore.RESET})")
+        print(f'- {Fore.RED}{abilities[ability]["name"]}{Fore.RESET}: {abilities[ability]["description"]} '
+            f'(Cost: {Fore.BLUE}{abilities[ability]["cost"]}{Fore.RESET}, Dmg: {Fore.RED}{abilities[ability]["effect"]} + {abilities[ability]["attribute"]}{Fore.RESET})')

@@ -55,7 +55,7 @@ def shopping_for_potions(player: Character):
             print(f"\n{Fore.RED}You already have this item, and cannot carry more.{Fore.RESET}")
         else:
             print(f"\n{Fore.GREEN}--- PURCHASE SUCCESS ---")
-            print(f"\n{Fore.RED if "Health" in pot.name else Fore.BLUE}{pot.name}{Fore.GREEN} has been added to your inventory.{Fore.RESET}")
+            print(f'\n{Fore.RED if "Health" in pot.name else Fore.BLUE}{pot.name}{Fore.GREEN} has been added to your inventory.{Fore.RESET}')
             player.potions.append(pot.name)
             player.gold -= pot.val
     return 0
@@ -68,7 +68,7 @@ def use_potions(player: Character):
     # prints all the potions
     print(f"\n{Fore.GREEN}--- POTIONS ---{Fore.RESET}")
     for potion in player.potions:
-        print(f"{i}. {Fore.RED if "Health" in potion else Fore.BLUE}{potion}{Fore.RESET}")
+        print(f'{i}. {Fore.RED if "Health" in potion else Fore.BLUE}{potion}{Fore.RESET}')
         i += 1
     print(f'{i}. {Fore.RED}Return{Fore.RESET}')
     #
