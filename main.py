@@ -28,10 +28,12 @@ print('-----A-----A----A-A----A-----A-----')
 print('----A-A-A-A-A----A----A-A-A-A-A----')
 print(f'{Fore.BLUE}-----------------------------------{Fore.RESET}')
 
-
-player_character = ask_to_load(character_classes, armors, weapons, amulets, rings)
+while True:
+    player_character = ask_to_load(character_classes, armors, weapons, amulets, rings)
+    if player_character != 0:
+        break
 game_inventory = Inventory(armors, weapons, amulets, rings)
 
 if player_character != 0:
-    print(f'\n{Fore.GREEN}Welcome, {Fore.RED}{player_character.name}{Fore.RESET} the {Fore.YELLOW}{player_character.char_class}{Fore.GREEN}!{Fore.RESET}')
+    print(f'\nWelcome, {Fore.RED}{player_character.name}{Fore.RESET} the {Fore.YELLOW}{player_character.char_class}{Fore.RESET}!')
     request_action(player_character, game_inventory)

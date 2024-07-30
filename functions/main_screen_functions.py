@@ -12,7 +12,7 @@ def ask_to_load(classes, armors, weapons, amulets, rings):
     while answer not in [1,2,3]:
         while True:
             try:
-                print(f"1. New Character\n2. Load Character\n3. {Fore.RED}Exit{Fore.RESET}")
+                print(f"\n1. New Character\n2. Load Character\n3. {Fore.RED}Exit{Fore.RESET}")
                 answer = int(input(f'\n{Fore.YELLOW}What is your choice?: {Fore.RESET}'))
             except ValueError:
                 print(f"\n{Fore.RED}Please select a valid option.{Fore.RESET}")
@@ -20,15 +20,14 @@ def ask_to_load(classes, armors, weapons, amulets, rings):
                 break
         match answer:
             case 1:
-                print(f"\n{Fore.RED}------{Fore.RESET}")
                 print("Time to make a new character!")
                 time.sleep(1)
                 player = make_character(classes, armors, weapons, amulets, rings)
             case 2:
                 player = load_character()
             case 3:
-                print(f"\n{Fore.RED}------{Fore.RESET}")
-                print("\nQuitting the game.")
+                print(f"{Fore.RED}\n--- QUITTING GAME ---")
+                print(f"\nQuitting the game.{Fore.RESET}\n")
                 time.sleep(1)
                 return 0
             case _:
@@ -42,12 +41,12 @@ def request_action(player, inventory):
             print('\n...')
             time.sleep(1)
             print(f'\n{Fore.RED}---DEFEAT---{Fore.RESET}')
-            print('\nYou awake in the tavern, barely alive. Rest here to regain the rest of your vigour.')
+            print(f'\nYou awake in the tavern, barely alive. {Fore.RED}Rest here{Fore.RESET} to regain the rest of your {Fore.RED}HP{Fore.RESET} and {Fore.BLUE}MP{Fore.RESET}.')
             player.health = 1
 
-        print(f'\n{Fore.BLUE}---VILLAGE---')
-        print(f'Available actions:{Fore.RESET}\n1. Inspect Character Sheet\n2. Explore\n3. '
-              'Rest at the Tavern\n4. Buy Potions\n5. Save\n6. Save and Exit the Game')
+        print(f'\n{Fore.BLUE}---VILLAGE---{Fore.RESET}')
+        print(f'\n1. Inspect Character Sheet\n2. Explore\n3. '
+            f'Rest at the Tavern\n4. Buy Potions\n5. Save\n6. Save and {Fore.RED}Exit{Fore.RESET} the Game')
         while True:
             try:
                 action = int(input(f'\n{Fore.YELLOW}What is your choice?: {Fore.RESET}'))
@@ -75,12 +74,12 @@ def request_action(player, inventory):
                 print(f"\n{Fore.GREEN}---SAVING---")
                 save_character(player)
                 print(f"\nDone!{Fore.RESET}")
-                print(f"\n{Fore.RED}---QUITTING---")
-                print(f"\nQuitting the game.{Fore.RESET}")
+                print(f"\n{Fore.RED}---QUITTING THE GAME---")
+                print(f"\nQuitting the game.{Fore.RESET}\n")
                 time.sleep(1)
                 break
             case _:
                 print(f"\n{Fore.RED}Please select a valid option.{Fore.RESET}")
                 print(f'\n{Fore.BLUE}---VILLAGE---{Fore.RESET}')
-                print('Available actions:\n1. Inspect Character Sheet\n2. Explore\n3. '
+                print('\n1. Inspect Character Sheet\n2. Explore\n3. '
                     'Rest at the Tavern\n4. Buy Potions\n5. Save and Exit the Game')

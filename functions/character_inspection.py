@@ -17,18 +17,18 @@ rings = json.load(load_rings)
 abilities = json.load(load_abilities)
 
 def inspect_sheet(player, inventory):
-    print(f'\n{Fore.GREEN}--- CHARACTER SHEET ---')
-    print(f'Name: {player.name}')
-    print(f'Class: {player.char_class}')
-    print(f'Level: {player.level}')
+    print(f'\n{Fore.GREEN}--- CHARACTER SHEET ---{Fore.RESET}')
+    print(f'Name: {Fore.RED}{player.name}{Fore.RESET}')
+    print(f'Class: {Fore.YELLOW}{player.char_class}{Fore.RESET}')
+    print(f'Level: {Fore.RED}{player.level}{Fore.RESET}')
     print(f'Current XP: {player.current_xp}')
     print(f'XP until next level: {player.xp_to_level}')
 
-    print(f'\nHealth: {player.health} (Max: {player.max_health} ).')
-    print(f'Mana: {player.mana} (Max: {player.max_mana}).')
-    print(f'Strength: {player.strength}')
-    print(f'Dexterity: {player.dexterity}')
-    print(f'Willpower: {player.willpower}')
+    print(f'\nHealth: {Fore.RED}{player.health}{Fore.RESET} (Max: {Fore.RED}{player.max_health}{Fore.RESET}).')
+    print(f'Mana: {Fore.BLUE}{player.mana}{Fore.RESET} (Max: {Fore.BLUE}{player.max_mana}{Fore.RESET}).')
+    print(f'Strength: {Fore.RED}{player.strength}{Fore.RESET}')
+    print(f'Dexterity: {Fore.RED}{player.dexterity}{Fore.RESET}')
+    print(f'Willpower: {Fore.RED}{player.willpower}{Fore.RESET}')
 
     print(f'\nGold: {player.gold}')
     print(f'Potions: {player.potions}')
@@ -38,7 +38,7 @@ def inspect_sheet(player, inventory):
 
     # level option if there's enough XP
     choice = None
-    print(f"\n{Fore.GREEN}1. Equipment\n2. Level Up\n3. {Fore.RED}Return{Fore.RESET}")
+    print(f"\n1. Equipment\n2. Level Up\n3. {Fore.RED}Return{Fore.RESET}")
     while choice == None or choice not in list(range(1,4)):
         while True:
             try:
@@ -64,5 +64,5 @@ def inspect_sheet(player, inventory):
 
 def list_abilities(player):
     for ability in player.abilities:
-        print(f"- {Fore.YELLOW}{abilities[ability]["name"]}{Fore.BLUE}: {abilities[ability]["description"]} "
-            f"{Fore.GREEN}(Cost: {abilities[ability]["cost"]}, Dmg: {abilities[ability]["effect"]} + {abilities[ability]["attribute"]}){Fore.RESET}")
+        print(f"- {Fore.RED}{abilities[ability]["name"]}{Fore.RESET}: {abilities[ability]["description"]} "
+            f"(Cost: {Fore.BLUE}{abilities[ability]["cost"]}{Fore.RESET}, Dmg: {Fore.RED}{abilities[ability]["effect"]} + {abilities[ability]["attribute"]}{Fore.RESET})")

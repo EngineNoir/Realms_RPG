@@ -51,14 +51,14 @@ class Boss(Creature):
     def deal_damage_to_player(self, target: Character):
         self.taunt_player()
         damage_dealt = max(self.compute_damage() - target.eq_armor['defence'], 0)
-        output_text = self.name + ' ' + random.choice(self.moveset) + ' '
+        output_text = f'{self.name} {random.choice(self.moveset)} '
         misses = ["which fails to break through your defences.", "missing its attack.",
                   "failing to connect the attack.", "unable to land the attack.",
                   "but you dodge away in time.", "barely missing you."]
         if damage_dealt > 0:
-            output_text += 'dealing ' + str(damage_dealt) + ' damage.'
+            output_text += f'dealing {str(damage_dealt)} damage.'
             target.health -= damage_dealt
         else:
             output_text += random.choice(misses)
         print(f"\n{Fore.RED}--- BOSS DAMAGE ---")
-        print(output_text + f"{Fore.RESET}")
+        print(f"\n{output_text}{Fore.RESET}")

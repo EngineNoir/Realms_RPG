@@ -30,12 +30,12 @@ def generate_potions(consumables):
     return potions
 
 def shopping_for_potions(player: Character):
-    print(f"{Fore.BLUE}--- POTION STORE ---")
+    print(f"{Fore.BLUE}--- POTION STORE ---{Fore.RESET}")
     potions = generate_potions(consumables)
     player_choice = None
     while True:
-        print('\n1. Lesser Health Potion (10g)'
-              '\n2. Health Potion (50g)\n3. Greater Health Potion (200g)\n4. Lesser Mana Potion (10g)\n5. Mana Potion (50g)'
+        print(f'\n1. Lesser Health Potion (10g)'
+              f'\n2. Health Potion (50g)\n3. Greater Health Potion (200g)\n4. Lesser Mana Potion (10g)\n5. Mana Potion (50g)'
               f'\n6. Greater Mana Potion (200g)\n7. {Fore.RED}Return{Fore.RESET}')
         print(f"\nYou have {player.gold} gold.")
         while True:
@@ -55,7 +55,6 @@ def shopping_for_potions(player: Character):
             print(f"\n{Fore.RED}You already have this item, and cannot carry more.{Fore.RESET}")
         else:
             print(f"\n{Fore.GREEN}--- PURCHASE SUCCESS ---")
-            print("\nYou succesfully purchase this item.")
             print(f"\n{Fore.RED if "Health" in pot.name else Fore.BLUE}{pot.name}{Fore.GREEN} has been added to your inventory.{Fore.RESET}")
             player.potions.append(pot.name)
             player.gold -= pot.val
@@ -67,7 +66,7 @@ def use_potions(player: Character):
     did_drink = False
     i = 1
     # prints all the potions
-    print(f"\n{Fore.GREEN}--- POTIONS ---")
+    print(f"\n{Fore.GREEN}--- POTIONS ---{Fore.RESET}")
     for potion in player.potions:
         print(f"{i}. {Fore.RED if "Health" in potion else Fore.BLUE}{potion}{Fore.RESET}")
         i += 1

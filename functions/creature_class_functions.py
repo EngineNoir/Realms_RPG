@@ -46,15 +46,13 @@ class Creature:
                   "failing to connect the attack.", "unable to land the attack.",
                   "but you dodge away in time.", "barely missing you."]
         if damage_dealt > 0:
-            output_text += 'dealing ' + str(damage_dealt) + ' damage.'
+            output_text += f'dealing {damage_dealt} damage.'
             target.health -= damage_dealt
         else:
             output_text += random.choice(misses)
-        print(f"{Fore.RED}\n--- ENEMY DAMAGE ---")
-        print(output_text + f"{Fore.RESET}")
+        print(f"{Fore.RED}\n--- ENEMY DAMAGE ---{Fore.RESET}")
+        print(f"\n {output_text} {Fore.RESET}")
 
     def spot_player(self, target: Character):
         if self.awareness >= target.dexterity:
-            print(f"{Fore.RED}\n--- STEALTH CANCELLED ---")
-            print(f'You are spotted!{Fore.RESET}')
             target.stealth = False

@@ -16,11 +16,11 @@ load_locations = open('jsons/locations.json')
 locations = json.load(load_locations)
 
 def explore(player: Character, inventory: Inventory):
-    print(f"\n{Fore.BLUE}--- EXPLORATION ---")
+    print(f"\n{Fore.BLUE}--- EXPLORATION ---{Fore.RESET}")
     print("\nYou may explore the following places:")
     for i in range(0, len(locations)):
-        print(f"{Fore.YELLOW}{i+1}{Fore.RESET}. {locations[i]['location_name']}")
-    print(f"{Fore.YELLOW}{len(locations) + 1}{Fore.RESET}. {Fore.RED}Return{Fore.RESET}")
+        print(f"{i+1}. {locations[i]['location_name']}")
+    print(f"{len(locations) + 1}. {Fore.RED}Return{Fore.RESET}")
 
     player_choice = int(input(f"\n{Fore.YELLOW}What is your choice?: {Fore.RESET}")) - 1
     match player_choice:

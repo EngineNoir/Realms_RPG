@@ -105,25 +105,25 @@ class Character:
     def determine_weapon_ability(self):
         # function that accesses a Character value based on weapon ability value
         if self.eq_weapon['ability'] == 'strength':
-            return self.strength
+            return self.strength + round(0.5 * max(self.dexterity, self.willpower))
         elif self.eq_weapon['ability'] == 'dexterity':
-            return self.dexterity
+            return self.dexterity + round(0.5 * max(self.strength, self.willpower))
         else:
-            return self.willpower
+            return self.willpower + round(0.5 * max(self.strength, self.dexterity))
 
     def deal_damage_to_enemy(self, target):
         # either deal dmg - armor or 0, negative values will heal the enemy (bug!)
         damage_dealt = max(self.weapon_attack() - target.armor, 0)
-        output_text = '\nYou ' + random.choice(self.eq_weapon['moveset'])
+        output_text = 'You ' + random.choice(self.eq_weapon['moveset'])
         if damage_dealt > 0:
-            output_text += ' dealing ' + str(damage_dealt) + ' damage to ' + target.name + '.'
+            output_text += f' dealing {damage_dealt} damage to {target.name}.'
             target.health -= damage_dealt
         else:
             fails = ["your attack misses.", "you fail to deal damage.", "the enemy dodges out of the way.", "your attack fails to connect.",
                 "you underestimate the opponent's speed and miss."]
-            output_text += ' but ' + random.choice(fails)
+            output_text += f' but {random.choice(fails)}'
         print(f"{Fore.BLUE}\n--- YOUR DAMAGE ---")
-        print(output_text + f"{Fore.RESET}")
+        print(f"\n{output_text}{Fore.RESET}")
 
     def attempt_stealth_in_combat(self, target):
         print(f"{Fore.BLUE}\n--- STEALTH ---")
@@ -186,9 +186,9 @@ class Character:
         ability_chosen = None
         player_choice = None
         while player_choice not in [1,2,3]:
-            print(f"\n{Fore.GREEN}--- INCREASE ATTRIBUTE ---")
+            print(f"\n{Fore.GREEN}--- INCREASE ATTRIBUTE ---{Fore.RESET}")
             print('\nChoose which of the three attributes you wish to increase by 1.'
-                    '\n1. Strength\n2. Dexterity\n3. Willpower')
+                    '\n\n1. Strength\n2. Dexterity\n3. Willpower')
             while True:
                 try:
                     player_choice = int(input(f'\n{Fore.YELLOW}What is your choice?: {Fore.RESET}'))
@@ -207,17 +207,17 @@ class Character:
                 self.willpower += 1
                 ability_chosen = "Willpower"
         if ability_chosen != None:
-            print(f"\n--- SUCCESS ---")
+            print(f"\n{Fore.GREEN}--- SUCCESS ---")
             print(f'\n{ability_chosen.upper} increased by 1.{Fore.RESET}')
         return ability_chosen
 
     def level_up(self):
         if self.current_xp >= self.xp_to_level:
-            print(f"\n{Fore.GREEN}--- LEVEL UP ---")
+            print(f"\n{Fore.GREEN}--- LEVEL UP ---{Fore.RESET}")
             print(f'\nYou have {self.current_xp} XP. Do you wish to spend {self.xp_to_level} XP to level up?')
             answer_input = None
             while answer_input not in [1,2]:
-                print("\n1. Yes\n2. No")
+                print(f"\n1. Yes\n2. {Fore.RED}No{Fore.RESET}")
                 while True:
                     try:
                         answer_input = int(input(f'{Fore.YELLOW}\nWhat is your choice?: {Fore.RESET}'))
@@ -253,16 +253,16 @@ class Character:
     def gain_abilities(self):
         if self.level == 3 and self.abilities_to_learn[0] not in self.abilities:
             self.abilities.append(self.abilities_to_learn[0])
-            print(f"\n{Fore.GREEN}--- NEW ABILITY ---")
-            print(f"\nYou have learned {self.abilities_to_learn[0]}!{Fore.RESET}")
+            print(f"\n{Fore.GREEN}--- NEW ABILITY ---{Fore.RESET}")
+            print(f"\nYou have learned {Fore.RED}{self.abilities_to_learn[0]}{Fore.RESET}!")
         elif self.level == 7 and self.abilities_to_learn[1] not in self.abilities:
             self.abilities.append(self.abilities_to_learn[1])
-            print(f"\n{Fore.GREEN}--- NEW ABILITY ---")
-            print(f"\nYou have learned {self.abilities_to_learn[1]}!{Fore.RESET}")
+            print(f"\n{Fore.GREEN}--- NEW ABILITY ---{Fore.RESET}")
+            print(f"\nYou have learned {Fore.RED}{self.abilities_to_learn[1]}{Fore.RESET}!")
         elif self.level == 12 and self.abilities_to_learn[2] not in self.abilities:
             self.abilities.append(self.abilities_to_learn[2])
-            print(f"\n{Fore.GREEN}--- NEW ABILITY ---")
-            print(f"\nYou have learned {self.abilities_to_learn[2]}!{Fore.RESET}")
+            print(f"\n{Fore.GREEN}--- NEW ABILITY ---{Fore.RESET}")
+            print(f"\nYou have learned {Fore.RED}{self.abilities_to_learn[2]}{Fore.RESET}!")
 
 
 # MAKE AND SAVE CHARACTER -----------------------------
@@ -271,21 +271,21 @@ def make_character(classes, armors, weapons, amulets, rings):
     char_name = None
     while True:
         try:
-            char_name = str(input(f"\n{Fore.YELLOW}What is your character's name? (enter '{Fore.RED}exit{Fore.YELLOW}' to terminate): {Fore.RESET}"))
+            char_name = str(input(f"\nWhat is your character's name? (enter '{Fore.RED}exit{Fore.RESET}' to terminate): "))
             if char_name == 'exit':
-                return None
+                return 0
         except ValueError:
             print(f"\n{Fore.RED}Please input a valid name.{Fore.RESET}")
         else:
             break
 
     # index over the class names in classes list and present the options
-    print(f'\n{Fore.GREEN}Pick one of the following classes.{Fore.RESET}')
+    print(f'\nPick one of the following classes.')
     i = 1
     for char_class in classes:
-        print(f"{i}. {Fore.YELLOW}{char_class["class_name"]} {Fore.BLUE}"
-            f"(STR: {char_class["strength"]}, DEX {char_class["dexterity"]}, WILL: {char_class["willpower"]}) - "
-            f"{Fore.GREEN}{char_class["description"]}{Fore.RESET}")
+        print(f"{i}. {Fore.YELLOW}{char_class["class_name"]}{Fore.RESET}"
+            f" (STR: {char_class["strength"]}, DEX {char_class["dexterity"]}, WILL: {char_class["willpower"]}) - "
+            f"{char_class["description"]}")
         i += 1
 
     # makes the player choose a class from the given options
@@ -349,7 +349,7 @@ def load_character():
     print(f"\n{Fore.GREEN}--- LOAD CHARACTER ---{Fore.RESET}")
     while True:
         try:
-            char_name = input(f"\n{Fore.YELLOW}What is your character's name? (enter '{Fore.RED}exit{Fore.RESET}'to terminate): {Fore.RESET}")
+            char_name = input(f"\nWhat is your character's name? (enter '{Fore.RED}exit{Fore.RESET}'to terminate): ")
             if char_name == 'exit':
                 return None
         except ValueError:
@@ -357,7 +357,7 @@ def load_character():
         try:
             char_sheet = json.load(open(f'characters/{char_name}.json'))
         except FileNotFoundError:
-            print(f"\n{Fore.GREEN}Please input an existing character name. Input '{Fore.RED}exit{Fore.RESET}' to terminate.{Fore.RESET}")
+            print(f"\nPlease input an existing character name. Input '{Fore.RED}exit{Fore.RESET}' to terminate.")
         else:
             break
 

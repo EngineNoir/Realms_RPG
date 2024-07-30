@@ -41,38 +41,38 @@ class Inventory:
 
     def list_equipped(self, player):
         print(f"\n{Fore.GREEN}--- EQUIPPED ---{Fore.RESET}")
-        print(f"Weapon: {Fore.RED}{player.eq_weapon["weapon_name"]} "
-            f"{Fore.BLUE}(Dmg: {player.eq_weapon["damage"]}, {Fore.RED}{player.eq_weapon["ability"]}{Fore.BLUE} scaling){Fore.RESET}")
-        print(f'Armor: {Fore.RED}{player.eq_armor["armor_name"]} '
-            f'{Fore.BLUE}(Def: {player.eq_armor["defence"]}, {Fore.RED}{player.eq_armor["weight"]}{Fore.BLUE}){Fore.RESET}')
-        print(f'Amulet: {Fore.RED}{player.eq_amulet["name"]} '
-            f'{Fore.BLUE}(Add {Fore.RED}{player.eq_amulet["effect"]}{Fore.BLUE} to '
-                    f'{Fore.RED}{player.eq_amulet["stat"] or None}{Fore.BLUE}){Fore.RESET}')
-        print(f'Ring 1: {Fore.RED}{player.eq_ring_1["name"]} '
-            f'{Fore.BLUE}(Add {Fore.RED}{player.eq_ring_1["effect"]}{Fore.BLUE} to '
-                    f'{Fore.RED}{player.eq_ring_1["stat"] or None}{Fore.BLUE}){Fore.RESET}')
-        print(f'Ring 2: {Fore.RED}{player.eq_ring_2["name"]} '
-            f'{Fore.BLUE}(Add {Fore.RED}{player.eq_ring_2["effect"]}{Fore.BLUE} to '
-                    f'{Fore.RED}{player.eq_ring_2["stat"] or None}{Fore.BLUE}){Fore.RESET}')
+        print(f"Weapon: {Fore.RED}{player.eq_weapon["weapon_name"]}{Fore.RESET} "
+            f"(Dmg: {Fore.RED}{player.eq_weapon["damage"]}{Fore.RESET}, {Fore.RED}{player.eq_weapon["ability"]}{Fore.RESET} scaling)")
+        print(f'Armor: {Fore.RED}{player.eq_armor["armor_name"]}{Fore.RESET} '
+            f'(Def: {Fore.RED}{player.eq_armor["defence"]}{Fore.RESET}, {Fore.RED}{player.eq_armor["weight"]}{Fore.RESET})')
+        print(f'Amulet: {Fore.RED}{player.eq_amulet["name"]}{Fore.RESET} '
+            f'(Add {Fore.RED}{player.eq_amulet["effect"]}{Fore.RESET} to '
+                    f'{Fore.RED}{player.eq_amulet["stat"] or None}{Fore.RESET})')
+        print(f'Ring 1: {Fore.RED}{player.eq_ring_1["name"]}{Fore.RESET} '
+            f'(Add {Fore.RED}{player.eq_ring_1["effect"]}{Fore.RESET} to '
+                    f'{Fore.RED}{player.eq_ring_1["stat"] or None}{Fore.RESET})')
+        print(f'Ring 2: {Fore.RED}{player.eq_ring_2["name"]}{Fore.RESET} '
+            f'(Add {Fore.RED}{player.eq_ring_2["effect"]}{Fore.RESET} to '
+                    f'{Fore.RED}{player.eq_ring_2["stat"] or None}{Fore.RESET})')
 
     def list_inventory(self, player):
         print(f"{Fore.GREEN}\n--- INVENTORY ---{Fore.RESET}")
         print("Weapons:")
         for weapon in player.weapons:
-            print(f'- {Fore.RED}{weapon} {Fore.BLUE}(Dmg: {Fore.RED}{self.weapons[weapon]["damage"]}{Fore.BLUE},'
-               f' {Fore.RED}{self.weapons[weapon]["ability"]}{Fore.BLUE} scaling){Fore.RESET}')
+            print(f'- {Fore.RED}{weapon} {Fore.RESET}(Dmg: {Fore.RED}{self.weapons[weapon]["damage"]}{Fore.RESET},'
+               f' {Fore.RED}{self.weapons[weapon]["ability"]}{Fore.RESET} scaling)')
         print("Armors:")
         for armor in player.armors:
-            print(f"- {Fore.RED}{armor} {Fore.BLUE}(Def: {Fore.RED}{self.armors[armor]["defence"]}{Fore.BLUE},"
-                f" {Fore.RED}{self.armors[armor]["weight"]}{Fore.BLUE}){Fore.RESET}")
+            print(f"- {Fore.RED}{armor} {Fore.RESET}(Def: {Fore.RED}{self.armors[armor]["defence"]}{Fore.RESET},"
+                f" {Fore.RED}{self.armors[armor]["weight"]}{Fore.RESET})")
         print("Amulets:")
         for amulet in player.amulets:
-            print(f"- {Fore.RED}{amulet} {Fore.BLUE}(Add {Fore.RED}{self.amulets[amulet]["effect"]}{Fore.BLUE} to "
-                            f"{Fore.RED}{self.amulets[amulet]["stat"]}{Fore.BLUE}){Fore.RESET}")
+            print(f"- {Fore.RED}{amulet} {Fore.RESET}(Add {Fore.RED}{self.amulets[amulet]["effect"]}{Fore.RESET} to "
+                            f"{Fore.RED}{self.amulets[amulet]["stat"]}{Fore.RESET})")
         print("Rings:")
         for ring in player.rings:
-            print(f"- {Fore.RED}{ring} {Fore.BLUE}(Add {Fore.RED}{self.rings[ring]["effect"]}{Fore.BLUE} to "
-                            f"{Fore.RED}{self.rings[ring]["stat"]}{Fore.BLUE}){Fore.RESET}")
+            print(f"- {Fore.RED}{ring} {Fore.RESET}(Add {Fore.RED}{self.rings[ring]["effect"]}{Fore.RESET} to "
+                            f"{Fore.RED}{self.rings[ring]["stat"]}{Fore.RESET})")
         choice = None
         while choice != 2:
             print(f"\n1. Equip item\n2. {Fore.RED}Return{Fore.RESET}")
@@ -122,8 +122,8 @@ class Inventory:
         print(f"\n{Fore.GREEN}--- WEAPONS ---{Fore.RESET}")
         i = 1
         for weapon in player.weapons:
-            print(f"{i}. {Fore.YELLOW}{weapon}{Fore.BLUE} (Dmg: "
-                f"{Fore.RED}{self.weapons[weapon]["damage"]}{Fore.BLUE}, {Fore.RED}{self.weapons[weapon]["ability"]}{Fore.BLUE} scaling){Fore.RESET}")
+            print(f"{i}. {Fore.RED}{weapon}{Fore.RESET} (Dmg: "
+                f"{Fore.RED}{self.weapons[weapon]["damage"]}{Fore.RESET}, {Fore.RED}{self.weapons[weapon]["ability"]}{Fore.RESET} scaling)")
             i += 1
         print(f"{i}. {Fore.RED}Return{Fore.RESET}")
         choice = None
@@ -151,8 +151,8 @@ class Inventory:
         print(f"\n{Fore.GREEN}--- ARMOR ---{Fore.RESET}")
         i = 1
         for armor in player.armors:
-            print(f"{i}. {Fore.RED}{armor}{Fore.BLUE}"
-                f" (Def: {Fore.RED}{self.armors[armor]["defence"]}{Fore.BLUE}, {Fore.RED}{self.armors[armor]["weight"]}{Fore.BLUE}){Fore.RESET}")
+            print(f"{i}. {Fore.RED}{armor}{Fore.RESET}"
+                f" (Def: {Fore.RED}{self.armors[armor]["defence"]}{Fore.RESET}, {Fore.RED}{self.armors[armor]["weight"]}{Fore.RESET})")
             i += 1
         print(f"{i}. {Fore.RED}Return{Fore.RESET}")
         choice = None
@@ -183,8 +183,8 @@ class Inventory:
         print(f"\n{Fore.GREEN}--- AMULETS ---{Fore.RESET}")
         i = 1
         for amulet in player.amulets:
-            print(f"{i}. {Fore.RED}{amulet} {Fore.BLUE}(Add {Fore.RED}{self.amulets[amulet]["effect"]}{Fore.BLUE} "
-                f"to {Fore.RED}{self.amulets[amulet]["stat"]}{Fore.BLUE}){Fore.RESET}")
+            print(f"{i}. {Fore.RED}{amulet} {Fore.RESET}(Add {Fore.RED}{self.amulets[amulet]["effect"]}{Fore.RESET} "
+                f"to {Fore.RED}{self.amulets[amulet]["stat"]}{Fore.RESET})")
             i += 1
         print(f"{i}. {Fore.RED}Return{Fore.RESET}")
         choice = None
@@ -210,11 +210,11 @@ class Inventory:
         return 0
 
     def equip_ring(self, player):
-        print(f"\n{Fore.GREEN}--- RINGS ---")
+        print(f"\n{Fore.GREEN}--- RINGS ---{Fore.RESET}")
         i = 1
         for ring in player.rings:
-            print(f"{i}. {Fore.RED}{ring}{Fore.BLUE} (Add {Fore.RED}{self.rings[ring]["effect"]} "
-                f"{Fore.BLUE}to {Fore.RED}{self.rings[ring]["stat"]}{Fore.BLUE}){Fore.RESET}")
+            print(f"{i}. {Fore.RED}{ring}{Fore.RESET} (Add {Fore.RED}{self.rings[ring]["effect"]} "
+                f"{Fore.RESET}to {Fore.RED}{self.rings[ring]["stat"]}{Fore.RESET})")
             i += 1
         print(f"{i}. {Fore.RED}Return{Fore.RESET}")
         choice = None
@@ -233,10 +233,10 @@ class Inventory:
                 chosen_ring = player.rings[choice - 1]
                 choice2 = None
                 print(f"\n{Fore.GREEN}--- REPLACE RING ---{Fore.RESET}")
-                print(f"\n1. {Fore.RED}{player.eq_ring_1["name"]} {Fore.BLUE}"
-                    f"(Add {Fore.RED}{player.eq_ring_1["effect"]}{Fore.BLUE} to {Fore.RED}{player.eq_ring_1["stat"]}{Fore.BLUE}){Fore.RESET}"
-                    f"\n2. {Fore.RED}{player.eq_ring_2["name"]} {Fore.BLUE}"
-                    f"(Add {Fore.RED}{player.eq_ring_2["effect"]}{Fore.BLUE} to {Fore.RED}{player.eq_ring_2["stat"]}{Fore.BLUE}){Fore.RESET}"
+                print(f"\n1. {Fore.RED}{player.eq_ring_1["name"]} {Fore.RESET}"
+                    f"(Add {Fore.RED}{player.eq_ring_1["effect"]}{Fore.RESET} to {Fore.RED}{player.eq_ring_1["stat"]}{Fore.RESET})"
+                    f"\n2. {Fore.RED}{player.eq_ring_2["name"]} {Fore.RESET}"
+                    f"(Add {Fore.RED}{player.eq_ring_2["effect"]}{Fore.RESET} to {Fore.RED}{player.eq_ring_2["stat"]}{Fore.RESET})"
                     f"\n3. {Fore.RED}Return{Fore.RESET}")
                 while choice2 not in [1, 2, 3]:
                     while True:

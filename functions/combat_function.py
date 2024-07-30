@@ -39,11 +39,15 @@ def combat_time(player: Character, enemy: Creature):
                 if enemy.health > 0 and not player.stealth:
                     enemy.deal_damage_to_player(player)                    # the player is revealed from stealth after their attack
                 if player.stealth:
-                    print(f"\n{Fore.RED}--- STEALTH FAILED ---")
-                    print(f'You are spotted again, and are no longer hidden or invisible.{Fore.RESET}')
+                    print(f"\n{Fore.RED}--- STEALTH CANCELLED ---")
+                    print(f'\nYou are spotted again, and are no longer hidden or invisible.{Fore.RESET}')
                     player.stealth = False
             case 2:
                 player_abilities(player, enemy)
+                if player.stealth:
+                    print(f"\n{Fore.RED}--- STEALTH CANCELLED ---")
+                    print(f'\nYou are spotted again, and are no longer hidden or invisible.{Fore.RESET}')
+                    player.stealth = False
             case 3:
                 pot = use_potions(player)
                 if pot:
@@ -94,7 +98,7 @@ def player_abilities(player: Character, enemy: Creature):
     if ability == 0:
         return 0
     elif ability == "Shield" or ability == "Parry" or ability == "Dodge":
-        print(f"\n{Fore.GREEN}--- ABILITY ---")
+        print(f"\n{Fore.BLUE}--- ABILITY ---{Fore.RESET}")
         print(f"\nYou {random.choice(abilities[ability]["moveset"])}")
         player.deal_damage_to_enemy(enemy)
     elif ability == "God's Abandon" or ability == "Surrounded by Ruins" or ability == "Apotheosis":
@@ -109,11 +113,11 @@ def player_abilities(player: Character, enemy: Creature):
         parse_ability(player, enemy, ability, abilities)
 
 def list_abilities_combat(player: Character, abilities: list):
-    print(f'\n{Fore.BLUE}--- ABILITIES ---')
+    print(f'\n{Fore.BLUE}--- ABILITIES ---{Fore.RESET}')
     print('You have the following abilities available:')
     i = 1
     for ability in player.abilities:
-        print(f"{i}. {Fore.YELLOW}{ability}{Fore.BLUE} (Cost: {abilities[ability]["cost"]}, Dmg/Heal: {abilities[ability]["cost"]})")
+        print(f"{i}. {Fore.BLUE}{ability}{Fore.RESET} (Cost: {Fore.BLUE}{abilities[ability]["cost"]}{Fore.RESET}, Dmg/Heal: {Fore.RED}{abilities[ability]["cost"]}{Fore.RESET})")
         i += 1
     print(f"{i}. {Fore.RED}Return{Fore.RESET}")
     choice = None
@@ -128,6 +132,8 @@ def list_abilities_combat(player: Character, abilities: list):
         if choice == i:
             print(f"\n{Fore.RED}No ability was chosen.{Fore.RESET}")
             return 0
+        if player.mana < abilities[player.abilities[choice - 1]]["cost"]:
+            print(f"{Fore.RED}\nYou have insufficient mana to use this ability{Fore.RESET}")
         else:
             return player.abilities[choice - 1]
 
@@ -135,11 +141,11 @@ def parse_ability(player: Character, enemy: Creature, ability: str, abilities: d
     enemy_hits = True if random.randint(0, 100) > 60 else False
     is_heal = True if abilities[ability]["type"] == "heal" else False
     if is_heal:
-        print(f"\n{Fore.BLUE}--- HEAL ---")
+        print(f"\n{Fore.BLUE}--- HEAL ---{Fore.RESET}")
         player.mana = max(player.mana - abilities[ability]["cost"], 0)
         player.health = min(player.max_health, player.health + abilities[ability]["effect"])
         print(f"\nYou {random.choice(abilities[ability]["moveset"])}.")
-        print(f"You recover {random.choice(abilities[ability]["effect"])} HP.{Fore.RESET}")
+        print(f"You recover {Fore.RED}{random.choice(abilities[ability]["effect"])}{Fore.RESET} HP.")
     elif not is_heal:
         player.mana = max(player.mana - abilities[ability]["cost"], 0)
         dmg = None
@@ -151,10 +157,10 @@ def parse_ability(player: Character, enemy: Creature, ability: str, abilities: d
             case "willpower":
                 dmg = random.randint(1, player.willpower)
         enemy.health -= abilities[ability]["effect"] + dmg
-        print(f"\n--- ABILITY ---")
-        print(f"\nYou {random.choice(abilities[ability]["moveset"])} dealing {abilities[ability]["effect"] + dmg} damage.{Fore.RESET}")
+        print(f"\n{Fore.BLUE}--- ABILITY ---{Fore.RESET}")
+        print(f"\nYou {random.choice(abilities[ability]["moveset"])} dealing {abilities[ability]["effect"] + dmg} damage.")
     if enemy.health > 0 and enemy_hits:
         enemy.deal_damage_to_player(player)
     if not enemy_hits:
-        print(f"\n{Fore.GREEN}--- ENEMY STAGGER ---")
-        print(f"\nThe enemy struggles from the attack, and fails to retalliate.{Fore.RESET}")
+        print(f"\n{Fore.GREEN}--- ENEMY STAGGER ---{Fore.RESET}")
+        print(f"\nThe enemy struggles from the attack, and fails to retalliate.")

@@ -48,13 +48,13 @@ class Location:
     def explore(self, player: Character, inventory: Inventory):
         number_of_rooms = random.randint(self.rooms_min, self.rooms_max)
         boss = self.generate_boss(bosses)
-        print(f"\n{Fore.BLUE}--- ENTERED {Fore.RED}{self.name.upper}{Fore.BLUE} ---")
+        print(f"\n{Fore.BLUE}--- ENTERED LOCATION ---{Fore.RESET}")
         print(self.entry)
 
         while self.current_room < number_of_rooms and player.health > 0:
-            print(f"\n{Fore.BLUE}--- EXPLORE ---")
+            print(f"\n{Fore.BLUE}--- EXPLORE ---{Fore.RESET}")
             print('\n1. Continue Exploring.\n2. Stealth.\n3. Use a potion'
-                    '\n4. Inspect Character Sheet\n5. Leave the Location.')
+                f'\n4. Inspect Character Sheet\n5. {Fore.RED}Leave the Location{Fore.RESET}')
             player_choice = None
             while player_choice not in list(range(1,6)):
                 while True:
@@ -83,10 +83,10 @@ class Location:
                             print(random.choice(self.encounters))
                             if player.health < player.max_health:
                                 player.health = min(player.health + 5, player.max_health)
-                                print(f"\n{Fore.GREEN}You regain health up to {Fore.RED}{player.health}{Fore.GREEN}HP.{Fore.RESET}")
+                                print(f"\n{Fore.GREEN}You regain health up to {Fore.RED}{player.health}{Fore.GREEN} HP.{Fore.RESET}")
                             if player.mana < player.max_mana:
                                 player.mana = min(player.mana + 5, player.max_mana)
-                                print(f"\n{Fore.GREEN}You regain health up to {Fore.BLUE}{player.mana}{Fore.RESET}MP.{Fore.RESET}")
+                                print(f"\n{Fore.GREEN}You regain mana up to {Fore.BLUE}{player.mana}{Fore.RESET} MP.{Fore.RESET}")
                             self.current_room += 1
                     case 2:
                         player.stealth_in_exploration()
@@ -102,6 +102,7 @@ class Location:
                         print(f"\n{Fore.RED}Please select a valid option.{Fore.RESET}")
 
         if self.current_room == number_of_rooms and self.name not in player.cleared_dungeons:
+            print(f"\n{Fore.RED}--- BOSS ENCOUNTER ---{Fore.RESET}")
             print(self.final_room)
             if player.stealth:
                 print(f"\n{Fore.RED}--- STEALTH CANCELLED ---")
@@ -110,8 +111,8 @@ class Location:
             combat_outcome = combat_time(player, boss)
             if player.health > 0 and combat_outcome:
                 player.cleared_dungeons.append(self.name)
-                print(f"{Fore.GREEN}--- VICTORY ---")
-                print(f"{Fore.RED}{self.boss_death}{Fore.RESET}")
+                print(f"\n{Fore.GREEN}--- VICTORY ---")
+                print(f"{self.boss_death}{Fore.RESET}")
                 inventory.loot_boss(player, boss)
             else: return 0
         elif self.name in player.cleared_dungeons:
@@ -120,13 +121,15 @@ class Location:
         return 0
 
     def stealth(self, player: Character, enemy: Creature):
-        if player.stealth == False or enemy.awareness > player.dexterity:
-            print(f"\n{Fore.RED}--- STEALTH CANCELLED ---")
-            print(f"\nYou are spotted by the enemy. Prepare for combat!{Fore.RESET}")
+        if player.stealth == False:
+            combat_time(player, enemy)
+        elif enemy.awareness > player.dexterity:
+            print(f"{Fore.RED}\n--- STEALTH CANCELLED ---")
+            print(f"\nYou are spotted by the enemy! Prepare for combat!{Fore.RESET}")
             combat_time(player, enemy)
         elif enemy.awareness <= player.dexterity:
             print(f"\n{Fore.RED}--- ENEMY SPOTTED ---")
-            print(f"\nYou spot a(n) {enemy.name}, but remain hidden.{Fore.RESET}\n1.Ambush {enemy.name}\n2.Sneak away")
+            print(f"\nYou spot a(n) {enemy.name}, but remain hidden.{Fore.RESET}\n1. Ambush {enemy.name} (start combat)\n2. Sneak away")
             while True:
                 try:
                     choice = int(input(f"\n{Fore.YELLOW}What do you choose?: {Fore.RESET}"))
