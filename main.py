@@ -28,10 +28,7 @@ print('-----A-----A----A-A----A-----A-----')
 print('----A-A-A-A-A----A----A-A-A-A-A----')
 print(f'{Fore.BLUE}-----------------------------------{Fore.RESET}')
 
-while True:
-    player_character = ask_to_load(character_classes, armors, weapons, amulets, rings)
-    if player_character != 0:
-        break
+player_character = ask_to_load(character_classes, armors, weapons, amulets, rings)
 game_inventory = Inventory(armors, weapons, amulets, rings)
 
 if player_character != 0:

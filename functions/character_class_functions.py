@@ -351,7 +351,7 @@ def load_character():
         try:
             char_name = input(f"\nWhat is your character's name? (enter '{Fore.RED}exit{Fore.RESET}'to terminate): ")
             if char_name == 'exit':
-                return None
+                return 0
         except ValueError:
             print(f'\n{Fore.RED}Please input a valid character name.{Fore.RESET}')
         try:
@@ -359,6 +359,7 @@ def load_character():
         except FileNotFoundError:
             print(f"\nPlease input an existing character name. Input '{Fore.RED}exit{Fore.RESET}' to terminate.")
         else:
+            return 0
             break
 
     # generate a Character class object with the values from the json file

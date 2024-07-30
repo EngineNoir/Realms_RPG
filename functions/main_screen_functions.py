@@ -29,7 +29,7 @@ def ask_to_load(classes, armors, weapons, amulets, rings):
                 print(f"{Fore.RED}\n--- QUITTING GAME ---")
                 print(f"\nQuitting the game.{Fore.RESET}\n")
                 time.sleep(1)
-                return 0
+                return -1
             case _:
                 print(f"\n{Fore.RED}Please select a valid option.{Fore.RESET}")
     return player
