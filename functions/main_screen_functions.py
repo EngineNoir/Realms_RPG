@@ -40,11 +40,11 @@ def request_action(player, inventory):
         if player.health <= 0:
             print('\n...')
             time.sleep(1)
-            print(f'\n{Fore.RED}---DEFEAT---{Fore.RESET}')
+            print(f'\n{Fore.RED}--- DEFEAT ---{Fore.RESET}')
             print(f'\nYou awake in the tavern, barely alive. {Fore.RED}Rest here{Fore.RESET} to regain the rest of your {Fore.RED}HP{Fore.RESET} and {Fore.BLUE}MP{Fore.RESET}.')
             player.health = 1
 
-        print(f'\n{Fore.BLUE}---VILLAGE---{Fore.RESET}')
+        print(f'\n{Fore.BLUE}--- VILLAGE ---{Fore.RESET}')
         print(f'\n1. Inspect Character Sheet\n2. Explore\n3. '
             f'Rest at the Tavern\n4. Buy Potions\n5. Save\n6. Save and {Fore.RED}Exit{Fore.RESET} the Game')
         while True:
@@ -62,24 +62,24 @@ def request_action(player, inventory):
             case 3:
                 player.health = player.max_health
                 player.mana = player.max_mana
-                print(f'\n{Fore.GREEN}---REST---')
+                print(f'\n{Fore.GREEN}--- REST ---')
                 print(f"\nYou rest at the tavern and regain all of your health and mana.{Fore.RESET}")
             case 4:
                 shopping_for_potions(player)
             case 5:
-                print(f"\n{Fore.GREEN}---SAVING---")
+                print(f"\n{Fore.GREEN}--- SAVING ---")
                 save_character(player)
                 print(f"\nDone!{Fore.RESET}")
             case 6:
-                print(f"\n{Fore.GREEN}---SAVING---")
+                print(f"\n{Fore.GREEN}--- SAVING ---")
                 save_character(player)
                 print(f"\nDone!{Fore.RESET}")
-                print(f"\n{Fore.RED}---QUITTING THE GAME---")
+                print(f"\n{Fore.RED}--- QUITTING THE GAME ---")
                 print(f"\nQuitting the game.{Fore.RESET}\n")
                 time.sleep(1)
                 break
             case _:
                 print(f"\n{Fore.RED}Please select a valid option.{Fore.RESET}")
-                print(f'\n{Fore.BLUE}---VILLAGE---{Fore.RESET}')
+                print(f'\n{Fore.BLUE}--- VILLAGE ---{Fore.RESET}')
                 print('\n1. Inspect Character Sheet\n2. Explore\n3. '
                     'Rest at the Tavern\n4. Buy Potions\n5. Save and Exit the Game')

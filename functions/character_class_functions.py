@@ -199,16 +199,16 @@ class Character:
         match player_choice:
             case 1:
                 self.strength += 1
-                ability_chosen = "Strength"
+                ability_chosen = "Strength".upper()
             case 2:
                 self.dexterity += 1
-                ability_chosen = "Dexterity"
+                ability_chosen = "Dexterity".upper()
             case 3:
                 self.willpower += 1
-                ability_chosen = "Willpower"
+                ability_chosen = "Willpower".upper()
         if ability_chosen != None:
             print(f"\n{Fore.GREEN}--- SUCCESS ---")
-            print(f'\n{ability_chosen.upper} increased by 1.{Fore.RESET}')
+            print(f'\n{ability_chosen} increased by 1.{Fore.RESET}')
         return ability_chosen
 
     def level_up(self):
@@ -354,13 +354,13 @@ def load_character():
                 return 0
         except ValueError:
             print(f'\n{Fore.RED}Please input a valid character name.{Fore.RESET}')
-        try:
-            char_sheet = json.load(open(f'characters/{char_name}.json'))
-        except FileNotFoundError:
-            print(f"\nPlease input an existing character name. Input '{Fore.RED}exit{Fore.RESET}' to terminate.")
         else:
-            return 0
-            break
+            try:
+                char_sheet = json.load(open(f'characters/{char_name}.json'))
+            except FileNotFoundError:
+                print(f"\nPlease input an existing character name. Input '{Fore.RED}exit{Fore.RESET}' to terminate.")
+            else:
+                break
 
     # generate a Character class object with the values from the json file
     player_character = Character(char_sheet['name'],
