@@ -67,6 +67,7 @@ class Location:
 
                 match player_choice:
                     case 1:
+                        print(f"\n{Fore.BLUE}--- LOCATION DESCRIPTION ---{Fore.RESET}")
                         print(random.choice(self.rooms))
                         if_combat = random.randint(0, 100)
                         if if_combat < 50:
