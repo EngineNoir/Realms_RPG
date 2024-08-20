@@ -19,6 +19,11 @@ to enter into the virtual environment and install the necessary packages by runn
 ```Python
 pip install -r requirements.txt
 ```
+To disable the virtual environment simply run the command
+```Bash
+deactivate
+```
+
 You can also use ```pipenv``` or some other environment management tool.
 
 ## Running the game
