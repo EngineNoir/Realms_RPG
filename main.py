@@ -25,6 +25,8 @@ print(f"\n{Fore.BLUE}" + pyfiglet.figlet_format("REALMS", font='epic') + f"{Fore
 player_character = ask_to_load(character_classes, armors, weapons, amulets, rings)
 game_inventory = Inventory(armors, weapons, amulets, rings)
 
+if player_character == -1:
+    exit()
 if player_character != 0:
     print(f'\nWelcome, {Fore.RED}{player_character.name}{Fore.RESET} the {Fore.YELLOW}{player_character.char_class}{Fore.RESET}!')
     request_action(player_character, game_inventory)
