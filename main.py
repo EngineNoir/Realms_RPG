@@ -1,4 +1,5 @@
 import json
+import pyfiglet
 from colorama import Fore
 from functions.inventory_class_functions import Inventory
 from functions.main_screen_functions import ask_to_load, request_action
@@ -19,14 +20,7 @@ consumables = json.load(load_consumables)
 amulets = json.load(load_amulets)
 rings = json.load(load_rings)
 
-
-print(f'\n{Fore.BLUE}-----------------------------------')
-print(f'{Fore.RED}--------A----A-A-A-A-A----A--------')
-print('-------A-A----A-----A----A-A-------')
-print('------A---A----A---A----A---A------')
-print('-----A-----A----A-A----A-----A-----')
-print('----A-A-A-A-A----A----A-A-A-A-A----')
-print(f'{Fore.BLUE}-----------------------------------{Fore.RESET}')
+print(f"\n{Fore.BLUE}" + pyfiglet.figlet_format("REALMS", font='epic') + f"{Fore.RESET}")
 
 player_character = ask_to_load(character_classes, armors, weapons, amulets, rings)
 game_inventory = Inventory(armors, weapons, amulets, rings)

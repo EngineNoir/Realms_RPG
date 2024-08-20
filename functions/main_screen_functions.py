@@ -12,7 +12,7 @@ def ask_to_load(classes, armors, weapons, amulets, rings):
     while answer not in [1,2,3]:
         while True:
             try:
-                print(f"\n1. New Character\n2. Load Character\n3. {Fore.RED}Exit{Fore.RESET}")
+                print(f"1. New Character\n2. Load Character\n3. {Fore.RED}Exit{Fore.RESET}")
                 answer = int(input(f'\n{Fore.YELLOW}What is your choice?: {Fore.RESET}'))
             except ValueError:
                 print(f"\n{Fore.RED}Please select a valid option.{Fore.RESET}")
