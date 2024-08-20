@@ -10,7 +10,7 @@ Enjoy!
 
 ## Setting up the environment
 
-First, you need to have python and pip installed on your device. For that, please check out the websites for (Python)[https://www.python.org/] and (pip)[https://pypi.org/project/pip/].
+First, you need to have python and pip installed on your device. For that, please check out the websites for [Python](https://www.python.org/) and [pip](https://pypi.org/project/pip/).
 Using the command line (terminal, or whatever) go to the root folder ```Realms_RPG``` and run the following command:
 ```Python
 source .venv/bin/activate
