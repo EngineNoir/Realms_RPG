@@ -1,6 +1,6 @@
 # Realms RPG
 
-This was a little project I started a while back when I first thought about getting into programming. I knew a handful of Python and thought I woul be able to make a little text based RPG that used random selection to give environment descriptions and pick enemies to fight. Initially everything consistsed of lists and dictionaries, and although it worked, it was very crude and immature in its design. 
+This was a little project I started a while back when I first thought about getting into programming. I knew a handful of Python and thought I would be able to make a little text based RPG that used random selection to give environment descriptions and pick enemies to fight. Initially everything consistsed of lists and dictionaries, and although it worked, it was very crude and immature in its design. 
 
 I have now rewritten the whole thing to make use of classes, and some tighter code. Unavoidably, a lot of things are still hardcoded, which I might rework in the future. The game is not very balanced as it is now, and the combat is not as sophisticated as I might like it to be. I might rework this in the future, but for now, it is what it is. 
 
