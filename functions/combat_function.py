@@ -38,13 +38,13 @@ def combat_time(player: Character, enemy: Creature):
                 # if the player is stealthed they get a free attack
                 if enemy.health > 0 and not player.stealth:
                     enemy.deal_damage_to_player(player)                    # the player is revealed from stealth after their attack
-                if player.stealth:
+                if enemy.health > 0 and player.stealth:
                     print(f"\n{Fore.RED}--- STEALTH CANCELLED ---")
                     print(f'\nYou are spotted again, and are no longer hidden or invisible.{Fore.RESET}')
                     player.stealth = False
             case 2:
                 player_abilities(player, enemy)
-                if player.stealth:
+                if enemy.health > 0 and player.stealth:
                     print(f"\n{Fore.RED}--- STEALTH CANCELLED ---")
                     print(f'\nYou are spotted again, and are no longer hidden or invisible.{Fore.RESET}')
                     player.stealth = False
