@@ -134,6 +134,7 @@ def list_abilities_combat(player: Character, abilities: list):
             return 0
         if player.mana < abilities[player.abilities[choice - 1]]["cost"]:
             print(f"{Fore.RED}\nYou have insufficient mana to use this ability{Fore.RESET}")
+            return 0
         else:
             return player.abilities[choice - 1]
 

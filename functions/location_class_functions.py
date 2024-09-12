@@ -105,6 +105,7 @@ class Location:
         if self.current_room == number_of_rooms and self.name not in player.cleared_dungeons:
             print(f"\n{Fore.RED}--- BOSS ENCOUNTER ---{Fore.RESET}")
             print(self.final_room)
+            print(boss.taunts[0])
             if player.stealth:
                 print(f"\n{Fore.RED}--- STEALTH CANCELLED ---")
                 print(f"\n{boss.name} notices you. Prepare for combat!{Fore.RESET}")
